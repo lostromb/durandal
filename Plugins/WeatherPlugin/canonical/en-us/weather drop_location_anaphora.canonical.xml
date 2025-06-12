@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!-- The purpose of this canonicalizer is to catch expressions like "Local weather", where "local" is accidentally resolved as a location. In these cases, cancel out the slot value-->
+<grammar version="1.0">
+  <regex id="matcher" expression=".+" />
+  
+  <normalization_rule id="normalizer" strict="false">
+    <item input="how is the" output="" />
+    <item input="how's the" output="" />
+    <item input="what is the" output="" />
+    <item input="what's the" output="" />
+    <item input="the" output="" />
+    <item input="local" output="" />
+    <item input="current" output="" />
+  </normalization_rule>
+  
+  <rule id="canonicalized_value">
+    <item><ruleref uri="#matcher" /><normalizer>normalizer</normalizer></item>
+  </rule>
+
+</grammar>

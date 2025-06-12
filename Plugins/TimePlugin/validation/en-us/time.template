@@ -1,0 +1,131 @@
+#STATIC#
+
+time/local_time_query	what is the time
+time/local_time_query	what time is it
+time/local_time_query	what time is it now
+time/local_time_query	what time is it right now
+time/local_time_query	do you have the time
+time/local_time_query	do you have the current time
+time/local_time_query	do you know what time it is
+time/local_time_query	what is the current time
+time/local_day_query	what is the date
+time/local_day_query	what day is it
+time/local_day_query	what is today's date
+time/local_day_query	what day is it today
+time/local_day_query	what day is today
+time/local_day_query	what is the current date
+time/start_timer	start a timer
+time/start_timer	start the timer
+time/start_timer	start timing
+time/stop_timer	stop a timer
+time/stop_timer	stop the timer
+time/stop_timer	stop timing
+
+#PATTERNS#
+
+time/holiday_query	when is [holiday]{holidays}[/holiday]
+time/holiday_query	when is [holiday]{holidays}[/holiday] on
+time/holiday_query	when is [holiday]{holidays}[/holiday] this year
+time/holiday_query	what day is [holiday]{holidays}[/holiday]
+time/holiday_query	what day is [holiday]{holidays}[/holiday] on
+time/holiday_query	what day is [holiday]{holidays}[/holiday] this year
+time/holiday_query	what day does [holiday]{holidays}[/holiday] happen
+time/holiday_query	what day does [holiday]{holidays}[/holiday] come
+
+time/world_time_query	what is the time in [location]{locations}[/location]
+time/world_time_query	what time is it in [location]{locations}[/location]
+time/world_time_query	local time in [location]{locations}[/location]
+time/world_time_query	what is the local time in [location]{locations}[/location]
+
+time/world_time_query_multiturn	what about [location]{locations}[/location]
+time/world_time_query_multiturn	what about in [location]{locations}[/location]
+time/world_time_query_multiturn	how about in [location]{locations}[/location]
+time/world_time_query_multiturn	and what is it in [location]{locations}[/location]
+time/world_time_query_multiturn	and what time is it in [location]{locations}[/location]
+time/world_time_query_multiturn	and what is the time in [location]{locations}[/location]
+time/world_time_query_multiturn	and what about [location]{locations}[/location]
+
+time/weather_cross_domain	{whats} the weather like over there
+time/weather_cross_domain	{whats} the weather like there
+time/weather_cross_domain	{whats} the weather over there
+time/weather_cross_domain	{whats} the weather there
+time/weather_cross_domain	and {whats} the weather like over there
+time/weather_cross_domain	and {whats} the weather like there
+time/weather_cross_domain	and {whats} the weather over there
+time/weather_cross_domain	and {whats} the weather there
+
+#whats#
+what is
+what's
+how is
+how's
+
+#locations#
+Seattle
+Suzhou
+San Francisco
+Paris
+New York
+Odessa Texas
+San Antonio
+Newark New Jersey
+Los Angeles
+Bremen Germany
+Oakland
+Tacoma
+Denver
+London
+Amsterdam
+Bangkok
+Beijing
+Buenos Aires
+Cairo
+Delhi
+Manila
+Mexico City
+Moscow
+Osaka
+Tokyo
+Seoul
+Rio de Janeiro
+Mumbai
+
+#holidays#
+Easter
+mother's day
+Christmas
+Diwali
+Passover
+Rosh Hashanah
+Yom Kippur
+Hanukkah
+Chinese New Year
+Chinese new year
+thanksgiving
+Thanksgiving
+Thanksgiving day
+black friday
+cyber monday
+labor day
+Columbus day
+groundhog day
+Valentine's Day
+valentine's
+patriot's day
+halloween
+Halloween
+may day
+boxing day
+St. Patricks Day
+St. Patrick's Day
+St. Patricks' Day
+Saint Patrick's Day
+Saint Patricks' Day
+Saint Patricks' Day
+father's day
+Martin Luther King Day
+Martin Luther King, Jr. Day
+presidents Day
+presidents' Day
+president's Day
+labor day

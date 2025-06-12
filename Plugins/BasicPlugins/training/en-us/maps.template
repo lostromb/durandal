@@ -1,0 +1,87 @@
+#REGEX#
+maps/get_directions	^{{get_me}} (map )?directions(?<anaphora> there| to there| to get there)?\.?$
+maps/get_map	^where is (?<anaphora>it)( on the map| on a map)?\.?$
+maps/get_map	^{{get_me}} (?<anaphora>it)( on the map| on a map)?\.?$
+
+#STATIC#
+maps/get_map	where am I
+maps/get_map	where am I
+maps/get_map	where am I
+maps/get_map	where is this
+maps/get_map	show the map
+maps/get_map	show the map
+maps/get_map	open the map
+maps/get_map	open the map
+maps/get_map	show me where I am
+maps/get_map	location please
+maps/get_map	locate me
+maps/get_map	locate me on the map
+maps/get_map	find me on the map
+
+maps/get_map	where is [anaphora]it[/anaphora]
+maps/get_map	where is [anaphora]it[/anaphora] on the map
+maps/get_map	show [anaphora]it[/anaphora] on the map
+maps/get_map	find [anaphora]it[/anaphora] on the map
+maps/get_map	show me a map
+maps/get_map	show [anaphora]it[/anaphora] on a map
+
+
+maps/get_directions	get me directions
+maps/get_directions	show me how to get [anaphora]there[/anaphora]
+
+#PATTERNS#
+maps/get_directions	{get_me} directions
+maps/get_directions	{get_me} directions [anaphora]there[/anaphora]
+maps/get_directions	{get_me} directions to [anaphora]there[/anaphora]
+maps/get_directions	{get_me} how to get [anaphora]there[/anaphora]
+maps/get_directions	{get_me} how to get over [anaphora]there[/anaphora]
+maps/get_directions	{get_me} the way
+maps/get_directions	{get_me} map directions
+maps/get_directions	{get_me} map directions to [anaphora]there[/anaphora]
+maps/get_directions	{get_me} map directions to get [anaphora]there[/anaphora]
+maps/get_directions	{get_me} map directions to [destination]{destinations}[/destination]
+maps/get_directions	{get_me} directions to get to [destination]{destinations}[/destination]
+maps/get_directions	{get_me} how to get to [destination]{destinations}[/destination]
+maps/get_directions	{get_me} how to reach [destination]{destinations}[/destination]
+
+maps/get_directions	{please} {get_me} directions
+maps/get_directions	{please} {get_me} directions [anaphora]there[/anaphora]
+maps/get_directions	{please} {get_me} directions to [anaphora]there[/anaphora]
+maps/get_directions	{please} {get_me} how to get [anaphora]there[/anaphora]
+maps/get_directions	{please} {get_me} how to get over [anaphora]there[/anaphora]
+maps/get_directions	{please} {get_me} the way
+maps/get_directions	{please} {get_me} map directions
+maps/get_directions	{please} {get_me} map directions to [anaphora]there[/anaphora]
+maps/get_directions	{please} {get_me} map directions to get [anaphora]there[/anaphora]
+maps/get_directions	{please} {get_me} map directions to [destination]{destinations}[/destination]
+maps/get_directions	{please} {get_me} directions to get to [destination]{destinations}[/destination]
+maps/get_directions	{please} {get_me} how to get to [destination]{destinations}[/destination]
+maps/get_directions	{please} {get_me} how to reach [destination]{destinations}[/destination]
+
+maps/get_map	{get_me} on the map
+maps/get_map	{please} {get_me} on the map
+maps/get_map	{please} {get_me} where it is on the map
+maps/get_map	{please} {get_me} where it is
+
+#get_me#
+find
+get
+show
+show me
+pull up
+get me
+bring up
+I need
+bring me
+
+#please#
+please
+can you
+can you please
+would you
+would you please
+would you kindly
+could you
+could you please
+
+#destinations#catalog=geography/us_cities#

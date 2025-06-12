@@ -1,0 +1,31 @@
+#PATTERNS#
+
+wikipedia/wikihow_search	{prefixes} [query]{queries}[/query]
+
+#prefixes#
+
+how do I
+how do you
+how can I
+how can you
+how could I
+I don't know how to
+teach me how to
+show me how to
+
+#queries#
+use a metal detector
+replace a defective wall box
+change an outlet
+paint a deck
+paint a garage
+apply dry wall spackle
+fix drywall
+fix plumbing
+change out a sink
+change a car battery
+jump start a truck
+tell if I am pregnant
+plant corn
+mow my lawn
+use a post digger

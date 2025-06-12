@@ -1,0 +1,28 @@
+#PATTERNS#
+
+wikipedia/wiki_search	who is [query]{people}[/query]
+wikipedia/wiki_search	who was [query]{people}[/query]
+wikipedia/wiki_search	what is [query]{things}[/query]
+wikipedia/wiki_search	what are [query]{things}[/query]
+wikipedia/wiki_search	search Wikipedia for [query]{things}[/query]
+wikipedia/wiki_search	search Wikipedia for [query]{people}[/query]
+wikipedia/wiki_search	find [query]{things}[/query] on Wikipedia
+wikipedia/wiki_search	find [query]{people}[/query] on Wikipedia
+
+#people#
+Bill Gates
+Michael Jordan
+Charles Barkley
+Christopher Columbus
+Janet Jackson
+Justin Bieber
+
+#things#
+black infinity
+the krebs cycle
+glycolosis
+octane
+the moon
+stem cells
+nickel bromide
+gamelan

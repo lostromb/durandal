@@ -1,0 +1,77 @@
+#STATIC#
+
+joke/tell_a_joke	tell me a joke
+joke/tell_a_joke	tell me something funny
+joke/tell_a_joke	got any jokes
+joke/tell_a_joke	do you know any jokes
+joke/tell_a_joke	do you have any jokes
+joke/tell_a_joke	have any hilarious jokes
+joke/tell_a_joke	tell me a funny joke
+joke/tell_a_joke	tell me a hilarious joke
+joke/tell_a_joke	I hear that you can tell jokes
+joke/tell_a_joke	I want to hear you tell a joke
+joke/tell_a_joke	I want to hear a joke
+joke/tell_a_joke	Cheer me up
+joke/tell_a_joke	Cheer me up with something
+joke/tell_a_joke	tell my your best joke
+joke/tell_a_joke	give me your best joke
+joke/tell_a_joke	a joke
+joke/tell_a_joke	a joke please
+joke/tell_a_joke	a joke, please
+joke/tell_a_joke	a joke tell me a joke
+joke/tell_a_joke	a new joke
+joke/tell_a_joke	make me laugh
+joke/tell_a_joke	make me laugh durandal
+joke/tell_a_joke	make me laugh please
+
+joke/tell_another	got any more?
+joke/tell_another	how about another one
+joke/tell_another	tell me another one
+joke/tell_another	another one
+joke/tell_another	do you have any more?
+joke/tell_another	do you have any more
+joke/tell_another	got any more
+joke/tell_another	any more?
+joke/tell_another	any more
+joke/tell_another	I meant any good jokes
+joke/tell_another	I meant good jokes
+joke/tell_another	I meant funny jokes
+joke/tell_another	I mean any good jokes
+joke/tell_another	I mean good jokes
+joke/tell_another	I mean funny jokes
+joke/tell_another	do you have any good ones
+joke/tell_another	how about some actual good ones
+joke/tell_another	now tell me a good one
+joke/tell_another	now tell me one that's good
+joke/tell_another	now tell me one that's funny
+joke/tell_another	tell me one that's actually funny
+joke/tell_another	how about one that's actually funny
+joke/tell_another	now how about one that's actually funny
+joke/tell_another	ok another one
+joke/tell_another	ok how about another
+joke/tell_another	ok tell me another one
+joke/tell_another	ok do you have any more
+
+joke/feedback_good	ha ha ha ha ha ha
+joke/feedback_good	ha ha ha ha
+joke/feedback_good	ha ha ha
+joke/feedback_good	ha ha
+joke/feedback_good	haha
+joke/feedback_good	very funny
+joke/feedback_good	that's very funny
+joke/feedback_good	that's good
+joke/feedback_good	that's pretty good
+joke/feedback_good	I like that
+
+joke/feedback_bad	not very funny
+joke/feedback_bad	that wasn't funny
+joke/feedback_bad	that wasn't very funny
+joke/feedback_bad	not funny
+joke/feedback_bad	I don't like it
+joke/feedback_bad	I'm not laughing
+joke/feedback_bad	not very funny
+joke/feedback_bad	that's not funny
+joke/feedback_bad	that's not very funny
+
+#REGEX#
+joke/knock_knock	^knock knock\.?$

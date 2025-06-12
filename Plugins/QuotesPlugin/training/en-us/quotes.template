@@ -1,0 +1,39 @@
+#REGEX#
+quotes/find_quotes	^find quotes\.?$
+quotes/find_quotes	^find quotes by (him|her|them)\.?$
+
+#PATTERNS#
+quotes/find_quotes	{get_me} {quotes}
+quotes/find_quotes	{get_me} {quotes} by him
+quotes/find_quotes	{get_me} {quotes} by her
+quotes/find_quotes	{get_me} {quotes} by them
+quotes/find_quotes	{get_me} {quotes} by this person
+quotes/find_quotes	{get_me} {quotes} by that person
+quotes/find_quotes	{get_me} {quotes} by [person]{people}[/person]
+
+#get_me#
+find
+get
+show
+show me
+pull up
+get me
+bring up
+I need
+bring me
+
+#quotes#
+quotes
+famous quotes
+funny quotes
+notable quotes
+quotations
+famous quotations
+funny quotations
+notable quotations
+sayings
+famous sayings
+funny sayings
+notable sayings
+
+#people#catalog=people/notable_people#

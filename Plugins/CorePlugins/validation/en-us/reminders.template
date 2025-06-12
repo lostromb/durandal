@@ -1,0 +1,102 @@
+reminder/set_reminder	create a reminder
+reminder/set_reminder	make a new reminder
+reminder/set_reminder	make a reminder
+reminder/set_reminder	I want you to remind me about something
+reminder/set_reminder	I want to add a reminder
+reminder/set_reminder	I want to create a reminder
+reminder/set_reminder	can you remind me about something
+
+#PATTERNS#
+
+reminder/set_reminder	remind me [phrasing]to[/phrasing] [title]{events_to}[/title]
+reminder/set_reminder	remind me [phrasing]about[/phrasing] [title]{events_about}[/title]
+reminder/set_reminder	I want you to remind me [phrasing]to[/phrasing] [title]{events_to}[/title]
+reminder/set_reminder	I want you to remind me [phrasing]about[/phrasing] [title]{events_about}[/title]
+reminder/set_reminder	would you please remind me [phrasing]to[/phrasing] [title]{events_to}[/title]
+reminder/set_reminder	would you kindly remind me [phrasing]about[/phrasing] [title]{events_about}[/title]
+reminder/set_reminder	remind me [phrasing]to[/phrasing] [title]{events_to}[/title] {time_phrases}
+reminder/set_reminder	can you remind me [phrasing]about[/phrasing] [title]{events_about}[/title] {time_phrases}
+reminder/set_reminder	remind me {time_phrases} [phrasing]to[/phrasing] [title]{events_to}[/title]
+
+#events_to#
+purchase a new light bulb
+look for a realtor
+check the house listings
+fix my bike
+paint the front door
+buy celery
+go to the store
+buy something for my wife
+get some new shoes
+go to Gamestop
+buy more pencils
+finish that painting
+on day off do to Linda's
+fix brakes
+take the trash out
+buy stamps
+follow up on the jobs applied for
+call my mom
+do my homework
+call on swimming lessons
+take Karen to her rehearsals
+look for a book on turtles
+
+#events_about#
+the camping trip
+the diapers in the laundry
+tomorrow's hike
+sale at Smiths
+the pool pump
+our anniversary dinner
+my own baldness
+global warming symposium
+the convention
+april fool's day
+general conference
+family get together
+dinner
+going on vacation
+
+#time_phrases#
+in 5 minutes
+tomorrow
+next week
+at 3 o'clock
+tomorrow at seven
+tomorrow at 7
+tomorrow at 7:00
+today at 6:00
+at 3:00
+in 1 hour
+in 12 hours
+in 60 minutes
+on Monday the 19th of November
+on monday the 19th
+tomorrow
+on Sunday
+on Tuesday next week
+next week on Tuesday
+this weekend
+about twenty days from now
+in about 20 days from today
+on Christmas
+on Easter Sunday
+on the week of the 3rd
+in a week
+on midnight Monday
+on Thursday night
+at midnight today
+today at midnight
+tomorrow morning at 6
+at 6 this evening
+tonight at 1:00 AM
+this morning at 6:00
+at 10:30 a.m.
+at 5
+at 9 am Wednesday
+at 9 pm Wednesday
+in 10 hours
+in half an hour
+in an hour
+at lunch

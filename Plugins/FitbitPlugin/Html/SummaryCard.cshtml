@@ -1,0 +1,155 @@
+<div class="container"> 
+  <div class="container-background"></div>
+  <div class="container-border">
+    <div class="top_message_container">
+      <div class="logo"> 
+        <img src="https://botletstorage.blob.core.windows.net/static-template-images/fitbit%20ic_fitbit_logo.png">
+      </div>
+      <div class="top_message">
+        <p class="title">{{entity.title}}</p>
+        <p class="subtitle">{{entity.subtitle}}</p>
+      </div>
+    </div>
+    <hr/>
+    <div class="data_container">
+      <div class="steps_container">
+        <div *ngIf="entity.steps_percent < 100" class="steps_circle c100 p{{entity.steps_percent}}">
+          <div class="slice">
+            <div class="bar"></div>
+            <div class="fill"></div>
+          </div>
+          <div *ngIf="entity.steps == 0"> 
+            <img src="https://botletstorage.blob.core.windows.net/static-template-images/fitbit%20ic_steps_50.png">
+          </div>
+          <div *ngIf="entity.steps > 0"> 
+            <img src="https://botletstorage.blob.core.windows.net/static-template-images/fitbit%20ic_steps_50.png">
+          </div>
+        </div>
+        <div *ngIf="entity.steps_percent == 100" class="steps_circle c100 p100 green">
+          <div class="slice">
+            <div class="bar"></div>
+            <div class="fill"></div>
+          </div>
+          <img src="https://botletstorage.blob.core.windows.net/static-template-images/fitbit%20ic_steps_goal_50.png">
+        </div>
+        <div class="steps">
+          <p class="steps_data">
+            <span class="steps_number">{{entity.steps}}</span>
+            <span class="steps_name">steps</span>
+          </p>
+        </div>
+      </div>
+      <div class="bottom_container">
+        <div class="exercise_container">
+          <div class="exercise_icon">
+            <div *ngIf="entity.floors_percent < 100" class="small_exercise_circle c100 p{{entity.floors_percent}} small">
+              <div class="slice">
+                <div class="bar"></div>
+                <div class="fill"></div>
+              </div>
+              <div *ngIf="entity.floors == 0"> 
+                <img src="https://botletstorage.blob.core.windows.net/static-template-images/fitbit%20ic_floors_30.png">
+              </div>
+              <div *ngIf="entity.floors > 0"> 
+                <img src="https://botletstorage.blob.core.windows.net/static-template-images/fitbit%20ic_floors_30.png">
+              </div>
+            </div>
+            <div *ngIf="entity.floors_percent == 100" class="small_exercise_circle c100 p100 small green">
+              <div class="slice">
+                <div class="bar"></div>
+                <div class="fill"></div>
+              </div>
+              <img src="https://botletstorage.blob.core.windows.net/static-template-images/fitbit%20ic_floors_goal_30.png">
+            </div>
+          </div>
+          <div class="exercise_data">
+            <p class="exercise_number">{{entity.floors}}</p>
+            <p class="exercise_type">floors</p>
+          </div>
+        </div>
+        <div class="exercise_container">
+          <div class="exercise_icon">
+            <div *ngIf="entity.distance_percent < 100" class="small_exercise_circle c100 p{{entity.distance_percent}} small">
+              <div class="slice">
+                <div class="bar"></div>
+                <div class="fill"></div>
+              </div>
+              
+              <div *ngIf="entity.distance_val == 0"> 
+                <img src="https://botletstorage.blob.core.windows.net/static-template-images/fitbit%20ic_miles_30.png">
+              </div>
+              <div *ngIf="entity.distance_val > 0"> 
+                <img src="https://botletstorage.blob.core.windows.net/static-template-images/fitbit%20ic_miles_30.png">
+              </div>
+            </div>
+            <div *ngIf="entity.distance_percent == 100" class="small_exercise_circle c100 p100 small green">
+              <div class="slice">
+                <div class="bar"></div>
+                <div class="fill"></div>
+              </div>
+              <img src="https://botletstorage.blob.core.windows.net/static-template-images/fitbit%20ic_miles_goal_30.png">
+            </div>
+          </div>
+          <div class="exercise_data">
+            <p class="exercise_number">{{entity.distance}}</p>
+            <p class="exercise_type">{{entity.distance_unit}}</p>
+          </div>
+        </div>
+        <div class="exercise_container">
+          <div class="exercise_icon">
+            <div *ngIf="entity.calories_percent < 100" class="small_exercise_circle c100 p{{entity.calories_percent}} small">
+              <div class="slice">
+                <div class="bar"></div>
+                <div class="fill"></div>
+              </div>
+              <div *ngIf="entity.calories_burned == 0"> 
+                <img src="https://botletstorage.blob.core.windows.net/static-template-images/fitbit%20ic_calories_30.png">
+              </div>
+              <div *ngIf="entity.calories_burned > 0"> 
+                <img src="https://botletstorage.blob.core.windows.net/static-template-images/fitbit%20ic_calories_30.png">
+              </div>
+            </div>
+            <div *ngIf="entity.calories_percent == 100" class="small_exercise_circle c100 p100 small green">
+              <div class="slice">
+                <div class="bar"></div>
+                <div class="fill"></div>
+              </div>
+              <img src="https://botletstorage.blob.core.windows.net/static-template-images/fitbit%20ic_calories_goal_30.png">
+            </div>
+          </div>
+          <div class="exercise_data">
+            <p class="exercise_number">{{entity.calories_burned}}</p>
+            <p class="exercise_type">calories</p>
+          </div>
+        </div>
+        <div class="exercise_container">
+          <div class="exercise_icon">
+            <div *ngIf="entity.minutes_percent < 100" class="small_exercise_circle c100 p{{entity.minutes_percent}} small">
+              <div class="slice">
+                <div class="bar"></div>
+                <div class="fill"></div>
+              </div>
+              <div *ngIf="entity.active_minutes == 0"> 
+                <img src="https://botletstorage.blob.core.windows.net/static-template-images/fitbit%20ic_calories_30.png">
+              </div>
+              <div *ngIf="entity.active_minutes > 0"> 
+                <img src="https://botletstorage.blob.core.windows.net/static-template-images/fitbit%20ic_calories_30.png">
+              </div>
+            </div>
+            <div *ngIf="entity.minutes_percent == 100" class="small_exercise_circle c100 p100 small green">
+              <div class="slice">
+                <div class="bar"></div>
+                <div class="fill"></div>
+              </div>
+              <img src="https://botletstorage.blob.core.windows.net/static-template-images/fitbit%20ic_calories_goal_30.png">
+            </div>
+          </div>
+          <div class="exercise_data">
+            <p class="exercise_number">{{entity.active_minutes}}</p>
+            <p class="exercise_type">minutes</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

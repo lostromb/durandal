@@ -1,0 +1,47 @@
+#STATIC#
+
+color/favorite_color	what is your favorite color?
+color/favorite_color	what's your favorite color?
+color/favorite_color	what's your favorite color
+color/favorite_color	what is your favorite color.
+color/favorite_color	do you have a favorite color?
+color/favorite_color	tell me your favorite color
+
+color/get_color_suggestion	what color should I dye my hair
+color/get_color_suggestion	what color should I paint my house
+color/get_color_suggestion	what color should I paint my bedroom
+color/get_color_suggestion	what color should I paint my room
+color/get_color_suggestion	what color should I paint my wall
+color/get_color_suggestion	what color should I paint my car
+color/get_color_suggestion	which color should I dye my hair
+color/get_color_suggestion	which color should I paint my house
+color/get_color_suggestion	which color should I paint my bedroom
+color/get_color_suggestion	which color should I paint my room
+color/get_color_suggestion	which color should I paint my wall
+color/get_color_suggestion	which color should I paint my car
+color/get_color_suggestion	give me a good color
+color/get_color_suggestion	I need a color
+color/get_color_suggestion	give me a color
+color/get_color_suggestion	I need a new color
+
+#PATTERNS#
+
+color/get_color_info	what color is [color]{colors}[/color]
+color/get_color_info	what color is [color]{colors}[/color]?
+color/get_color_info	what is [color]{colors}[/color]
+color/get_color_info	what is [color]{colors}[/color]?
+color/get_color_info	what does [color]{colors}[/color] look like
+color/get_color_info	what does [color]{colors}[/color] look like?
+
+#colors#
+red
+green
+Navy blue
+Ochre
+burnt sienna
+Viridian
+magenta
+fuschia
+wine red
+argent
+chartreuse

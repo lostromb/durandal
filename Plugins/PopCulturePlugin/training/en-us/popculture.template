@@ -1,0 +1,33 @@
+#STATIC#
+popculture/insult	you're terrible at this
+popculture/insult	you're terrible
+popculture/insult	you suck
+popculture/insult	awful
+popculture/insult	you're awful
+popculture/insult	I hate you
+popculture/insult	hate you
+
+#PATTERNS#
+popculture/people_opinions	{opinion_prefix} [person]{famous_people}[/person]
+popculture/people_opinions	{opinion_prefix} [person]{famous_people}[/person]?
+
+#opinion_prefix#
+what do you think about
+what is your opinion about
+what's your opinion about
+what do you think of
+what is your opinion of
+what's your opinion of
+
+#famous_people#
+Barack Obama
+Obama
+Bruce Jenner
+Kaitlyn Jenner
+Kim Kardashian
+George Bush
+Donald Trump
+Hillary Clinton
+Bernie Sanders
+Bill Gates
+Hulk Hogan

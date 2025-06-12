@@ -1,0 +1,92 @@
+﻿body
+{
+	margin: 0px;
+	padding: 0px;
+}
+
+/* Scale font sizes and margins based on screen size */
+@media screen and (max-width: 360px)
+{
+	.smallFont
+	{
+		font-size: 8pt;
+	}
+}
+@media screen and (min-width: 361px) and (max-width: 800px)
+{
+	.smallFont
+	{
+		font-size: 9pt;
+	}
+}
+@media screen and (min-width: 801px) and (max-width: 1200px)
+{
+	.smallFont
+	{
+		font-size: 10pt;
+	}
+}
+@media screen and (min-width: 1201px)
+{
+	.smallFont
+	{
+		font-size: 12pt;
+	}
+}
+
+#centerDiv
+{
+	position: relative;
+	left: 50%;
+	top: 0px;
+	background-color: black;
+	width: 1px;
+	height: 1px;
+}
+#containerDiv
+{
+	text-align: center;
+	width: 300px;
+	height: 500px;
+	position: relative;
+	left: -150px;
+	top: 0px;
+}
+
+#logoImgNoGlow
+{
+	width: 300px;
+	height: 300px;
+}
+
+#logoImg
+{
+	width: 300px;
+	height: 300px;
+	margin-bottom: -300px;
+	display: block;
+}
+
+#glowImg
+{
+	width: 300px;
+	height: 300px;
+	opacity: 0.3;
+	display: block;
+}
+
+#authIndicator
+{
+	position:fixed;
+	left:0px;
+	top: 0px;
+}
+
+#versionSpan
+{
+	position: fixed;
+	right: 0px;
+	top: 0px;
+	font-size: 7pt;
+	color: #555;
+}

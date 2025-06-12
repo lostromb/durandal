@@ -1,0 +1,36 @@
+#REGEX#
+skype/make_call	^call (?<contactname>.+?) on Skype
+skype/make_call	^call (?<contactname>.+?) with Skype
+
+#PATTERNS#
+skype/make_call	{prefixes} [contactname]{firstnames}[/contactname]
+skype/make_call	{prefixes} [contactname]{firstnames}[/contactname] on {skype}
+skype/make_call	{prefixes} [contactname]{firstnames}[/contactname] with {skype}
+skype/make_call	{prefixes} [contactname]{firstnames} {lastnames}[/contactname]
+skype/make_call	{prefixes} [contactname]{firstnames} {lastnames}[/contactname] on {skype}
+skype/make_call	{prefixes} [contactname]{firstnames} {lastnames}[/contactname] with {skype}
+
+#skype#
+skype
+Skype
+
+#prefixes#
+call
+call up
+Skype
+Skype call
+skype
+skype call
+[calltype]video[/calltype] call
+[calltype]video[/calltype] call with
+start a call with
+started call with
+start a Skype call with
+start a skype call with
+started Skype call with
+started [calltype]video[/calltype] call with
+start a [calltype]video[/calltype] call with
+
+#firstnames#catalog=people/first_names#
+
+#lastnames#catalog=people/last_names#

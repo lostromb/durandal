@@ -1,0 +1,49 @@
+; INTENTS AND SLOTS
+; local_time_query: The user wants to know the current time at their current location
+; local_day_query: The user wants to know the current date at their current location
+; start_timer: Starts a singleton timer, like a kitchen timer or something
+; stop_timer: Stop a previously set timer
+; holiday_query: The user wants to know date information about a particular holiday
+;	[holiday] The holiday in question
+; world_time_query: the user wants to know the time in an arbitrary place in the world
+;	[location] The location in question
+; weather_cross_domain: Follow up a world time query with a weather query for the same location
+
+#STATIC#
+
+time/local_time_query	¿cuál es el tiempo
+time/local_time_query	¿cuál es el tiempo?
+time/local_time_query	cuál es el tiempo
+time/local_time_query	¿qué hora es?
+time/local_time_query	qué hora es
+time/local_time_query	Qué horas son
+time/local_time_query	¿qué hora es
+time/local_time_query	sabes qué hora es
+time/local_time_query	¿Sabes qué hora es?
+time/local_time_query	qué hora es?
+
+time/local_day_query	¿qué día es?
+time/local_day_query	qué día es
+time/local_day_query	¿qué día es
+time/local_day_query	sabes qué día es
+time/local_day_query	¿Sabes qué día es?
+time/local_day_query	qué día es?
+time/local_day_query	¿Sabes qué día es
+time/local_day_query	¿Cuál es la fecha de hoy
+time/local_day_query	cuál es la fecha de hoy?
+time/local_day_query	¿Cuál es la fecha de hoy?
+
+#PATTERNS#
+
+time/world_time_query	¿Qué hora es en [location]{locations}[/location]
+time/world_time_query	¿qué hora es en [location]{locations}[/location]?
+time/world_time_query	hora local en [location]{locations}[/location]
+time/world_time_query	cuál es la hora local en [location]{locations}[/location]
+
+#whats#
+qué es
+como es
+
+#locations#catalog=geography/us_cities;geography/world_cities;geography/world_countries#
+
+#holidays#catalog=common/us_holidays#

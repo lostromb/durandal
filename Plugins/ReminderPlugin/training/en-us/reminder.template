@@ -1,0 +1,29 @@
+reminder/set_reminder	create a reminder
+reminder/set_reminder	make a new reminder
+reminder/set_reminder	make a reminder
+reminder/set_reminder	I want you to remind me about something
+reminder/set_reminder	I want to add a reminder
+reminder/set_reminder	I want to create a reminder
+reminder/set_reminder	can you remind me about something
+
+#PATTERNS#
+
+reminder/set_reminder	remind me [phrasing]to[/phrasing] [title]{events_to}[/title]
+reminder/set_reminder	remind me [phrasing]about[/phrasing] [title]{events_about}[/title]
+reminder/set_reminder	I want you to remind me [phrasing]to[/phrasing] [title]{events_to}[/title]
+reminder/set_reminder	I want you to remind me [phrasing]about[/phrasing] [title]{events_about}[/title]
+reminder/set_reminder	would you please remind me [phrasing]to[/phrasing] [title]{events_to}[/title]
+reminder/set_reminder	would you kindly remind me [phrasing]about[/phrasing] [title]{events_about}[/title]
+reminder/set_reminder	remind me [phrasing]to[/phrasing] [title]{events_to}[/title] [reminder_time]{time_phrases}[/reminder_time]
+reminder/set_reminder	can you remind me [phrasing]about[/phrasing] [title]{events_about}[/title] [reminder_time]{time_phrases}[/reminder_time]
+reminder/set_reminder	remind me [reminder_time]{time_phrases}[/reminder_time] [phrasing]to[/phrasing] [title]{events_to}[/title]
+
+reminder/date_time_input	[reminder_time]{time_phrases}[/reminder_time]
+
+reminder/title_input	[title]{events_to}[/title]
+
+#events_to#catalog=custom/reminder/reminder_to#
+
+#events_about#catalog=custom/reminder/reminder_about#
+
+#time_phrases#catalog=time/time_expressions;time/date_expressions#

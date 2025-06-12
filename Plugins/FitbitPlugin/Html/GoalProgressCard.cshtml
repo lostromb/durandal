@@ -1,0 +1,94 @@
+<div class="container"> 
+  <div class="container-background"></div>
+  <div class="container-border">
+    <div class="top_message_container">
+      <div class="logo"> 
+        <img src="https://botletstorage.blob.core.windows.net/static-template-images/fitbit%20ic_fitbit_logo.png">
+      </div>
+      <div class="top_message">
+        <p class="title">Fitbit</p>
+        <p class="subtitle">Your goals</p>
+      </div>
+    </div>
+    <hr/>
+    <div class="data_container">
+      <div class="steps_container">
+        <div class="steps_circle c100 p100">
+          <div class="slice">
+            <div class="bar"></div>
+            <div class="fill"></div>
+          </div>
+          <img src="https://botletstorage.blob.core.windows.net/static-template-images/fitbit%20ic_steps_50.png">
+        </div>
+        <div class="steps">
+          <p class="steps_data">
+            <span class="steps_number">{{entity.goal_steps}}</span>
+            <span class="steps_name">steps</span>
+          </p>
+        </div>
+      </div>
+      <div class="bottom_container">
+        <div class="exercise_container">
+          <div class="exercise_icon">
+            <div class="small_exercise_circle c100 p100 small">
+              <div class="slice">
+                <div class="bar"></div>
+                <div class="fill"></div>
+              </div>
+              <img src="https://botletstorage.blob.core.windows.net/static-template-images/fitbit%20ic_floors_30.png">
+            </div>
+          </div>
+          <div class="exercise_data">
+            <p class="exercise_number">{{entity.goal_floors}}</p>
+            <p class="exercise_type">floors</p>
+          </div>
+        </div>
+        <div class="exercise_container">
+          <div class="exercise_icon">
+            <div class="small_exercise_circle c100 p100 small">
+              <div class="slice">
+                <div class="bar"></div>
+                <div class="fill"></div>
+              </div>
+              <img src="https://botletstorage.blob.core.windows.net/static-template-images/fitbit%20ic_miles_30.png">
+            </div>
+          </div>
+          <div class="exercise_data">
+            <p class="exercise_number">{{entity.goal_distance}}</p>
+            <p class="exercise_type">{{entity.distance_unit}}</p>
+          </div>
+        </div>
+        <div class="exercise_container">
+          <div class="exercise_icon">
+            <div class="small_exercise_circle c100 p100 small">
+              <div class="slice">
+                <div class="bar"></div>
+                <div class="fill"></div>
+              </div>
+              <img src="https://botletstorage.blob.core.windows.net/static-template-images/fitbit%20ic_calories_30.png">
+            </div>
+          </div>
+          <div class="exercise_data">
+            <p class="exercise_number">{{entity.goal_calories}}</p>
+            <p class="exercise_type">calories</p>
+          </div>
+        </div>
+        <div class="exercise_container">
+          <div class="exercise_icon">
+            <div class="small_exercise_circle c100 p100 small">
+              <div class="slice">
+                <div class="bar"></div>
+                <div class="fill"></div>
+              </div>
+              <img src="https://botletstorage.blob.core.windows.net/static-template-images/fitbit%20ic_calories_30.png">
+            </div>
+          </div>
+          <div class="exercise_data">
+            <p class="exercise_number">60</p>
+            <p class="exercise_type">minutes</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

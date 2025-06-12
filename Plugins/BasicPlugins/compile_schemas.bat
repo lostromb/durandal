@@ -1,0 +1,1 @@
+..\..\target\OntologySchemaTransformer.exe -compile -in "..\..\Data\Schemas\SchemaDotOrg" -out ".\SchemaDotOrg" -namespace "Durandal.Plugins.Basic.SchemaDotOrg" -visibility internal -select http://schema.org/Place http://schema.org/GeoCoordinates http://schema.org/GeoCircle http://schema.org/GeoShape http://schema.org/PostalAddress http://schema.org/URL

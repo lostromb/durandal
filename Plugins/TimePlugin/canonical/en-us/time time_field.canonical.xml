@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<grammar version="1.0">
+  <regex id="matcher" expression=".+" />
+  
+  <normalization_rule id="normalizer" strict="true">
+    <item input="time" output="TIME" />
+	<item input="day" output="DATE" />
+	<item input="date" output="DATE" />
+	<item input="day of week" output="DAY_OF_WEEK" />
+	<item input="day of month" output="DAY_OF_MONTH" />
+	<item input="day of the week" output="DAY_OF_WEEK" />
+	<item input="day of the month" output="DAY_OF_MONTH" />
+	<item input="daylight saving" output="DAYLIGHT_SAVINGS" />
+	<item input="daylight savings" output="DAYLIGHT_SAVINGS" />
+	<item input="daylight savings'" output="DAYLIGHT_SAVINGS" />
+	<item input="daylight's savings" output="DAYLIGHT_SAVINGS" />
+	<item input="daylight saving time" output="DAYLIGHT_SAVINGS" />
+	<item input="daylight savings time" output="DAYLIGHT_SAVINGS" />
+	<item input="daylight savings' time" output="DAYLIGHT_SAVINGS" />
+	<item input="DST" output="DAYLIGHT_SAVINGS" />
+	<item input="time change" output="DAYLIGHT_SAVINGS" />
+	<item input="times change" output="DAYLIGHT_SAVINGS" />
+	<item input="clock change" output="DAYLIGHT_SAVINGS" />
+	<item input="clocks change" output="DAYLIGHT_SAVINGS" />
+  </normalization_rule>
+  
+  <rule id="canonicalized_value">
+    <item><ruleref uri="#matcher" /><normalizer>normalizer</normalizer></item>
+  </rule>
+
+</grammar>

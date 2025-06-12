@@ -1,0 +1,241 @@
+﻿@charset "utf-8";
+
+/* Load the font face */
+@font-face
+{
+  font-family: 'Segoe';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Segoe UI Light'), local('SegoeUI-Light'), local('Segoe WP Light'), local('SegoeWP-Light');
+}
+
+/* Scale font sizes and margins based on screen size */
+/* Small screen, landscape + portrait */
+@media screen and (max-height: 400px) and (orientation: landscape)
+{
+	.size1
+	{
+		font-size: 34pt;
+	}
+	.size2
+	{
+		font-size: 22pt;
+	}
+	.size3
+	{
+		font-size: 18pt;
+	}
+	.size4
+	{
+		font-size: 10pt;
+	}
+}
+@media screen and (max-width: 400px) and (orientation: portrait)
+{
+	.size1
+	{
+		font-size: 34pt;
+	}
+	.size2
+	{
+		font-size: 22pt;
+	}
+	.size3
+	{
+		font-size: 18pt;
+	}
+	.size4
+	{
+		font-size: 10pt;
+	}
+}
+/* Medium (Phone-sized) screen, landscape + portrait */
+@media screen and (min-height: 401px) and (max-height: 600px) and (orientation: landscape)
+{
+	.size1
+	{
+		font-size: 52pt;
+	}
+	.size2
+	{
+		font-size: 34pt;
+	}
+	.size3
+	{
+		font-size: 24pt;
+	}
+	.size4
+	{
+		font-size: 12pt;
+	}
+}
+@media screen and (min-width: 401px) and (max-width: 600px) and (orientation: portrait)
+{
+	.size1
+	{
+		font-size: 52pt;
+	}
+	.size2
+	{
+		font-size: 34pt;
+	}
+	.size3
+	{
+		font-size: 24pt;
+	}
+	.size4
+	{
+		font-size: 12pt;
+	}
+}
+/* Medium-large (tablet-sized) screen, landscape and portrait */
+@media screen and (min-height: 601px) and (max-height: 900px) and (orientation: landscape)
+{
+	.size1
+	{
+		font-size: 80pt;
+	}
+	.size2
+	{
+		font-size: 52pt;
+	}
+	.size3
+	{
+		font-size: 34pt;
+	}
+	.size4
+	{
+		font-size: 20pt;
+	}
+}
+@media screen and (min-width: 601px) and (max-width: 900px) and (orientation: portrait)
+{
+	.size1
+	{
+		font-size: 80pt;
+	}
+	.size2
+	{
+		font-size: 52pt;
+	}
+	.size3
+	{
+		font-size: 34pt;
+	}
+	.size4
+	{
+		font-size: 20pt;
+	}
+}
+/* Large screen, landscape + portrait */
+@media screen and (min-height: 901px) and (max-height: 1200px) and (orientation: landscape)
+{
+	.size1
+	{
+		font-size: 96pt;
+	}
+	.size2
+	{
+		font-size: 52pt;
+	}
+	.size3
+	{
+		font-size: 34pt;
+	}
+	.size4
+	{
+		font-size: 20pt;
+	}
+}
+@media screen and (min-width: 901px) and (max-width: 1200px) and (orientation: portrait)
+{
+	.size1
+	{
+		font-size: 96pt;
+	}
+	.size2
+	{
+		font-size: 52pt;
+	}
+	.size3
+	{
+		font-size: 34pt;
+	}
+	.size4
+	{
+		font-size: 20pt;
+	}
+}
+/* Very large screens */
+@media screen and (min-height: 1201px) and (orientation: landscape)
+{
+	.size1
+	{
+		font-size: 120pt;
+	}
+	.size2
+	{
+		font-size: 64pt;
+	}
+	.size3
+	{
+		font-size: 42pt;
+	}
+	.size4
+	{
+		font-size: 30pt;
+	}
+}
+@media screen and (min-width: 1201px) and (orientation: portrait)
+{
+	.size1
+	{
+		font-size: 120pt;
+	}
+	.size2
+	{
+		font-size: 64pt;
+	}
+	.size3
+	{
+		font-size: 42pt;
+	}
+	.size4
+	{
+		font-size: 30pt;
+	}
+}
+
+/* remove padding from body frame */
+body
+{
+	padding: 0px;
+	margin: 0px;
+}
+
+.screenPadding
+{
+	padding: 8px;
+}
+
+.globalFontStyle
+{
+	font-family: "Segoe", "Segoe UI Light", "Segoe WP Light", "Segoe UI", "Segoe WP", "Helvetica CE 35 Thin", "Arial Narrow", sans-serif;
+}
+
+.buttonDiv
+{
+	display: inline-block;
+	padding: 0px 30px 4px 30px;
+}
+
+.featureImg
+{
+	max-width: 100%;
+	max-height: 400px
+}
+
+.hiddenLink:link    {text-decoration:none}
+.hiddenLink:visited {text-decoration:none}
+.hiddenLink:hover   {text-decoration:none}
+.hiddenLink:active  {text-decoration:none}

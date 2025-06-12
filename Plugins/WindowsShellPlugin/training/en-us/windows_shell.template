@@ -1,0 +1,73 @@
+windows_shell/lock_screen	lock the screen
+windows_shell/lock_screen	lock my screen
+windows_shell/lock_screen	lock my computer
+windows_shell/lock_screen	lock the computer
+windows_shell/lock_screen	lock this computer
+windows_shell/lock_screen	lock my work station
+windows_shell/lock_screen	locked computer
+windows_shell/lock_screen	locked my computer
+windows_shell/lock_screen	locked work station
+windows_shell/lock_screen	secure the screen
+windows_shell/lock_screen	secure my screen
+windows_shell/lock_screen	secure my computer
+windows_shell/lock_screen	secure the computer
+windows_shell/lock_screen	secure this computer
+windows_shell/lock_screen	secure my work station
+windows_shell/lock_screen	i'm heading out
+windows_shell/lock_screen	i'm leaving
+windows_shell/lock_screen	i'm leaving now
+windows_shell/suspend_computer	go to sleep
+windows_shell/suspend_computer	go to bed
+windows_shell/suspend_computer	put the computer to sleep
+windows_shell/suspend_computer	put computer to sleep
+windows_shell/suspend_computer	put the computer to rest
+windows_shell/suspend_computer	put computer to rest
+windows_shell/suspend_computer	suspend this computer
+windows_shell/suspend_computer	suspend the computer
+windows_shell/suspend_computer	suspend the work station
+windows_shell/suspend_computer	suspend this work station
+windows_shell/shutdown_computer	shutdown
+windows_shell/shutdown_computer	shut down
+windows_shell/shutdown_computer	shut down the computer
+windows_shell/shutdown_computer	shutdown the computer
+windows_shell/shutdown_computer	turn off the computer
+windows_shell/shutdown_computer	shut down this computer
+windows_shell/shutdown_computer	shutdown this computer
+windows_shell/shutdown_computer	turn off this computer
+windows_shell/take_screenshot	take a screenshot
+windows_shell/take_screenshot	take a picture of the desktop
+windows_shell/take_screenshot	capture a screenshot
+windows_shell/take_screenshot	take screenshot
+windows_shell/take_screenshot	capture the screen
+windows_shell/take_screenshot	take a picture of the screen
+windows_shell/take_screenshot	take a screen shot
+windows_shell/take_screenshot	capture a screen shot
+windows_shell/take_screenshot	capture the desktop
+windows_shell/take_screenshot	take a picture of the desktop
+windows_shell/take_screenshot	take a picture of the desk top
+windows_shell/take_screenshot	take a shot of the screen
+
+#PATTERNS#
+windows_shell/launch_app	{prefixes} [appname]{appnames}[/appname]
+windows_shell/launch_app	{prefixes} [appname]{appnames}[/appname] {suffixes}
+; windows_shell/launch_app	[appname]{appnames}[/appname]
+; windows_shell/launch_app	[appname]{appnames}[/appname] {suffixes}
+
+#prefixes#
+would you kindly start
+can you please start
+can you please start up
+can you please launch
+start
+startup
+start up
+launch
+open
+fire up
+open up
+
+#suffixes#
+for me
+please
+
+#appnames#catalog=computer/application_names#

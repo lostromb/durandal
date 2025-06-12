@@ -1,0 +1,145 @@
+#REGEX#
+smartthings/change_state	^turn the (?<device_name>.+) (?<device_type>{{alldevicetypes}}) (?<state>off|on)[\.]?$
+smartthings/change_state	^turn (?<state>off|on) the (?<device_name>.+) (?<device_type>{{alldevicetypes}})[\.]?$
+
+; these ones don't mention a device name - use default
+smartthings/change_state	^(turn the |switch the )?(?<device_type>light|lights|fan) (?<state>off|on)[\.]?$
+smartthings/change_state	^(turn the |switch the )?(?<device_type>light|lights|fan) (?<state>off|on) (in|on) the (?<device_name>.+)[\.]?$
+
+#PATTERNS#
+; Change state by device type (the location must be inferred)
+smartthings/change_state	{turn} the [device_type]{alldevicetypes}[/device_type] [state]{state}[/state]
+smartthings/change_state	{turn} [state]{state}[/state] the [device_type]{alldevicetypes}[/device_type]
+smartthings/change_state	{turn} the [device_type]{alldevicetypes}[/device_type] [state]{state}[/state] {inhere}
+smartthings/change_state	{turn} [state]{state}[/state] the [device_type]{alldevicetypes}[/device_type] {inhere}
+
+; Change state by room and optional scope
+smartthings/change_state	{turn} [state]{state}[/state] {mythe} [location]{room}[/location] [device_type]{alldevicetypes}[/device_type]
+smartthings/change_state	{turn} {mythe} [location]{room}[/location] [device_type]{alldevicetypes}[/device_type] [state]{state}[/state]
+smartthings/change_state	{turn} [state]{state}[/state] [scope]all[/scope] {mythe} [location]{room}[/location] [device_type]{devicetypes_pl}[/device_type]
+smartthings/change_state	{turn} [scope]all[/scope] {mythe} [location]{room}[/location] [device_type]{devicetypes_pl}[/device_type] [state]{state}[/state]
+smartthings/change_state	{turn} the [device_type]{alldevicetypes}[/device_type] [state]{state}[/state] in the [location]{room}[/location]
+smartthings/change_state	{turn} [state]{state}[/state] the [device_type]{alldevicetypes}[/device_type] on the [location]{room}[/location]
+
+; Specific formulations for dimmer devices
+smartthings/change_state	{canyou} set the [device_name]{room}[/device_name] [device_type]{devicetypes_si}[/device_type] to [value]{values}[/value]%
+smartthings/change_state	{canyou} set the [device_name]{room}[/device_name] [device_type]{devicetypes_si}[/device_type] to [value]{values}[/value] percent
+smartthings/change_state	{canyou} dim the [device_name]{room}[/device_name] [device_type]{devicetypes_si}[/device_type] to [value]{values}[/value]%
+smartthings/change_state	{canyou} dim the [device_name]{room}[/device_name] [device_type]{devicetypes_si}[/device_type] to [value]{values}[/value] percent
+smartthings/change_state	{turn} the [device_name]{room}[/device_name] [device_type]{devicetypes_si}[/device_type] to [value]{values}[/value]%
+smartthings/change_state	{turn} the [device_name]{room}[/device_name] [device_type]{devicetypes_si}[/device_type] to [value]{values}[/value] percent
+
+; Query state by device name
+; todo: doesn't handle "did I leave the fan on", since it scopes by rooms instead of device type
+smartthings/query_state	{arethe} [location]{room}[/location] [device_type]{alldevicetypes}[/device_type] [state]{state}[/state]
+smartthings/query_state	{arethe} [location]{room}[/location] [device_type]{alldevicetypes}[/device_type] [state]{state}[/state]?
+smartthings/query_state	{arethe} [device_type]{alldevicetypes}[/device_type] [state]{state}[/state] in the [location]{room}[/location] 
+smartthings/query_state	{arethe} [device_type]{alldevicetypes}[/device_type] [state]{state}[/state] in the [location]{room}[/location]?
+smartthings/query_state	{checkif} the [location]{room}[/location] [device_type]{devicetypes_si}[/device_type] is [state]{state}[/state]
+smartthings/query_state	{checkif} the [location]{room}[/location] [device_type]{devicetypes_pl}[/device_type] are [state]{state}[/state]
+
+#canyou#
+can you
+could you 
+please
+could you please
+can you please
+
+#turn#
+turn
+can you turn
+could you turn
+please turn
+
+#arethe#
+is the
+are the
+did I leave the
+did I leave my
+
+#state#
+on
+off
+
+#mythe#
+my
+the
+
+#inhere#
+in here
+in this room
+
+#checkif#
+can you check if
+check if
+check whether
+tell me if
+can you tell me if
+make sure that
+
+#alldevicetypes#
+light
+fan
+lights
+outlet
+outlets
+sprinkler
+sprinklers
+lamp
+lamps
+
+#devicetypes_si#
+light
+fan
+outlet
+sprinkler
+lamp
+
+#devicetypes_pl#
+lights
+outlets
+sprinklers
+lamps
+
+#values#
+5
+10
+25
+100
+five
+ten
+twenty
+
+#room#
+living room
+bedroom
+office
+home
+kitchen
+driveway
+main room
+family room
+hall
+garage
+work room
+sewing room
+upstairs hall
+downstairs bathroom
+bathroom
+guest bedroom
+guest bathroom
+master bathroom
+front porch
+inside
+house
+outside
+downstairs
+back yard
+upstairs
+hallway
+master bedroom
+night stand
+nightstand
+back patio
+patio
+office

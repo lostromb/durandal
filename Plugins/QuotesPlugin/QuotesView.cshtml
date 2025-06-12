@@ -1,0 +1,20 @@
+﻿@var IList<string> Quotes
+@var string AuthorName
+@namespace Durandal.Plugins.Quotes
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <link href="/views/quotes/quotes.css" rel="stylesheet" type="text/css">
+    <link href="/views/common/flexbox.css" rel="stylesheet" type="text/css">
+    <title>QuotesDaddy</title>
+</head>
+<body class="globalFontStyle">
+    <span class="title">Quotes by ${AuthorName}</span><br/>
+    <for each='string quote in Quotes'>
+        <p class="quote"><span class="oq">&ldquo;</span>${quote}<span class="oq">&rdquo;</span></p>
+        <br/>
+    </for>
+</body>
+</html>

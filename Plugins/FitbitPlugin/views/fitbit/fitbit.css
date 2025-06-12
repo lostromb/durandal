@@ -1,0 +1,227 @@
+body {
+    background-color: #00B0B9;
+}
+
+@font-face {
+font-family: "Proxima Nova";
+src: url('https://botletstorage.blob.core.windows.net/static-template-images/fitbit_ProximaNova-Reg.otf');
+}
+
+@font-face {
+font-family: "Proxima Nova Light";
+src: url('https://botletstorage.blob.core.windows.net/static-template-images/fitbit_ProximaNova-Light.otf');
+}
+
+@font-face {
+font-family: "Proxima Nova Semibold";
+src: url('https://botletstorage.blob.core.windows.net/static-template-images/fitbit_ProximaNova-Sbold.otf');
+}
+
+.container {
+    width:500px;
+    height:auto;
+    position:relative;
+
+}
+
+.container-border {
+    height:100%;
+    position:relative;
+    padding: 1px;
+}
+.container-background {
+    background-color: #ffffff;
+    opacity:1;
+    height:100%;
+    width:100%;
+    position:absolute;
+}
+
+
+p {
+    text-align: center;
+    font-family: 'Proxima Nova', 'Segoe UI', 'helvetica';
+    color:#454F5E;
+    font-style:normal;
+    font-size: 20px;
+}
+
+
+hr {
+    border-style: solid;
+    color:#E5E5E5;
+    opacity: 1;
+    width: 99%;
+margin:0px;
+}
+
+
+.logo {
+    float:left;
+    width: 30px;
+    height:30px;
+    margin-left: 23px;
+    margin-top:20px;
+margin-bottom:20px;
+}
+
+.logo img{
+    width: 30px;
+    height:30px;
+
+}
+
+
+.top_text {
+        margin-top: 22px;
+}
+
+.top_message_container {
+    height:70px;
+display: block;
+margin-top: 10px;
+margin-bottom:10px;
+}
+
+.top_message {
+    height: 70px;
+    float:left;
+
+    margin-left: 23px;
+
+}
+
+.subtitle {
+    font-family: 'Proxima Nova Light', 'Segoe UI', 'helvetica';
+    text-align: left;
+    margin-top:5px;
+margin-bottom:9px;
+    font-size: 18px;
+line-height: 18px;
+}
+
+.title {
+    text-align: left;
+    margin-top:9px;
+margin-bottom:5px;
+    font-family: 'Proxima Nova Light', 'Segoe UI', 'helvetica';
+    font-size:23px;
+line-height: 23px;
+}    
+
+.data_container {
+    display: block;
+    margin-top:30px;
+    height:auto;
+}
+
+.steps_circle {
+left: 190px;
+z-index: 1;
+}
+
+.steps_circle img {
+    width:60px;
+    height:60px;
+    float: left;
+position: relative;
+    margin-top:  29px;
+    margin-left: 29px;
+z-index: 100;
+}
+
+
+.steps {
+    width: 300px;
+    float:left;
+    margin-left: 110px;
+    margin-right: 110px;
+}
+
+.steps_data {
+    font-family: 'Proxima Nova Light', 'Segoe UI', 'helvetica';
+    line-height: 20px;
+    margin-top: 10px;
+}
+
+.steps_number {
+    font-size: 28px;
+}
+
+.steps_name {
+    font-size:18px;
+}
+
+.steps_container {
+    height: 180px;
+}
+
+.bottom_container {
+    margin-left: 16px;
+    margin-right: 16px;
+    height:146px;
+}
+
+.small_exercise_circle {
+    overflow: visible;
+    float: left;
+}
+
+.small_exercise_circle_goal {
+    overflow: visible;
+    float: left;
+    margin-top:-60px;
+}
+
+.exercise_data_container {
+        width: 300px;
+  margin-left: 100px;
+  margin-top: 170px;
+  margin-bottom:15px;
+}
+
+.exercise_container {
+    float: left;
+    width: 116px;
+
+}
+
+.exercise_icon {
+    margin-left: 18px;
+margin-right:18px;
+}
+
+.exercise_icon img {
+position: relative;
+    width:45px;
+    height:45px;
+    float: left;
+    margin-top: 18px;
+    margin-left: 18px;
+z-index: 100;
+}
+
+.exercise_data {
+    float:left;
+    margin: -10px 30px;
+    width: 60px;
+}
+
+
+.exercise_number {
+    margin: 12px auto 3px;
+    font-family: 'Proxima Nova Light', 'Segoe UI', 'helvetica';
+}
+
+.exercise_type {
+    margin-top: 0px;
+    font-size: 16px;
+    font-family: 'Proxima Nova Light', 'Segoe UI', 'helvetica';
+}
+
+
+.bottom_message {
+        font-family: 'Proxima Nova Light', 'Segoe UI', 'helvetica';
+        font-size: 18px;
+        margin-bottom: 22px;
+}

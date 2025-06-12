@@ -1,0 +1,42 @@
+Adobe Photoshop	photoshop.exe
+Photoshop	photoshop.exe
+photo shop	photoshop.exe
+foto shop	photoshop.exe
+fire fox	firefox.exe
+Firefox	firefox.exe
+internet explorer	iexplore.exe
+word	winword.exe
+email	outlook.exe
+my email	outlook.exe
+outlook	outlook.exe
+one note	onenote.exe
+OneNote	onenote.exe
+Powerpoint	powerpnt.exe
+power point	powerpnt.exe
+Notepad	notepad++.exe
+note pad	notepad++.exe
+wire shark	wireshark.exe
+sun bird	sunbird.exe
+Sunbird	sunbird.exe
+calendar	sunbird.exe
+product studio	ps.exe
+visual studio 2010	C:\Program Files (x86)\Microsoft Visual Studio 10.0\Common7\IDE\devenv.exe
+visual studio 2012	C:\Program Files (x86)\Microsoft Visual Studio 11.0\Common7\IDE\devenv.exe
+console	C:\Program Files (x86)\Console2\Console.exe
+a console	C:\Program Files (x86)\Console2\Console.exe
+VLC	C:\Program Files (x86)\VideoLAN\VLC\vlc.exe
+VLC media player	C:\Program Files (x86)\VideoLAN\VLC\vlc.exe
+Winamp	C:\Program Files (x86)\Winamp\winamp.exe
+win amp	C:\Program Files (x86)\Winamp\winamp.exe
+with amp	C:\Program Files (x86)\Winamp\winamp.exe
+with M	C:\Program Files (x86)\Winamp\winamp.exe
+Bing maps	bingmaps:\\
+maps	bingmaps:\\
+Bing finance	bingfinance:\\
+finance	bingfinance:\\
+Bing news	bingnews:\\
+news	bingnews:\\
+Bing weather	bingweather:\\
+weather	bingweather:\\
+Bing sports	bingsports:\\
+sports	bingsports:\\

@@ -1,0 +1,45 @@
+<div class="container">
+  <div class="container-background"></div>
+  <div class="container-border">
+    <p class="top_text">
+      <span class="day">{{entity.date}}</span>
+    </p>
+    <div class="data_container">
+      <div class="exercise_circle">
+        <div *ngIf="entity.percent < 100" class="steps_circle c100 p{{entity.percent}}">
+          <div class="slice">
+            <div class="bar"></div>
+            <div class="fill"></div>
+          </div>
+          <div *ngIf="entity.distance_traveled_value == 0"> 
+            <img src="https://botletstorage.blob.core.windows.net/static-template-images/fitbit%20ic_distance_50.png">
+          </div>
+          <div *ngIf="entity.distance_traveled_value > 0 && entity.percent < 100"> 
+            <img src="https://botletstorage.blob.core.windows.net/static-template-images/fitbit%20ic_distance_50.png">
+          </div>
+        </div>
+        <div *ngIf="entity.percent == 100" class="steps_circle c100 p100 green">
+          <div class="slice">
+            <div class="bar"></div>
+            <div class="fill"></div>
+          </div>
+          <div> 
+            <img src="https://botletstorage.blob.core.windows.net/static-template-images/fitbit%20ic_distance_goal_50.png">
+          </div>
+        </div>
+      </div>
+    </div>
+    <p class="exercise_data_container">
+      <span class="exercise_number">{{entity.distance_traveled}}</span>
+    </p>
+    
+    <p class="bottom_message" *ngIf="entity.distance_to_goal_value >= 0">
+      <span class="number_left">{{entity.distance_to_goal}}</span>
+      <span class="exercise_left">left to reach your goal!</span>
+    </p>
+    <p class="bottom_message" *ngIf="entity.distance_to_goal_value < 0">
+      <span class="number_left">{{entity.distance_to_goal}}</span>
+      <span class="exercise_left">above your goal!</span>
+    </p>
+  </div>
+</div>

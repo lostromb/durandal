@@ -1,0 +1,40 @@
+#PATTERNS#
+pokedex/get_overview	which {pokemon} is number [pkmn_number]{number}[/pkmn_number]?
+pokedex/get_overview	{pokemon} #[pkmn_number]{number}[/pkmn_number]
+pokedex/get_overview	{pokemon} [pkmn_number]{number}[/pkmn_number]
+pokedex/get_overview	{pokemon} number [pkmn_number]{number}[/pkmn_number]
+pokedex/get_overview	tell me about [pkmn_name]{name}[/pkmn_name]
+pokedex/get_overview	what is [pkmn_name]{name}[/pkmn_name]
+pokedex/get_overview	statistics for [pkmn_name]{name}[/pkmn_name]
+pokedex/get_overview	show me statistics for [pkmn_name]{name}[/pkmn_name]
+pokedex/get_overview	[pkmn_name]{name}[/pkmn_name] stats
+pokedex/get_overview	[pkmn_name]{name}[/pkmn_name] statistics
+
+pokedex/get_stats	what is [pkmn_name]{name}[/pkmn_name]'s base defense
+pokedex/get_stats	what does [pkmn_name]{name}[/pkmn_name] evolve into
+pokedex/get_stats	what does [pkmn_name]{name}[/pkmn_name] evolve from
+pokedex/get_stats	what type is [pkmn_name]{name}[/pkmn_name]
+pokedex/get_stats	is [pkmn_name]{name}[/pkmn_name] a frost type
+
+pokedex/compare_pokemon	which is faster {name} or {name}
+
+pokedex/rank_pokemon	which {pokemon} has the highest defense
+
+#pokemon#
+pokemon
+Pokemon
+pokémon
+Pokémon
+
+#number#
+2
+10
+100
+664
+
+#statistic#
+number
+catch rate
+type
+
+#name#catalog=custom/pokedex/pokemon#

@@ -1,0 +1,417 @@
+winamp/pause_media	pause the music
+winamp/pause_media	pause music
+winamp/pause_media	pause
+winamp/pause_media	POS music
+winamp/pause_media	POS
+winamp/pause_media	POS the music
+winamp/pause_media	POS winamp
+winamp/pause_media	POS with amp
+winamp/pause_media	posin music
+winamp/pause_media	posin
+winamp/pause_media	posin the music
+winamp/pause_media	posin winamp
+winamp/pause_media	paws music
+winamp/pause_media	paws
+winamp/pause_media	paws the music
+winamp/pause_media	paws winamp
+winamp/pause_media	pause with amp
+winamp/pause_media	positive music
+winamp/pause_media	winamp pause the music
+winamp/pause_media	pause winamp
+winamp/pause_media	pause with amp
+winamp/pause_media	oz music
+winamp/next_track	play the next song
+winamp/next_track	play the next track
+winamp/next_track	skip this song
+winamp/next_track	skip this track
+winamp/next_track	get this song
+winamp/next_track	get this track
+winamp/next_track	play next song
+winamp/next_track	play next track
+winamp/next_track	next song
+winamp/next_track	next track
+winamp/next_track	next song please
+winamp/next_track	i don't like this song
+winamp/next_track	don't like this song
+winamp/next_track	i don't like this track
+winamp/next_track	NexTraq
+winamp/stop_media	stop
+winamp/stop_media	stop music
+winamp/stop_media	stop the music
+winamp/stop_media	stop playing
+winamp/stop_media	stop winamp
+winamp/stop_media	stop with amp
+winamp/play_media	play
+winamp/play_media	play music
+winamp/play_media	play the music
+winamp/play_media	start playing
+winamp/play_media	start the music
+winamp/play_media	start playing music
+winamp/play_media	andaz music
+winamp/play_media	unpause music
+winamp/play_media	unpause the music
+winamp/play_media	unpause winamp
+winamp/play_media	play winamp
+winamp/play_media	start playing winamp
+winamp/play_media	play with amp
+winamp/play_media	start playing with amp
+
+#PATTERNS#
+
+; basic patterns - single artist / album / song title only
+winamp/enqueue_songs	{prefixes} music by [artist]{artist_names}[/artist]
+winamp/enqueue_songs	{prefixes} song by [artist]{artist_names}[/artist]
+winamp/enqueue_songs	{prefixes} songs by [artist]{artist_names}[/artist]
+winamp/enqueue_songs	{prefixes} all song by [artist]{artist_names}[/artist]
+winamp/enqueue_songs	{prefixes} all songs by [artist]{artist_names}[/artist]
+winamp/enqueue_songs	{prefixes} all tracks by [artist]{artist_names}[/artist]
+winamp/enqueue_songs	{prefixes} the song [songtitle]{song_names}[/songtitle]
+winamp/enqueue_songs	{prefixes} the album [albumtitle]{album_names}[/albumtitle]
+winamp/enqueue_songs	{prefixes} the CD [albumtitle]{album_names}[/albumtitle]
+winamp/enqueue_songs	{prefixes} song from [albumtitle]{album_names}[/albumtitle]
+winamp/enqueue_songs	{prefixes} songs from [albumtitle]{album_names}[/albumtitle]
+winamp/enqueue_songs	{prefixes} all songs from [albumtitle]{album_names}[/albumtitle]
+winamp/enqueue_songs	{prefixes} [songtitle]{song_names}[/songtitle]
+
+; more complex patterns combining 2 or more fields
+
+winamp/enqueue_songs	{prefixes} the song [songtitle]{song_names}[/songtitle] by [artist]{artist_names}[/artist]
+winamp/enqueue_songs	{prefixes} the song [songtitle]{song_names}[/songtitle] by artist [artist]{artist_names}[/artist]
+
+#prefixes#
+play
+queue up
+enqueue
+I want to hear
+I want to listen to
+I'm in the mood for
+
+#album_names#
+abbey road
+closer
+ecliptica
+introducing
+faithful and strong
+go live
+give up
+high voltage
+hell at the house
+kind of blue
+blues bred in the bone
+little busters
+light
+
+#song_names#
+better off alone
+everlasting love
+gravity
+restless
+goodbye is all we have
+union house branch
+wouldn't be so bad
+pastures of plenty
+crazy as me
+my poor old heart
+this sad song
+I don't have to live this way
+a living prayer
+I need you
+sandman
+ventura highway
+don't cross the river
+only in your heart
+
+#artist_names#
+Netsky
+seventh element
+KVE
+DJ pretzel
+Archie
+Renard
+Michael Jackson
+aluminum
+aviators
+final fantasy
+overclocked remix
+Matt Nathanson
+Katy Perry
+Beethoven
+balloon party
+hey ocean
+Daft Punk
+discovery
+the standard model
+the format
+the briefs
+the Beatles
+fire and ice
+Ayreon
+Dj Format
+DJ Mary Jane
+DJ Murphy Brown
+DJ Mystik
+DJ Pretzel
+DJ Shadow
+Hirokazu Ando
+Hixxy
+HMage
+Homestar Runner
+Hoobastank
+House of Pain
+Howard Shore
+Hudson River School
+Hudson Soft
+Human League
+Hyrule Symphony
+Ice Cube
+Illreme
+Imogen Heap
+In the Nursery
+Insideout a Cappella
+Isaac Hayes
+ISSA
+Jack Johnson
+Jackie Evancho
+Jackson 5
+Jackson Five
+Jacques Brel
+James Brown
+James Horner
+Jean Knight
+Jefferson Starship
+Jeffthestrider
+Jemaine Clement
+Jenna Kimble
+Jennifer Lopez
+Jeremy Soule
+Jerrytown
+Jessica Andrews
+Jet
+Jewel
+Jim Croce
+Jimi Hendrix
+Jimmy Fallon
+Jivemaster
+Jo Dee Messina
+Jock Jams
+John Coltrane
+John Holt
+John Mayer
+John Michael Montgomery
+John Tavener
+John Williams
+Johnny Cash
+Johnny Nash
+Jonathan Coulton
+Jonathan Larson
+Josh Groban
+Josh Mono
+Joshua Mononoetoe
+Joshua Radin
+Journey
+JS16
+Judas Priest
+Julie Andrews
+Junkie XL And Don Davis
+Juno Reactor
+Junya Nakano
+jurassic five
+just4lolzz
+Kool & The Gang
+Kool and the Gang
+Kromozone Project
+Kryptage
+KT Tunstall
+Kubota Osamu
+Kung Fu Suckas
+KvE
+L'Orchestre De Gil Evans
+La Bouche
+La Oreja de Van Gogh
+Lagwagon
+LanceArrow & Jim Elzenga
+Las Chuches
+Las Ketchup
+Lauren Hill
+Le Chic
+Le Soldat Pony
+Leann Rimes
+Led Zeppelin
+Led Zepplin
+Legend of Zelda
+Lenny Kravitz
+Leonard Weir
+Lerner and Loewe
+Less Than Jake
+Lex de Azevedo
+Linda Eder
+Linkin Park
+Little Richard
+LL Cool J
+Loggins and Messina
+LoreRD
+Lou Bega
+Louis Armstrong
+Louis Prima
+LousySpy
+Ludacris
+Luis Armstrong
+LutariFan
+Lynard Skynard
+Lynn A. Mickelsen
+Lynyrd Skynyrd
+M. Pallante
+Maaya Sakamoto
+Machinae Supremacy
+Madness
+Madonna
+Mae
+Magika
+Magnetic Fields
+Makeup and Vanity Set
+Maki Nomiya
+Makkon
+Mamas and the Papas
+Man of La Mancha
+Manau
+Mannheim Steamroller
+March Of Heroes
+Maren Ord
+Mariah Carey
+Mark Wills
+Maroon 5
+Maroon5
+MARRS
+Martina McBride
+Marvin Gaye
+Masaki Kurokawa
+Masato Nakamura
+Masayuki Tanaka
+Michael Salvatori
+Michelle Pfeiffer
+Mika Bomb
+Mikael Mutti
+Miles Davis
+Mind Reflection
+Mindy Gledhill
+Minibosses
+Minnows
+MIU
+Mogwai
+Nelly
+Nena
+Netsky
+Neue Deutsche Welle
+New Found Glory
+New Joc City
+Night Breeze
+Nightwatchers
+Nikki Blonsky
+Nirvana
+Nix Spark
+No Mercy
+No Use For A Name
+Nobuo Uematsu
+Nom Nom
+Noodles
+Nora Jones
+Norah Jones
+norg
+Norman Greenbaum
+Nosnibormada
+not a clever pony
+Note Wise
+Notorious BIG
+O-Zone
+oasis
+OBC
+Of Montreal
+OK Go
+Oklahoma
+Oldies
+one cent stamp
+owl city
+ozone
+P.D.Q. Bach
+Pablo Casals
+Pachelbel
+Parov Stelar
+Paul Cardall
+Paul McCartney
+Paul Oakenfold
+Paul Reed
+Paul Simon
+Paul Stokey
+peak freak
+pearl jam
+Percy Grainger
+Persichetti
+Peter Breinholt
+Peter McConnell
+Phallus Dei
+the Phenomonauts
+Phil Vassar
+PhillyPu
+pilot
+Pink Floyd
+pixel
+Pizzicato Five
+plastic Bertrand
+Poe
+Pokey Smokes
+Ponchillo
+Ponky
+Ponyphonic
+PonyVisation
+Power Chord
+power of seven
+Powerman 5000
+Praga Khan
+Primal Fear
+PriZm
+Proclaimers
+Procol Harum
+prophecy
+Protricity
+Protricity And Zyko
+Psychadelic Brony
+Punjabi
+Pure Heart
+Pussycat Dolls
+Queen
+Queen Latifah
+Rachel Yamagata
+Rage Against The Machine
+Raiden
+Ram Jam
+Rammstein
+Ramones
+RandomBlockFilms
+Randy Newman
+Rascal Flatts
+RaynStrom
+Red Hot Chili Peppers
+Reel Big Fish
+Regina Spektor
+Relient K
+Rellik
+Renard
+replacer
+Reps
+Requiem For A Dream
+resident evil
+restrained madness
+Rex Harrison
+Rhianna
+Richard Harris
+the Ramones
+the righteous brothers
+the Rio singers
+the rolling stones
+the Smashing Pumpkins
+the Steve Miller Band
+the Sugarland run
+The tokens
+The Who
+The wind waker
+The Zutons

@@ -1,0 +1,99 @@
+<html>
+	<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+	<meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+	<title>Durandal</title>
+	<link href="/views/common/global_html5.css" rel="stylesheet" type="text/css" />
+	<link href="/views/common/flexbox.css" rel="stylesheet" type="text/css" />
+	<link href="/views/common/browser.css" rel="stylesheet" type="text/css" >
+	<script src="/views/common/jquery-3.2.1.min.js"></script>
+	<script src="/views/common/durandal.js"></script>
+	<script>
+	var recentlyGreeted = true; // used to prevent an infinite greet loop
+	
+	var handleClientActions = function(response) {
+		if (response != undefined && response.ResponseAction != undefined && response.ResponseAction != "")
+		{
+			var actions = [];
+			var actionBlob = JSON.parse(response.ResponseAction);
+			
+			if (actionBlob[0] != undefined)
+			{
+				// It's an array of actions
+				actions = actionBlob;
+			}
+			else
+			{
+				// It's a single action
+				actions.push(actionBlob);
+			}
+			
+			for (c = 0; c < actions.length; c++) {
+				var action = actions[c];
+				if (action.Name == "OAuthLogin")
+				{
+					console.log("Got oauth login " + action.LoginUrl);
+					window.open(action.LoginUrl);
+				}
+			}
+		}
+	}
+	
+	var queryCallback = function(response) {
+		console.log(JSON.stringify(response));
+		document.getElementById('inputQueryField').value = "";
+		
+		if (response.ResponseUrl != undefined)
+		{
+			recentlyGreeted = false;
+			var targetUrl = response.ResponseUrl;
+			/*if (targetUrl.substring(0, 1) != '/' && targetUrl.substring(0, 7) != 'http://')
+			{
+				targetUrl = "http://" + targetUrl;
+			}*/
+			
+			if (response.UrlScope == 2)
+			{
+				// Open external urls in their own window
+				window.open(targetUrl);
+			}
+			else
+			{
+				// Otherwise they open in the results window
+				document.getElementById("resultsFrame").src = targetUrl;
+			}
+		}
+		else
+		{
+			// Return back to the greet page
+			if (!recentlyGreeted) {
+				recentlyGreeted = true;
+				Durandal.greet(queryCallback);
+			}
+		}
+		
+		handleClientActions(response);
+	}
+	
+	var submitTextQuery = function() {
+		var input = document.getElementById('inputQueryField').value;
+		var clientDataString = document.getElementById("resultsFrame").innerHTML;
+		Durandal.submitTextQuery(input, queryCallback, clientDataString);
+	}
+	</script>
+	</head>
+<body class="globalFontStyle globalBgColor" onload="Durandal.initialize(queryCallback)">
+	<form onsubmit="submitTextQuery(); return false;">
+		<div class="flex flexAppContainer">
+			<div class="flex flexBoxColumn flex-stretch">
+				<div class="flex flex-stretch flexBoxColumn">
+					<iframe class="flex flex-stretch flexBoxColumn" id="resultsFrame" name="resultsFrame">{ "RequestData": {}}</iframe>
+				</div>
+				<div class="flex noflexshrink" id="queryContainer">
+					<input id="inputQueryField" type="text" placeholder="Ask me anything">
+				</div>
+			</div>
+		</div>
+	</form>
+</body>
+</html>

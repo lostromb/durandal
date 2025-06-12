@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<grammar version="1.0">
+  <regex id="matcher" expression=".+" />
+  
+  <normalization_rule id="normalizer" strict="false">
+    <item input="Spanish" output="SPANISH" />
+    <item input="spanish" output="SPANISH" />
+    <item input="espanol" output="SPANISH" />
+    <item input="English" output="ENGLISH" />
+    <item input="english" output="ENGLISH" />
+    <item input="German" output="GERMAN" />
+    <item input="german" output="GERMAN" />
+    <item input="French" output="FRENCH" />
+    <item input="french" output="FRENCH" />
+    <item input="Italian" output="ITALIAN" />
+    <item input="italian" output="ITALIAN" />
+    <item input="Japanese" output="JAPANESE" />
+    <item input="japanese" output="JAPANESE" />
+    <item input="Cantonese" output="CANTONESE" />
+    <item input="cantonese" output="CANTONESE" />
+    <item input="Mandarin" output="MANDARIN" />
+    <item input="mandarin" output="MANDARIN" />
+    <item input="mandarin chinese" output="MANDARIN" />
+    <item input="mandarin Chinese" output="MANDARIN" />
+    <item input="Mandarin Chinese" output="MANDARIN" />
+    <item input="Russian" output="RUSSIAN" />
+    <item input="russian" output="RUSSIAN" />
+    <item input="Finnish" output="FINNISH" />
+    <item input="finnish" output="FINNISH" />
+    <item input="finish" output="FINNISH" />
+    <item input="Swedish" output="SWEDISH" />
+    <item input="swedish" output="SWEDISH" />
+    <item input="Dutch" output="DUTCH" />
+    <item input="dutch" output="DUTCH" />
+  </normalization_rule>
+  
+  <rule id="canonicalized_value">
+    <item><ruleref uri="#matcher" /><normalizer>normalizer</normalizer></item>
+  </rule>
+
+</grammar>

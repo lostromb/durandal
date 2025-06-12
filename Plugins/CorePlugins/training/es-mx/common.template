@@ -1,0 +1,132 @@
+#STATIC#
+
+common/confirm	yes
+common/confirm	sure
+common/confirm	go ahead
+common/confirm	yes please
+common/confirm	please do
+common/confirm	okay
+common/confirm	OK
+common/confirm	yes OK
+common/confirm	affirmative
+common/confirm	that's right
+
+common/deny	no
+common/deny	no don't
+common/deny	don't
+common/deny	cancel
+common/deny	cancel it
+common/deny	cancel that
+common/deny	cannibal
+common/deny	go back
+common/deny	stop
+common/deny	stop that
+common/deny	nevermind
+common/deny	never mind
+common/deny	forget it
+common/deny	abort
+common/deny	please don't
+common/deny	i didn't say that
+common/deny	I didn't say that
+common/deny	don't do it
+common/deny	don't do that
+
+common/repeat	repeat that
+common/repeat	repeat that
+common/repeat	repeat that please
+common/repeat	please repeat
+common/repeat	repeat
+common/repeat	what was that
+common/repeat	what was that?
+common/repeat	what did you say
+common/repeat	what did you just say
+common/repeat	what was that again
+common/repeat	what did you say?
+common/repeat	what did you just say?
+
+common/elaboration	tell me more
+common/elaboration	tell me about it
+common/elaboration	keep talking
+common/elaboration	tell me something about it
+
+common/help	help
+common/help	help me out
+common/help	can you help me with that
+
+common/thanks	thank you
+common/thanks	thanks alot
+common/thanks	thanks a lot
+common/thanks	thanks
+common/thanks	thank you very much
+common/thanks	thank you
+common/thanks	thank you
+common/thanks	thank you for that
+common/thanks	thank you for doing that
+common/thanks	thank you you're very helpful
+common/thanks	thanks for the help
+
+common/compliment	you're a champ
+common/compliment	you're wonderful
+common/compliment	I love you
+common/compliment	you're good
+common/compliment	you're so good
+common/compliment	you're so good when you're bad
+
+common/contempt	you're terrible
+common/contempt	you suck
+common/contempt	awful
+common/contempt	you're awful
+common/contempt	I hate you
+
+common/read_aloud	read it to me
+common/read_aloud	read it out loud
+common/read_aloud	read it for me
+common/read_aloud	read that one
+common/read_aloud	read that out loud
+common/read_aloud	read that for me
+common/read_aloud	can you read it for me
+common/read_aloud	can you read it out loud
+common/read_aloud	can you read it
+
+common/ignore	ignore that
+common/ignore	disregard that
+common/ignore	ignore me
+common/ignore	ignore me for a moment
+
+#PATTERNS#
+
+common/repeat	{canyou} {repeat} {that}
+common/repeat	{canyou} {repeat} {that} please
+common/repeat	{canyou} {repeat} {that} {again}
+common/repeat	{repeat} {that}
+common/repeat	{repeat} {that} {again}
+common/repeat	{repeat} {again}
+common/repeat	{again} please
+common/repeat	can I hear {that} again
+common/repeat	can you say {that} again
+
+#canyou#
+can you
+could you
+could you please
+can you please
+please
+will you
+will you please
+would you
+would you kindly
+would you please
+
+#that#
+that
+those
+
+#repeat#
+repeat
+say
+tell me
+
+#again#
+again
+one more time
+once again

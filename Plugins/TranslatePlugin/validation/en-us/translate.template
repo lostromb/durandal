@@ -1,0 +1,43 @@
+#PATTERNS#
+
+translate/translate_phrase	{how_you_say} [phrase]{translate_phrases}[/phrase] in [targetlanguage]{languages}[/targetlanguage]
+translate/translate_phrase	{translate} [phrase]{translate_phrases}[/phrase] {to} [targetlanguage]{languages}[/targetlanguage]
+
+#how_you_say#
+how do you say
+what is
+
+#translate#
+can you translate
+translate
+please translate
+translate for me
+
+#to#
+to
+into
+in to
+
+#languages#
+English
+German
+Spanish
+French
+Italian
+Japanese
+Cantonese
+Mandarin
+Mandarin Chinese
+Greek
+Russian
+Finnish
+Swedish
+Dutch
+Klingon
+
+#translate_phrases#
+what time is it
+how is the weather
+where is the city
+can you help me
+dictionary

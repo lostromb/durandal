@@ -1,0 +1,28 @@
+#PATTERNS#
+
+vlcmedia/play_movie	{movie_prefixes} [media_title]{movie_titles}[/media_title]
+vlcmedia/play_tv_episode	{tv_prefixes} [media_title]{tv_titles}[/media_title] season [season]0[/season] episode [episode]0[/episode]
+
+#movie_prefixes#
+play movie
+play video
+play the movie
+play the video
+start playing
+start playing the movie
+start playing the video
+start the movie
+start the video
+
+#tv_prefixes#
+play
+play video
+play the video
+start playing
+start playing the video
+start the video
+I want to watch
+
+#movie_titles#catalog=culture/movie_titles#
+
+#tv_titles#catalog=culture/tv_programs#

@@ -1,0 +1,23 @@
+body
+{
+	border: 0px;
+	margin: 0px;
+	padding: 0px;
+}
+
+#inputQueryField
+{
+	width: 100%;
+	font-size: 14pt;
+	background-color: #DDDDDD;
+	padding: 5px;
+	border: 0px;
+}
+
+#resultsFrame
+{
+	border: 0px;
+	margin: 0px;
+	padding: 0px;
+	width: 100%;
+}

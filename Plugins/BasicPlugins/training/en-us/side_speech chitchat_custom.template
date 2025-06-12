@@ -1,0 +1,25 @@
+side_speech/yourname	what is your name
+side_speech/yourname	what's your name
+side_speech/yourname	what are you called
+side_speech/yourname	do you have a name
+side_speech/yourname	what is your name
+side_speech/yourname	what's your name?
+side_speech/yourname	what is your name?
+side_speech/yourname	what can I call you
+side_speech/yourname	hi what's your name
+side_speech/yourname	who is this
+side_speech/yourname	who this
+side_speech/yourname	hi who is this
+side_speech/yourname	hi who are you
+side_speech/yourname	whose number is this
+side_speech/yourname	who is this
+
+#REGEX#
+side_speech/yourname	^what('s| is) your name[?\.]?$
+side_speech/yourname	^do you have a name[?\.]?$
+side_speech/yourname	^who are you[?\.]?$
+
+side_speech/yourquest	^what('s| is) your quest[?\.]?$
+
+side_speech/yourcolor	^what('s| is) your favou?rite color[?\.]?$
+side_speech/unladenswallow	^what.+?(air ?speed|velocity|laden|swallow)

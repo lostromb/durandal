@@ -1,0 +1,9 @@
+[
+{
+	"question": "Which chess piece can only move diagonally?",
+	"correct": "a bishop",
+	"incorrect": [ "a rook", "a knight", "a king" ],
+	"category": "SPORTS",
+	"difficulty": 3
+}
+]

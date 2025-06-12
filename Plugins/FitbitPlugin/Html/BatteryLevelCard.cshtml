@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="container-background"></div>
+  <div class="container-border">
+    <div class="battery_status_container">
+      <div class="battery_message">
+        <p class="title">
+          <span class="device_name">{{entity.device_name}}</span> <span>battery level</span>
+        </p>
+        <div class="battery_status" *ngIf="entity.battery_level == \"Full\"> 
+          <img src="https://botletstorage.blob.core.windows.net/static-template-images/fitbit%20ic_battery_full.png">
+        </div>
+        <div class="battery_status" *ngIf="entity.battery_level == \"Medium\"> 
+          <img src="https://botletstorage.blob.core.windows.net/static-template-images/fitbit%20ic_battery_medium.png">
+        </div>
+        <div class="battery_status" *ngIf="entity.battery_level == \"Low\"> 
+          <img src="https://botletstorage.blob.core.windows.net/static-template-images/fitbit%20ic_battery_low.png">
+        </div>
+        <div class="battery_status" *ngIf="entity.battery_level == \"Empty\"> 
+          <img src="https://botletstorage.blob.core.windows.net/static-template-images/fitbit%20ic_battery_empty.png">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

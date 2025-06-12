@@ -1,0 +1,53 @@
+#PATTERNS#
+
+bing/navigate_directly	[query]{queries}{coms}[/query]
+bing/navigate_directly	{prefixes} [query]{queries}{coms}[/query]
+bing/navigate_directly	{prefixes} [query]{queries}[/query] {website}
+bing/navigate_directly	{prefixes} the [query]{queries}[/query] {website}
+bing/navigate_directly	{prefixes} the {website} for [query]{queries}[/query]
+
+#prefixes#
+go to
+open
+open up
+find
+
+#website#
+website
+web site
+webpage
+web page
+home page
+
+#coms#
+.com
+.net
+.org
+ dot com
+
+#queries#
+Microsoft
+something awful
+buzz feed
+twitter
+waffle
+Skype
+visual studio online
+round stable
+Equestria daily
+Capcom
+marvel
+dictionary
+Winamp
+AOL
+Youtube
+you tube
+smart things
+Amazon
+wiki how
+Yahoo
+babelfish
+dog pile
+stack overflow
+google
+flight arrivals

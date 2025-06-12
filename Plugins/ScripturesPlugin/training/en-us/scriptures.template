@@ -1,0 +1,32 @@
+#REGEX#
+scriptures/look_up_reference	(?<verse>(1st|2nd|4th|5th|6th|7th|8th|9th|10th|11th|12th|13th|first|second|third|fourth|sixth|seventh|eighth|ninth|tenth|eleventh|twelfth|thirteenth)) (?<book>articles? of faith)
+
+#PATTERNS#
+scriptures/look_up_reference	{prefixes} [book]{books}[/book] chapter [chapter]{chapter_nums}[/chapter]{verse_separator}[verse]{verse_nums}[/verse]
+scriptures/look_up_reference	{prefixes} [book]{books}[/book] [chapter]{chapter_nums}[/chapter]{verse_separator}[verse]{verse_nums}[/verse]
+scriptures/look_up_reference	[book]{books}[/book] [chapter]{chapter_nums}[/chapter]{verse_separator}[verse]{verse_nums}[/verse]
+
+; certain books make special exceptions if they only have one chapter - this includes Haggai, Words of Mormon, Enos, etc.
+scriptures/look_up_reference	{prefixes} [book]{books}[/book] [verse]{verse_nums}[/verse]
+scriptures/look_up_reference	[book]{books}[/book] [verse]{verse_nums}[/verse]
+
+#prefixes#
+look up
+what is
+quote
+what does it say it
+read
+read out
+read out loud
+recite
+
+#verse_separator#
+ verse 
+:
+ : 
+
+#chapter_nums#catalog=common/numbers_below_50#
+
+#verse_nums#catalog=common/numbers_below_50#
+
+#books#catalog=custom/scriptures/scripture_books#

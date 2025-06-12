@@ -1,0 +1,73 @@
+#PATTERNS#
+
+bing/image_search	{prefixes} [query]{queries_single}[/query]
+bing/image_search	{showme} {prefixes} [query]{queries_single}[/query]
+bing/image_search	{showme} [query]{queries_single}[/query] {photos}
+
+bing/image_search	{prefixes_plural} [query]{queries_plural}[/query]
+bing/image_search	{showme} {prefixes_plural} [query]{queries_plural}[/query]
+bing/image_search	{showme} [query]{queries_plural}[/query] {photos}
+
+#prefixes#
+a picture of
+a photo of
+an image of
+
+#prefixes_plural#
+pictures of
+images of
+photos of
+pictures from
+images from
+photos from
+
+#showme#
+find
+bing
+Bing
+search
+search for
+show me
+I'm looking for
+find me
+
+#photos#
+photos
+pictures
+images
+
+; Phrased like "find me a picture of ____"
+#queries_single#
+Guy Fieri
+Australia
+world of Warcraft
+Steve Jobs
+Odin
+Thor
+a hammer
+a nail
+the Krebs cycle
+a Kenmore microwave
+raspberry pie
+a baby
+a watch
+
+; Phrased like "find pictures (multiple) of ____"
+#queries_plural#
+beaches
+yamaha engines
+unfinished basements
+coral reefs
+koalas
+giraffes
+puppies
+old work wallboxes
+computer monitors
+computer technicians
+offices
+skyscrapers
+old telepone
+pockets
+pinwheels
+tulips
+meadows

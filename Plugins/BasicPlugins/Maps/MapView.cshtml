@@ -1,0 +1,28 @@
+﻿@var string Title
+@var string Content
+@var string Image;
+@var IDictionary<string,string> ClientContextData = null
+@Namespace Durandal.Plugins.Maps
+
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link href="/views/common/pure-base-min.css" rel="stylesheet" type="text/css">
+    <link href="/views/common/flexbox.css" rel="stylesheet" type="text/css">
+    <link href="/views/common/global_html5.css" rel="stylesheet" type="text/css">
+    ${new Durandal.CommonViews.DynamicTheme() { ClientContextData = ClientContextData }.Render()}
+    <title>${Title}</title>
+</head>
+<body class="globalBgColor globalFontStyle globalFontColor">
+    <div class="flex flexAppContainer">
+        <div class="flex flexBoxColumn flex-stretch screenPadding">
+            <div class="flex1"></div>
+            <div align="center" style="text-align: center"><span class="flex1 size2 globalFontColorAccent">${Content}</span></div>
+            <div align="center"><img class="pure-img screenPadding" src="${Image}"></div>
+            <div class="flex1"></div>
+        </div>
+    </div>
+</body>
+</html>

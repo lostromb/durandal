@@ -1,0 +1,265 @@
+#STATIC#
+; Show overall summary
+fitbit/get_activity	show me my summary
+; Show individual stat
+; weight height BMI age battery
+fitbit/get_measurement	how many [stat_type]steps[/stat_type] did I have [date]yesterday[/date]
+; Show overall goals
+fitbit/get_goals	show me my goals
+; Show individual goal
+fitbit/get_goals	what was my [goal_type]step[/goal_type] goal [date]yesterday[/date]
+; get remaining progress to a goal
+fitbit/get_remaining	how many [goal_type]steps[/goal_type] are left
+; show number of exercises
+fitbit/get_count	how many times did I exercise [date]last week[/date]
+; log out
+fitbit/log_out	log out
+; show help
+fitbit/help	help
+; set an alarm
+fitbit/set_alarm	set an alarm for [time]5 AM[/time]
+; set a new goal
+fitbit/set_goal	set a new [goal_type]step[/goal_type] goal
+; how many calories did I eat
+fitbit/get_activity	how many [stat_type]calories[/stat_type] did I [activity_type]eat[/activity_type]
+; log that I ate a burger
+fitbit/log_activity	log that I [activity_type]ate[/activity_type] a [food]hamburger[/food]
+; log that I drank water
+fitbit/log_activity	log that I [activity_type]drank[/activity_type] a [unit]glass[/unit] of [stat_type]water[/stat_type]
+fitbit/log_activity	log that I [activity_type]drank[/activity_type] [quantity]8[/quantity] [unit]ounces[/unit] of [stat_type]water[/stat_type]
+; how much water did I drink
+fitbit/get_activity	how much [stat_type]water[/stat_type] did I [activity_type]drink[/activity_type]
+; show my alarms
+fitbit/find_alarm	show me my alarms
+
+; local intents
+; enter an alarm time
+fitbit/enter_time	[time]8 AM[/time]
+; enter either AM or PM
+fitbit/enter_meridian	[meridian]AM[/meridian]
+; disambiguate multiple trackers
+fitbit/enter_device	the [device]flex[/device]
+
+#STATIC#
+fitbit/get_activity	how is my exercise coming
+fitbit/get_activity	how's my exercise coming
+fitbit/get_activity	how well am I exercising
+fitbit/get_activity	how well I am exercising
+fitbit/get_activity	how well am I staying active
+fitbit/get_activity	how well I am staying active
+fitbit/get_activity	how much am I exercising
+fitbit/get_activity	how much I am exercising
+fitbit/get_activity	how much am I staying active
+fitbit/get_activity	how much I am staying active
+fitbit/get_activity	am I staying active
+fitbit/get_activity	how am I staying active
+fitbit/get_activity	how well am I doing [date]today[/date]
+fitbit/get_activity	how am I doing [date]today[/date]
+fitbit/get_activity	how my day is going
+fitbit/get_activity	how is my day going
+fitbit/get_activity	my summary
+fitbit/get_activity	my fitness summary
+fitbit/get_activity	my exercise summary
+fitbit/get_activity	give me a summary
+fitbit/get_activity	give me the summary
+fitbit/get_activity	show me the summary
+fitbit/get_activity	show me my summary
+fitbit/get_activity	my fitness somebody
+fitbit/get_activity	my fitbit somebody
+fitbit/get_activity	my exercise somebody
+fitbit/get_activity	how well did I do [date]yesterday[/date]
+fitbit/get_activity	how well did I do [date]today[/date]
+fitbit/get_activity	how well I did [date]yesterday[/date]
+fitbit/get_activity	how well I did [date]today[/date]
+fitbit/get_activity	how well I exercised [date]yesterday[/date]
+fitbit/get_activity	how well I exercised [date]today[/date]
+
+#PATTERNS#
+fitbit/get_activity	how many {stat_did_i_act}
+fitbit/get_activity	how many {stat_did_i_act} [date]{dates}[/date]
+fitbit/get_activity	{tell_me} how many {stat_did_i_act}
+fitbit/get_activity	{tell_me} how many {stat_did_i_act} [date]{dates}[/date]
+
+fitbit/get_activity	how many {stat_i_acted}
+fitbit/get_activity	how many {stat_i_acted} [date]{dates}[/date]
+fitbit/get_activity	{tell_me} how many {stat_i_acted}
+fitbit/get_activity	{tell_me} how many {stat_i_acted} [date]{dates}[/date]
+
+#tell_me#
+tell me
+show me
+
+#stat_did_i_act#
+[stat_type]steps[/stat_type]
+[stat_type]miles[/stat_type]
+[stat_type]calories[/stat_type]
+[stat_type]floors[/stat_type]
+[stat_type]flights[/stat_type]
+[stat_type]flights of stairs[/stat_type]
+[stat_type]staircases[/stat_type]
+[stat_type]steps[/stat_type] did I take
+[stat_type]steps[/stat_type] did I [activity_type]walk[/activity_type]
+[stat_type]steps[/stat_type] did I have
+[stat_type]miles[/stat_type] did I [activity_type]walk[/activity_type]
+[stat_type]miles[/stat_type] did I [activity_type]run[/activity_type]
+[stat_type]miles[/stat_type] did I [activity_type]jog[/activity_type]
+[stat_type]kilometers[/stat_type] did I [activity_type]walk[/activity_type]
+[stat_type]kilometers[/stat_type] did I [activity_type]run[/activity_type]
+[stat_type]kilometers[/stat_type] did I [activity_type]jog[/activity_type]
+[stat_type]calories[/stat_type] did I [activity_type]burn[/activity_type]
+[stat_type]calories[/stat_type] did I [activity_type]eat[/activity_type]
+[stat_type]floors[/stat_type] did I [activity_type]climb[/activity_type]
+[stat_type]floors[/stat_type] did I [activity_type]ascend[/activity_type]
+[stat_type]flights[/stat_type] did I [activity_type]climb[/activity_type]
+[stat_type]flights[/stat_type] did I [activity_type]ascend[/activity_type]
+[stat_type]flights of stairs[/stat_type] did I [activity_type]climb[/activity_type]
+[stat_type]flights of stairs[/stat_type] did I [activity_type]ascend[/activity_type]
+[stat_type]staircases[/stat_type] did I [activity_type]climb[/activity_type]
+[stat_type]staircases[/stat_type] did I [activity_type]ascend[/activity_type]
+
+#stat_i_acted#
+[stat_type]steps[/stat_type] I took
+[stat_type]steps[/stat_type] I [activity_type]walked[/activity_type]
+[stat_type]steps[/stat_type] I had
+[stat_type]miles[/stat_type] I [activity_type]walked[/activity_type]
+[stat_type]miles[/stat_type] I [activity_type]ran[/activity_type]
+[stat_type]miles[/stat_type] I [activity_type]jogged[/activity_type]
+[stat_type]kilometers[/stat_type] I [activity_type]walked[/activity_type]
+[stat_type]kilometers[/stat_type] I [activity_type]ran[/activity_type]
+[stat_type]kilometers[/stat_type] I [activity_type]jogged[/activity_type]
+[stat_type]calories[/stat_type] I [activity_type]burned[/activity_type]
+[stat_type]calories[/stat_type] I [activity_type]ate[/activity_type]
+[stat_type]floors[/stat_type] I [activity_type]climbed[/activity_type]
+[stat_type]floors[/stat_type] I [activity_type]ascended[/activity_type]
+[stat_type]flights[/stat_type] I [activity_type]climbed[/activity_type]
+[stat_type]flights[/stat_type] I [activity_type]ascended[/activity_type]
+[stat_type]flights of stairs[/stat_type] I [activity_type]climbed[/activity_type]
+[stat_type]flights of stairs[/stat_type] I [activity_type]ascended[/activity_type]
+[stat_type]staircases[/stat_type] I [activity_type]climbed[/activity_type]
+[stat_type]staircases[/stat_type] I [activity_type]ascended[/activity_type]
+
+#dates#
+today
+yesterday
+last night
+last week
+this week
+yesterday night
+yesterday morning
+last morning
+
+#PATTERNS#
+fitbit/get_activity	{when_was} my [order_ref]last[/order_ref] [activity_type]{workout}[/activity_type]
+fitbit/get_activity	{when_was} my [order_ref]most recent[/order_ref] [activity_type]workout[/activity_type]
+
+#when_was#
+when was
+what time was
+how long ago was
+
+#workout#
+exercise
+workout
+work out
+
+#PATTERNS#
+fitbit/get_count	how many times did I {go_for_a_run} {this_week}
+fitbit/get_count	how often did I {go_for_a_run} {this_week}
+
+#go_for_a_run#
+[activity_type]exercise[/activity_type]
+[activity_type]work out[/activity_type]
+[activity_type]jog[/activity_type]
+go [activity_type]jogging[/activity_type]
+go for a [activity_type]jog[/activity_type]
+go out for a [activity_type]jog[/activity_type]
+
+#this_week#
+[date]this week[/date]
+[date]this month[/date]
+
+#STATIC#
+fitbit/get_goals	what are my goals
+fitbit/get_goals	what are my fitness goals
+fitbit/get_remaining	how close am I to my goal
+
+#PATTERNS#
+fitbit/get_goals	what is my [goal_type]{goal_type}[/goal_type] goal
+fitbit/get_goals	what is my current [goal_type]{goal_type}[/goal_type] goal
+fitbit/get_goals	what's my [goal_type]{goal_type}[/goal_type] goal
+fitbit/get_goals	what's my current [goal_type]{goal_type}[/goal_type] goal
+
+fitbit/get_remaining	how close am I to my [goal_type]{goal_type}[/goal_type] goal
+fitbit/get_remaining	how much more for my [goal_type]{goal_type}[/goal_type] goal
+fitbit/get_remaining	how much more do I need for my [goal_type]{goal_type}[/goal_type] goal
+fitbit/get_remaining	how much more do I need to meet my [goal_type]{goal_type}[/goal_type] goal
+fitbit/get_remaining	how much more do I need to meet my [goal_type]{goal_type}[/goal_type] goal
+
+#goal_type#
+step
+exercise
+activity
+calorie
+weight
+
+#STATIC#
+fitbit/get_measurement	how much do I [measurement]weigh[/measurement]
+fitbit/get_measurement	what is my [measurement]weight[/measurement]
+fitbit/get_measurement	what is my current [measurement]weight[/measurement]
+fitbit/get_measurement	what is my [measurement]weight[/measurement] [date]today[/date]
+
+fitbit/set_alarm	set a [time]6:00 AM[/time] alarm
+
+fitbit/find_alarm	show me my alarms
+fitbit/find_alarm	what alarms do I have
+fitbit/find_alarm	show me my fitbit alarms
+fitbit/find_alarm	when is my alarm
+fitbit/find_alarm	when is my alarm set
+fitbit/find_alarm	what is my alarm set to
+fitbit/find_alarm	when is my alarm going to ring
+fitbit/find_alarm	when is my alarm going to go off
+fitbit/find_alarm	when will my alarm go off
+fitbit/find_alarm	when will my alarm ring
+
+;
+;- Get exercise count
+;?????
+;
+
+#STATIC#
+fitbit/get_leaderboard	to show me the ranking
+fitbit/get_leaderboard	show me the ranking
+
+#PATTERNS#
+fitbit/get_leaderboard	how do I rank on the {leaderboard}
+fitbit/get_leaderboard	where am I at on the {leaderboard}
+fitbit/get_leaderboard	what's my {leaderboard} rank
+fitbit/get_leaderboard	to show me the {leaderboard}
+fitbit/get_leaderboard	show me the {leaderboard}
+
+#leaderboard#
+leaderboard
+leader board
+
+#STATIC#
+
+fitbit/get_measurement	what is my [measurement]battery_level[/measurement]
+
+fitbit/get_activity	how well did I [stat_type]sleep[/stat_type]
+
+; EX
+fitbit/get_goals	what is my [goal_type]step[/goal_type] goal
+fitbit/set_goal	set a new [goal_type]step[/goal_type] goal
+fitbit/get_weight_difference	how much weight have I lost [date]this month[/date]
+
+fitbit/get_measurement	what is my [measurement]BMI[/measurement]
+fitbit/get_measurement	what is my [measurement]body mass index[/measurement]
+fitbit/get_measurement	what is my current [measurement]BMI[/measurement]
+fitbit/get_measurement	what is my [measurement]height[/measurement]
+fitbit/get_measurement	what is my [measurement]age[/measurement]
+fitbit/get_measurement	what's my [measurement]BMI[/measurement]
+fitbit/get_measurement	what's my current [measurement]BMI[/measurement]
+fitbit/get_measurement	what's my [measurement]height[/measurement]
+fitbit/get_measurement	what's my [measurement]age[/measurement]
+fitbit/get_measurement	how [measurement]old[/measurement] am I
+fitbit/get_measurement	how [measurement]tall[/measurement] am I

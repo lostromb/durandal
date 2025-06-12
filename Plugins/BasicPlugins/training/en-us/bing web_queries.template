@@ -1,0 +1,17 @@
+#REGEX#
+bing/web_search	^search Bing for (?<query>.+)$
+bing/web_search	^search the web for (?<query>.+)$
+bing/web_search	^search the Internet for (?<query>.+)$
+
+#PATTERNS#
+bing/web_search	{prefixes} [query]{queries}[/query]
+
+#prefixes#
+search bing for
+search for
+search the web for
+search the Internet for
+bing
+find
+
+#queries#catalog=computer/web_search_queries#

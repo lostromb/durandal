@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<grammar version="1.0">
+  <regex id="matcher" expression=".+" />
+  
+  <normalization_rule id="normalizer" strict="true">
+	<item input="Cortana" output="CORTANA" />
+	<item input="Alexa" output="ALEXA" />
+	<item input="Echo" output="ALEXA" />
+	<item input="Amazon Echo" output="ALEXA" />
+	<item input="Siri" output="SIRI" />
+	<item input="Google Now" output="GOOGLE" />
+  </normalization_rule>
+  
+  <rule id="canonicalized_value">
+    <item><ruleref uri="#matcher" /><normalizer>normalizer</normalizer></item>
+  </rule>
+
+</grammar>

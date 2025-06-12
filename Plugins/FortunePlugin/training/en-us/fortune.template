@@ -1,0 +1,98 @@
+#STATIC#
+
+fortune/tell_fortune	tell me a fortune
+fortune/tell_fortune	tell me my fortune
+fortune/tell_fortune	tell my fortune
+fortune/tell_fortune	got any fortunes
+fortune/tell_fortune	do you know any fortunes
+fortune/tell_fortune	do you have any fortunes
+fortune/tell_fortune	I hear that you can tell fortunes
+fortune/tell_fortune	I want to hear you tell a fortune
+fortune/tell_fortune	I want to hear a fortune
+fortune/tell_fortune	tell my your best fortune
+fortune/tell_fortune	give me your best fortune
+fortune/tell_fortune	fortune
+fortune/tell_fortune	fortune cookie
+fortune/tell_fortune	what does the fortune cookie say
+fortune/tell_fortune	what does my fortune cookie say
+fortune/tell_fortune	a fortune
+fortune/tell_fortune	a fortune please
+fortune/tell_fortune	a fortune, please
+fortune/tell_fortune	a fortune tell me a fortune
+fortune/tell_fortune	a new fortune
+fortune/tell_fortune	I hear that you can tell people's fortunes
+fortune/tell_fortune	I want to hear you tell my fortune
+fortune/tell_fortune	I want to hear my fortune
+fortune/tell_fortune	tell my your best fortune
+fortune/tell_fortune	give me your best fortune
+fortune/tell_fortune	my fortune
+fortune/tell_fortune	my fortune please
+fortune/tell_fortune	my fortune, please
+fortune/tell_fortune	my fortune tell me a fortune
+fortune/tell_fortune	my new fortune
+fortune/tell_fortune	read the future for me
+fortune/tell_fortune	tell me the future
+fortune/tell_fortune	tell me what the future holds
+fortune/tell_fortune	tell me about the future
+fortune/tell_fortune	can you see the future
+fortune/tell_fortune	can you see into the future
+fortune/tell_fortune	can you foresee the future
+fortune/tell_fortune	what do the fates hold for me
+fortune/tell_fortune	what do you see in my future
+fortune/tell_fortune	what do you see in the future
+fortune/tell_fortune	what do you see in the crystal ball
+fortune/tell_fortune	what do you see in your crystal ball
+fortune/tell_fortune	a fortune tell me a fortune
+fortune/tell_fortune	a new fortune
+fortune/tell_fortune	I hear that you can tell people's fortunes
+fortune/tell_fortune	I hear you can tell the future
+fortune/tell_fortune	I hear you can tell people their future
+fortune/tell_fortune	I hear you can tell people's future
+fortune/tell_fortune	my new fortune
+fortune/tell_fortune	please consult the bones
+fortune/tell_fortune	will you consult the bones
+fortune/tell_fortune	read the tea leaves
+fortune/tell_fortune	predict the future
+fortune/tell_fortune	predict my future
+fortune/tell_fortune	can you tell the future
+fortune/tell_fortune	can you predict the future
+fortune/tell_fortune	please tell me the future
+fortune/tell_fortune	please predict the future for me
+fortune/tell_fortune	what is my fortune for today
+
+#PATTERNS#
+fortune/tell_fortune	{look} into the {crystal_ball}
+fortune/tell_fortune	{look} into your {crystal_ball}
+fortune/tell_fortune	{look} into the {crystal_ball} and tell me what you see
+fortune/tell_fortune	{look} into your {crystal_ball} and tell me
+
+#look#
+look
+stare
+gaze
+
+#crystal_ball#
+crystal ball
+crystal
+magic mirror
+
+#STATIC#
+fortune/tell_another	got any more?
+fortune/tell_another	how about another one
+fortune/tell_another	tell me another one
+fortune/tell_another	another one
+fortune/tell_another	do you have any more?
+fortune/tell_another	do you have any more
+fortune/tell_another	got any more
+fortune/tell_another	any more?
+fortune/tell_another	any more
+fortune/tell_another	I meant any good fortunes
+fortune/tell_another	I meant good fortunes
+fortune/tell_another	I mean any good fortunes
+fortune/tell_another	I mean good fortunes
+fortune/tell_another	now tell me a good one
+fortune/tell_another	now tell me one that's good
+fortune/tell_another	ok another one
+fortune/tell_another	ok how about another
+fortune/tell_another	ok tell me another one
+fortune/tell_another	ok do you have any more

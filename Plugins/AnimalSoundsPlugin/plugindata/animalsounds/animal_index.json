@@ -1,0 +1,562 @@
+[
+{
+	"name": "BEAR",
+	"properName": {
+		"en-us": "bear"
+	},
+	"knownAs": {
+		"en-us": [ "bear", "bears" ]
+	},
+	"sound": {
+		"en-us": "Grrrraaawr!",
+	},
+	"soundFile": "Bear.raw",
+	"image": "bear.jpg"
+},
+{
+	"name": "BEE",
+	"properName": {
+		"en-us": "bee"
+	},
+	"knownAs": {
+		"en-us": [ "bee", "bees", "bumblebee", "bumblebees", "bumble bee", "bumble bees", "honeybee", "honeybees", "honey bee", "honey bees" ]
+	},
+	"sound": {
+		"en-us": "Bzzzzzz!",
+	},
+	"soundFile": "Bee.raw",
+	"image": "bee.jpg"
+},
+{
+	"name": "BIRD",
+	"properName": {
+		"en-us": "bird"
+	},
+	"knownAs": {
+		"en-us": [ "bird", "birds", "birdie", "birdies" ]
+	},
+	"sound": {
+		"en-us": "Chirp!",
+	},
+	"soundFile": "Bird.raw",
+	"image": "bird.jpg"
+},
+{
+	"name": "BUTTERFLY",
+	"properName": {
+		"en-us": "butterfly"
+	},
+	"knownAs": {
+		"en-us": [ "butterfly", "butterflies" ]
+	},
+	"sound": {
+		"en-us": "",
+	},
+	"soundFile": "Butterfly.raw",
+	"image": "butterfly.jpg"
+},
+{
+	"name": "CAT",
+	"properName": {
+		"en-us": "cat"
+	},
+	"knownAs": {
+		"en-us": [ "cat", "cats", "housecat", "felines" ]
+	},
+	"sound": {
+		"en-us": "Meow!",
+	},
+	"soundFile": "Cat.raw",
+	"image": "cat.jpg"
+},
+{
+	"name": "CHICKEN",
+	"properName": {
+		"en-us": "chicken"
+	},
+	"knownAs": {
+		"en-us": [ "chicken", "chickens" ]
+	},
+	"sound": {
+		"en-us": "Cluck!",
+	},
+	"soundFile": "Chicken.raw",
+	"image": "chicken.jpg"
+},
+{
+	"name": "COW",
+	"properName": {
+		"en-us": "cow"
+	},
+	"knownAs": {
+		"en-us": [ "cow", "cows" ]
+	},
+	"sound": {
+		"en-us": "Moo!",
+	},
+	"soundFile": "Cow.raw",
+	"image": "cow.jpg"
+},
+{
+	"name": "COYOTE",
+	"properName": {
+		"en-us": "coyote"
+	},
+	"knownAs": {
+		"en-us": [ "coyote", "coyotes" ]
+	},
+	"sound": {
+		"en-us": "Awooooo!",
+	},
+	"soundFile": "Coyote.raw",
+	"image": "coyote.jpg"
+},
+{
+	"name": "CRICKET",
+	"properName": {
+		"en-us": "cricket"
+	},
+	"knownAs": {
+		"en-us": [ "cricket", "crickets" ]
+	},
+	"sound": {
+		"en-us": "Chirp!",
+	},
+	"soundFile": "Cricket.raw",
+	"image": "cricket.jpg"
+},
+{
+	"name": "CROW",
+	"properName": {
+		"en-us": "crow"
+	},
+	"knownAs": {
+		"en-us": [ "crow", "crows", "raven", "ravens" ]
+	},
+	"sound": {
+		"en-us": "Caw!",
+	},
+	"soundFile": "Crow.raw",
+	"image": "crow.jpg"
+},
+{
+	"name": "DOG",
+	"properName": {
+		"en-us": "dog"
+	},
+	"knownAs": {
+		"en-us": [ "dog", "dogs", "doggo", "doggie", "doggies" ]
+	},
+	"sound": {
+		"en-us": "Woof!",
+	},
+	"soundFile": "Dog.raw",
+	"image": "dog.jpg"
+},
+{
+	"name": "DOLPHIN",
+	"properName": {
+		"en-us": "dolphin"
+	},
+	"knownAs": {
+		"en-us": [ "dolphin", "dolphins", "porpoise", "porpoises" ]
+	},
+	"sound": {
+		"en-us": "Click!",
+	},
+	"soundFile": "Dolphin.raw",
+	"image": "dolphin.jpg"
+},
+{
+	"name": "DONKEY",
+	"properName": {
+		"en-us": "donkey"
+	},
+	"knownAs": {
+		"en-us": [ "donkey", "donkeys", "mule", "mules", "ass", "asses" ]
+	},
+	"sound": {
+		"en-us": "Hee-haw!"
+	},
+	"soundFile": "Donkey.raw",
+	"image": "donkey.jpg"
+},
+{
+	"name": "DUCK",
+	"properName": {
+		"en-us": "duck"
+	},
+	"knownAs": {
+		"en-us": [ "duck", "ducks", "mallard", "mallards" ]
+	},
+	"sound": {
+		"en-us": "Quack!",
+	},
+	"soundFile": "Duck.raw",
+	"image": "duck.jpg"
+},
+{
+	"name": "ELEPHANT",
+	"properName": {
+		"en-us": "elephant"
+	},
+	"knownAs": {
+		"en-us": [ "elephant", "elephants" ]
+	},
+	"sound": {
+		"en-us": "Baroooo!",
+	},
+	"soundFile": "Elephant.raw",
+	"image": "elephant.jpg"
+},
+{
+	"name": "FISH",
+	"properName": {
+		"en-us": "fish"
+	},
+	"knownAs": {
+		"en-us": [ "fish" ]
+	},
+	"sound": {
+		"en-us": "Glub!",
+	},
+	"soundFile": "Fish.raw",
+	"image": "fish.jpg"
+},
+{
+	"name": "FOX",
+	"properName": {
+		"en-us": "fox"
+	},
+	"knownAs": {
+		"en-us": [ "fox", "foxes" ]
+	},
+	"sound": {
+		"en-us": "Ring-a-ding-ding!",
+	},
+	"soundFile": "Fox.raw",
+	"image": "fox.jpg"
+},
+{
+	"name": "FROG",
+	"properName": {
+		"en-us": "frog"
+	},
+	"knownAs": {
+		"en-us": [ "frog", "frogs" ]
+	},
+	"sound": {
+		"en-us": "Ribbit!",
+	},
+	"soundFile": "Frog.raw",
+	"image": "frog.jpg"
+},
+{
+	"name": "GIRAFFE",
+	"properName": {
+		"en-us": "giraffe"
+	},
+	"knownAs": {
+		"en-us": [ "giraffe", "giraffes" ]
+	},
+	"sound": {
+		"en-us": "Hummm!",
+	},
+	"soundFile": "Giraffe.raw",
+	"image": "giraffe.jpg"
+},
+{
+	"name": "GOAT",
+	"properName": {
+		"en-us": "goat"
+	},
+	"knownAs": {
+		"en-us": [ "goat", "goats" ]
+	},
+	"sound": {
+		"en-us": "Naaa!",
+	},
+	"soundFile": "Goat.raw",
+	"image": "goat.jpg"
+},
+{
+	"name": "GOOSE",
+	"properName": {
+		"en-us": "goose"
+	},
+	"knownAs": {
+		"en-us": [ "goose", "geese" ]
+	},
+	"sound": {
+		"en-us": "Honk!",
+	},
+	"soundFile": "Goose.raw",
+	"image": "goose.jpg"
+},
+{
+	"name": "HORSE",
+	"properName": {
+		"en-us": "horse"
+	},
+	"knownAs": {
+		"en-us": [ "horse", "horses", "horsie", "horsey", "horsies" ]
+	},
+	"sound": {
+		"en-us": "Neigh!",
+	},
+	"soundFile": "Horse.raw",
+	"image": "horse.jpg"
+},
+{
+	"name": "JAGUAR",
+	"properName": {
+		"en-us": "jaguar"
+	},
+	"knownAs": {
+		"en-us": [ "jaguar", "jaguars" ]
+	},
+	"sound": {
+		"en-us": "Yoowwww!",
+	},
+	"soundFile": "Jaguar.raw",
+	"image": "jaguar.jpg"
+},
+{
+	"name": "KITTEN",
+	"properName": {
+		"en-us": "kitten"
+	},
+	"knownAs": {
+		"en-us": [ "kitten", "kittens", "kitty", "kitties" ]
+	},
+	"sound": {
+		"en-us": "Mew!",
+	},
+	"soundFile": "Kitten.raw",
+	"image": "kitten.jpg"
+},
+{
+	"name": "LEOPARD",
+	"properName": {
+		"en-us": "leopard"
+	},
+	"knownAs": {
+		"en-us": [ "leopard", "leopards" ]
+	},
+	"sound": {
+		"en-us": "Yoowwww!",
+	},
+	"soundFile": "Jaguar.raw",
+	"image": "leopard.jpg"
+},
+{
+	"name": "LION",
+	"properName": {
+		"en-us": "lion"
+	},
+	"knownAs": {
+		"en-us": [ "lion", "lions" ]
+	},
+	"sound": {
+		"en-us": "Roar!",
+	},
+	"soundFile": "Lion.raw",
+	"image": "lion.jpg"
+},
+{
+	"name": "LIZARD",
+	"properName": {
+		"en-us": "lizard"
+	},
+	"knownAs": {
+		"en-us": [ "lizard", "lizards" ]
+	},
+	"sound": {
+		"en-us": "Mlem!",
+	},
+	"soundFile": "Lizard.raw",
+	"image": "lizard.jpg"
+},
+{
+	"name": "MONKEY",
+	"properName": {
+		"en-us": "monkey"
+	},
+	"knownAs": {
+		"en-us": [ "monkey", "monkeys" ]
+	},
+	"sound": {
+		"en-us": "Hoo hoo hoo!",
+	},
+	"soundFile": "Monkey.raw",
+	"image": "monkey.jpg"
+},
+{
+	"name": "OWL",
+	"properName": {
+		"en-us": "owl"
+	},
+	"knownAs": {
+		"en-us": [ "owl", "owls" ]
+	},
+	"sound": {
+		"en-us": "Hoot!",
+	},
+	"soundFile": "Owl.raw",
+	"image": "owl.jpg"
+},
+{
+	"name": "PANDA",
+	"properName": {
+		"en-us": "panda"
+	},
+	"knownAs": {
+		"en-us": [ "panda", "pandas", "panda bear", "panda bears" ]
+	},
+	"sound": {
+		"en-us": "Grrrawwwrr!",
+	},
+	"soundFile": "Panda.raw",
+	"image": "panda.jpg"
+},
+{
+	"name": "PARROT",
+	"properName": {
+		"en-us": "parrot"
+	},
+	"knownAs": {
+		"en-us": [ "parrot", "parrots", "macaw", "macaws" ]
+	},
+	"sound": {
+		"en-us": "Ca-CAW!",
+	},
+	"soundFile": "Parrot.raw",
+	"image": "parrot.jpg"
+},
+{
+	"name": "PIGEON",
+	"properName": {
+		"en-us": "pigeon"
+	},
+	"knownAs": {
+		"en-us": [ "pigeon", "pigeons" ]
+	},
+	"sound": {
+		"en-us": "Coo coo!",
+	},
+	"soundFile": "Pigeon.raw",
+	"image": "pigeon.jpg"
+},
+{
+	"name": "PIG",
+	"properName": {
+		"en-us": "pig"
+	},
+	"knownAs": {
+		"en-us": [ "pig", "pigs", "hog", "hogs", "piggie", "piggies", "piglet", "piglets" ]
+	},
+	"sound": {
+		"en-us": "Oink!",
+	},
+	"soundFile": "Pig.raw",
+	"image": "pig.jpg"
+},
+{
+	"name": "PLATYPUS",
+	"properName": {
+		"en-us": "platypus"
+	},
+	"knownAs": {
+		"en-us": [ "platypus", "platypuses" ]
+	},
+	"sound": {
+		"en-us": "Mrglmrglmrglmrgl!",
+	},
+	"soundFile": "Platypus.raw",
+	"image": "platypus.jpg"
+},
+{
+	"name": "PONY",
+	"properName": {
+		"en-us": "pony"
+	},
+	"knownAs": {
+		"en-us": [ "pony", "ponies", "little pony", "little ponies" ]
+	},
+	"sound": {
+		"en-us": "Neigh!",
+	},
+	"soundFile": "Pony.raw",
+	"image": "pony.jpg"
+},
+{
+	"name": "PUPPY",
+	"properName": {
+		"en-us": "puppy"
+	},
+	"knownAs": {
+		"en-us": [ "puppy", "puppies" ]
+	},
+	"sound": {
+		"en-us": "Bark!",
+	},
+	"soundFile": "Puppy.raw",
+	"image": "puppy.jpg"
+},
+{
+	"name": "ROOSTER",
+	"properName": {
+		"en-us": "rooster"
+	},
+	"knownAs": {
+		"en-us": [ "rooster", "roosters" ]
+	},
+	"sound": {
+		"en-us": "Cock-a-doodle-doo!",
+	},
+	"soundFile": "Rooster.raw",
+	"image": "rooster.jpg"
+},
+{
+	"name": "SHEEP",
+	"properName": {
+		"en-us": "sheep"
+	},
+	"knownAs": {
+		"en-us": [ "sheep", "lamb", "lambs" ]
+	},
+	"sound": {
+		"en-us": "Baaaa!",
+	},
+	"soundFile": "Sheep.raw",
+	"image": "sheep.jpg"
+},
+{
+	"name": "TIGER",
+	"properName": {
+		"en-us": "tiger"
+	},
+	"knownAs": {
+		"en-us": [ "tiger", "tigers" ]
+	},
+	"sound": {
+		"en-us": "Rawr!",
+	},
+	"soundFile": "Tiger.raw",
+	"image": "tiger.jpg"
+},
+{
+	"name": "TOAD",
+	"properName": {
+		"en-us": "toad"
+	},
+	"knownAs": {
+		"en-us": [ "toad", "toads" ]
+	},
+	"sound": {
+		"en-us": "Croak!",
+	},
+	"soundFile": "Toad.raw",
+	"image": "toad.jpg"
+}
+]

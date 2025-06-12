@@ -1,0 +1,41 @@
+﻿@Var IEnumerable<YoutubeVideo> Videos
+@Namespace Durandal.Plugins.Youtube
+
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/base-min.css" />
+	<link href="/views/common/global_html5.css" rel="stylesheet" type="text/css" />
+	<link href="/views/common/flexbox.css" rel="stylesheet" type="text/css" />
+	<link href="/views/youtube/html5/youtube.css" rel="stylesheet" type="text/css" />
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+	<title>Youtube search results</title>
+    ${new Durandal.CommonViews.DynamicTheme().Render()}
+</head>
+<body class="globalBgColor globalFgColor globalFontStyle globalFontColor">
+	<div class="flexAppContainer flex">
+		<div class="flex flexBoxRow">
+			<div class="flex sidebar globalBgColor"></div>
+			<div class="flex flex3 globalBgColorLight">
+				<div class="flex flexBoxColumn">
+                    <for each='var video in Videos'>
+                        <div class="flex1 resultItem">
+                            <div class="flex flexBoxRow flex-center">
+                                <div class="flex2">
+                                    <img width="100%" class="pure-img" src="${video.ThumbUrl}" />
+                                </div>
+                                <div class="descriptionBox flex3">
+                                    <a href="${video.PageUrl}" class="globalLinkColor">${video.Name}</a><br />
+                                    ${video.Description}<br />
+                                </div>
+                            </div>
+                        </div>
+                    </for>
+				</div>
+			</div>
+			<div class="flex sidebar globalBgColor"></div>
+		</div>
+	</div>
+</body>
+</html>

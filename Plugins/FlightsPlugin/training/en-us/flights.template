@@ -1,0 +1,84 @@
+#STATIC#
+
+#PATTERNS#
+
+flights/get_flight_status	[airline]{airlines}[/airline] [flight_num]{flightnums}[/flight_num]
+flights/get_flight_status	[airline]{airlines}[/airline] flight [flight_num]{flightnums}[/flight_num]
+flights/get_flight_status	[airline]{airlines}[/airline] flight number [flight_num]{flightnums}[/flight_num]
+flights/get_flight_status	[airline]{airlines}[/airline] [flight_num]{flightnums}[/flight_num] {status}
+flights/get_flight_status	[airline]{airlines}[/airline] flight [flight_num]{flightnums}[/flight_num] {status}
+flights/get_flight_status	[airline]{airlines}[/airline] flight number [flight_num]{flightnums}[/flight_num] {status}
+flights/get_flight_status	{flight_info_prefixes} [airline]{airlines}[/airline] [flight_num]{flightnums}[/flight_num]
+flights/get_flight_status	{flight_info_prefixes} [airline]{airlines}[/airline] flight [flight_num]{flightnums}[/flight_num]
+flights/get_flight_status	{flight_info_prefixes} [airline]{airlines}[/airline] flight number [flight_num]{flightnums}[/flight_num]
+flights/get_flight_status	{whenwill} [airline]{airlines}[/airline] [flight_num]{flightnums}[/flight_num] {land}
+flights/get_flight_status	{whenwill} [airline]{airlines}[/airline] flight [flight_num]{flightnums}[/flight_num] {land}
+flights/get_flight_status	{whenwill} [airline]{airlines}[/airline] flight number [flight_num]{flightnums}[/flight_num] {land}
+flights/get_flight_status	when is [airline]{airlines}[/airline] [flight_num]{flightnums}[/flight_num] {landing}
+flights/get_flight_status	when is [airline]{airlines}[/airline] flight [flight_num]{flightnums}[/flight_num] {landing}
+flights/get_flight_status	when is [airline]{airlines}[/airline] flight number [flight_num]{flightnums}[/flight_num] {landing}
+flights/get_flight_status	how long until [airline]{airlines}[/airline] [flight_num]{flightnums}[/flight_num] {lands}
+flights/get_flight_status	how long until [airline]{airlines}[/airline] flight [flight_num]{flightnums}[/flight_num] {lands}
+flights/get_flight_status	how long until [airline]{airlines}[/airline] flight number [flight_num]{flightnums}[/flight_num] {lands}
+
+
+
+#flight_info_prefixes#
+what is the status of
+what's the status of
+status of
+flight status
+flight status of
+flight updates for
+flight update for
+current status of
+what is the current status of
+what's the current status of
+where is
+
+#whenwill#
+when does
+when will
+when shall
+at what time does
+at what time will
+
+#status#
+status
+current status
+landing time
+
+#land#
+land
+arrive
+touch down
+touchdown
+
+#lands#
+lands
+arrives
+touches down
+
+#landing#
+landing
+arriving
+touching down
+
+#airlines#catalog=business/airlines#
+
+#flightnums#
+4343
+117
+206
+425
+44
+10
+97
+9
+444
+654
+123
+853
+277
+1100
+322

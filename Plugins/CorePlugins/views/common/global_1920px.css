@@ -1,0 +1,13 @@
+﻿/* Without CSS3 media selectors in compatability mode, font sizes are fixed here */
+h1
+{
+	font-size: 52pt;
+}
+h2
+{
+	font-size: 38pt;
+}
+body
+{
+	font-size: 26pt;
+}

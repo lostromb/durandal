@@ -1,0 +1,82 @@
+#STATIC#
+
+bingmaps/show_map	where am I
+bingmaps/show_map	where am I
+bingmaps/show_map	where am I
+bingmaps/show_map	where is this
+bingmaps/show_map	show the map
+bingmaps/show_map	show the map
+bingmaps/show_map	open the map
+bingmaps/show_map	open the map
+bingmaps/show_map	show me where I am
+bingmaps/show_map	location please
+bingmaps/show_map	locate me
+bingmaps/show_map	locate me on the map
+bingmaps/show_map	find me on the map
+
+#PATTERNS#
+
+bingmaps/find_locations	{prefixes} [location]{locations}[/location]
+
+bingmaps/get_directions_by_selection	{direction_prefix} [selection_ordinal]{basic_selection_ordinal}[/selection_ordinal]
+bingmaps/get_directions_by_selection	{direction_prefix} [selection_ordinal]{selection_prefix}[selection_criteria]{selection_criteria}[/selection_criteria][/selection_ordinal]
+
+#prefixes#
+where is the nearest
+where is the
+find the nearest
+show me the closest
+find the closest
+
+#direction_prefix#
+give me directions to
+directions to
+take me to
+drive me to
+tell me how to get to
+show me the way to
+can you show me the way to
+can you take me to
+steer me to
+steer me towards
+
+; (The one) on 2nd street
+#selection_prefix#
+the place 
+the one 
+one 
+
+; The one (on 2nd street)
+#selection_criteria#
+on 2nd avenue
+on first street
+on main
+on west lake Sammamish
+on 2nd avenue
+in Ayden
+in Greenville
+in Paris
+in Vernal
+closest to me
+that's closest
+that's close by
+that's near me
+by the mall
+on pine street
+in Santa Clara
+
+#basic_selection_ordinal#catalog=common/ordinals#
+
+#locations#
+sip wine bar
+Thai restaurant
+movie theater
+gas station
+Arco
+McDonald's
+Wendy's
+jack in the box
+staples
+office depot
+butcher shop
+train station

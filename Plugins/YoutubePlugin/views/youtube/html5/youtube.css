@@ -1,0 +1,68 @@
+﻿@charset "utf-8";
+body
+{
+    /* standard "single-page app" body layout */
+    display: block;
+    overflow: hidden;
+    margin: 0px;
+    padding: 0px;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+a
+{
+	font-weight: bold;
+}
+
+.resultItem
+{
+	margin: 5px;
+	overflow: hidden;
+}
+.descriptionBox
+{
+	padding: 5px;
+}
+
+@media screen and (max-width: 360px)
+{
+	.resultItem
+	{
+		font-size: 7pt;
+	}
+}
+@media screen and (min-width: 361px) and (max-width: 800px)
+{
+	.resultItem
+	{
+		font-size: 9pt;
+	}
+}
+@media screen and (min-width: 801px) and (max-width: 1200px)
+{
+	.resultItem
+	{
+		font-size: 11pt;
+	}
+}
+@media screen and (min-width: 1201px)
+{
+	.resultItem
+	{
+		font-size: 14pt;
+	}
+}
+
+/* Show and hide the sidebars depending on screen width */
+@media screen and (min-width: 600px)
+{
+	.sidebar
+	{
+		-webkit-box-flex: 1;
+		-moz-box-flex: 1;
+		-webkit-flex: 1;
+		-ms-flex: 1 1 auto;
+		flex: 1;
+	}
+}

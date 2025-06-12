@@ -1,0 +1,52 @@
+#REGEX#
+wikipedia/wiki_search	^search wikipedia for (the )?(?<query>.+?)\.?
+wikipedia/wiki_search	^find (the )?(?<query>.+?) on wikipedia\.?
+
+; wikipedia/wiki_search	^who is (?<query>.{5,20}?)[\.\?]?$
+; wikipedia/wiki_search	^what (is|are) (the )?(?<query>.{3,20}?)[\.\?]?$
+
+#PATTERNS#
+wikipedia/wiki_search	who is [query]{people}[/query]
+wikipedia/wiki_search	who was [query]{people}[/query]
+wikipedia/wiki_search	who were [query]{people}[/query]
+wikipedia/wiki_search	what is [query]{things_singular}[/query]
+wikipedia/wiki_search	what are [query]{things_plural}[/query]
+wikipedia/wiki_search	who is [query]{people}[/query]?
+wikipedia/wiki_search	who was [query]{people}[/query]?
+wikipedia/wiki_search	who were [query]{people}[/query]?
+wikipedia/wiki_search	what is [query]{things_singular}[/query]?
+wikipedia/wiki_search	what are [query]{things_plural}[/query]?
+wikipedia/wiki_search	search Wikipedia for [query]{things_singular}[/query]
+wikipedia/wiki_search	search Wikipedia for [query]{things_plural}[/query]
+wikipedia/wiki_search	search Wikipedia for [query]{people}[/query]
+wikipedia/wiki_search	find [query]{things_singular}[/query] on Wikipedia
+wikipedia/wiki_search	find [query]{things_plural}[/query] on Wikipedia
+wikipedia/wiki_search	find [query]{people}[/query] on Wikipedia
+
+#people#catalog=people/notable_people#
+
+#things_singular#
+black infinity
+the krebs cycle
+glycolysis
+octane
+the moon
+nickel bromide
+gamelan
+Microsoft
+Malawi
+bel
+paris
+Cycnus
+dreamago
+abrams tank
+ladyhawke
+
+#things_plural#
+the green bay packers
+stem cells
+ottowa fury women
+hellfire missiles
+the plains indians
+butterflies
+birds

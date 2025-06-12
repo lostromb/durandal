@@ -1,0 +1,59 @@
+#PATTERNS#
+
+vlcmedia/play_movie	{movie_prefixes} [media_title]{movie_titles}[/media_title]
+vlcmedia/play_tv_episode	{tv_prefixes} [media_title]{tv_titles}[/media_title] season [season]0[/season] episode [episode]0[/episode]
+
+#movie_prefixes#
+play movie
+play video
+play the movie
+play the video
+start playing
+start playing the movie
+start playing the video
+start the movie
+start the video
+
+#tv_prefixes#
+play
+play video
+play the video
+start playing
+start playing the video
+start the video
+I want to watch
+
+#movie_titles#
+guardians of the galaxy
+top secret
+better off dead
+double dragon
+the empire strikes back
+the thing
+friday
+Balto
+127 hours
+the beach
+last action hero
+terminator 2
+hackers
+blank check
+up
+dear Jane
+Mr. Deeds
+click
+jurassic park
+home alone 2
+
+#tv_titles#
+game of thrones
+scrubs
+psych
+king of the hill
+friends
+Malcolm in the middle
+the Simpsons
+breaking bad
+Dexter
+gravity falls
+total drama island

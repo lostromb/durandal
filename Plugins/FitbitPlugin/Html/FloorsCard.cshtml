@@ -1,0 +1,46 @@
+<div class="container">
+  <div class="container-background"></div>
+  <div class="container-border">
+    <p class="top_text">
+      <span class="day">{{entity.date}}</span>
+    </p>
+    <div class="data_container">
+      <div class="exercise_circle">
+        <div *ngIf="entity.percent < 100" class="steps_circle c100 p{{entity.percent}}">
+          <div class="slice">
+            <div class="bar"></div>
+            <div class="fill"></div>
+          </div>
+          <div *ngIf="entity.stairs_climbed == 0"> 
+            <img src="https://botletstorage.blob.core.windows.net/static-template-images/fitbit%20ic_floors_50.png">
+          </div>
+          <div *ngIf="entity.stairs_climbed > 0 && entity.percent < 100"> 
+            <img src="https://botletstorage.blob.core.windows.net/static-template-images/fitbit%20ic_floors_50.png">
+          </div>
+        </div>
+        <div *ngIf="entity.percent == 100" class="steps_circle c100 p100 green">
+          <div class="slice">
+            <div class="bar"></div>
+            <div class="fill"></div>
+          </div>
+          <div> 
+            <img src="https://botletstorage.blob.core.windows.net/static-template-images/fitbit%20ic_floors_goal_50.png">
+          </div>
+        </div>
+      </div>
+    </div>
+    <p class="exercise_data_container">
+      <span class="exercise_number">{{entity.stairs_climbed}}</span>
+      <span class="exercise_type">floors</span>
+    </p>
+    
+    <p class="bottom_message" *ngIf="entity.stairs_to_goal >= 0">
+      <span class="number_left">{{entity.stairs_to_goal}}</span>
+      <span class="exercise_left">floors left to reach your goal!</span>
+    </p>
+    <p class="bottom_message" *ngIf="entity.stairs_to_goal < 0">
+      <span class="number_left">{{0 - entity.stairs_to_goal}}</span>
+      <span class="exercise_left">floors above your goal!</span>
+    </p>
+  </div>
+</div>

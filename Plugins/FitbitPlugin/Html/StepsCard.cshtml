@@ -1,0 +1,71 @@
+@var int Percent
+@var int StepsTaken
+@var int StepsToGoal
+@var string DateString
+@namespace Durandal.Plugins.Fitbit.Html
+
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <link href="/views/fitbit/fitbit.css" rel="stylesheet" type="text/css">
+        <link href="/views/fitbit/percentage_circle.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="container-background"></div>
+            <div class="container-border">
+                <p class="top_text">
+                    <span class="day">${DateString}</span>
+                </p>
+                <div class="data_container">
+                    <div class="exercise_circle">
+                        <if condition='Percent < 100'>
+							<div class="steps_circle c100 p${Percent}">
+								<div class="slice">
+									<div class="bar"></div>
+									<div class="fill"></div>
+								</div>
+								<div>
+									<if condition='StepsTaken == 0'>
+										<img src="https://botletstorage.blob.core.windows.net/static-template-images/fitbit%20ic_steps_50.png">
+									</if>
+									<else>
+										<img src="https://botletstorage.blob.core.windows.net/static-template-images/fitbit%20ic_steps_50.png">
+									</else>
+								</div>
+							</div>
+						</if>
+						<else>
+							<div class="steps_circle c100 p100 green">
+								<div class="slice">
+									<div class="bar"></div>
+									<div class="fill"></div>
+								</div>
+								<div>
+									<img src="https://botletstorage.blob.core.windows.net/static-template-images/fitbit%20ic_steps_goal_50.png">
+								</div>
+							</div>
+						</else>
+                    </div>
+                </div>
+                <p class="exercise_data_container">
+                    <span class="exercise_number">${StepsTaken}</span>
+                    <span class="exercise_type">steps</span>
+                </p>
+				<if condition='StepsToGoal >= 0'>
+					<p class="bottom_message">
+						<span class="number_left">${StepsToGoal}</span>
+						<span class="exercise_left">steps left to reach your goal!</span>
+					</p>
+				</if>
+				<else>
+					<p class="bottom_message">
+						<span class="number_left">${0 - StepsToGoal}</span>
+						<span class="exercise_left">steps above your goal!</span>
+					</p>
+				</else>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<grammar version="1.0">
+  <regex id="matcher" expression=".+" />
+  
+  <normalization_rule id="normalizer" strict="true">
+    <item input="past" output="PAST" />
+    <item input="last" output="PAST" />
+    <item input="recent" output="PAST" />
+    <item input="most recent" output="PAST" />
+    <item input="latest" output="PAST" />
+  </normalization_rule>
+  
+  <rule id="canonicalized_value">
+    <item><ruleref uri="#matcher" /><normalizer>normalizer</normalizer></item>
+  </rule>
+
+</grammar>

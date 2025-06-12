@@ -1,0 +1,18 @@
+﻿#timer {
+	font-size: 64pt;
+	color: #EEEEEE;
+	font-family: "Courier", monospace, sans-serif;
+}
+
+#hoursField {
+	color: #EEEEEE;
+}
+#minutesField {
+	color: #EEEEEE;
+}
+#secondsField {
+	color: #1FED14;
+}
+#msField {
+	color: #EEEEEE;
+}

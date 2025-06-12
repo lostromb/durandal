@@ -1,0 +1,26 @@
+﻿@Var bool countDown
+@Var long targetTimeEpoch
+@Namespace Durandal.Plugins.Time
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Timer</title>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link href="/views/common/global_html5.css" rel="stylesheet" type="text/css" />
+    <link href="/views/common/flexbox.css" rel="stylesheet" type="text/css" />
+    <link href="/views/time/timer.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="/views/common/durandal_assistant.js"></script>
+    <script type="text/javascript" src="/views/time/timer.js"></script>
+    ${new Durandal.CommonViews.DynamicTheme().Render()}
+</head>
+
+<body class="globalBgColor" onload="Timer.start(${countDown.ToString().ToLower()}, ${targetTimeEpoch})">
+    <div id="timer"><span id="hoursField">00</span>:<span id="minutesField">00</span>:<span id="secondsField">00</span>.<span id="msField">000</span></div>
+    <button id="pauseButton" onclick="Timer.pause()">Pause</button>
+    <button id="stopButton" onclick="Timer.stop()">Stop</button>
+</body>
+
+</html>

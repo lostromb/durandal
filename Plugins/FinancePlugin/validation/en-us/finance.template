@@ -1,0 +1,41 @@
+#STATIC#
+finance/show_overview	show me the overall market
+finance/show_overview	how are my finances
+finance/show_overview	show me my finances
+finance/show_overview	how are the markets doing
+finance/show_overview	how is the market doing
+finance/show_overview	is the market good today
+finance/show_overview	is the market doing well today
+finance/show_overview	is the market performing well today
+finance/show_overview	how is the market performing
+
+#PATTERNS#
+
+finance/show_stocks	{prefixes} {stock_portfolio}
+finance/show_stocks	what is {stock_portfolio} {market_actions}
+finance/show_stocks	how is {stock_portfolio} {market_actions}
+finance/show_bonds	{prefixes} {bond_portfolio}
+
+#prefixes#
+show me
+how is
+
+#market_actions#
+like
+performing
+like now
+performing now
+like right now
+performing right now
+
+#stock_portfolio#
+the stock market
+the stock exchange
+the current stock market
+the current stock exchange
+
+#bond_portfolio#
+the bond market
+the bond exchange
+the current bond market
+the current bond exchange

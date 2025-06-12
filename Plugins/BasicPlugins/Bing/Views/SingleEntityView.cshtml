@@ -1,0 +1,26 @@
+﻿@var string EntityImage
+@var string EntityDescription
+@var string EntityText
+@namespace Durandal.Plugins.Bing.Views
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <link href="/views/common/global_html5.css" rel="stylesheet" type="text/css">
+    <link href="/views/bing/entitycards.css" rel="stylesheet" type="text/css">
+    <title>${EntityText}</title>
+</head>
+<body class="globalBgColor globalFontStyle globalFontColor">
+    <h1>${EntityText}</h1>
+    <img height="300px" src="${EntityImage}">
+    <p class="singleEntityDescription">
+        <if condition="string.IsNullOrWhiteSpace(EntityDescription)">
+            I would like to show a description here, but no further information is available
+        </if>
+        <else>
+            ${EntityDescription}
+        </else>
+    </p>
+</body>
+</html>

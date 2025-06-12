@@ -1,0 +1,149 @@
+.globalFontColor
+{
+    color: #EEEEEE;
+}
+.globalFontColorAccent
+{
+    color: #1FED14;
+}
+.globalFontColorSubtitle
+{
+    color: #999999;
+}
+
+.globalLinkColor
+{
+    color: #94AFE7;
+}
+.globalLinkColor:visited
+{
+    color: #C2A3DD;
+}
+.globalBgColor
+{
+    background-color: #000000;
+}
+.globalBgColorLight
+{
+    background-color: #333333;
+}
+.globalBgColorAccent
+{
+    background-color: #666666;
+}
+
+.buttonDiv
+{
+    background-color: #333333;
+}
+
+.buttonLink
+{
+    color: #FFFFFF;
+}
+.buttonLink:visited
+{
+    color: #FFFFFF;
+}
+
+.entityPageHeader
+{
+	padding-left: 10px;
+}
+
+.entityBoxFixed
+{
+	display: inline-block;
+	position: relative;
+	width: 300px;
+	height: 300px;
+	margin-left: 10px;
+	margin-top: 10px;
+	overflow: hidden;
+	
+	background: rgb(0,183,234); /* Old browsers */
+	background: -moz-linear-gradient(top, rgba(0,183,234,1) 0%, rgba(0,158,195,1) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top, rgba(0,183,234,1) 0%,rgba(0,158,195,1) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, rgba(0,183,234,1) 0%,rgba(0,158,195,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00b7ea', endColorstr='#009ec3',GradientType=0 );
+}
+
+.entityTopShadow
+{
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	right: 0px;
+	height: 60px;
+	background-color: #000000;
+	opacity: 0.5;
+	z-index: 20;
+}
+
+.entityBottomShadow
+{
+	position: absolute;
+	left: 0px;
+	bottom: 0px;
+	right: 0px;
+	height: 90px;
+	background-color: #000000;
+	opacity: 0.5;
+	z-index: 20;
+}
+
+.entityTitle
+{
+	position: absolute;
+	left: 0px;
+	top: 8px;
+	font-size: 18pt;
+	padding: 10px;
+	margin: 0px;
+	color: #FFFFFF;
+	z-index: 30;
+	width: 1000px;
+}
+
+.entityTypeName
+{
+	position: absolute;
+	left: 10px;
+	top: 0px;
+	font-size: 10pt;
+	padding: 0px;
+	margin: 0px;
+	color: #FFFFFF;
+	z-index: 30;
+	width: 1000px;
+}
+
+.entityDescription
+{
+	position: absolute;
+	left: 0px;
+	top: 200px;
+	right: 0px;
+	font-size: 12pt;
+	padding-left: 10px;
+	padding-right: 10px;
+	color: #FFFFFF;
+	text-align: justify;
+	z-index: 30;
+}
+
+.singleEntityDescription
+{
+	font-size: 20pt;
+}
+
+.entityImage
+{
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	max-width: 100%;
+	height: 300px;
+	display: block;
+	z-index: 10;
+}

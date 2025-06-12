@@ -1,0 +1,16 @@
+[
+{
+	"question": "What is the painting 'La Gioconda' more commonly known as?",
+	"correct": "the Mona Lisa",
+	"incorrect": [ "the Starry Night", "the Virgin of the Rocks", "Girl with a Pearl Earring" ],
+	"category": "ART",
+	"difficulty": 7
+},
+{
+	"question": "Which Shakespeare play features Shylock?",
+	"correct": "the Merchant of Venice.",
+	"incorrect": [ "Macbeth", "the Taming of the Shrew", "Romeo and Juliet" ],
+	"category": "ART",
+	"difficulty": 6
+}
+]

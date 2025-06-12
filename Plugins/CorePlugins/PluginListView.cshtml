@@ -1,0 +1,35 @@
+﻿@var IEnumerable<PluginRenderingInfo> Plugins
+@namespace Durandal.Plugins.Reflection.Views
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+		<meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+        <link href="/views/common/global_html5.css" rel="stylesheet" type="text/css">
+        <link href="/views/reflection/responsive_grid.css" rel="stylesheet" type="text/css">
+        <title>Installed Plugins</title>
+        ${new Durandal.CommonViews.DynamicTheme().Render()}
+        <script src="/views/common/durandal_assistant.js"></script>
+        <script>
+            DurandalAssistant.logMessage("I am over here");
+            DurandalAssistant.updateRequestData("key1", "value1");
+            DurandalAssistant.updateRequestData("key2", "value2");
+        </script>
+    </head>
+    <body class="globalBgColor globalFontStyle globalFontColor">
+        <h1>Active dialog plugins</h1>
+        <ul class="cbp-rfgrid">
+            <for each='PluginRenderingInfo plugin in Plugins'>
+                <li>
+                    <a href="${plugin.InfoLink}">
+                        <img src="${plugin.IconUrl}" />
+                        <div>
+                            <h3>${plugin.Name}</h3>
+                        </div>
+                    </a>
+                </li>
+            </for>
+        </ul>
+    </body>
+</html>

@@ -1,0 +1,7 @@
+Pacific/Tahiti	Pacific/Marquesas
+Asia/Calcutta	Asia/Kolkata
+Asia/Katmandu	Asia/Kathmandu
+Asia/Rangoon	Asia/Yangon
+Asia/Saigon	Asia/Ho_Chi_Minh
+Atlantic/Faeroe	Atlantic/Faroe
+Pacific/Ponape	Pacific/Pohnpei

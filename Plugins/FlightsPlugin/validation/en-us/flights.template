@@ -1,0 +1,73 @@
+#STATIC#
+
+#PATTERNS#
+
+flights/get_flight_status	{flight_info_prefixes} [airline]{airlines}[/airline] [flight_num]{flightnums}[/flight_num]
+flights/get_flight_status	{flight_info_prefixes} [airline]{airlines}[/airline] flight [flight_num]{flightnums}[/flight_num]
+flights/get_flight_status	{flight_info_prefixes} [airline]{airlines}[/airline] flight number [flight_num]{flightnums}[/flight_num]
+flights/get_flight_status	[airline]{airlines}[/airline] [flight_num]{flightnums}[/flight_num] {status}
+flights/get_flight_status	[airline]{airlines}[/airline] flight [flight_num]{flightnums}[/flight_num] {status}
+flights/get_flight_status	[airline]{airlines}[/airline] flight number [flight_num]{flightnums}[/flight_num] {status}
+flights/get_flight_status	{whenwill} [airline]{airlines}[/airline] [flight_num]{flightnums}[/flight_num] {land}
+flights/get_flight_status	{whenwill} [airline]{airlines}[/airline] flight [flight_num]{flightnums}[/flight_num] {land}
+flights/get_flight_status	when is [airline]{airlines}[/airline] [flight_num]{flightnums}[/flight_num] {landing}
+flights/get_flight_status	when is [airline]{airlines}[/airline] flight number [flight_num]{flightnums}[/flight_num] {landing}
+flights/get_flight_status	how long until [airline]{airlines}[/airline] flight [flight_num]{flightnums}[/flight_num] {lands}
+
+#flight_info_prefixes#
+what is the status of
+what's the status of
+status of
+flight status
+flight status of
+flight updates for
+flight update for
+where is
+
+#airlines#
+Alaska
+southwest
+north west
+united
+Northwind
+Hawaii air
+Lufthansa
+air Mexico
+Korea air
+Delta
+
+#status#
+status
+current status
+landing time
+
+#land#
+land
+arrive
+touch down
+touchdown
+
+#lands#
+lands
+arrives
+touches down
+
+#landing#
+landing
+arriving
+touching down
+
+
+#whenwill#
+when does
+when shall
+at what time does
+at what time shall
+
+#flightnums#
+10
+744
+9412
+154
+16
+21

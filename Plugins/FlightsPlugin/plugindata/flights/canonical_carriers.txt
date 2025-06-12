@@ -1,0 +1,25 @@
+Aeromexico	AM
+Air China	CA
+Air France	AF
+Alaska Airlines	AS
+Alaska Air	AS
+Alaska	AS
+American Airlines	AA
+American	AA
+China Southern Airlines	CZ
+China Southern	CZ
+Delta Air Lines	DL
+Delta Airlines	DL
+Delta	DL
+easyJet	U2
+easy jet	U2
+Hawaiian Airlines	HA
+Hawaiian	HA
+JetBlue Airways	B6
+JetBlue	B6
+jet blue	B6
+Lufthansa	LH
+Southwest Airlines	WN
+Southwest	WN
+United Airlines	UA
+United	UA

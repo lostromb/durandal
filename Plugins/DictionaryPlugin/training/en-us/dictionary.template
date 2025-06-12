@@ -1,0 +1,73 @@
+#REGEX#
+dictionary/spell	^how do you spell (?<word>\w+?)[\?\.]?$
+dictionary/spell	^spell (?<word>\w+?)[\?\.]?$
+
+dictionary/define	^what does (?<word>\w+?) mean[\?\.]?$
+dictionary/define	^define (?<word>\w+?)\.?$
+
+#PATTERNS#
+
+dictionary/define	what does [word]{words}[/word] mean
+dictionary/define	what does the word [word]{words}[/word] mean
+dictionary/define	do you know what [word]{words}[/word] means
+dictionary/define	tell me what [word]{words}[/word] means
+dictionary/define	{define_prefixes} [word]{words}[/word]
+
+dictionary/spell	{spell_prefixes} [word]{words}[/word]
+
+#define_prefixes#
+define
+dictionary define
+dictionary definition of
+definition of
+find dictionary definition of
+find the dictionary definition of
+show me the dictionary definition of
+what is the meaning of
+
+#spell_prefixes#
+spell
+how do you spell
+what is the spelling of
+how do you spell the word
+spelling of
+correct spelling of
+what's the spelling of
+spell out
+how do you spell out
+can you spell out
+can you spell the word
+
+#words#
+aspersion
+ostensible
+fantastic
+inculcate
+sagacious
+exertion
+knavery
+pander
+purloin
+bunt
+duster
+lobbyist
+ubiquitous
+callousness
+typographer
+unwisdom
+membranous
+abbreviation
+extenuating
+inarticulateness
+indistinguishably
+reinstatement
+regurgitate
+senatorial
+handbill
+defamatory
+calumny
+pizzicato
+reverential
+stigmata
+trenchantly
+lectern

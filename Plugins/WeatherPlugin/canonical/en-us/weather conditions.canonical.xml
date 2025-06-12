@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<grammar version="1.0">
+  <regex id="matcher" expression=".+?" />
+  
+  <normalization_rule id="normalizer" strict="true">
+    <item input="temperature" output="TEMP" />
+    <item input="temp" output="TEMP" />
+    <item input="heat" output="TEMP" />
+    <item input="hot" output="TEMP" />
+    <item input="cold" output="TEMP" />
+    <item input="warm" output="TEMP" />
+	
+    <item input="wind" output="WIND" />
+    <item input="windy" output="WIND" />
+	
+	<!-- should "storm" be precipitation or wind? -->
+	<item input="storm" output="PRECIP" /> 
+	<item input="stormy" output="PRECIP" />
+    <item input="precipitation" output="PRECIP" />
+    <item input="moisture" output="PRECIP" />
+    <item input="rain" output="PRECIP" />
+    <item input="rainy" output="PRECIP" />
+    <item input="wet" output="PRECIP" />
+    <item input="water" output="PRECIP" />
+    <item input="hail" output="PRECIP" />
+    <item input="sleet" output="PRECIP" />
+    <item input="snow" output="PRECIP" />
+    <item input="snowy" output="PRECIP" />
+	<item input="flurries" output="PRECIP" />
+  </normalization_rule>
+  
+  <rule id="canonicalized_value">
+    <item><ruleref uri="#matcher" /><normalizer>normalizer</normalizer></item>
+  </rule>
+
+</grammar>

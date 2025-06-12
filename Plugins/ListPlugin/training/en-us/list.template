@@ -1,0 +1,141 @@
+#STATIC#
+
+list/append	append
+list/append	append something
+list/append	one more thing
+list/append	there's something else
+list/append	I want to add something else
+list/append	I want to add more
+list/append	add something to this list
+list/append	add something to the list
+list/append	add something
+list/append	something else
+list/append	add another thing
+list/append	add another item
+list/append	add one more item
+list/append	add one more thing
+list/append	append something else
+
+list/finish_appending	that's all
+list/finish_appending	I'm done
+list/finish_appending	that's enough
+list/finish_appending	that's all
+list/finish_appending	that is it
+list/finish_appending	that is all
+list/finish_appending	finish
+list/finish_appending	done with the list
+list/finish_appending	done appending
+list/finish_appending	done adding things
+list/finish_appending	finished appending
+list/finish_appending	stop editing
+list/finish_appending	stop appending
+list/finish_appending	stop adding things
+list/finish_appending	stop doing things
+
+; (todo: route "deny" and "contempt" to the finish_appending node)
+
+#PATTERNS#
+
+list/find_list	{open} my [title]grocery list[/title]
+list/find_list	{open} my [title]work items[/title]
+list/find_list	{open} my [title]task list[/title]
+list/find_list	{open} my list [list_title]{list_title}[/list_title]
+list/find_list	{open} my list called [list_title]{list_title}[/list_title]
+list/find_list	{open} my list named [list_title]{list_title}[/list_title]
+list/find_list	{open} the list [list_title]{list_title}[/list_title]
+
+list/create_list	{make} a list
+list/create_list	{make} a new list
+list/create_list	{make} a todo list
+list/create_list	{make} a list {called} [list_title]{list_title}[/list_title]
+list/create_list	{make} a new list {called} [list_title]{list_title}[/list_title]
+list/create_list	{make} a todo list {called} [list_title]{list_title}[/list_title]
+
+list/name_list	name it [list_title]{list_title}[/list_title]
+list/name_list	call it [list_title]{list_title}[/list_title]
+list/name_list	the title is [list_title]{list_title}[/list_title]
+list/name_list	the title should be [list_title]{list_title}[/list_title]
+list/name_list	title is [list_title]{list_title}[/list_title]
+list/name_list	[list_title]{list_title}[/list_title]
+
+list/select_list	[selection_ordinal]{ordinal}[/selection_ordinal]
+list/select_list	the [selection_term]{list_title}[/selection_term]
+list/select_list	the [selection_term]{list_title}[/selection_term] [explicit_exclude]list[/explicit_exclude]
+
+list/delete_list	{delete} this one
+list/delete_list	{delete} this note
+list/delete_list	{delete} this list
+
+list/append	add [item]{groceries}[/item]
+list/append	add [explicit_exclude]to the list[/explicit_exclude] [item]{groceries}[/item]
+list/append	add [item]{groceries}[/item] [explicit_exclude]to the list[/explicit_exclude]
+list/append	add [item]{todo}[/item]
+list/append	add [explicit_exclude]to the list[/explicit_exclude] [item]{todo}[/item]
+list/append	add [item]{todo}[/item] [explicit_exclude]to the list[/explicit_exclude]
+
+list/item_input	[item]{groceries}[/item]
+list/item_input	[item]{todo}[/item]
+
+list/create_reminder	remind me about this when I go [reminder_location]{locations}[/reminder_location]
+list/create_reminder	remind me about this when I'm at [reminder_location]{locations}[/reminder_location]
+list/create_reminder	remind me about this when I am at [reminder_location]{locations}[/reminder_location]
+list/create_reminder	remind me about this when I get to [reminder_location]{locations}[/reminder_location]
+list/create_reminder	remind me about this when I'm near [reminder_location]{locations}[/reminder_location]
+list/create_reminder	remind me about this when I am near [reminder_location]{locations}[/reminder_location]
+
+#open#
+open
+find
+bring up
+retrieve
+show me
+
+#called#
+called
+and call it
+named
+and name it
+labeled
+and label it
+titled
+and title it
+
+#make#
+make
+create
+start
+start making
+
+#delete#
+delete
+trash
+get rid of
+
+#list_title#
+grocery list
+shopping list
+bucket list
+groceries
+shopping cart
+games to buy
+things to try
+newegg
+computer parts
+parts
+death note
+work items
+tasks
+
+#locations#
+the store
+the gym
+home
+the office
+my office
+work
+
+#groceries#catalog=culture/food_ingredients#
+
+#todo#catalog=custom/reminder/reminder_to#
+
+#ordinal#catalog=common/ordinals#

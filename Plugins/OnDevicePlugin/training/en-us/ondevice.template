@@ -1,0 +1,43 @@
+#STATIC#
+ondevice/stop_listening	stop listening
+ondevice/stop_listening	stop listening to me
+ondevice/stop_listening	turn the microphone off
+ondevice/stop_listening	turn your mic off
+ondevice/stop_listening	stop recording
+ondevice/stop_listening	stop recording me
+ondevice/stop_listening	shut up durandal i didn't ask you anything
+ondevice/stop_listening	shut up
+ondevice/stop_listening	shut up durandal
+ondevice/stop_listening	get out
+ondevice/stop_listening	get out of here
+ondevice/stop_listening	get outta here
+ondevice/stop_listening	get your face outta here
+ondevice/stop_listening	get your face out of here
+ondevice/stop_listening	get your bitch ass outta here
+ondevice/stop_listening	get your bitch ass out of here
+
+#PATTERNS#
+ondevice/stop_listening	stop listening for [duration]{durations}[/duration]
+ondevice/stop_listening	stop listening to me for [duration]{durations}[/duration]
+ondevice/stop_listening	turn the microphone off for [duration]{durations}[/duration]
+ondevice/stop_listening	turn your mic off for [duration]{durations}[/duration]
+ondevice/stop_listening	stop recording for [duration]{durations}[/duration]
+ondevice/stop_listening	stop recording me for [duration]{durations}[/duration]
+
+#durations#
+10 minutes
+30 minutes
+a half hour
+an hour
+a few hours
+a few minutes
+20 minutes
+5 minutes
+five minutes
+two hours
+2 hours
+3 hours
+5 hours
+6 hours
+45 minutes
+forty minutes

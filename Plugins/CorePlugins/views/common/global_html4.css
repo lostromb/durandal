@@ -1,0 +1,46 @@
+﻿/* remove padding from body frame */
+body
+{
+	padding: 0px;
+	margin: 0px;
+}
+
+.screenPadding
+{
+	padding: 8px;
+}
+
+.globalFontStyle
+{
+	font-family: "Segoe UI Light", "Segoe WP Light", "Segoe UI", "Segoe WP", "Segoe", "Helvetica CE 35 Thin", "Arial Narrow", sans-serif;
+}
+.globalFontColor
+{
+	color: #EEEEEE;
+}
+.globalFontColorAccent
+{
+	color: #7BFF85;
+}
+
+.globalLinkColor
+{
+	color: #94AFE7;
+}
+.globalLinkColor:visited
+{
+	color: #C2A3DD;
+}
+
+.globalBgColor
+{
+	background-color: #000000;
+}
+.globalBgColorLight
+{
+	background-color: #333333;
+}
+.globalBgColorAccent
+{
+	background-color: #666666;
+}

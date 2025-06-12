@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<grammar version="1.0">
+  <regex id="matcher" expression=".+" />
+  
+  <normalization_rule id="normalizer" strict="false">
+    <item input="thanksgiving" output="Thanksgiving" />
+    <item input="easter" output="Easter" />
+    <item input="christmas" output="Christmas" />
+    <item input="it" output="" />
+    <item input="it now" output="" />
+	<item input="it right now" output="" />
+    <item input="right now" output="" />
+  </normalization_rule>
+  
+  <rule id="canonicalized_value">
+    <item><ruleref uri="#matcher" /><normalizer>normalizer</normalizer></item>
+  </rule>
+
+</grammar>

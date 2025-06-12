@@ -1,0 +1,117 @@
+﻿@Var string Revision
+@Var string Date
+@Var bool UseHtml5
+@var ISet<string> SampleQueries
+@var string ListPluginsLink
+@var ClientAuthenticationLevel AuthLevel
+@using Durandal.API
+@namespace Durandal.Plugins.Reflection.Views
+
+<if condition='UseHtml5'>
+    <!DOCTYPE HTML>
+    <html>
+        <head>
+            <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+            <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+            <link href="/views/common/global_html5.css" rel="stylesheet" type="text/css">
+            <link href="/views/reflection/start.css" rel="stylesheet" type="text/css">
+            ${new Durandal.CommonViews.DynamicTheme().Render()}
+            <script src="/views/common/jquery-3.2.1.min.js"></script>
+            <script>
+                var glowTime = 0;
+                var suggestionTimer = 0;
+                var sampleQueries = [
+                <if condition='SampleQueries != null'>
+		            <for each='string sampleQuery in SampleQueries'>"\"${sampleQuery}\"",</for>
+	            </if>
+                ];
+                var sampleQueryIndex = 0;
+                var step = function () {
+                    glowTime += 0.1;
+                    suggestionTimer += 0.1;
+                    document.getElementById("glowImg").style.opacity = (Math.sin(glowTime) + 1.0) / 3.0;
+
+                    // Switch suggested queries every 4 seconds
+                    if (suggestionTimer > 4) {
+                        suggestionTimer = 0;
+                        sampleQueryIndex += 1;
+                        if (sampleQueryIndex >= sampleQueries.length) {
+                            sampleQueryIndex = 0;
+                        }
+                        $("#suggestionSpan").fadeOut(500, function () {
+                            if (sampleQueries[sampleQueryIndex]) {
+                                document.getElementById("suggestionText").innerHTML = sampleQueries[sampleQueryIndex];
+                            }
+                            $("#suggestionSpan").fadeIn(500);
+                        });
+                    }
+                };
+            </script>
+        </head>
+        <body class="globalBgColor globalFontStyle globalFontColor" onload="setInterval(step, 100);">
+			<div id="centerDiv">
+                <div id="containerDiv" class="smallFont">
+                    <img id="logoImg" src="/views/reflection/logo.png">
+                    <img id="glowImg" src="/views/reflection/logoglow.png">
+                    <a class="hiddenLink" href="${ListPluginsLink}">
+                        <div id="suggestionSpan">
+                            <span class="globalFontColor">Try </span><span id="suggestionText" class="globalFontColorAccent">"Hello!"</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+			<div id="authIndicator">
+				<if condition='AuthLevel.HasFlag(ClientAuthenticationLevel.UserAuthorized)'>
+					<img src="/views/reflection/auth_authorized.png" width="16px" height="16px" >
+				</if>
+				<if condition='AuthLevel.HasFlag(ClientAuthenticationLevel.UserUnauthorized)'>
+					<img src="/views/reflection/auth_unauthorized.png" width="16px" height="16px" >
+				</if>
+				<if condition='AuthLevel.HasFlag(ClientAuthenticationLevel.UserUnverified)'>
+					<img src="/views/reflection/auth_unverified.png" width="16px" height="16px" >
+				</if>
+				<if condition='AuthLevel.HasFlag(ClientAuthenticationLevel.UserUnknown)'>
+					<img src="/views/reflection/auth_unknown.png" width="16px" height="16px" >
+				</if>
+			</div>
+			<div id="versionSpan">
+				Durandal ${Revision} Logan Stromberg ${Date}
+			</div>
+        </body>
+    </html>
+</if>
+<else>
+    <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+    <html>
+        <head>
+            <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+            <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+            <link href="/views/common/global_html4.css" rel="stylesheet" type="text/css" />
+            <link href="/views/reflection/start.css" rel="stylesheet" type="text/css" />
+        </head>
+        <body class="globalBgColor globalFontStyle globalFontColor">
+			<div id="centerDiv">
+                <div id="containerDiv">
+                    <br /><br /><br />
+                    <img id="logoImgNoGlow" src="/views/reflection/logo.png"><br>
+                    <span>Durandal Prototype ${Revision}</span><br>
+                    <span>Logan Stromberg ${Date}</span>
+                </div>
+            </div>
+			<div id="authIndicator">
+                <if condition='AuthLevel.HasFlag(ClientAuthenticationLevel.UserAuthorized)'>
+                    <img src="/views/reflection/auth_authorized.png" width="16px" height="16px">
+                </if>
+                <if condition='AuthLevel.HasFlag(ClientAuthenticationLevel.UserUnauthorized)'>
+                    <img src="/views/reflection/auth_unauthorized.png" width="16px" height="16px">
+                </if>
+                <if condition='AuthLevel.HasFlag(ClientAuthenticationLevel.UserUnverified)'>
+                    <img src="/views/reflection/auth_unverified.png" width="16px" height="16px">
+                </if>
+                <if condition='AuthLevel.HasFlag(ClientAuthenticationLevel.UserUnknown)'>
+                    <img src="/views/reflection/auth_unknown.png" width="16px" height="16px">
+                </if>
+			</div>
+        </body>
+    </html>
+</else>

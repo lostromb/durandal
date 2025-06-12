@@ -1,0 +1,26 @@
+#REGEX#
+translate/translate_phrase	^(translate|could you translate|can you translate|please translate|translate for me) "?(?<phrase>.+?)"? (into|to|in to) (?<targetlanguage>{{language}})( please| for me)?[\.\?]?$
+translate/translate_phrase	^how (do|can) you say "?(?<phrase>.+?)"? in (?<targetlanguage>{{language}})[\.\?]?$
+translate/translate_phrase	^what is "?(?<phrase>.+?)"? in (?<targetlanguage>{{language}})[\.\?]?$
+translate/translate_phrase	^(what is the |what's the )?(?<targetlanguage>{{language}}) word for (?<phrase>.+?)[\.\?]?$
+translate/translate_phrase	^(can you say|say) "?(?<phrase>.+?)"? in (?<targetlanguage>{{language}})( please| for me)?[\.\?]?$
+
+translate/enter_translate_mode	^(start translating|translate) (between|from|using) (?<language1>{{language}}) (and|to|in) (?<language2>{{language}})\.?$
+translate/exit_translate_mode	^(stop|end|exit) (translating|translation)\.?$
+
+#language#
+English
+German
+Spanish
+French
+Italian
+Japanese
+Cantonese
+Mandarin
+Mandarin Chinese
+Greek
+Russian
+Finnish
+Swedish
+Dutch
+Klingon

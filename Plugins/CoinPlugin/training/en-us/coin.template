@@ -1,0 +1,129 @@
+#REGEX#
+coin/flip	^flips? a coin
+coin/flip	^toss a coin
+coin/flip	^(a )?coin toss$
+coin/flip	^heads or tails[\.\?]?$
+
+#STATIC#
+coin/flip	flip a coin
+coin/flip	flips a coin
+coin/flip	toss a coin
+coin/flip	settle this with a coin toss
+coin/flip	flip a coin for me
+coin/flip	flip a coin please
+coin/flip	please flip a coin
+coin/flip	toss up a coin
+coin/flip	throw a coin
+coin/flip	call heads or tails
+coin/flip	is it heads or tails
+coin/flip	should it be heads or tails
+coin/flip	heads or tails?
+coin/flip	let's have a coin toss
+coin/flip	let's flip a coin
+coin/flip	let's flip a coin for it
+coin/flip	let's decide this with a coin toss
+coin/flip	let's decide it with a coin toss
+coin/flip	do you pick heads or tails?
+coin/flip	do you choose heads or tails?
+coin/flip	decide with a coin toss
+coin/flip	let's flip a coin
+coin/flip	let's flip a coin heads or tails
+
+
+#STATIC#
+coin/roll_dice	roll dice
+coin/roll_dice	dice roll
+coin/roll_dice	roll some dice
+coin/roll_dice	roll the dice
+coin/roll_dice	toss some dice
+coin/roll_dice	toss the dice
+coin/roll_dice	roll [number]2[/number] dice
+coin/roll_dice	roll [number]3[/number] dice
+coin/roll_dice	roll [number]4[/number] dice
+coin/roll_dice	roll [number]5[/number] dice
+coin/roll_dice	roll [number]two[/number] dice
+coin/roll_dice	roll [number]three[/number] dice
+coin/roll_dice	roll [number]four[/number] dice
+coin/roll_dice	roll [number]five[/number] dice
+
+#PATTERNS#
+coin/roll_dice	roll [number]{number}[/number] dice
+coin/roll_dice	[dnd_dice]d{dnd_sides}[/dnd_dice]
+coin/roll_dice	[dnd_dice]{dnd_dies}d{dnd_sides}[/dnd_dice]
+coin/roll_dice	[dnd_dice]{dnd_dies}d{dnd_sides}[/dnd_dice].
+coin/roll_dice	[dnd_dice]{dnd_dies} D {dnd_sides}[/dnd_dice]
+coin/roll_dice	roll [dnd_dice]{dnd_dies}d{dnd_sides}[/dnd_dice]
+coin/roll_dice	roll [dnd_dice]{dnd_dies} D {dnd_sides}[/dnd_dice]
+coin/roll_dice	roll [dnd_dice]{dnd_dies} D {dnd_sides}[/dnd_dice].
+coin/roll_dice	roll a [dnd_dice]{dnd_dies} D {dnd_sides}[/dnd_dice]
+coin/roll_dice	roll a [dnd_dice]d{dnd_sides}[/dnd_dice]
+coin/roll_dice	roll a [dnd_dice]D {dnd_sides}[/dnd_dice]
+
+#REGEX#
+coin/roll_dice	^roll (a |some |the )?dice
+coin/roll_dice	^roll (?<number>(one|two|three|four|five|six|seven|eight|nine|ten|[1-9][0-9]*)) dice
+coin/roll_dice	^(?<dnd_dice>[0-9]+ ?[dD] ?[0-9]+)$
+coin/roll_dice	^roll (?<dnd_dice>[0-9]+ ?[dD] ?[0-9]+)
+coin/roll_dice	^roll (a )?(?<dnd_dice>[dD] ?[0-9]+)
+
+#number#catalog=common/numbers_below_10#
+
+#dnd_dies#
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+
+#dnd_sides#
+4
+5
+6
+7
+8
+9
+10
+12
+20
+40
+50
+100
+
+#STATIC#
+coin/pick_number	pick a number between [min]1[/min] and [max]10[/max]
+coin/pick_number	pick any number between [min]1[/min] and [max]10[/max]
+coin/pick_number	pick a random number between [min]1[/min] and [max]10[/max]
+coin/pick_number	pick a number from [min]1[/min] to [max]10[/max]
+coin/pick_number	pick any number from [min]1[/min] to [max]10[/max]
+coin/pick_number	pick a random number from [min]1[/min] to [max]10[/max]
+
+#PATTERNS#
+coin/pick_number	{pick} {a_number} between [min]{number}[/min] and [max]{number}[/max]
+coin/pick_number	{pick} {a_number} from [min]{number}[/min] to [max]{number}[/max]
+coin/pick_number	I'm thinking of a number between [min]{number}[/min] and [max]{number}[/max]
+coin/pick_number	what's a number between [min]{number}[/min] and [max]{number}[/max]
+
+#REGEX#
+coin/pick_number	(pick |choose |tell me |guess |select |say |what's |I'm thinking of )?(a |any )(random )?number between (?<min>\d+) and (?<max>\d+)
+coin/pick_number	(pick |choose |tell me |guess |select |say |what's |I'm thinking of )?(a |any )(random )?number from (?<min>\d+) to (?<max>\d+)
+
+
+#pick#
+pick
+choose
+tell me
+guess
+select
+say
+
+#a_number#
+a number
+any number
+a random number

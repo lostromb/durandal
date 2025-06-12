@@ -1,0 +1,193 @@
+<?xml version="1.0"?>
+<grammar version="1.0">
+  <regex id="matcher" expression=".+" />
+  
+  <normalization_rule id="normalizer" strict="true">
+	<!-- UNIT SYSTEMS -->
+	<item input="imperial" output="IMPERIAL" />
+	<item input="imperial measurement" output="IMPERIAL" />
+	<item input="imperial measurements" output="IMPERIAL" />
+	<item input="imperial unit" output="IMPERIAL" />
+	<item input="imperial units" output="IMPERIAL" />
+	<item input="US unit" output="IMPERIAL" />
+	<item input="US units" output="IMPERIAL" />
+	<item input="US measurement" output="IMPERIAL" />
+	<item input="US measurements" output="IMPERIAL" />
+	<item input="American unit" output="IMPERIAL" />
+	<item input="American units" output="IMPERIAL" />
+	<item input="American measurement" output="IMPERIAL" />
+	<item input="American measurements" output="IMPERIAL" />
+	<item input="English unit" output="IMPERIAL" />
+	<item input="English units" output="IMPERIAL" />
+	<item input="English measurement" output="IMPERIAL" />
+	<item input="English measurements" output="IMPERIAL" />
+	
+	<item input="metric" output="METRIC" />
+	<item input="metric system" output="METRIC" />
+	<item input="metric unit" output="METRIC" />
+	<item input="metric units" output="METRIC" />
+	<item input="metric measurement" output="METRIC" />
+	<item input="metric measurements" output="METRIC" />
+	<item input="SI" output="METRIC" />
+	<item input="SI unit" output="METRIC" />
+	<item input="SI units" output="METRIC" />
+	<item input="SI measurement" output="METRIC" />
+	<item input="SI measurements" output="METRIC" />
+	<item input="scientific" output="METRIC" />
+	<item input="scientific unit" output="METRIC" />
+	<item input="scientific units" output="METRIC" />
+	<item input="scientific measurement" output="METRIC" />
+	<item input="scientific measurements" output="METRIC" />
+	
+	<!-- LENGTH -->
+	<item input="millimeter" output="MILLIMETER" />
+	<item input="millimeters" output="MILLIMETER" />
+	<item input="mm" output="MILLIMETER" />
+	<item input="centimeter" output="CENTIMETER" />
+	<item input="centimeters" output="CENTIMETER" />
+	<item input="cm" output="CENTIMETER" />
+	<item input="meter" output="METER" />
+	<item input="meters" output="METER" />
+	<item input="m" output="METER" />
+	<item input="yard" output="YARD" />
+	<item input="yards" output="YARD" />
+	<item input="yd" output="YARD" />
+	<item input="kilometer" output="KILOMETER" />
+	<item input="kilometers" output="KILOMETER" />
+	<item input="km" output="KILOMETER" />
+	<item input="mile" output="MILE" />
+	<item input="miles" output="MILE" />
+	<item input="mi" output="MILE" />
+	<item input="foot" output="FOOT" />
+	<item input="feet" output="FOOT" />
+	<item input="ft" output="FOOT" />
+	<item input="inch" output="INCH" />
+	<item input="inches" output="INCH" />
+	<item input="in" output="INCH" />
+	
+	<!-- MASS -->
+	<item input="kilogram" output="KILOGRAM" />
+	<item input="kilograms" output="KILOGRAM" />
+	<item input="kg" output="KILOGRAM" />
+	<item input="milligram" output="MILLIGRAM" />
+	<item input="milligrams" output="MILLIGRAM" />
+	<item input="mg" output="MILLIGRAM" />
+	<item input="gram" output="GRAM" />
+	<item input="grams" output="GRAM" />
+	<item input="g" output="GRAM" />
+	<item input="pound" output="POUND" />
+	<item input="pounds" output="POUND" />
+	<item input="lb" output="POUND" />
+	<item input="lbs" output="POUND" />
+	<item input="ounce" output="AMBIG_ENG_OUNCE" />
+	<item input="ounces" output="AMBIG_ENG_OUNCE" />
+	<item input="oz" output="AMBIG_ENG_OUNCE" />
+	
+	<!-- TEMPERATURE -->
+	<item input="fahrenheit" output="FAHRENHEIT" />
+	<item input="degree fahrenheit" output="FAHRENHEIT" />
+	<item input="degree sfahrenheit" output="FAHRENHEIT" />
+	<item input="F" output="FAHRENHEIT" />
+	<item input="celsius" output="CELSIUS" />
+	<item input="degree celsius" output="CELSIUS" />
+	<item input="degrees celsius" output="CELSIUS" />
+	<item input="C" output="CELSIUS" />
+	<item input="kelvin" output="KELVIN" />
+	<item input="degree kelvin" output="KELVIN" />
+	<item input="degrees kelvin" output="KELVIN" />
+	<item input="K" output="KELVIN" />
+	<item input="centigrade" output="CENTIGRADE" />
+	<item input="degree centigrade" output="CENTIGRADE" />
+	<item input="degrees centigrade" output="CENTIGRADE" />
+	
+	
+	<!-- VOLUME -->
+	<item input="milliliter" output="MILLILITER" />
+	<item input="milliliters" output="MILLILITER" />
+	<item input="ml" output="MILLILITER" />
+	<item input="liter" output="LITER" />
+	<item input="liters" output="LITER" />
+	<item input="L" output="LITER" />
+	<item input="gallon" output="US_GALLON" />
+	<item input="gallons" output="US_GALLON" />
+	<item input="gal" output="US_GALLON" />
+	<item input="fluid ounce" output="US_FLUID_OUNCE" />
+	<item input="fluid ounces" output="US_FLUID_OUNCE" />
+	<item input="fl. oz" output="US_FLUID_OUNCE" />
+	<item input="fl oz" output="US_FLUID_OUNCE" />
+	<item input="cup" output="US_CUP" />
+	<item input="cups" output="US_CUP" />
+	<item input="teaspoon" output="US_TEASPOON" />
+	<item input="teaspoons" output="US_TEASPOON" />
+	<item input="tsp" output="US_TEASPOON" />
+	<item input="tablespoon" output="US_TABLESPOON" />
+	<item input="tablespoons" output="US_TABLESPOON" />
+	<item input="tbs" output="US_TABLESPOON" />
+	<item input="quart" output="US_QUART" />
+	<item input="quarts" output="US_QUART" />
+	<item input="qt" output="US_QUART" />
+	<item input="pint" output="US_PINT" />
+	<item input="pint" output="US_PINT" />
+	<item input="pt" output="US_PINT" />
+	
+	<!-- AREA -->
+	<item input="acre" output="ACRE" />
+	<item input="acres" output="ACRE" />
+	<item input="hectare" output="HECTARE" />
+	<item input="hectares" output="HECTARE" />
+	<item input="square meter" output="SQUARE_METER" />
+	<item input="square meters" output="SQUARE_METER" />
+	<item input="square millimeter" output="SQUARE_MILLIMETER" />
+	<item input="square millimeters" output="SQUARE_MILLIMETER" />
+	<item input="square centimeter" output="SQUARE_CENTIMETER" />
+	<item input="square centimeters" output="SQUARE_CENTIMETER" />
+	<item input="square kilometer" output="SQUARE_KILOMETER" />
+	<item input="square kilometers" output="SQUARE_KILOMETER" />
+	<item input="square yard" output="SQUARE_YARD" />
+	<item input="square yards" output="SQUARE_YARD" />
+	<item input="square mile" output="SQUARE_MILE" />
+	<item input="square miles" output="SQUARE_MILE" />
+	
+	<!-- TIME -->
+	<item input="millisecond" output="MILLISECOND" />
+	<item input="milliseconds" output="MILLISECOND" />
+	<item input="second" output="SECOND" />
+	<item input="seconds" output="SECOND" />
+	<item input="minute" output="MINUTE" />
+	<item input="minutes" output="MINUTE" />
+	<item input="hour" output="HOUR" />
+	<item input="hours" output="HOUR" />
+	<item input="day" output="DAY" />
+	<item input="days" output="DAY" />
+	<item input="week" output="WEEK" />
+	<item input="weeks" output="WEEK" />
+	<item input="month" output="MONTH" />
+	<item input="months" output="MONTH" />
+	<item input="year" output="YEAR" />
+	<item input="years" output="YEAR" />
+	<item input="decade" output="DECADE" />
+	<item input="decades" output="DECADE" />
+	<item input="century" output="CENTURY" />
+	<item input="centuries" output="CENTURY" />
+	
+	<!-- CURRENCIES -->
+	<item input="dollar" output="" />
+	<item input="dollars" output="" />
+	<item input="US dollar" output="USD" />
+	<item input="US dollars" output="USD" />
+	<item input="american dollar" output="USD" />
+	<item input="american dollars" output="USD" />
+	<item input="euro" output="EUR" />
+	<item input="euros" output="EUR" />
+	<item input="yen" output="JPY" />
+	<item input="Japanese yen" output="JPY" />
+	<item input="yuan" output="CNY" />
+	<item input="chinese yuan" output="CNY" />
+	
+  </normalization_rule>
+  
+  <rule id="canonicalized_value">
+    <item><ruleref uri="#matcher" /><normalizer>normalizer</normalizer></item>
+  </rule>
+
+</grammar>

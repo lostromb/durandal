@@ -1,0 +1,50 @@
+﻿@var string Text
+@var ColorForDisplay MainColor
+@var IList<ColorForDisplay> NearbyColors
+@Namespace Durandal.Plugins.Color
+
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <link rel="stylesheet" href="/views/common/pure-base-min.css" />
+        <link href="/views/common/flexbox.css" rel="stylesheet" type="text/css">
+        <link href="/views/common/global_html5.css" rel="stylesheet" type="text/css">
+        <link href="/views/color/color.css" rel="stylesheet" type="text/css">
+        <title>Color</title>
+        ${new Durandal.CommonViews.DynamicTheme().Render()}
+    </head>
+    <body class="globalBgColor globalFontStyle" style="background-color: #${MainColor.Hex}">
+        <div class="flex flexAppContainer">
+            <div class="flex flexBoxColumn flex-stretch screenPadding">
+                <div class="flex5"></div>
+                <if condition='MainColor.IsBright'>
+                    <div align="center" style="text-align: center"><span class="flex1 size2" style="color: #000000;">${Text}</span></div>
+                </if>
+                <else>
+                    <div align="center" style="text-align: center"><span class="flex1 size2" style="color: #FFFFFF;">${Text}</span></div>
+                </else>
+                <div class="flex5"></div>
+                <if condition="NearbyColors != null">
+                    <div align="center" style="text-align: center">
+                        <span class="size4">Similar Colors</span>
+                    </div>
+                    <div class="flex flex1 flexBoxRow flex-stretch">
+                        <div class="flex1"></div>
+                        <for each='ColorForDisplay similarColor in NearbyColors'>
+                            <a href="${similarColor.ActionUrl}" class="hiddenLink">
+                                <if condition='similarColor.IsBright'>
+                                    <div class="colorSuggestionDiv flex-stretch" style="background-color: #${similarColor.Hex};"><span class="size4" style="color: #000000;">${similarColor.LocalizedName}</span></div>
+                                </if>
+                                <else>
+                                    <div class="colorSuggestionDiv flex-stretch" style="background-color: #${similarColor.Hex};"><span class="size4" style="color: #FFFFFF;">${similarColor.LocalizedName}</span></div>
+                                </else>
+                            </a>
+                        </for>
+                        <div class="flex1"></div>
+                    </div>
+                </if>
+            </div>
+        </div>
+    </body>
+</html>

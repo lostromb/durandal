@@ -1,0 +1,36 @@
+#STATIC#
+
+#PATTERNS#
+
+dolphin/launch_game	start a game of [game]{titles}[/game]
+dolphin/launch_game	I would like to play [game]{titles}[/game]
+dolphin/launch_game	I want to play [game]{titles}[/game]
+
+#titles#
+aggressive in line
+Alien Hominid
+animal crossing
+Baten Kaitos
+Bionicle
+burn out
+chaos field
+crazy taxi
+Cubivore
+driven
+F-Zero GX
+Ikaruga
+the Italian job
+killer 7
+wind waker
+twilight princess
+Luigi's mansion
+Mario party five
+Metroid Prime
+Metroid Prime 2
+paper Mario
+resident evil 4
+Sonic adventure two
+Sonic riders
+Spiderman
+star fox adventures
+Viewtiful Joe

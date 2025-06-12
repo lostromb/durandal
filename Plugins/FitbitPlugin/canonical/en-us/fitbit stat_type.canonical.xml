@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<grammar version="1.0">
+  <regex id="matcher" expression=".+" />
+  
+  <normalization_rule id="normalizer" strict="true">
+    <item input="step" output="STEPS" />
+    <item input="steps" output="STEPS" />
+    <item input="long" output="DISTANCE" />
+    <item input="far" output="DISTANCE" />
+    <item input="how far" output="DISTANCE" />
+    <item input="how long" output="DISTANCE" />
+    <item input="walk" output="DISTANCE" />
+    <item input="walked" output="DISTANCE" />
+    <item input="run" output="DISTANCE" />
+    <item input="ran" output="DISTANCE" />
+    <item input="distance" output="DISTANCE" />
+    <item input="calorie" output="CALORIES" />
+    <item input="calories" output="CALORIES" />
+    <item input="mile" output="MILES" />
+    <item input="miles" output="MILES" />
+    <item input="kilometer" output="KILOMETERS" />
+    <item input="kilometers" output="KILOMETERS" />
+    <item input="water" output="WATER" />
+    <item input="water drinking" output="WATER" />
+    <item input="water consumption" output="WATER" />
+    <item input="water drunk" output="WATER" />
+    <item input="drunk" output="WATER" />
+    <item input="drink" output="WATER" />
+    <item input="hydrate" output="WATER" />
+    <item input="hydrated" output="WATER" />
+    <item input="hydration" output="WATER" />
+    <item input="stair" output="STAIRS" />
+    <item input="stairs" output="STAIRS" />
+    <item input="flights" output="STAIRS" />
+    <item input="flights of stairs" output="STAIRS" />
+    <item input="floors" output="STAIRS" />
+    <item input="sleep" output="SLEEP" />
+    <item input="slept" output="SLEEP" />
+    <item input="hours of sleep" output="SLEEP" />
+    <item input="hours of restful sleep" output="SLEEP" />
+    <item input="activity" output="ACTIVE_MINUTES" />
+    <item input="active minutes" output="ACTIVE_MINUTES" />
+    <item input="active time" output="ACTIVE_MINUTES" />
+    <item input="activity minutes" output="ACTIVE_MINUTES" />
+    <item input="high activity minutes" output="ACTIVE_MINUTES" />
+    <item input="exercise minutes" output="ACTIVE_MINUTES" />
+    <item input="exercise time" output="ACTIVE_MINUTES" />
+    <item input="battery" output="BATTERY" />
+    <item input="batteries" output="BATTERY" />
+    <item input="battery level" output="BATTERY" />
+    <item input="battery charge" output="BATTERY" />
+    <item input="battery status" output="BATTERY" />
+    <item input="heart rate" output="HEART_RATE" />
+    <item input="pulse" output="HEART_RATE" />
+    <item input="weigh" output="WEIGHT" />
+    <item input="weight" output="WEIGHT" />
+    <item input="weighed" output="WEIGHT" />
+    <item input="body weight" output="WEIGHT" />
+  </normalization_rule>
+  
+  <rule id="canonicalized_value">
+    <item><ruleref uri="#matcher" /><normalizer>normalizer</normalizer></item>
+  </rule>
+
+</grammar>

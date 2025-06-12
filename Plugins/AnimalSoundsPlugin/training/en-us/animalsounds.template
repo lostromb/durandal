@@ -1,0 +1,156 @@
+#REGEX#
+animalsounds/get_animal_sound	^what does the (?<animal>{{animal}}) say[\.\?]?$
+animalsounds/get_animal_sound	^what (noise|sound|call) does (the|a|an) (?<animal>{{animal}}) make[\.\?]?$
+animalsounds/get_animal_sound	^what (noise|sound|call) do (?<animal>{{animal}}) make[\.\?]?$
+animalsounds/get_animal_sound	^what does (the|a|an) (?<animal>{{animal}}) sound like[\.\?]?$
+animalsounds/get_animal_sound	^what do (?<animal>{{animal_plural}}) sound like[\.\?]?$
+animalsounds/get_animal_sound	^how do (?<animal>{{animal_plural}}) sound( like)?[\.\?]?$
+
+#PATTERNS#
+animalsounds/get_animal_sound	what do [animal]{animal_plural}[/animal] sound like
+animalsounds/get_animal_sound	what do the [animal]{animal_plural}[/animal] sound like
+animalsounds/get_animal_sound	how do [animal]{animal_plural}[/animal] sound
+animalsounds/get_animal_sound	how do [animal]{animal_plural}[/animal] talk
+animalsounds/get_animal_sound	what do [animal]{animal_plural}[/animal] say
+animalsounds/get_animal_sound	what {sound} do [animal]{animal_plural}[/animal] make
+animalsounds/get_animal_sound	what do [animal]{animal_plural}[/animal] say
+animalsounds/get_animal_sound	what do [animal]{animal_plural}[/animal] say?
+
+animalsounds/get_animal_sound	what does {an} [animal]{animal}[/animal] sound like
+animalsounds/get_animal_sound	what does the [animal]{animal}[/animal] sound like?
+animalsounds/get_animal_sound	what {sound} does the [animal]{animal}[/animal] make
+animalsounds/get_animal_sound	what does the [animal]{animal}[/animal] say
+animalsounds/get_animal_sound	what does the [animal]{animal}[/animal] say?
+animalsounds/get_animal_sound	how does the [animal]{animal}[/animal] sound
+animalsounds/get_animal_sound	how does a [animal]{animal}[/animal] talk
+animalsounds/get_animal_sound	how does the [animal]{animal}[/animal] talk
+animalsounds/get_animal_sound	what does {an} [animal]{animal}[/animal] {sound} sound like
+animalsounds/get_animal_sound	how does {an} [animal]{animal}[/animal] {sound} sound
+animalsounds/get_animal_sound	what do [animal]{animal}[/animal] {sound}s sound like
+animalsounds/get_animal_sound	what is the {sound} of a [animal]{animal}[/animal]?
+animalsounds/get_animal_sound	what is the {sound} of the [animal]{animal}[/animal]?
+animalsounds/get_animal_sound	what's the {sound} of a [animal]{animal}[/animal]?
+animalsounds/get_animal_sound	what's the {sound} of the [animal]{animal}[/animal]?
+
+#PATTERNS#
+animalsounds/get_animal_sound_multiturn	what about [animal]{animal_plural}[/animal]
+animalsounds/get_animal_sound_multiturn	how about [animal]{animal_plural}[/animal]
+animalsounds/get_animal_sound_multiturn	now do [animal]{animal_plural}[/animal]
+animalsounds/get_animal_sound_multiturn	now try [animal]{animal_plural}[/animal]
+
+animalsounds/get_animal_sound_multiturn	what about a [animal]{animal}[/animal]
+animalsounds/get_animal_sound_multiturn	how about a [animal]{animal}[/animal]
+animalsounds/get_animal_sound_multiturn	now do a [animal]{animal}[/animal]
+animalsounds/get_animal_sound_multiturn	now be a [animal]{animal}[/animal]
+animalsounds/get_animal_sound_multiturn	now do a [animal]{animal}[/animal] {sound}
+animalsounds/get_animal_sound_multiturn	now do a [animal]{animal}[/animal] impression
+animalsounds/get_animal_sound_multiturn	now do your best [animal]{animal}[/animal] {sound}
+animalsounds/get_animal_sound_multiturn	now do your best [animal]{animal}[/animal] impression
+animalsounds/get_animal_sound_multiturn	now make a [animal]{animal}[/animal] {sound}
+animalsounds/get_animal_sound_multiturn	now try a [animal]{animal}[/animal]
+animalsounds/get_animal_sound_multiturn	now try being a [animal]{animal}[/animal]
+
+
+#sound#
+sound
+noise
+call
+
+#an#
+a
+an
+
+#animal#
+bear
+bee
+bird
+birdie
+butterfly
+cat
+chicken
+cow
+coyote
+crow
+dog
+dolphin
+donkey
+duck
+duckie
+eagle
+elephant
+fish
+fox
+giraffe
+goat
+goose
+hawk
+hog
+horse
+horsie
+horsey
+jaguar
+kitten
+leopard
+lion
+monkey
+mule
+owl
+panda
+parrot
+pigeon
+pig
+piggie
+piglet
+platypus
+pony
+puppy
+rooster
+sheep
+tiger
+
+#animal_plural#
+bears
+bees
+birds
+birdies
+butterflies
+cats
+chickens
+cows
+coyotes
+crows
+dogs
+dolphins
+donkeys
+ducks
+duckies
+eagles
+elephants
+fish
+foxes
+giraffes
+goats
+geese
+hawks
+hogs
+horses
+horsies
+jaguars
+kittens
+leopards
+lions
+monkeys
+mules
+owls
+pandas
+parrots
+pigeons
+pigs
+piggies
+piglets
+platypuses
+ponies
+puppies
+roosters
+sheep
+tigers

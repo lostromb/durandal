@@ -1,0 +1,39 @@
+﻿@var IEnumerable<DisambiguationRenderItem> Results
+@var string Header
+@namespace Durandal.Plugins.Reflection.Views
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="stylesheet" href="/views/common/pure-base-min.css" />
+    <link href="/views/common/global_html5.css" rel="stylesheet" type="text/css" />
+    <link href="/views/common/flexbox.css" rel="stylesheet" type="text/css" />
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <title>Disambiguation</title>
+    ${new Durandal.CommonViews.DynamicTheme().Render()}
+</head>
+<body class="globalBgColor globalFgColor globalFontStyle">
+    <div class="flexAppContainer flex">
+        <div class="flex flexBoxColumn">
+            <h1 class="globalFontColor">${Header}</h1>
+            <for each='DisambiguationRenderItem result in Results'>
+                <div class="resultItem">
+                    <a href="${result.SelectionUrl}" class="hiddenLink">
+                        <div class="flex flexBoxRow flex-center">
+                            <div class="flex1">
+                                <img width="100%" class="pure-img" src="${result.PluginIconUrl}" />
+                            </div>
+                            <div class="descriptionBox flex3">
+                                <span class="globalLinkColor size3">${result.ActionName}</span><br />
+                                <span class="globalFontColor size4">${result.Description}</span><br />
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </for>
+        </div>
+    </div>
+</body>
+</html>

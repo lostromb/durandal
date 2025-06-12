@@ -1,0 +1,147 @@
+#patterns#
+
+youtube/find_video	{prefixes} [query]{queries}[/query]
+youtube/find_video	{music_prefixes} [query]{musicians}[/query]
+youtube/select_video	{selection_prefixes} [selection]{ordinals}[/selection]
+youtube/download_video	{download_prefixes} [selection]{ordinals}[/selection]
+youtube/download_video	{download_prefixes} [selection]{ordinals}[/selection] to [download_location]{download_locations}[/download_location]
+
+#prefixes#
+find videos of
+find youtube videos
+find youtube videos of
+find Youtube videos
+find Youtube videos of
+find YouTube videos
+find YouTube videos of
+show me videos of
+search YouTube for
+search YouTube
+search Youtube for
+search Youtube
+search youtube for
+search youtube
+
+#music_prefixes#
+find music videos by
+music videos by
+
+#selection_prefixes#
+play
+select
+show me
+view
+choose
+pick
+
+#download_prefixes#
+download
+save
+
+#ordinals#catalog=common/ordinals#
+
+#download_locations#
+my videos
+videos
+my desktop
+the desktop
+my downloads folder
+downloads directory
+my downloads directory
+my music
+music
+downloads
+desktop
+
+#queries#
+shock master debut
+final fantasy 7
+funny dogs
+elevated demo scene
+best of web 3
+gravity falls
+fail army
+best short films
+kutiman
+panic cube
+baby doll
+best vines
+fail army
+college humor
+dubstep
+do you want to build a snowman
+American idol
+Naruto
+love
+funny
+Pokemon
+video
+Obama
+Juno
+family guy
+funny cats
+titanic
+harry potter
+awesome games done quick
+how it should have ended
+yogscast
+minecraft
+let's play
+high school musical
+panda
+wow
+iron man
+halo
+lost
+mario
+south park
+Alvin and the chipmunks
+iPhone
+ghost
+pitbull
+plies
+world of warcraft
+undertaker
+xbox
+Ronaldo
+halo 4
+dance
+Kobe Bryant
+xbox one
+guitar
+Enrique Iglesias
+
+#musicians#
+Ellie Goulding
+John Legend
+Ariana Grande
+Beyonce
+Mariah Carey
+Miley Cyrus
+Leona Lewis
+Hannah Montana
+Christina Aguilera
+Shakira
+Taylor Swift
+Michael Jackson
+the Jonas brothers
+Janet Jackson
+soulja boy
+Rihanna
+Avril Lavigne
+Vanessa Hudgens
+Eminem
+usher
+Fergie
+Cristiano Ronaldo
+Kelly Clarkson
+Whitney Houston
+Snoop Dogg
+Celine Dion
+David Archuleta
+Nelly
+Slipknot
+Metallica
+Elvis
+one tree hill
+Kanye West

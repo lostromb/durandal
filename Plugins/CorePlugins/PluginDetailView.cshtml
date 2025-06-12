@@ -1,0 +1,27 @@
+﻿@var PluginRenderingInfo Plugin
+@var string Backlink
+@namespace Durandal.Plugins.Reflection.Views
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <link href="/views/common/global_html5.css" rel="stylesheet" type="text/css" >
+    <title>Installed Plugins</title>
+    ${new Durandal.CommonViews.DynamicTheme().Render()}
+</head>
+<body class="globalBgColor globalFontStyle globalFontColor">
+    <img src="${Plugin.IconUrl}" height="192px">
+    <h2>${Plugin.Name}</h2>
+    ${Plugin.Subtitle}<br>
+    ${Plugin.LongDescription}<br>
+    <if condition='Plugin.SampleQueries != null && Plugin.SampleQueries.Count > 0'>
+        <h3>Try these queries:</h3>
+        <for each='PluginSampleQuery query in Plugin.SampleQueries'>
+            <a href="${query.Deeplink}">${query.Utterance}</a><br>
+        </for>
+        <br>
+    </if>
+    <a class="globalLinkColor" href="${Backlink}">Go Back</a>
+</body>
+</html>

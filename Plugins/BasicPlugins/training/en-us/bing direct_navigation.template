@@ -1,0 +1,125 @@
+#PATTERNS#
+
+bing/navigate_directly	[query]{queries}{coms}[/query]
+bing/navigate_directly	{prefixes} [query]{queries}{coms}[/query]
+bing/navigate_directly	{prefixes} [query]{queries}[/query] {website}
+
+; this next line assumes that the tokenizer will split out apostrophe suffixes for us
+bing/navigate_directly	{prefixes} [query]{queries}[/query]'s {website}
+bing/navigate_directly	{prefixes} the [query]{queries}[/query] {website}
+bing/navigate_directly	{prefixes} the {website} for [query]{queries}[/query]
+
+#prefixes#
+go to
+open
+open up
+find
+
+#website#
+website
+web site
+webpage
+web page
+home page
+
+#coms#
+.com
+.net
+.org
+ dot com
+
+#queries#
+amazon
+Alaska airlines
+American airlines
+American express
+auto trader
+apple
+bank of America
+buzz feed
+best buy
+bed bath and beyond
+Costco
+capital one
+Comcast
+direct TV
+drudge report
+Disneyland
+Ebay
+Etsy
+Expedia
+Facebook
+Fandango
+fox news
+forever 21
+google
+game stop
+Gamestop
+Hotmail
+home depot
+hobby lobby
+Huffington Post
+harbor freight
+Instagram
+Ikea
+Jimmy John's
+jet blue
+JC Penney
+king county metro
+orange county library
+living social
+league of legends
+linked in
+LinkedIn
+LA social
+Mapquest
+Maggiano's
+Minecraft
+Netflix
+Nordstrom
+New York times
+new egg
+Newegg
+old navy
+olive garden
+office depot
+outlook
+overstock
+pandora
+Pinterest
+Paypal
+Pizza Hut
+Papa John's
+price line
+Priceline
+quick books
+red box
+red fin
+red robin
+radio shack
+Rite Aid
+Safeway
+Sears
+Starbucks
+Skype
+target
+Ticketmaster
+ticket master
+Travelocity
+Twitter
+UPS
+USPS
+urban dictionary
+urban spoon
+Verizon
+virgin America
+victoria secret
+Walmart
+Wells Fargo
+weather
+white pages
+Xbox
+yahoo
+yelp
+Zillow
+Zappos

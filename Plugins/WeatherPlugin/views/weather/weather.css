@@ -1,0 +1,185 @@
+﻿@media screen and (max-width: 360px)
+{
+	body
+	{
+		font-size: 8pt;
+	}
+	#locationLabel
+	{
+		font-size: 14pt;
+	}
+	#temperature
+	{
+		font-size: 72pt;
+		padding-top: 40pt;
+		padding-bottom: 40pt;
+	}
+	#conditionLabel
+	{
+		font-size: 12pt;
+	}
+	.weatherConditionIcon
+	{
+		width: 25px;
+	}
+	.weatherDetailItem
+	{
+		font-size: 12pt;
+	}
+}
+@media screen and (min-width: 361px) and (max-width: 768px)
+{
+	body
+	{
+		font-size: 10pt;
+	}
+	#locationLabel
+	{
+		font-size: 24pt;
+	}
+	#temperature
+	{
+		font-size: 132pt;
+		padding-top: 76pt;
+		padding-bottom: 76pt;
+	}
+	#conditionLabel
+	{
+		font-size: 24pt;
+	}
+	.weatherConditionIcon
+	{
+		width: 40px;
+	}
+	.weatherDetailItem
+	{
+		font-size: 16pt;
+	}
+}
+@media screen and (min-width: 769px) and (max-width: 1200px)
+{
+	body
+	{
+		font-size: 12pt;
+	}
+	#locationLabel
+	{
+		font-size: 28pt;
+	}
+	#temperature
+	{
+		font-size: 146pt;
+		padding-top: 76pt;
+		padding-bottom: 76pt;
+	}
+	#conditionLabel
+	{
+		font-size: 28pt;
+	}
+	.weatherConditionIcon
+	{
+		width: 80px;
+	}
+	.weatherDetailItem
+	{
+		font-size: 20pt;
+	}
+}
+@media screen and (min-width: 1201px)
+{
+	body
+	{
+		font-size: 14pt;
+	}
+	#locationLabel
+	{
+		font-size: 40pt;
+	}
+	#temperature
+	{
+		font-size: 146pt;
+		padding-top: 76pt;
+		padding-bottom: 76pt;
+	}
+	#conditionLabel
+	{
+		font-size: 36pt;
+	}
+	.weatherConditionIcon
+	{
+		width: 100px;
+	}
+	.weatherDetailItem
+	{
+		font-size: 24pt;
+	}
+}
+
+
+body {
+	background-color: #000000;
+	color: white;
+	margin: 0px;
+	padding: 0px;
+}
+
+#locationLabel
+{
+	padding: 6px;
+	margin: 0px;
+	text-shadow: 1px 1px 3px #000000
+}
+
+#conditionLabel
+{
+	padding: 12px;
+	margin: 0px;
+	text-shadow: 1px 1px 3px #000000
+}
+
+#forecastLabel
+{
+	font-size: 16pt;
+	padding: 6px;
+	margin: 0px;
+}
+
+#temperature
+{
+	font-weight: lighter;
+	vertical-align: middle;
+	display: inline-block;
+	line-height: 0pt;
+	text-shadow: 4px 4px 6px #000000;
+}
+
+.alignCenter {
+	text-align: center;
+}
+
+.weatherDetailItem {
+	text-align: center;
+	margin: 5px;
+	padding: 5px;
+	display: block;
+}
+
+.weatherForecastItem {
+	text-align: center;
+	margin: 5px;
+	padding: 5px;
+}
+
+#copyrightField {
+	font-size: 8pt;
+	position: absolute;
+	right: 0px;
+	bottom: 0px;
+}
+
+.lightBackground {
+	background-color: rgba(0,0,0,0.20)
+}
+.medBackground {
+	background-color: rgba(0,0,0,0.40)
+}

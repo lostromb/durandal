@@ -1,0 +1,19 @@
+#STATIC#
+
+facebook/check_messages	do I have any Facebook messages
+facebook/check_messages	do I have any face book messages
+
+#PATTERNS#
+
+facebook/check_messages	check {facebook_synonyms}
+facebook/check_messages	open {facebook_synonyms}
+facebook/check_messages	check {facebook_synonyms} for me
+facebook/check_messages	open {facebook_synonyms} for me
+facebook/check_messages	show me {facebook_synonyms}
+facebook/check_messages	open up {facebook_synonyms}
+
+#facebook_synonyms#
+Facebook
+face book
+my Facebook
+my face book

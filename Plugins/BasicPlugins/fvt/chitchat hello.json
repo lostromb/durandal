@@ -1,0 +1,30 @@
+{
+	"Metadata":
+	{
+		"TestName": "Chitchat hello",
+		"Author": "Logan",
+		"SuggestedTestInterval": "5"
+	},
+	"Turns":
+	[
+		{
+			"Input":
+			{
+				"Type": "Speech", "DisplayText": "Hello", "Locale": "en-us"
+			},
+			"Validations":
+			[
+				{
+					"Type": "Any",
+					"Validations": 
+					[
+						{ "Type": "ResponseTextRegex", "Regex": "^Hello!$" },
+						{ "Type": "ResponseTextRegex", "Regex": "^Hello there!$" },
+						{ "Type": "ResponseTextRegex", "Regex": "^Hi! What can I do for you\\?$" },
+						{ "Type": "ResponseTextRegex", "Regex": "^Hi! How can I help\\?$" },
+					]
+				}
+			]
+		}
+	]
+}

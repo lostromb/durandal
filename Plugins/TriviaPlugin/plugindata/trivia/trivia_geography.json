@@ -1,0 +1,44 @@
+[
+{
+	"question": "What is the largest freshwater lake in the world?",
+	"correct": "Lake Superior",
+	"incorrect": [ "Lake Michigan", "Lake Winnipeg", "Lake Victoria" ],
+	"category": "GEOGRAPHY",
+	"difficulty": 5
+},
+{
+	"question": "Where would you find the Sea of Tranquility?",
+	"correct": "the moon",
+	"incorrect": [ "Asia", "Canada", "Jupiter" ],
+	"category": "GEOGRAPHY",
+	"difficulty": 4
+},
+{
+	"question": "What is the world's longest river?",
+	"correct": "the Amazon",
+	"incorrect": [ "the Mississippi", "the Nile", "the Euphrates" ],
+	"category": "GEOGRAPHY",
+	"difficulty": 4
+},
+{
+	"question": "What is the capital of Spain?",
+	"correct": "Madrid",
+	"incorrect": [ "Barcelona", "Valencia", "Seville" ],
+	"category": "GEOGRAPHY",
+	"difficulty": 3
+},
+{
+	"question": "What country suffered the worst two earthquakes in history, killing 830,000 in 1556 and 750,000 in 1976?",
+	"correct": "China",
+	"incorrect": [ "Chile", "Indonesia", "Madagascar" ],
+	"category": "GEOGRAPHY",
+	"difficulty": 5
+},
+{
+	"question": "In 1816 which US state was admitted to the Union as the 20th state?",
+	"correct": "Mississippi",
+	"incorrect": [ "Kentucky", "West Virginia", "Illinois" ],
+	"category": "GEOGRAPHY",
+	"difficulty": 1
+}
+]

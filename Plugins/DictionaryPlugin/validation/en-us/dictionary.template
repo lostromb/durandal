@@ -1,0 +1,43 @@
+#PATTERNS#
+
+dictionary/define	what does [word]{words}[/word] mean
+dictionary/define	what does the word [word]{words}[/word] mean
+dictionary/define	do you know what [word]{words}[/word] means
+dictionary/define	tell me what [word]{words}[/word] means
+dictionary/define	{define_prefixes} [word]{words}[/word]
+
+dictionary/spell	{spell_prefixes} [word]{words}[/word]
+
+#define_prefixes#
+define
+dictionary define
+dictionary definition of
+definition of
+find dictionary definition of
+find the dictionary definition of
+show me the dictionary definition of
+
+#spell_prefixes#
+how do you spell
+what is the spelling of
+how do you spell the word
+spelling of
+correct spelling of
+what's the spelling of
+spell out
+how do you spell out
+can you spell out
+can you spell the word
+
+#words#
+sanguine
+inevitable
+loquacious
+avid
+avarice
+precipitate
+mediation
+inevitable
+quandary
+temerity
+ponderous

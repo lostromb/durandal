@@ -1,0 +1,12 @@
+﻿{
+  "supports": {},
+  "dependencies": {
+    "AdaptiveCards": "2.7.3",
+    "AdaptiveCards.Rendering.Html": "2.7.3",
+    "NETStandard.Library": "2.0.3",
+    "Newtonsoft.Json": "13.0.1"
+  },
+  "frameworks": {
+    "netstandard1.3": {}
+  }
+}

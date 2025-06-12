@@ -1,0 +1,118 @@
+#PATTERNS#
+
+bing/image_search	{prefixes} [query]{queries_single}[/query]
+bing/image_search	{showme} {prefixes} [query]{queries_single}[/query]
+bing/image_search	{showme} [query]{queries_single}[/query] {photos}
+
+bing/image_search	what does [query]{queries_single}[/query] look like
+bing/image_search	what does [query]{queries_single}[/query] look like?
+
+bing/image_search	{prefixes_plural} [query]{queries_plural}[/query]
+bing/image_search	{showme} {prefixes_plural} [query]{queries_plural}[/query]
+bing/image_search	{showme} [query]{queries_plural}[/query] {photos}
+
+bing/image_search	what do [query]{queries_plural}[/query] look like
+bing/image_search	what do [query]{queries_plural}[/query] look like?
+
+#prefixes#
+a picture of
+a photo of
+an image of
+; drawing
+; painting
+; diagram
+
+#prefixes_plural#
+pictures of
+images of
+photos of
+pictures from
+images from
+photos from
+
+#showme#
+find
+bing
+Bing
+search
+search for
+show me
+I'm looking for
+find me
+
+#photos#
+photos
+pictures
+images
+
+; Phrased like "find me a picture of ____"
+#queries_single#
+Britney Spears
+snow in Seattle
+a wedding invitation
+a used car
+Michael Jordan
+chocolate
+the Bronx
+camouflage
+Kelly Clarkson
+Haiti
+Steve Harvey
+vinyl siding
+babies with dark hair
+a baseball
+a dog attack victim
+smoky mountain
+the black stallion
+the Boston harbor during the American revolution
+the bubonic plague
+the city of Minneapolis
+the click five
+the doors
+the great southern white butterfly
+the Jeremy Hoyle band
+the Liberian dollar
+the moon
+the reverend from avenged sevenfold
+the river walk
+the sunshine sky way bridge
+the top 10 cell phones
+the Washington monument
+the last unicorn
+the milky way
+
+; Phrased like "find pictures (multiple) of ____"
+#queries_plural#
+rare salamanders
+motorcycles
+unicorns
+wedding invitations
+tribal tattoos
+used cars
+computer desks
+fractals
+diamond watches
+toy army guns
+constellations
+appetizers
+baby field rats
+backyard decks
+backyard ponds
+bands
+beaches
+faeries
+famous poets
+famous psychologists
+famous singers
+fancy mice
+doves
+dragons
+shark attacks
+skin hives
+the best cell phones
+the Celtic gods
+the Ford GT 500 wallpapers
+the Chinese love birds
+the Sopranos
+the all American rejects
+pillows

@@ -1,0 +1,191 @@
+[
+{
+	"question": "What is someone who shoes horses called?",
+	"correct": "a farrier",
+	"incorrect": [ "a cartwright", "a hammerer", "a shoesmith" ],
+	"category": "HISTORY",
+	"difficulty": 5
+},
+{
+	"question": "What item of clothing was named after its Scottish inventor?",
+	"correct": "a Mackintosh",
+	"incorrect": [ "a Drummond", "a Mungo", "an Erskine" ],
+	"category": "HISTORY",
+	"difficulty": 6
+},
+{
+	"question": "What kind of weapon is a falchion?",
+	"correct": "a sword",
+	"incorrect": [ "an axe", "a bow", "a rifle" ],
+	"category": "HISTORY",
+	"difficulty": 5
+},
+{
+	"question": "Who invented the rabies vaccination?",
+	"correct": "Louis Pasteur",
+	"incorrect": [ "Jonas Salk", "Edward Jenner", "Ernest Hemingway" ],
+	"category": "HISTORY",
+	"difficulty": 6
+},
+{
+	"question": "Which kind of bulbs were once exchanged as a form of currency?",
+	"correct": "tulips",
+	"incorrect": [ "garlic", "lily", "Dutch irises" ],
+	"category": "HISTORY",
+	"difficulty": 5
+},
+{
+	"question": "Which of Henry the 8th's wives was mother of Elizabeth the 1st?",
+	"correct": "Anne Boleyn",
+	"incorrect": [ "Catherine of Aragon", "Jane Seymour", "Catherine Howard" ],
+	"category": "HISTORY",
+	"difficulty": 5
+},
+{
+	"question": "Who led the first Million Man March on Washington?",
+	"correct": "Louis Farrakhan",
+	"incorrect": [ "Malcolm X", "Muhammad Ali", "James Farmer" ],
+	"category": "HISTORY",
+	"difficulty": 5
+},
+{
+	"question": "What Eastern European city was the last city to be liberated in World War 2?",
+	"correct": "Prague",
+	"incorrect": [ "Berlin", "Warsaw", "Bremen" ],
+	"category": "HISTORY",
+	"difficulty": 5
+},
+{
+	"question": "What symbol was first linked to the Democratic party in an 1870 cartoon by Thomas Nast?",
+	"correct": "a donkey",
+	"incorrect": [ "an eagle", "a horse", "a lion" ],
+	"category": "HISTORY",
+	"difficulty": 1
+},
+{
+	"question": "In 1986 the prime minister of which European country was assassinated on his way home from the cinema with his wife?",
+	"correct": "Sweden",
+	"incorrect": [ "Armenia", "Portugal", "Denmark" ],
+	"category": "HISTORY",
+	"difficulty": 6
+},
+{
+	"question": "In which year did the demolition of the Berlin Wall begin?",
+	"correct": "1989",
+	"incorrect": [ "NULL", "NULL", "NULL" ],
+	"category": "HISTORY",
+	"difficulty": 2
+},
+{
+	"question": "The first day of which battle was the worst day in the history of the British Army, which suffered 60,000 casualties?",
+	"correct": "Battle of the Somme",
+	"incorrect": [ "NULL", "NULL", "NULL" ],
+	"category": "HISTORY",
+	"difficulty": 4
+},
+{
+	"question": "Who designed Regent’s Park in London in 1811?",
+	"correct": "John Nash",
+	"incorrect": [ "NULL", "NULL", "NULL" ],
+	"category": "HISTORY",
+	"difficulty": 7
+},
+{
+	"question": "Southern Rhodesia became what country in 1980?",
+	"correct": "Zimbabwe",
+	"incorrect": [ "NULL", "NULL", "NULL" ],
+	"category": "HISTORY",
+	"difficulty": 6
+},
+{
+	"question": "Which is the oldest University in the USA?",
+	"correct": "Harvard",
+	"incorrect": [ "Princeton", "Yale", "Oxford" ],
+	"category": "HISTORY",
+	"difficulty": 3
+},
+{
+	"question": "In which war was The Battle of Agincourt?",
+	"correct": "Hundred Years War",
+	"incorrect": [ "NULL", "NULL", "NULL" ],
+	"category": "HISTORY",
+	"difficulty": 5
+},
+{
+	"question": "Which English scholar, well known for his translation of the Bible into English, was executed in Antwerp in 1536?",
+	"correct": "William Tyndale",
+	"incorrect": [ "John Calvin", "Martin Luther", "John Wycliffe" ],
+	"category": "HISTORY",
+	"difficulty": 2
+},
+{
+	"question": "In which year did the Titanic sink?",
+	"correct": "1912",
+	"incorrect": [ "1924", "1896", "1933" ],
+	"category": "HISTORY",
+	"difficulty": 4
+},
+{
+	"question": "Which country did Britain fight in the War of Jenkins’s Ear??",
+	"correct": "Spain",
+	"incorrect": [ "NULL", "NULL", "NULL" ],
+	"category": "HISTORY",
+	"difficulty": 8
+},
+{
+	"question": "What Apollo 13 astronaut contacted Mission Control with the words, “Houston, we’ve had a problem here..” ?",
+	"correct": "Jack Swigert",
+	"incorrect": [ "James Lovell", "Fred Haise", "Neil Armstrong" ],
+	"category": "HISTORY",
+	"difficulty": 7
+},
+{
+	"question": "What was the cause of the pandemic which killed over 1% of the world’s population in 1918?",
+	"correct": "Spanish Flu",
+	"incorrect": [ "Polio", "Diphtheria", "Measles" ],
+	"category": "HISTORY",
+	"difficulty": 5
+
+{
+	"question": "In which French city was Joan of Arc put to death?",
+	"correct": "Rouen",
+	"incorrect": [ "NULL", "NULL", "NULL" ],
+	"category": "HISTORY",
+	"difficulty": 7
+},
+{
+	"question": "Who invented the thermometer in 1593?",
+	"correct": "Galileo Galilei",
+	"incorrect": [ "Daniel Bernoulli", "Blaise Pascal", "Leonardo da Vinci" ],
+	"category": "HISTORY",
+	"difficulty": 5
+},
+{
+	"question": "Who was the last British Viceroy of India?",
+	"correct": "Lord Louis Mountbatten",
+	"incorrect": [ "NULL", "NULL", "NULL" ],
+	"category": "HISTORY",
+	"difficulty": 7
+},
+{
+	"question": "What artifact was discovered in 1799 by Pierre-François Bouchard, a Napoleonic soldier?",
+	"correct": "the Rosetta Stone",
+	"incorrect": [ "the Tomb of Amenhotep III", "the Lewis Chessmen", "the Esquiline Treasure" ],
+	"category": "HISTORY",
+	"difficulty": 8
+},
+{
+	"question": "Which killer was also known as ‘The Whitechapel Murderer’?",
+	"correct": "Jack the Ripper",
+	"incorrect": [ "NULL", "NULL", "NULL" ],
+	"category": "HISTORY",
+	"difficulty": 7
+},
+{
+	"question": "Which country was first to operate an old age pension scheme?",
+	"correct": "Germany",
+	"incorrect": [ "Japan", "Finland", "South Africa" ],
+	"category": "HISTORY",
+	"difficulty": 6
+}
+]

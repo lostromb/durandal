@@ -1,0 +1,109 @@
+#STATIC#
+weather/sunset_query	when is sunset
+weather/sunset_query	when is sun set
+weather/sunset_query	when does sun set
+weather/sunset_query	when does the sun set
+weather/sunset_query	what time is sunset tonight
+weather/sunset_query	when is sunset tonight
+weather/sunset_query	when does the sun set tonight
+weather/sunset_query	what time is the sunset tonight
+weather/sunset_query	at what time does the sun set
+weather/sunset_query	when does the sun go down
+weather/sunset_query	how long will the day last
+weather/sunset_query	when will it get dark
+weather/sunset_query	when will it get dark around here
+weather/sunset_query	when will the sun go down today
+weather/sunset_query	when will the sun go down tonight
+
+weather/sunrise_query	when is sunrise
+weather/sunrise_query	when is sun rise
+weather/sunrise_query	when does sun rise
+weather/sunrise_query	when does the sun rise
+weather/sunrise_query	what time is sunrise tomorrow
+weather/sunrise_query	when was rise today
+weather/sunrise_query	when does the sun rise
+weather/sunrise_query	what time is the sunrise
+weather/sunrise_query	at what time does the sun rise
+weather/sunrise_query	when does the sun come up
+weather/sunrise_query	when will it get light
+weather/sunrise_query	when will it get light around here
+weather/sunrise_query	when did the sun come up today
+weather/sunrise_query	when did the sun come up this morning
+
+weather/get_weather	weather
+weather/get_weather	the weather
+weather/get_weather	get weather
+weather/get_weather	show me weather
+weather/get_weather	how is weather now?
+weather/get_weather	weather now?
+
+#PATTERNS#
+weather/check_condition	{whats} the [condition]temperature[/condition]
+weather/check_condition	{whats} the current [condition]temperature[/condition]
+weather/check_condition	{whats} the [condition]temperature[/condition] {outside}
+weather/check_condition	how [condition]{condition}[/condition] is it {outside}
+weather/check_condition	is it [condition]{condition}[/condition] {outside}
+weather/check_condition	is it very [condition]{condition}[/condition] {outside}
+weather/check_condition	is it [condition]raining[/condition] in [location]{locations}[/location]?
+weather/check_condition	what is temperature right now in [location]{locations}[/location]
+weather/check_condition	{whats} the [condition]temperature[/condition] in [location]{locations}[/location]
+weather/check_condition	{whats} the current [condition]temperature[/condition] in [location]{locations}[/location]
+weather/check_condition	is it [condition]raining[/condition] today in [location]{locations}[/location]
+weather/check_condition	how [condition]{condition}[/condition] is it in [location]{locations}[/location]
+weather/check_condition	how [condition]{condition}[/condition] is it in [location]{locations}[/location] right now
+
+weather/get_weather	{whats} the weather
+weather/get_weather	{whats} the local weather
+weather/get_weather	{whats} the weather like
+weather/get_weather	{whats} the weather like {outside}
+weather/get_weather	{whats} the weather like today
+weather/get_weather	{whats} the weather today
+weather/get_weather	{whats} the current weather
+weather/get_weather	{whats} the weather {outside}
+weather/get_weather	weather [location]{locations}[/location]
+weather/get_weather	weather in [location]{locations}[/location]
+weather/get_weather	weather [location]{locations}[/location] currently
+weather/get_weather	weather in [location]{locations}[/location] right now
+weather/get_weather	{whats} the weather in [location]{locations}[/location]
+weather/get_weather	{whats} the weather like in [location]{locations}[/location]
+weather/get_weather	weather now in [location]{locations}[/location]
+weather/get_weather	I want to know, how is [location]{locations}[/location] weather ?
+weather/get_weather	how is weather now in [location]{locations}[/location]?
+weather/get_weather	[location]{locations}[/location] weather
+
+#whats#
+what is
+what's
+how's
+how is
+
+#condition#
+hot
+cold
+warm
+windy
+
+#outside#
+outside
+right now
+
+#locations#
+Oakland
+Tacoma
+Denver
+London
+Amsterdam
+Bangkok
+Beijing
+Buenos Aires
+Cairo
+Delhi
+Manila
+Mexico City
+Moscow
+Osaka
+Tokyo
+Seoul
+Rio de Janeiro
+Mumbai
+Seattle

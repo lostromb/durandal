@@ -1,0 +1,1 @@
+..\..\target\OntologySchemaTransformer -compile -in "..\..\Data\Schemas\SchemaDotOrg" -out ".\SchemaDotOrg" -namespace "Durandal.Plugins.PopCulture.SchemaDotOrg" -visibility internal -select http://schema.org/Person http://schema.org/GenderType

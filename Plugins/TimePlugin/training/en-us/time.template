@@ -1,0 +1,231 @@
+#STATIC#
+
+time/query_time	what is the [field]time[/field]
+time/query_time	what [field]time[/field] is it
+time/query_time	what [field]time[/field] is it now
+time/query_time	what [field]time[/field] is it right now
+time/query_time	do you have the [field]time[/field]
+time/query_time	do you have the current [field]time[/field]
+time/query_time	do you know what [field]time[/field] it is
+time/query_time	what is the current [field]time[/field]
+time/query_time	tell me the [field]time[/field]
+time/query_time	tell me the current [field]time[/field]
+time/query_time	what's the [field]time[/field]
+time/query_time	what is the [field]time[/field]
+time/query_time	what [field]time[/field] is it?
+time/query_time	what [field]time[/field] is it now?
+time/query_time	what [field]time[/field] is it right now?
+time/query_time	do you have the [field]time[/field]?
+time/query_time	do you have the current [field]time[/field]?
+time/query_time	do you know what [field]time[/field] it is?
+time/query_time	what is the current [field]time[/field]?
+time/query_time	tell me the [field]time[/field]?
+time/query_time	tell me the current [field]time[/field]?
+time/query_time	what's the [field]time[/field]?
+time/query_time	do you know the [field]time[/field]
+time/query_time	do you know the current [field]time[/field]
+time/query_time	do you know the [field]time[/field]?
+
+time/query_time	what is the current [field]date[/field]
+time/query_time	what's the [field]date[/field] [time]today[/time]
+time/query_time	what's the [field]date[/field]
+time/query_time	what is the [field]date[/field]?
+time/query_time	what [field]day[/field] is it?
+time/query_time	what is [time]today's[/time] [field]date[/field]?
+time/query_time	what [field]day[/field] is it [time]today[/time]
+time/query_time	what [field]day[/field] is it [time]today[/time]?
+time/query_time	what [field]day[/field] is [time]today[/time]?
+time/query_time	what is the current [field]date[/field]?
+time/query_time	what's the [field]date[/field] [time]today[/time]?
+time/query_time	what's the [field]date[/field]?
+time/query_time	which [field]date[/field] is it
+
+#PATTERNS#
+
+time/query_time	{tellme} the [field]{date}[/field]
+time/query_time	{tellme} [time]today's[/time] [field]date[/field]
+time/query_time	{tellme} what [field]{date}[/field] it is
+time/query_time	{tellme} what [field]{date}[/field] it is [time]today[/time]
+
+time/query_time	{whatis} the [field]{date}[/field]
+time/query_time	{whatis} [time]today's[/time] [field]date[/field]
+
+time/query_time	{which} [field]{date}[/field] is it
+time/query_time	{which} [field]{date}[/field] is it [time]today[/time]
+time/query_time	{which} [field]{date}[/field] is it [time]today[/time]?
+
+time/query_time	{which} [field]{date}[/field] is [time]{time_expressions}[/time]
+time/query_time	{which} [field]{date}[/field] is [time]{month} 4[/time]?
+time/query_time	{which} [field]{date}[/field] is [time]{month} 10[/time]
+time/query_time	{which} [field]{date}[/field] is [time]{month} {nth}[/time]
+time/query_time	{which} [field]{date}[/field] is [time]the {nth} of {month}[/time]
+
+time/query_time	when is [time]{holidays}[/time]
+time/query_time	when is [time]{holidays}[/time] on
+time/query_time	when is [time]{holidays}[/time] this year
+time/query_time	{which} [field]{date}[/field] is [time]{holidays}[/time]
+time/query_time	{which} [field]{date}[/field] is [time]{holidays}[/time] on
+time/query_time	{which} [field]{date}[/field] is [time]{holidays}[/time] this year
+time/query_time	{which} [field]{date}[/field] does [time]{holidays}[/time] happen
+time/query_time	{which} [field]{date}[/field] does [time]{holidays}[/time] come
+
+time/query_time	what [field]time[/field] is it in [location]{locations}[/location]
+time/query_time	what is the [field]time[/field] in [location]{locations}[/location]
+time/query_time	what [field]time[/field] is it in [location]{locations}[/location]
+time/query_time	local [field]time[/field] in [location]{locations}[/location]
+time/query_time	what is the local [field]time[/field] in [location]{locations}[/location]
+
+#REGEX#
+time/query_time	^(what|which) (?<field>day|time) is it[\?\.]?$
+time/query_time	^what('s| is) today's (?<field>date)[\?\.]?$
+time/query_time	^when('s| is) (?<time>.+?)[\?\.]?$
+time/query_time	^what (?<field>time) is it in (?<location>.+?)[\?\.]?$
+time/query_time	^what is the local (?<field>time) in (?<location>.+?)[\?\.]?$
+
+#tellme#
+tell me
+can you tell me
+could you tell me
+
+#whatis#
+what is
+do you know
+
+#which#
+what
+which
+
+#date#
+day
+date
+day of the week
+day of the month
+
+#time_expressions#
+today
+tomorrow
+monday
+tuesday
+wednesday
+thursday
+friday
+saturday
+sunday
+
+#nth#
+10th
+1st
+2nd
+3rd
+4th
+11th
+21st
+31st
+
+#month#
+january
+february
+march
+april
+may
+june
+july
+august
+september
+october
+november
+december
+
+#locations#catalog=geography/us_cities;geography/world_cities;geography/world_countries#
+
+#holidays#catalog=time/us_holidays#
+
+#PATTERNS#
+
+time/query_time_multiturn	what about [location]{locations}[/location]
+time/query_time_multiturn	what about in [location]{locations}[/location]
+time/query_time_multiturn	how about in [location]{locations}[/location]
+time/query_time_multiturn	and what is it in [location]{locations}[/location]
+time/query_time_multiturn	and what [field]time[/field] is it in [location]{locations}[/location]
+time/query_time_multiturn	and what is the [field]time[/field] in [location]{locations}[/location]
+time/query_time_multiturn	and what about [location]{locations}[/location]
+
+time/weather_cross_domain	{whats} the weather like over there
+time/weather_cross_domain	{whats} the weather like there
+time/weather_cross_domain	{whats} the weather over there
+time/weather_cross_domain	{whats} the weather there
+time/weather_cross_domain	and {whats} the weather like over there
+time/weather_cross_domain	and {whats} the weather like there
+time/weather_cross_domain	and {whats} the weather over there
+time/weather_cross_domain	and {whats} the weather there
+
+#whats#
+what is
+what's
+how is
+how's
+
+#STATIC#
+
+time/change_timer	[action]start[/action] a new timer
+time/change_timer	[action]start[/action] timing
+time/change_timer	[action]stop[/action] timing
+
+#PATTERNS#
+
+time/change_timer	[action]{timer_actions}[/action] {a_timer}
+time/change_timer	please [action]{timer_actions}[/action] {a_timer}
+time/change_timer	can you [action]{timer_actions}[/action] {a_timer}
+time/change_timer	[action]{timer_actions}[/action] {a_timer} please
+time/change_timer	[action]{timer_actions}[/action] {a_timer} for me
+
+
+#timer_actions#
+start
+pause
+stop
+reset
+turn off
+
+#a_timer#
+a timer
+my timer
+the timer
+that timer
+
+#REGEX#
+time/change_timer	^(?<action>start|stop|pause) (a |the )?timer[\?\.]?$
+
+#STATIC#
+time/query_time	when does the [field]clock change[/field]
+time/query_time	when do the [field]clocks change[/field]
+time/query_time	when does the [field]time change[/field]
+time/query_time	when do the [field]times change[/field]
+
+#PATTERNS#
+
+time/query_time	when is [field]{dst}[/field]
+time/query_time	when's [field]{dst}[/field]
+time/query_time	when does [field]{dst}[/field] end
+time/query_time	when does [field]{dst}[/field] begin
+time/query_time	when does [field]{dst}[/field] start
+time/query_time	when does [field]{dst}[/field] happen
+time/query_time	when does [field]{dst}[/field] happen next
+
+#dst#
+daylight savings
+daylight savings'
+daylight's savings
+daylight savings time
+daylight savings' time
+DST
+
+#REGEX#
+time/query_time	^(when is|when does|when's) (?<field>daylight.+savings?(?: time)?)(end|happen|begin|start)\?\.]?$
+
+#PATTERNS#
+time/get_relative_world_time	what time would it be in [query_location]{locations}[/query_location] if it were [basis_time]10 AM[basis_time] in [basis_location]{locations}[/basis_location]
+time/get_relative_world_time	what would the time be in [query_location]{locations}[/query_location] if it were [basis_time]10 AM[basis_time] in [basis_location]{locations}[/basis_location]
+time/get_relative_world_time	what would the local time in [query_location]{locations}[/query_location] be if it were [basis_time]10 AM[basis_time] in [basis_location]{locations}[/basis_location]
+time/get_relative_world_time	if it were [basis_time]10 AM[basis_time] in [basis_location]{locations}[/basis_location] what time would it be in [query_location]{locations}[/query_location]
+time/get_relative_world_time	if it were [basis_time]10 AM[basis_time] in [basis_location]{locations}[/basis_location] then what time would it be in [query_location]{locations}[/query_location]

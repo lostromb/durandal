@@ -1,0 +1,88 @@
+#STATIC#
+skype/make_call	call [contactname]Scootaloo[/contactname] on Skype
+
+#PATTERNS#
+skype/make_call	{prefixes} [contactname]{firstnames}[/contactname]
+skype/make_call	{prefixes} [contactname]{firstnames}[/contactname] on {skype}
+skype/make_call	{prefixes} [contactname]{firstnames}[/contactname] with {skype}
+skype/make_call	{prefixes} [contactname]{firstnames} {lastnames}[/contactname]
+skype/make_call	{prefixes} [contactname]{firstnames} {lastnames}[/contactname] on {skype}
+skype/make_call	{prefixes} [contactname]{firstnames} {lastnames}[/contactname] with {skype}
+
+#skype#
+skype
+Skype
+
+#prefixes#
+call
+call up
+Skype
+Skype call
+[calltype]video[/calltype] call
+[calltype]video[/calltype] call with
+start a call with
+started call with
+start a Skype call with
+started Skype call with
+started [calltype]video[/calltype] call with
+start a [calltype]video[/calltype] call with
+
+#firstnames#
+Melanie
+Prince
+John
+Omar
+Bill
+Misha
+Nathan
+Katie
+Brooke
+Erik
+Arshad
+Mon
+Oleg
+Vadim
+Gilad
+
+#lastnames#
+Johnson
+Klein
+Springer
+Karlstad
+Cahill
+Todd
+Veras
+Palmer
+Jackson
+Smith
+Ericson
+Mitsuda
+Huppe
+Kloer
+Sansbury
+Whedon
+Procter
+Pratchett
+Scurry
+Kuritz
+Bowen
+Pearson
+Cowley
+Bikkula
+Ivanko
+Sonnenberg
+Valentine
+Yang
+Branter
+Hagebusch
+Lamper
+Lodge
+Sissel
+Karmon
+Basilyan
+Beeri
+Shepshelevich
+Holostov
+Mantinband
+Berezansky
+Yosefi

@@ -1,0 +1,23 @@
+﻿@var List<SelectableEntity> Entities
+@var string Header
+@namespace Durandal.Plugins.Bing.Views
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <link href="/views/common/global_html5.css" rel="stylesheet" type="text/css">
+    <link href="/views/bing/entitycards.css" rel="stylesheet" type="text/css">
+    <title>Bing Search Results</title>
+</head>
+<body class="globalBgColor globalFontStyle globalFontColor">
+    <h1 class="entityPageHeader">${Header}</h1>
+    <for each='SelectableEntity e in Entities'>
+        <a href="${e.SelectActionUrl}">
+            <div class="entityBoxFixed">
+                ${e.HtmlCard}
+            </div>
+        </a>
+    </for>
+</body>
+</html>

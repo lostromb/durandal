@@ -1,0 +1,1 @@
+..\..\target\OntologySchemaTransformer -compile -in "..\..\Data\Schemas\SchemaDotOrg" -out ".\SchemaDotOrg" -namespace "Durandal.Plugins.Quotes.SchemaDotOrg" -visibility internal -select http://schema.org/Person

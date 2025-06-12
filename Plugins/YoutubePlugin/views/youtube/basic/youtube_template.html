@@ -1,0 +1,37 @@
+﻿<fragment name="main"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/base-min.css" />
+<link href="/views/youtube/youtube.css" rel="stylesheet" type="text/css" />
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Youtube search results</title>
+</head>
+<body>
+<div id="flexContainer" class="flex">
+	<div class="flex flexBoxRow">
+		<div class="borderBox flex1"></div>
+		<div class="centerBox flex3">
+			<div class="flex flexBoxColumn">
+				{<RESULTS>}
+			</div>
+		</div>
+		<div class="borderBox flex1"></div>
+	</div>
+</div>
+</body>
+</html></fragment>
+
+<fragment name="singleresult">
+<div class="flex resultItem flex1">
+	<div class="flex flexBoxRow flex-center">
+		<div class="flex2">
+			<img width="100%" class="pure-img" src="{<THUMBNAIL_URL>}"/>
+		</div>
+		<div class="descriptionBox flex3">
+			<a href="{<VIDEO_URL>}">{<VIDEO_TITLE>}</a><br/>
+			{<VIDEO_DESC>}
+		</div>
+	</div>
+</div>
+</fragment>

@@ -1,0 +1,32 @@
+﻿@Namespace Durandal.Answers.ListAnswer
+@Var string pageTitle
+@Var string conversationResponse
+@Var string cancelLink
+@Var string doneLink
+@Var ListEntity list
+
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <link href="/views/common/global_html5.css" rel="stylesheet" type="text/css">
+        <link href="/views/note/note.css" rel="stylesheet" type="text/css">
+        <title>@pageTitle</title>
+        ${new Durandal.CommonViews.DynamicTheme().Render()}
+    </head>
+    <body class="globalBgColor globalFontStyle globalFontColor">
+        <span class="globalFontColorAccent">@conversationResponse</span>
+        <hr>
+        @list.Title<br>
+        <ul>
+            @foreach (string entry in list.Entries)
+            {
+                <li>@entry</li>
+            }
+        </ul>
+        <div id="bottomButtons" class="globalBgColor" align="center">
+            <a class="buttonLink" href="@cancelLink"><span class="buttonDiv">Cancel</span></a>
+            <a class="buttonLink" href="@doneLink"><span class="buttonDiv">Done</span></a>
+        </div>
+    </body>
+</html>

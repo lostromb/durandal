@@ -1,0 +1,45 @@
+@charset "utf-8";
+
+/* Load the font face */
+@font-face
+{
+  font-family: 'Segoe';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Segoe UI Light'), local('SegoeUI-Light'), local('Segoe WP Light'), local('SegoeWP-Light');
+}
+
+.globalFontStyle
+{
+	font-family: "Segoe", "Segoe UI Light", "Segoe WP Light", "Segoe UI", "Segoe WP", "Helvetica CE 35 Thin", "Arial Narrow", sans-serif;
+}
+
+body
+{
+	padding: 0px;
+	margin-left: 0px;
+	background-color: #DDDDDD;
+	margin-right: 20px;
+}
+
+.title
+{
+	font-size: 30pt;
+	padding: 20px;
+}
+
+.quote
+{
+	border: 1px solid black;
+	border-radius: 10px;
+	padding: 10px;
+	margin-left: 20px;
+	font-size: 18pt;
+	background: #FFFFFF;
+	display: inline-block;
+}
+
+.oq
+{
+	font-size: 20pt;
+}

@@ -1,0 +1,23 @@
+﻿@charset "utf-8";
+body
+{
+    /* standard "single-page app" body layout */
+    display: block;
+    overflow: hidden;
+    margin: 0px;
+    padding: 0px;
+    width: 100% !important;
+    height: 100% !important;
+    color: white;
+    font-size: 12pt;
+    font-family: "Segoe UI Light", "Helvetica CE 35 Thin", "Arial Narrow", sans-serif;
+}
+a
+{
+	color: white;
+	font-weight: bold;
+}
+.descriptionBox
+{
+	padding: 5px;
+}

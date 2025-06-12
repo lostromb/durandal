@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<grammar version="1.0">
+  <regex id="matcher" expression="(all|any)" />
+  
+  <normalization_rule id="normalizer" strict="true">
+    <item input="all" output="ALL" />
+    <item input="any" output="ANY" />
+  </normalization_rule>
+  
+  <rule id="canonicalized_value">
+    <item><ruleref uri="#matcher" /><normalizer>normalizer</normalizer></item>
+  </rule>
+
+</grammar>

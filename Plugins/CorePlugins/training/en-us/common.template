@@ -1,0 +1,322 @@
+#STATIC#
+
+; The user has made an affirmative statement; "Yes" or "OK" or similar
+common/confirm	yes
+common/confirm	sure
+common/confirm	go ahead
+common/confirm	yes please
+common/confirm	please do
+common/confirm	okay
+common/confirm	OK
+common/confirm	yes OK
+common/confirm	affirmative
+common/confirm	that's right
+common/confirm	yeah
+common/confirm	yeah.
+common/confirm	Yes.
+common/confirm	yes it is
+common/confirm	yes that's right
+common/confirm	correct
+common/confirm	that's correct
+common/confirm	that is correct
+common/confirm	that is right
+common/confirm	confirm
+common/confirm	confirmed
+common/confirm	yupperoni
+common/confirm	yep
+common/confirm	uh huh
+common/confirm	uh-huh
+common/confirm	OK
+common/confirm	y
+
+; The user has either said "no" or expressed some kind of frustration, such as "Don't do that"
+common/deny	no
+common/deny	no way
+common/deny	nope
+common/deny	nooo
+common/deny	nono
+common/deny	nonono
+common/deny	noooooooo
+common/deny	no don't
+common/deny	don't
+common/deny	cancel
+common/deny	cancel it
+common/deny	cancel that
+common/deny	cannibal
+common/deny	go back
+common/deny	stop
+common/deny	stop that
+common/deny	nevermind
+common/deny	never mind
+common/deny	forget it
+common/deny	abort
+common/deny	please don't
+common/deny	i didn't say that
+common/deny	I didn't say that
+common/deny	don't do it
+common/deny	don't do that
+common/deny	n
+
+; The user is asking to hear the previous information again, or perform the last action a second time
+common/repeat	repeat that
+common/repeat	repeat that
+common/repeat	repeat that please
+common/repeat	please repeat
+common/repeat	repeat
+common/repeat	what was that
+common/repeat	what was that?
+common/repeat	what did you say
+common/repeat	what did you just say
+common/repeat	what was that again
+common/repeat	what did you say?
+common/repeat	what did you just say?
+common/repeat	again
+common/repeat	once again
+common/repeat	one more time
+common/repeat	once more
+common/repeat	again
+
+; The user wishes to know more about something
+common/elaboration	tell me more
+common/elaboration	tell me about it
+common/elaboration	keep talking
+common/elaboration	tell me something about it
+common/elaboration	any more
+common/elaboration	any more?
+
+; The user is asking for help in a generic sense
+
+#REGEX#
+common/help	^help[\.\?]?$
+
+#STATIC#
+common/help	help
+common/help	help me out
+common/help	can you help me with that
+common/help	help me
+common/help	show help
+common/help	show me help
+common/help	show me the help screen
+common/help	I need help
+common/help	please help me
+common/help	please help
+
+; The user is thanking the system
+common/thanks	thank you
+common/thanks	thanks alot
+common/thanks	thanks a lot
+common/thanks	thanks
+common/thanks	thank you very much
+common/thanks	thank you
+common/thanks	thank you
+common/thanks	thank you for that
+common/thanks	thank you for doing that
+common/thanks	thank you you're very helpful
+common/thanks	thanks for the help
+common/thanks	ok thanks
+common/thanks	ok thank you
+common/thanks	hey thank you
+common/thanks	hey thanks a lot
+common/thanks	thank you kindly
+common/thanks	okay thanks
+common/thanks	okay thank you
+common/thanks	okay thanks a lot
+common/thanks	ok thanks a lot
+common/thanks	okay thanks alot
+common/thanks	ok thanks alot
+common/thanks	thank you much
+
+; These should be handled by chitchat from now on
+
+; The user is complimenting the system
+;common/compliment	you're a champ
+;common/compliment	you're wonderful
+;common/compliment	I love you
+;common/compliment	you're good
+;common/compliment	you're so good
+;common/compliment	you're so good when you're bad
+
+; The user expresses contempt or disdain for the system or its avatar
+;common/contempt	you're terrible
+;common/contempt	you suck
+;common/contempt	awful
+;common/contempt	you're awful
+;common/contempt	I hate you
+
+; The user wishes to hear something on the screen read aloud
+common/read_aloud	read it to me
+common/read_aloud	read it out loud
+common/read_aloud	read it for me
+common/read_aloud	read that one
+common/read_aloud	read that out loud
+common/read_aloud	read that for me
+common/read_aloud	can you read it for me
+common/read_aloud	can you read it out loud
+common/read_aloud	can you read it
+
+; The user wants speech or audio to stop
+common/stop_talking	stop talking
+common/stop_talking	shut up
+common/stop_talking	be quiet
+common/stop_talking	quiet
+common/stop_talking	shut up please
+common/stop_talking	can you shut up
+common/stop_talking	can you stop talking
+common/stop_talking	can you please stop
+common/stop_talking	please stop
+common/stop_talking	stop
+
+; The user wishes to undo the previous action, or go backwards in the conversation
+common/undo	undo that
+common/undo	go back
+common/undo	undo
+
+
+#REGEX#
+common/confirm	^yes[\.]?$
+common/deny	^no[\.]?$
+common/stop_talking	^shut up[\.!]?$
+common/stop_talking	^stop talking[\.!]?$
+
+; Captures the very common multiturn query of "what about (some other thing)"
+; This intent has to shotgun pretty much all the annotators we have so it can be kind of heavy when it triggers
+; The fact that it is regex means it doesn't generate negative training data for other domains that may want
+; to implement their own multiturn training to capture this intent
+; common/what_about	^(and )?(how about |what about )(?<phrase>(a |an |the |in )?(?<item>.+?))[\.\?]?$
+
+#PATTERNS#
+
+common/repeat	{canyou} {repeat} {that}
+common/repeat	{canyou} {repeat} {that} please
+common/repeat	{canyou} {repeat} {that} {again}
+common/repeat	{repeat} {that}
+common/repeat	{repeat} {that} {again}
+common/repeat	{repeat} {again}
+common/repeat	{again} please
+common/repeat	can I hear {that} again
+common/repeat	can you say {that} again
+
+; The user is navigating or choosing an option, in a generic sense
+; Selection could be "Show me the 2nd one"
+; Navigation could be "next page"
+; todo do I really care about tagging the item type?
+common/select	{choose} the [selection]{selection}[/selection]
+common/select	{choose} the [selection]{selection}[/selection] [item_type]{choice}[/item_type]
+common/select	[selection]{selection}[/selection] [item_type]{choice}[/item_type]
+common/select	the [selection]{selection}[/selection]
+common/select	the [selection]{selection}[/selection] [item_type]{choice}[/item_type]
+common/select	[item_type]{item}[/item_type] [selection]{number}[/selection]
+
+#STATIC#
+common/select	number [selection]1[/selection]
+common/select	number [selection]5[/selection]
+common/select	number [selection]2[/selection]
+common/select	number [selection]10[/selection]
+
+#REGEX#
+common/select	^\s*(#\s*|number )(?<selection>[0-9]+)\s*$
+common/select	^(?<item_type>item|choice|option|page|step) (number )?(?<selection>[0-9]+)\.?$
+common/select	^(choose|pick|show|show me|tell me about|I choose|I pick|go to|tell me|say|read|look at) the (?<selection>.+?) (?<item_type>item|choice|option|page|step)\.?$
+common/select	^(?<selection>[0-9]+)$
+
+
+#canyou#
+can you
+could you
+could you please
+can you please
+please
+will you
+will you please
+would you
+would you kindly
+would you please
+
+#that#
+that
+those
+
+#repeat#
+repeat
+say
+tell me
+
+#again#
+again
+one more time
+once again
+
+#choose#
+choose
+pick
+show
+show me
+tell me about
+I choose
+I pick
+go to
+tell me
+say
+read
+look at
+
+#selection#
+previous
+next
+1st
+first
+2nd
+second
+3rd
+third
+4th
+forth
+fourth
+5th
+fifth
+6th
+sixth
+7th
+seventh
+8th
+eighth
+9th
+ninth
+10th
+tenth
+last
+bottom
+top
+
+#number#
+one
+two
+three
+four
+five
+six
+seven
+1
+2
+3
+4
+5
+6
+7
+
+#choice#
+one
+page
+option
+item
+choice
+thing
+step
+
+#item#
+page
+option
+item
+choice
+number
+step

@@ -1,0 +1,106 @@
+@Var string Location
+@var string Temperature
+@var string DetailedConditions
+@var string ConditionImageName
+@var string BackgroundImageName
+@var string WindCondition
+@var string RainCondition
+@var string HumidityCondition
+@var string PressureCondition
+@var DarkskyWeatherResult FullWeatherResult
+@var string RefreshUrl
+@using Durandal.ExternalServices.Darksky
+@namespace Durandal.Plugins.Weather.Views
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+<link href="/views/common/global_html5.css" rel="stylesheet" type="text/css" />
+<link href="/views/common/flexbox.css" rel="stylesheet" type="text/css" />
+<link href="/views/weather/weather.css" rel="stylesheet" type="text/css" />
+<title>Local weather</title>
+${new Durandal.CommonViews.DynamicTheme().Render()}
+<script src="/views/weather/js/jquery.min.js"></script>
+<script src="/views/weather/js/backstretch.js"></script>
+    <if condition="!string.IsNullOrEmpty(RefreshUrl)">
+        <!-- Refresh URL is given - rely on javascript to drive automatic refresh -->
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $.backstretch("/views/weather/bg/${BackgroundImageName}");
+                window.setTimeout(function () { window.location = "${RefreshUrl}"; }, 1800000); // Refresh the weather every 30 minutes
+            });
+        </script>
+    </if>
+    <else>
+        <!-- No refresh URL - the client itself will trigger refresh via DelayedDialogAction -->
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $.backstretch("/views/weather/bg/${BackgroundImageName}");
+            });
+        </script>
+    </else>
+</head>
+<body class="globalFontStyle">
+	<div class="flex flexAppContainer">
+		<div class="flex flexBoxColumn flex-stretch">
+			<div class="flex alignCenter">
+				<div class="flex flexBoxColumn">
+					<span id="locationLabel">${Location}</span>
+					<span id="temperature">${Temperature}</span>
+					<span id="conditionLabel">${DetailedConditions}</span>
+				</div>
+			</div>
+			<div class="flex lightBackground">
+				<div class="flex flexBoxColumn">
+					<div class="flex flexBoxRow">
+						<div class="flex flex1"></div>
+						<div class="flex noFlexShrink weatherDetailItem">
+							Wind<br/>${WindCondition}
+						</div>
+						<div class="flex noFlexShrink weatherDetailItem">
+							Rain<br/>${RainCondition}
+						</div>
+						<div class="flex noFlexShrink weatherDetailItem">
+							Humidity<br/>${HumidityCondition}
+						</div>
+						<div class="flex noFlexShrink weatherDetailItem">
+							Pressure<br/>${PressureCondition}
+						</div>
+						<div class="flex flex1"></div>
+					</div>
+				</div>
+			</div>
+			<if condition="FullWeatherResult.Daily == null || FullWeatherResult.Daily.Data.Count == 0">
+				<div class="flex medBackground">
+					<div class="flex flexBoxColumn flex-center">
+						<span id="forecastLabel">Forecast not available</span>
+					</div>
+				</div>
+			</if>
+			<else>
+				<div class="flex medBackground">
+					<div class="flex flexBoxColumn flex-center">
+						<span id="forecastLabel">Forecast</span>
+						<div class="flex flexBoxRow">
+							<div class="flex flex1"></div>
+                            #int daysToDisplay = 5;
+                            <for each='DarkskyWeatherDataPoint dayForecast in FullWeatherResult.Daily.Data'>
+                                <if condition="daysToDisplay-- > 0">
+                                    <div class="flex noFlexShrink weatherDetailItem">
+                                        ${dayForecast.Time.ToString("ddd")}<br><img src="/views/weather/icons/${dayForecast.Icon}.png" class="weatherConditionIcon"><br>${dayForecast.ApparentTemperatureHigh.Value.ToString("F0")}°<br>${dayForecast.ApparentTemperatureLow.Value.ToString("F0")}°
+                                    </div>
+                                </if>
+							</for>
+							<div class="flex flex1"></div>
+						</div>
+					</div>
+				</div>
+			</else>
+			<div class="flex medBackground flex1"></div>
+			<div id="copyrightField">Powered by Dark Sky</div>
+		</div>
+	</div>
+</body>
+</html>

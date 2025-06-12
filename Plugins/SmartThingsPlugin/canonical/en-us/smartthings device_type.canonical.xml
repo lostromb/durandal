@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<grammar version="1.0">
+  <regex id="matcher" expression="(lights?|lamps?|fans?|outlets?|sprinklers?)" />
+  
+  <normalization_rule id="normalizer" strict="true">
+    <item input="light" output="LIGHT" />
+    <item input="lights" output="LIGHT" />
+	<item input="lamp" output="LIGHT" />
+    <item input="lamps" output="LIGHT" />
+    <item input="fan" output="FAN" />
+    <item input="fans" output="FAN" />
+    <item input="sprinkler" output="SPRINKLER" />
+    <item input="sprinklers" output="SPRINKLER" />
+    <item input="outlet" output="OUTLET" />
+    <item input="outlets" output="OUTLETS" />
+  </normalization_rule>
+  
+  <rule id="canonicalized_value">
+    <item><ruleref uri="#matcher" /><normalizer>normalizer</normalizer></item>
+  </rule>
+
+</grammar>

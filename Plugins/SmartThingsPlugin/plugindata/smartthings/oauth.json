@@ -1,0 +1,10 @@
+{
+	"Domain": "smartthings.com",
+	"ClientId": "f581af47-8b8f-44b5-98e4-8e10d371d1c0",
+	"ClientSecret": "2c42a8e6-5f52-4bfa-9189-e3c9e29ae212",
+	"AuthUri": "https://graph.api.smartthings.com/oauth/authorize",
+	"TokenUri": "https://graph.api.smartthings.com/oauth/token",
+	"Scope": "app",
+	"ConfigName": "smartthings",
+	"Type": 0
+ }

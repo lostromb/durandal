@@ -1,0 +1,77 @@
+#STATIC#
+coin/flip	flip a coin
+coin/flip	flip a coin
+coin/flip	flip a coin for me
+coin/flip	toss a coin
+coin/flip	coin toss
+coin/flip	heads or tails
+coin/flip	choose heads or tails
+coin/flip	let's flip a coin for it
+coin/flip	please flip a coin
+coin/flip	will it be heads or tails
+
+coin/roll_dice	roll a dice
+coin/roll_dice	roll some dice
+
+#PATTERNS#
+coin/roll_dice	roll [number]{number}[/number] dice
+
+#number#catalog=common/numbers_below_10#
+
+#STATIC#
+
+coin/roll_dice	roll a [dnd_dice]d6[/dnd_dice]
+coin/roll_dice	roll [dnd_dice]1 D 20[/dnd_dice]
+coin/roll_dice	roll a [dnd_dice]D 20[/dnd_dice]
+
+#PATTERNS#
+coin/roll_dice	[dnd_dice]{dnd_dice}[/dnd_dice]
+coin/roll_dice	[dnd_dice]{dnd_singular}[/dnd_dice]
+coin/roll_dice	roll [dnd_dice]{dnd_dice}[/dnd_dice]
+coin/roll_dice	roll a [dnd_dice]{dnd_dice}[/dnd_dice]
+coin/roll_dice	roll a [dnd_dice]{dnd_singular}[/dnd_dice]
+
+#dnd_dice#
+1d4
+1d6
+2d6
+2d8
+2d12
+4d20
+2d20
+3d6
+3d8
+5d10
+10d4
+1 D 4
+1 D 6
+2 D 6
+2 D 8
+2 D 12
+4 D 20
+2 D 20
+3 D 6
+3 D 8
+5 D 10
+10 D 6
+
+#dnd_singular#
+d4
+d6
+d8
+d10
+d12
+d20
+d100
+
+#PATTERNS#
+
+coin/pick_number	pick a number between [min]{number}[/min] and [max]{number}[/max]
+coin/pick_number	pick any number between [min]{number}[/min] and [max]{number}[/max]
+coin/pick_number	pick a random number between [min]{number}[/min] and [max]{number}[/max]
+coin/pick_number	pick a number from [min]{number}[/min] to [max]{number}[/max]
+coin/pick_number	pick any number from [min]{number}[/min] to [max]{number}[/max]
+coin/pick_number	pick a random number from [min]{number}[/min] to [max]{number}[/max]
+coin/pick_number	what's a number between [min]{number}[/min] to [max]20[/max]?
+coin/pick_number	I'm thinking of a random number between [min]{number}[/min] to [max]100[/max]
+coin/pick_number	thinking of a number between [min]{number}[/min] and [max]100[/max]

@@ -1,0 +1,51 @@
+[
+	{
+		"Name": "Dining room light",
+		"Type": "DIMMER",
+		"Subtype": "LIGHT",
+		"Id": "4b06134f-563f-4dab-838e-c84cfcfa79cd",
+		"KnownAs": [ "dining room", "kitchen" ]
+	},
+	{
+		"Name": "Front porch light",
+		"Type": "SWITCH",
+		"Subtype": "LIGHT",
+		"Id": "f1da0ca6-d06e-4a19-a9fd-3ed3dfeef289",
+		"KnownAs": [ "front porch", "front", "driveway", "outside" ]
+	},
+	{
+		"Name": "Back yard light",
+		"Type": "SWITCH",
+		"Subtype": "LIGHT",
+		"Id": "6e1d3832-9087-46e2-8935-8972ea25b77d",
+		"KnownAs": [ "back porch", "back", "backyard", "back yard", "outside" ]
+	},
+	{
+		"Name": "Living room lights",
+		"Type": "SWITCH",
+		"Subtype": "LIGHT",
+		"Id": "bf8bdae2-77a4-43a7-9818-7b677e03c38e",
+		"KnownAs": [ "living room", "main room" ]
+	},
+	{
+		"Name": "Downstairs light",
+		"Type": "SWITCH",
+		"Subtype": "LIGHT",
+		"Id": "ce7f8d71-3ec0-48b3-b1df-d6ab389acdd5",
+		"KnownAs": [ "den", "downstairs" ]
+	},
+	{
+		"Name": "Back patio light",
+		"Type": "SWITCH",
+		"Subtype": "LIGHT",
+		"Id": "dbcefbd0-9dd9-4241-98c9-e67d0498107c",
+		"KnownAs": [ "back patio", "patio", "back yard", "backyard" ]
+	},
+	{
+		"Name": "Nightstand light",
+		"Type": "DIMMER",
+		"Subtype": "LIGHT",
+		"Id": "28d0dc43-0c85-4638-af63-293b6192bc44",
+		"KnownAs": [ "nightstand", "night stand", "master bedroom" ]
+	}
+]

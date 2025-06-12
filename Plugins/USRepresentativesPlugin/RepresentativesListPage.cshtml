@@ -1,0 +1,128 @@
+﻿@Var IEnumerable<Legislator> Legislators
+@var string UserState
+@var int UserRepresentativeDistrict
+@Namespace Durandal.Plugins.Plugins.USRepresentatives
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <link href="/views/common/flexbox.css" rel="stylesheet" type="text/css">
+    <link href="/views/common/global_html5.css" rel="stylesheet" type="text/css">
+    <link href="/views/common/pure-base-min.css" rel="stylesheet" type="text/css">
+    <style>
+        body {
+            padding: 0px;
+            margin: 0px;
+        }
+
+        .container {
+            background: #7d7e7d;
+            background: -moz-linear-gradient(top, #7d7e7d 0%, #0e0e0e 100%);
+            background: -webkit-linear-gradient(top, #7d7e7d 0%,#0e0e0e 100%);
+            background: linear-gradient(to bottom, #7d7e7d 0%,#0e0e0e 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7d7e7d', endColorstr='#0e0e0e',GradientType=0 );
+        }
+
+        .headerLine {
+            color: white;
+            font-size: 24pt;
+            padding-left: 10px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        .personBlock {
+            margin-left: 20px;
+            margin-right: 20px;
+            background-color: white;
+            z-index: -50;
+        }
+
+        .repName {
+            font-size: 30pt;
+            display: block;
+        }
+
+        .democrat {
+            width: 30px;
+            background-color: blue;
+        }
+
+        .republican {
+            width: 30px;
+            background-color: red;
+        }
+
+        .personInfo {
+        }
+
+        .portrait {
+            width: 200px;
+            height: auto;
+            display: block;
+        }
+    </style>
+    <title>Outlook</title>
+</head>
+<body>
+    <div class="container flex flexAppContainer">
+        <div class="flex flexBoxColumn flex-stretch">
+            <span class="headerLine">Senate</span>
+            <for each='var legislator in Legislators'>
+                <if condition="legislator.Office == GovernmentOffice.Senate">
+                    <div class="personBlock">
+                        <div class="flex flexBoxRow">
+                            <div>
+                                <img src="${legislator.PortaitThumbnail}" class="portrait">
+                                <div class="republican"></div>
+                            </div>
+                            <div class="flex5 personInfo">
+                                <span class="repName">${legislator.FullName}</span>
+                                Age: 67<br />
+                                Years in office: 12 (Since 2005)<br />
+                                Phone: ${legislator.PhoneNumber}<br />
+                                Fax: ${legislator.FaxNumber}<br />
+                                Address: ${legislator.CapitolAddress}, Washington D.C.<br />
+                                <a href="http://www.cantwell.senate.gov/public/index.cfm/email-maria">Website</a><br />
+                                Contact via</br>
+                                <a href="http://www.cantwell.senate.gov/public/index.cfm/email-maria">Email</a>
+                                <a href="http://www.cantwell.senate.gov/public/index.cfm/email-maria">Facebook</a>
+                                <a href="http://www.cantwell.senate.gov/public/index.cfm/email-maria">Twitter</a>
+                                <a href="http://www.cantwell.senate.gov/public/index.cfm/email-maria">Youtube</a>
+                            </div>
+                        </div>
+                    </div>
+                </if>
+            </for>
+                <span class="headerLine">House of Representatives - ${UserState} - District ${UserRepresentativeDistrict}</span>
+            <for each='var legislator in Legislators'>
+                <if condition="legislator.Office == GovernmentOffice.HouseOfRepresentatives">
+                    <div class="personBlock">
+                        <div class="flex flexBoxRow">
+                            <div>
+                                <img src="${legislator.PortaitThumbnail}" class="portrait">
+                                <div class="republican"></div>
+                            </div>
+                            <div class="flex5 personInfo">
+                                <span class="repName">${legislator.FullName}</span>
+                                Age: 67<br />
+                                Years in office: 12 (Since 2005)<br />
+                                Phone: ${legislator.PhoneNumber}<br />
+                                Fax: ${legislator.FaxNumber}<br />
+                                Address: ${legislator.CapitolAddress}, Washington D.C.<br />
+                                <a href="http://www.cantwell.senate.gov/public/index.cfm/email-maria">Website</a><br />
+                                Contact via</br>
+                                <a href="http://www.cantwell.senate.gov/public/index.cfm/email-maria">Email</a>
+                                <a href="http://www.cantwell.senate.gov/public/index.cfm/email-maria">Facebook</a>
+                                <a href="http://www.cantwell.senate.gov/public/index.cfm/email-maria">Twitter</a>
+                                <a href="http://www.cantwell.senate.gov/public/index.cfm/email-maria">Youtube</a>
+                            </div>
+                        </div>
+                    </div>
+                </if>
+            </for>
+        </div>
+    </div>
+</body>
+</html>
