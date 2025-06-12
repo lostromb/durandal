@@ -1,0 +1,69 @@
+﻿{
+  "Id": "http://schema.org/PostalAddress",
+  "Comment": "The mailing address.",
+  "Label": "PostalAddress",
+  "InheritsFrom": [
+    "http://schema.org/ContactPoint"
+  ],
+  "Fields": {
+    "postOfficeBoxNumber": {
+      "Name": "postOfficeBoxNumber",
+      "Values": [
+        {
+          "Type": "Text",
+          "Comment": "The post office box number for PO box addresses."
+        }
+      ]
+    },
+    "streetAddress": {
+      "Name": "streetAddress",
+      "Values": [
+        {
+          "Type": "Text",
+          "Comment": "The street address. For example, 1600 Amphitheatre Pkwy."
+        }
+      ]
+    },
+    "addressCountry": {
+      "Name": "addressCountry",
+      "Values": [
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/Country",
+          "Comment": "The country. For example, USA. You can also provide the two-letter <a href=\"http://en.wikipedia.org/wiki/ISO_3166-1\">ISO 3166-1 alpha-2 country code</a>."
+        },
+        {
+          "Type": "Text",
+          "Comment": "The country. For example, USA. You can also provide the two-letter <a href=\"http://en.wikipedia.org/wiki/ISO_3166-1\">ISO 3166-1 alpha-2 country code</a>."
+        }
+      ]
+    },
+    "addressRegion": {
+      "Name": "addressRegion",
+      "Values": [
+        {
+          "Type": "Text",
+          "Comment": "The region. For example, CA."
+        }
+      ]
+    },
+    "postalCode": {
+      "Name": "postalCode",
+      "Values": [
+        {
+          "Type": "Text",
+          "Comment": "The postal code. For example, 94043."
+        }
+      ]
+    },
+    "addressLocality": {
+      "Name": "addressLocality",
+      "Values": [
+        {
+          "Type": "Text",
+          "Comment": "The locality. For example, Mountain View."
+        }
+      ]
+    }
+  }
+}

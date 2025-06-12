@@ -1,0 +1,10 @@
+namespace Durandal.Extensions.BondProtocol.API
+
+struct OAuthToken
+{
+    1: nullable<string> Token;
+	2: nullable<string> TokenType;
+	3: nullable<string> RefreshToken;
+	4: int64 IssuedAtUtcTicks;
+	5: int64 ExpiresAtUtcTicks;
+}

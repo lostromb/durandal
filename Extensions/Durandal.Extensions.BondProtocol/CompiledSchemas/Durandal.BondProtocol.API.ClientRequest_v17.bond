@@ -1,0 +1,57 @@
+import "Durandal.BondProtocol.API.AudioData.bond"
+import "Durandal.BondProtocol.API.ClientContext.bond"
+import "Durandal.BondProtocol.API.RecoResult.bond"
+import "Durandal.BondProtocol.API.InputMethod.bond"
+import "Durandal.BondProtocol.API.RecognizedPhrase.bond"
+import "Durandal.BondProtocol.API.SecurityToken.bond"
+import "Durandal.BondProtocol.API.SpeechRecognitionResult.bond"
+
+namespace Durandal.Extensions.BondProtocol.API
+
+struct ClientRequest_v17
+{
+    // Versioning for this communication
+	1: required int32 ProtocolVersion = 17;
+	
+	// The client context specific to this request
+	2: required ClientContext ClientContext;
+	
+	// Defines the method of input used to generate this request
+	3: required InputMethod InputType = Unknown;
+	
+	// Input string if input method is text
+	4: nullable<string> TextInput;
+	
+	// Speech recognition result if input method is speech
+	5: nullable<SpeechRecognitionResult> SpeechInput;
+	
+	// Optional security token information
+	6: nullable<vector<SecurityToken>> AuthTokens;
+	
+	// If the client cannot do speech reco, it will simply pass the audio here
+	7: nullable<AudioData> InputAudio;
+	
+	// If the client wishes to invoke a dialog action directly it can do so here
+	// This can also be used if LU was invoked elsewhere and we want to bypass the
+	// LU call that normally happens in dialog
+	8: nullable<vector<RecognizedPhrase>> LanguageUnderstanding;
+	
+	// The preferred audio codec that the client wants the response audio to use
+	9: nullable<string> PreferredAudioCodec;
+	
+	// A debugging traceId. If not set, a new one will be generated
+	10: nullable<string> TraceId;
+	
+	// Used to scope the client request to only a subset of loaded domains
+	11: nullable<vector<string>> DomainScope;
+
+	// If the user gave more input while the response from the previous turn is still
+	// playing out of their speakers, this client should set this field
+	// which indicates how much of the response was actually played, in ms.
+	// This is to allow barge-in selection if the answer supports it.
+	12: nullable<int32> ClientAudioPlaybackTimeMs;
+
+	// Stores flags that identify the type of request.
+	// Common flags might be for debug, trace, etc.
+	13: uint32 RequestFlags = 0;
+}

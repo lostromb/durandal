@@ -1,0 +1,10 @@
+namespace Durandal.Extensions.BondProtocol.Remoting
+
+struct RemoteFileStreamOpenResult
+{
+    1: required string StreamId;
+    2: required bool CanRead;
+    3: required bool CanWrite;
+    4: required bool CanSeek;
+    5: required nullable<int64> InitialFileLength;
+}

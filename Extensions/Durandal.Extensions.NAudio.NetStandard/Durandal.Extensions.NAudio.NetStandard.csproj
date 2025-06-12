@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <AssemblyName>Durandal.Extensions.NAudio</AssemblyName>
+    <RootNamespace>Durandal.Extensions.NAudio</RootNamespace>
+	<SignAssembly>True</SignAssembly>
+	<AssemblyOriginatorKeyFile>..\..\durandal.snk</AssemblyOriginatorKeyFile>
+	<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+  </PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+		<DefineConstants>$(DefineConstants)TRACK_IDISPOSABLE_LEAKS</DefineConstants>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+		<DefineConstants>$(DefineConstants)</DefineConstants>
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <PackageReference Include="NAudio.Core" Version="2.2.1" />
+	  <PackageReference Include="NAudio.Wasapi" Version="2.2.1" />
+	  <PackageReference Include="NAudio.WinMM" Version="2.2.1" />
+	</ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Core\Durandal.NetStandard\Durandal.NetStandard.csproj" />
+  </ItemGroup>
+
+  <Import Project="..\Durandal.Extensions.NAudio\Durandal.Extensions.NAudio.projitems" Label="Shared" />
+
+</Project>

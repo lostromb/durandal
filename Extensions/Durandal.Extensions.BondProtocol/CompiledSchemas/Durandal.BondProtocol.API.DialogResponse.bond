@@ -1,0 +1,111 @@
+import "Durandal.BondProtocol.API.Result.bond"
+import "Durandal.BondProtocol.API.AudioOrdering.bond"
+import "Durandal.BondProtocol.API.AudioData.bond"
+import "Durandal.BondProtocol.API.RecoResult.bond"
+import "Durandal.BondProtocol.API.PluginStrongName.bond"
+import "Durandal.BondProtocol.API.UrlScope.bond"
+import "Durandal.BondProtocol.API.InstrumentationData.bond"
+import "Durandal.BondProtocol.API.TriggerKeyword.bond"
+
+namespace Durandal.Extensions.BondProtocol.API
+
+struct DialogResponse
+{
+    // Versioning for this communication
+	1: required int32 ProtocolVersion = 20;
+	
+	// The overall result of the execution (whether the input was ignored, or an error occurred, etc.)
+    2: required Result ExecutionResult = Failure;
+	
+	// Signals to the client that it should start listening for another query immediately
+	3: required bool ContinueImmediately = false;
+	
+	// For text-based clients, this is the plain-format text that should be displayed
+    4: string ResponseText = "";
+	
+	// When HTML is hosted on the dialog server side, this will contain the URL to retrieve that page.
+	// The URL should be interpreted as a relative URL to the dialog server's web endpoint.
+	// This can also be used to refer to an external web page, but that use is deprecated in favor
+	// of returning a ResponseAction that will open the client's browser explicitly
+    5: string ResponseUrl = "";
+	
+	// Tells the client to render this HTML to its display
+	6: string ResponseHtml = "";
+	
+	// If ContinueImmediately is set, this is a hint for how long to wait until prompting again
+    7: nullable<int32> SuggestedRetryDelay;
+	
+	// If Result == failure, there will usually be some debug information here
+	8: string ErrorMessage = "";
+	
+	// A map of extra data (application-specific) to accompany the response
+    9: map<string, string> ResponseData;
+	
+	// The service may perform additional resolution or transformation on the input query,
+	// or it may simply select a different SR hypothesis than what the client chose to display.
+	// To minimize confusion to the user, this field is used to display the actual real query
+	// that was acted upon by the system
+	10: string AugmentedFinalQuery = "";
+	
+	// The audio that should be played as a response
+    11: nullable<AudioData> ResponseAudio;
+	
+	// An SSML string to be used in speech synthesis (if the client has elected to synthesize its own
+	// speech, otherwise the spoken audio will simply be put into AudioToPlay)
+	12: string ResponseSsml = "";
+	
+	// The reco result that triggered this response (mostly for debugging and integration)
+	13: nullable<RecoResult> SelectedRecoResult;
+	
+	// The scope of the returned URL, if any. Internal-scope urls are resolved relative to the
+	// current dialog connection
+	14: UrlScope UrlScope = Unknown;
+
+	// If the client supports it, the server can generate streaming audio that can be read from
+	// this URL, as a way to save latency
+	15: string StreamingAudioUrl = "";
+	
+	// In rare cases where the server returns unsynthesized TTS as well as custom audio, we
+	// need this flag in order to determine how the audio should actually be played
+	16: AudioOrdering CustomAudioOrdering = AfterSpeech;
+	
+    // This flag is set when the client sends a non-recognized query during a multiturn conversation.
+	// It indicates that the input was bad and that the client should reprompt the user.
+	// Additionally, it means that the client should _not_ clear its view because we are trying
+	// to get clarification on the current prompt.
+	17: bool IsRetrying = false;
+
+	// This is an action object that the server would like to have executed on the client.
+	// The form of these actions is application-dependent, but in general they will look like
+	// JSON/XML objects specifying action types and parameters. Default actions may be to open a web
+	// browser, update the client's profile, close the client, turn the microphone on/off, etc.
+	// Multiple actions could also be conjugated using (for example) an "AggregateAction", to chain
+	// dependent actions or execute them in parallel.
+	18: string ResponseAction;
+
+	// This is an optional vector of strings that can be shown as suggestions for follow-up queries,
+	// to aid discoverability.
+	19: vector<string> SuggestedQueries;
+
+	// This field makes use of the PocketSphinx keyword spotter functionality. When a plugin puts words or phrases in
+	// this dictionary (and returns a tenative multiturn result), the client's keyword spotter will begin listening
+	// for all of these keywords, in addition to the regular trigger phrase, until the conversation expires.
+	// When a custom keyword is triggered (spoken) by the user, it will be treated as an instant speech reco result
+	// and sent as a regular query (bypassing the regular record-utterance path), so make sure your LU can properly classify the actual keywords themselves
+	20: vector<TriggerKeyword> TriggerKeywords;
+
+	// For queries and services that support instant tracing, this field should contain
+	// a list of instrumentation events that were generated as a result of this query
+	21: nullable<vector<InstrumentationEvent>> TraceInfo;
+
+	// If the server generated a traceId for this query, it will be returned here so you can debug later
+	22: nullable<string> TraceId;
+
+	// Signals the maximum length of time that the system will allow a continuation of the current conversation,
+	// in seconds. After this time elapses, it would be a good idea to clear the UI or something to indicate
+	// that a conversation is finished
+	23: nullable<int32> ConversationLifetimeSeconds;
+	
+	// The strong name of the plugin that actually produced the response
+	24: optional nullable<PluginStrongName> ExecutedPlugin;
+}

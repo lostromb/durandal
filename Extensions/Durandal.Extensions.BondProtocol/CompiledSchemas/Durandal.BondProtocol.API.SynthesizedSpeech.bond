@@ -1,0 +1,13 @@
+import "Durandal.BondProtocol.API.AudioData.bond"
+import "Durandal.BondProtocol.API.SynthesizedWord.bond"
+
+namespace Durandal.Extensions.BondProtocol.API
+
+struct SynthesizedSpeech
+{
+	1: required AudioData Audio;
+	2: nullable<string> Locale;
+	3: nullable<string> Ssml;
+	4: nullable<string> PlainText;
+	5: nullable<vector<SynthesizedWord>> Words;
+}

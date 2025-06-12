@@ -1,0 +1,28 @@
+import "Durandal.BondProtocol.API.TaggedData.bond"
+import "Durandal.BondProtocol.API.Sentence.bond"
+
+namespace Durandal.Extensions.BondProtocol.API
+
+// Represents the completely annotated recognition result that is passed to
+// each answer.
+struct RecoResult
+{
+    // The classified domain of the utterance
+    1: required string Domain = "";
+    
+    // The user's intent within the domain
+    2: required string Intent = "";
+    
+    // The confidence that this utterance is in the proper domain
+    3: required float Confidence = 0.0;
+    
+    // The actual input sentence
+    4: Sentence Utterance;
+    
+    // The set of all tag hypotheses attached to this result.
+    // This is an N-best list produced by the CRF
+    5: vector<TaggedData> TagHyps;
+
+	// An identifier for the source of this classification result
+	6: optional string Source;
+}

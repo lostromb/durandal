@@ -1,0 +1,38 @@
+import "Durandal.BondProtocol.API.SpeechPhraseElement.bond"
+import "Durandal.BondProtocol.API.Tag.bond"
+
+namespace Durandal.Extensions.BondProtocol.API
+
+// represents a phrase that was recognized by SR
+struct SpeechRecognizedPhrase
+{
+    // Display text of the recognized phrase. Combined using PhraseElements[].DisplayText and PhraseElements[].DisplayAttributes
+    1: optional string DisplayText;
+
+    // Lexical form of the recognized phrase Combined using PhraseElelements[].LexicalForm, seperated by space
+    2: optional string LexicalForm;
+
+    // Confidence for this phrase computed by the SR engine.
+    3: optional float SREngineConfidence;
+
+    // list of recognized words in the phrase
+    4: optional nullable<vector<SpeechPhraseElement>> PhraseElements;
+
+    // Locale/language of the recognition (ex: en-us)
+    5: optional string Locale;
+
+    // Absolute time for start of phrase audio in milliseconds
+    6: optional uint32 AudioTimeOffset;
+
+    // Length of phrase audio in milliseconds
+    7: optional uint32 AudioTimeLength;
+
+    // Array of ITN results, default = array length of 1
+    8: nullable<vector<string>> InverseTextNormalizationResults;
+
+    // A list of tags found matching the pattern
+    9: nullable<vector<Tag>> ProfanityTags;
+
+    // Array of profanity filtered ITN results, default = array length of 1
+    10: nullable<vector<string>> MaskedInverseTextNormalizationResults;
+} 

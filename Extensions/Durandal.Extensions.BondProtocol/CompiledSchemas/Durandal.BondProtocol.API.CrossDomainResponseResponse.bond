@@ -1,0 +1,10 @@
+import "Durandal.BondProtocol.API.CrossDomainResponseData.bond"
+import "Durandal.BondProtocol.API.MultiTurnBehavior.bond"
+
+namespace Durandal.Extensions.BondProtocol.API
+
+struct CrossDomainResponseResponse
+{
+	1: nullable<CrossDomainResponseData> PluginResponse;
+	2: nullable<blob> OutEntityContext;
+}

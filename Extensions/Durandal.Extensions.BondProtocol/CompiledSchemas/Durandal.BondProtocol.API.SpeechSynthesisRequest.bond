@@ -1,0 +1,18 @@
+import "Durandal.BondProtocol.API.VoiceGender.bond"
+
+namespace Durandal.Extensions.BondProtocol.API
+
+struct SpeechSynthesisRequest
+{
+	// The SSML markup string to be rendered into speech. This is the preferred input to a synthesizer.
+	1: nullable<string> Ssml;
+
+	// The plaintext string to be rendered into speech. Only used if SSML is not specified.
+	2: nullable<string> Plaintext;
+
+	// The requested voice gender to use, which could be "unspecified" to use the default of the engine.
+	3: required VoiceGender VoiceGender = Unspecified;
+	
+	// The primary locale of the request (though the SSML may potentially contain interjections from an alternative locale)
+	4: required string Locale;
+}

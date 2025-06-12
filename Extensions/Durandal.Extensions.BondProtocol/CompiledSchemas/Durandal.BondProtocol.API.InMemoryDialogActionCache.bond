@@ -1,0 +1,16 @@
+import "Durandal.BondProtocol.API.DialogAction.bond"
+
+namespace Durandal.Extensions.BondProtocol.API
+
+struct InMemoryCachedDialogAction
+{
+	1: required string Key;
+	2: required DialogAction Value;
+	3: nullable<int32> LifeTimeSeconds;
+	4: nullable<int64> ExpireTimeUtcTicks;
+}
+
+struct InMemoryDialogActionCache
+{
+    1: vector<InMemoryCachedDialogAction> Items;
+}

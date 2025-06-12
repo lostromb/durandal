@@ -1,0 +1,26 @@
+namespace Durandal.Extensions.BondProtocol.API
+
+// The status of the recognition
+enum SpeechRecognitionStatus
+{
+    // no status
+    None = 0,
+
+    // a recognition result was found
+    Success = 1,
+
+    // no result was found
+    NoMatch = 2,
+
+    // initial silence in the audio exceeded the maximum
+    InitialSilenceTimeout = 3,
+
+    // timeout period exceeded for background noise
+    BabbleTimeout = 4,
+
+    // recognition was cancelled by the client
+    Cancelled = 5,
+
+    // there was an error during recognition
+    Error = 6,
+} 

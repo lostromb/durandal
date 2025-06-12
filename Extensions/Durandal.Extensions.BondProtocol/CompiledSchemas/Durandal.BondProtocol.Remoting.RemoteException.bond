@@ -1,0 +1,8 @@
+namespace Durandal.Extensions.BondProtocol.Remoting
+
+struct RemoteException
+{
+    1: string ExceptionType;
+	2: string Message;
+	3: string StackTrace;
+}

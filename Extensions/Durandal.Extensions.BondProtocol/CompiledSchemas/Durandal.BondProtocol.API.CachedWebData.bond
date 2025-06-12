@@ -1,0 +1,15 @@
+﻿namespace Durandal.Extensions.BondProtocol.API
+
+struct CachedWebData
+{
+	// The raw data
+	1: required blob Data;
+
+	// The mimetype of the data
+    2: required string MimeType;
+
+	// The lifetime that the data should be stored in a cache, in seconds
+	3: int32 LifetimeSeconds;
+	
+	4: nullable<string> TraceId;
+}

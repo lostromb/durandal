@@ -1,0 +1,19 @@
+import "Durandal.BondProtocol.API.Sentence.bond"
+import "Durandal.BondProtocol.API.SlotValue.bond"
+
+namespace Durandal.Extensions.BondProtocol.API
+
+struct TaggedData
+{
+    // The sentence that generated these tags
+	1: required string Utterance;
+	
+	// The list of slots parsed from this utterance
+    2: required vector<SlotValue> Slots;
+	
+	// A set of sentence-level annotations that were generated from LU
+    3: required map<string, string> Annotations;
+	
+	// The LU engine confidence that these slots and annotations are correct
+    4: required float Confidence;
+}

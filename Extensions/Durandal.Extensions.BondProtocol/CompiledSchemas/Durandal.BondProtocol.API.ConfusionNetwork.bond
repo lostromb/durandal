@@ -1,0 +1,20 @@
+import "Durandal.BondProtocol.API.ConfusionNetworkNode.bond"
+import "Durandal.BondProtocol.API.ConfusionNetworkArc.bond"
+
+namespace Durandal.Extensions.BondProtocol.API
+
+// Defines data structure that could be used to correct (substitute) reco result phrase elements.
+struct ConfusionNetwork
+{
+    // All the words in the network
+    1: optional vector<string> WordTable;
+
+    // List of nodes in the network.
+    2: optional vector<ConfusionNetworkNode> Nodes;
+
+    // List of arcs in the network
+    3: optional vector<ConfusionNetworkArc> Arcs;
+
+    // Array of indexes pointing to best result.
+    4: optional vector<uint16> BestArcsIndexes;
+} 

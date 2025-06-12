@@ -1,0 +1,20 @@
+namespace Durandal.Extensions.BondProtocol.API
+
+// Defines the Arc used in ConfusionNetwork.
+struct ConfusionNetworkArc
+{
+    // Index to the previous node.
+    1: optional uint16 PreviousNodeIndex;
+
+    // Index to the next node.
+    2: optional uint16 NextNodeIndex;
+
+    // Index to a word in WorldTable.
+    3: optional uint32 WordStartIndex;
+
+    // This is a special score for the arcs in the confusion network.
+    4: optional float Score;
+
+    // True if this is the last arc.
+    5: optional bool IsLastArc;
+} 

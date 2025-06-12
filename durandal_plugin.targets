@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Target Name="WarnOfMissingDurandalRoot" Condition="$(DURANDAL_ROOT) == ''" >
+    <Warning Text="DURANDAL_ROOT environment variable not set. Local runtime environment will be set to the local target directory" />
+  </Target>
+  <PropertyGroup Condition="$(DURANDAL_ROOT) == ''">
+    <DurandalRoot>$(SolutionDir)target\net48</DurandalRoot>
+  </PropertyGroup>
+  <PropertyGroup Condition="$(DURANDAL_ROOT) != ''">
+    <DurandalRoot>$(DURANDAL_ROOT)</DurandalRoot>
+  </PropertyGroup>
+  
+  <!-- This build target will ensure that all referenced assemblies are binplaced in the project output directory
+	prior to packaging (since the newer .netcore project framework will try to keep that as nuget references only)-->
+  <Target Name="BinplacePackageDependencies" AfterTargets="Compile" DependsOnTargets="ResolveAssemblyReferences" >
+	<Message Text="ReferenceDependencyPaths is @(ReferenceDependencyPaths)"/>
+    <Message Text="ReferencePath is @(ReferencePath)"/>
+    <Message Text="ReferenceSatellitePaths is @(ReferenceSatellitePaths)"/>
+    <Message Text="ReferenceCopyLocalPaths is @(ReferenceCopyLocalPaths)"/>
+    <Message Text="ResolvedDependencyFiles is @(ResolvedDependencyFiles)"/>
+    <Message Text="Reference is @(Reference)"/>
+	<Message Text="Copying all referenced assemblies into the package staging directory. References are: @(ReferencePath);@(ReferenceDependencyPaths)" />
+    <Copy
+		Condition="'@(ReferenceDependencyPaths)'!=''"
+		SourceFiles="@(ReferenceDependencyPaths)"
+		DestinationFolder="$(OutDir)"
+		SkipUnchangedFiles="true"/>
+	<Copy
+		Condition="'@(ReferencePath)'!=''"
+		SourceFiles="@(ReferencePath)"
+		DestinationFolder="$(OutDir)"
+		SkipUnchangedFiles="true"/>
+  </Target>
+  
+  <!-- Define the prebuild and postbuild events to compile Razor views and package the final .dupkg file for the project -->
+  <PropertyGroup>
+    <PreBuildEvent>call "$(SolutionDir)target\net48\RazorCompile.exe" "$(ProjectDir)\"</PreBuildEvent>
+    <PostBuildEvent>call "$(SolutionDir)target\net48\CommandLinePackager.exe" /CreateFromProject "$(ProjectDir)\" "$(TargetPath)" "$(DurandalRoot)\packages\$(TargetName).dupkg"</PostBuildEvent>
+  </PropertyGroup>
+</Project>

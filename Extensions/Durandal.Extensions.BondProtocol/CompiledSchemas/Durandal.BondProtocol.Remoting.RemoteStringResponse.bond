@@ -1,0 +1,9 @@
+import "Durandal.BondProtocol.Remoting.RemoteProcedureResponse.bond"
+import "Durandal.BondProtocol.API.OAuthToken.bond"
+
+namespace Durandal.Extensions.BondProtocol.Remoting
+
+struct RemoteStringResponse : RemoteProcedureResponse
+{
+    4: nullable<string> ReturnVal;
+}

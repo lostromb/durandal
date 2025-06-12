@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>3af079ae-9838-424c-ba46-8bba484436dc</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>Durandal.Common</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Dialog\Runtime\PluginFrameworkLevel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Dialog\Runtime\ResidentDllPluginLoader.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)File\RealFileSystem.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)File\RealFileSystemWatcher.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Instrumentation\ConsoleMetricOutput.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Instrumentation\FileMetricOutput.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Instrumentation\Profiling\FileMicroProfilerClient.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Instrumentation\SystemThreadPoolObserver.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Instrumentation\WindowsPerfCounterReporter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Instrumentation\WindowsPerfCounterSet.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Logger\ConsoleLogger.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Logger\DetailedConsoleLogger.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Logger\TraceLogger.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Net\AnonymousPipeClientSocket.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Net\AnonymousPipeServerSocket.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Net\AnonymousPipeServerSocketFactory.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Net\MemoryMappedFileStream.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Net\MMIOClientSocket.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Net\MMIOServerSocket.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Net\MMIOServerSocketFactory.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Net\NamedPipeClientSocket.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Net\NamedPipeClientSocketFactory.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Net\NamedPipeServer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Net\NamedPipeServerSocket.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Net\PooledSSLStreamSocket.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Net\PooledTcpClientSocket.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Net\PooledTcpClientSocketFactory.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Net\SslStreamSocket.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Net\TcpClientSocket.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Net\TcpClientSocketFactory.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Net\WebSocket\SystemWebSocketClientFactory.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Net\WebSocket\SystemWebSocketWrapper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Net\RawTcpServerSocket.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Net\RawTcpServerSocketFactory.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Net\RawTcpSocket.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Net\RawTcpSocketFactory.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Net\RawTcpSocketServer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Collections\Indexing\DeflateCompressedMemoryPageStorage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)NLP\Language\WindowsCultureInfoFactory.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Packages\PluginReflector.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Remoting\ProcessContainerGuestInitializationParams.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Remoting\ProcessContainerHost.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Remoting\ProcessIsolatedPluginProvider.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Security\CertificateCache.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Security\ICertificateCache.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Security\CertificateHelpers.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Security\CryptographicRandom.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Security\IPhysicalCertificateStore.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Security\NumericsRSADelegates.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Security\PhysicalCertificateStore.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Security\SystemAESDelegates.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Security\SystemRSADelegates.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ServiceCommon.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Tasks\CustomThreadPool.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Time\Win32HighPrecisionWaitProvider.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Utils\Jitter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Tasks\SystemThreadPool.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Utils\NativePlatform\NativeLibraryResolverImpl.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)Instrumentation\Profiling\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Collections\" />
+  </ItemGroup>
+</Project>

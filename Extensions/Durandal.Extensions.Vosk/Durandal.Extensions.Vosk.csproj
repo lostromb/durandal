@@ -1,0 +1,82 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <AssemblyName>Durandal.Extensions.Vosk</AssemblyName>
+    <RootNamespace>Durandal.Extensions.Vosk</RootNamespace>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+	<CodeAnalysisRuleSet>..\..\DurandalCodeAnalysis.ruleset</CodeAnalysisRuleSet>
+    <SignAssembly>True</SignAssembly>
+    <AssemblyOriginatorKeyFile>..\..\durandal.snk</AssemblyOriginatorKeyFile>
+	<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DefineConstants>$(DefineConstants);TRACK_IDISPOSABLE_LEAKS</DefineConstants>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DefineConstants>$(DefineConstants)</DefineConstants>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+
+	<ItemGroup>
+		<None Remove="runtimes\linux-x64\native\libvosk.so" />
+		<None Remove="runtimes\osx\native\libvosk.dylib" />
+		<None Remove="runtimes\win-x64\native\vosk.dll" />
+		<None Remove="runtimes\win-x64\native\libgcc_s_seh-1.dll" />
+		<None Remove="runtimes\win-x64\native\libstdc++-6.dll" />
+		<None Remove="runtimes\win-x64\native\libwinpthread-1.dll" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Content Include="runtimes\android-arm\native\libvosk.so">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="runtimes\android-arm64\native\libvosk.so">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="runtimes\android-x64\native\libvosk.so">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="runtimes\android-x86\native\libvosk.so">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="runtimes\linux-arm\native\libvosk.so">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="runtimes\linux-arm64\native\libvosk.so">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="runtimes\linux-riscv64\native\libvosk.so">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="runtimes\linux-x64\native\libvosk.so">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="runtimes\linux-x86\native\libvosk.so">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="runtimes\osx\native\libvosk.dylib">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="runtimes\win-x64\native\vosk.dll">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="runtimes\win-x64\native\libgcc_s_seh-1.dll">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="runtimes\win-x64\native\libstdc++-6.dll">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="runtimes\win-x64\native\libwinpthread-1.dll">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+	</ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Core\Durandal.NetStandard\Durandal.NetStandard.csproj" />
+  </ItemGroup>
+
+</Project>

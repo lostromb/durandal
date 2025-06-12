@@ -1,0 +1,19 @@
+import "Durandal.BondProtocol.API.PluginResult.bond"
+import "Durandal.BondProtocol.API.InMemoryDataStore.bond"
+import "Durandal.BondProtocol.API.InMemoryDialogActionCache.bond"
+import "Durandal.BondProtocol.API.InMemoryWebDataCache.bond"
+
+namespace Durandal.Extensions.BondProtocol.API
+
+struct DialogProcessingResponse
+{
+    1: nullable<Durandal.Extensions.BondProtocol.API.PluginResult> PluginOutput;
+	2: bool WasRetrying = false;
+	3: nullable<Durandal.Extensions.BondProtocol.API.InMemoryDataStore> UpdatedSessionStore;
+	4: nullable<Durandal.Extensions.BondProtocol.API.InMemoryDataStore> UpdatedLocalProfile;
+	5: nullable<Durandal.Extensions.BondProtocol.API.InMemoryDataStore> UpdatedGlobalProfile;
+	6: nullable<blob> UpdatedEntityContext;
+	7: nullable<blob> UpdatedEntityHistory;
+	8: nullable<Durandal.Extensions.BondProtocol.API.InMemoryDialogActionCache> UpdatedDialogActions;
+	9: nullable<Durandal.Extensions.BondProtocol.API.InMemoryWebDataCache> UpdatedWebDataCache;
+}

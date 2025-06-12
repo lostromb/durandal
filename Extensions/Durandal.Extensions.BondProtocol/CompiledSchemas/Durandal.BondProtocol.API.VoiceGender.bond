@@ -1,0 +1,8 @@
+namespace Durandal.Extensions.BondProtocol.API
+
+enum VoiceGender
+{
+	Unspecified,
+	Male,
+	Female
+};

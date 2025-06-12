@@ -1,0 +1,17 @@
+namespace Durandal.Extensions.BondProtocol.API
+
+struct TriggerKeyword
+{
+	// The word or short phrase itself
+	1: required string TriggerPhrase;
+
+	// The amount of time this keyword will be listened for, starting _after_ all audio playback has finished.
+	// If the keyword should only be allowed as barge-in, set this to 0
+    2: required int32 ExpireTimeSeconds;
+
+	// Whether to allow this word to be spoken as a barge-in.
+	// This means that the word could be triggered while the client is still speaking out
+	// the service response. Naturally, this should only really be used for things like "cancel" or "stop talking",
+	// but it potentially could be used for barge-in selection as well.
+	3: required bool AllowBargeIn;
+}

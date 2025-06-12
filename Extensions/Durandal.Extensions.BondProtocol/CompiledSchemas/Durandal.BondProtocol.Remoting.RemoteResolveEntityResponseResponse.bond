@@ -1,0 +1,9 @@
+import "Durandal.BondProtocol.Remoting.RemoteProcedureResponse.bond"
+import "Durandal.BondProtocol.Remoting.RemoteResolveEntityResponse.bond"
+
+namespace Durandal.Extensions.BondProtocol.Remoting
+
+struct RemoteResolveEntityResponseResponse : RemoteProcedureResponse
+{
+    4: nullable<RemoteResolveEntityResponse> ReturnVal;
+}

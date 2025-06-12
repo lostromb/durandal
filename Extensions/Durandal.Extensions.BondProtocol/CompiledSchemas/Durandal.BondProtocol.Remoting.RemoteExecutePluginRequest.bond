@@ -1,0 +1,25 @@
+import "Durandal.BondProtocol.API.ContextualEntity.bond"
+import "Durandal.BondProtocol.API.InMemoryDataStore.bond"
+import "Durandal.BondProtocol.API.PluginStrongName.bond"
+import "Durandal.BondProtocol.API.QueryWithContext.bond"
+import "Durandal.BondProtocol.Remoting.RemoteMessage.bond"
+import "Durandal.BondProtocol.Remoting.RemoteProcedureRequest.bond"
+
+namespace Durandal.Extensions.BondProtocol.Remoting
+
+struct RemoteExecutePluginRequest : RemoteProcedureRequest
+{
+    3: required Durandal.Extensions.BondProtocol.API.PluginStrongName PluginId;
+    4: nullable<string> EntryPoint;
+    5: bool IsRetry;
+    6: Durandal.Extensions.BondProtocol.API.QueryWithContext Query;
+    7: nullable<Durandal.Extensions.BondProtocol.API.InMemoryDataStore> SessionStore;
+	8: nullable<Durandal.Extensions.BondProtocol.API.InMemoryDataStore> LocalUserProfile;
+	9: nullable<Durandal.Extensions.BondProtocol.API.InMemoryDataStore> GlobalUserProfile;
+	10: nullable<blob> EntityContext;
+	11: nullable<blob> EntityHistory;
+	12: nullable<vector<Durandal.Extensions.BondProtocol.API.ContextualEntity>> ContextualEntities;
+	13: nullable<string> TraceId;
+	14: int32 ValidLogLevels;
+	15: bool GlobalUserProfileIsWritable;
+}

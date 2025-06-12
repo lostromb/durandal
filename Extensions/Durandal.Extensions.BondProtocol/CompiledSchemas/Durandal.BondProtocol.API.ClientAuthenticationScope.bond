@@ -1,0 +1,9 @@
+﻿namespace Durandal.Extensions.BondProtocol.API
+
+enum ClientAuthenticationScope
+{
+	None = 0x00,
+	Client = 0x01,
+	User = 0x02,
+	UserClient = 0x03
+}

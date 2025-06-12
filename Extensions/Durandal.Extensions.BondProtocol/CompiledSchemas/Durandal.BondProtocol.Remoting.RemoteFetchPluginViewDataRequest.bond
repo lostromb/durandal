@@ -1,0 +1,12 @@
+import "Durandal.BondProtocol.API.PluginStrongName.bond"
+import "Durandal.BondProtocol.Remoting.RemoteMessage.bond"
+import "Durandal.BondProtocol.Remoting.RemoteProcedureRequest.bond"
+
+namespace Durandal.Extensions.BondProtocol.Remoting
+
+struct RemoteFetchPluginViewDataRequest : RemoteProcedureRequest
+{
+    3: required Durandal.Extensions.BondProtocol.API.PluginStrongName PluginId;
+    4: required string FilePath;
+    5: nullable<int64> IfModifiedSinceUtcTicks;
+}

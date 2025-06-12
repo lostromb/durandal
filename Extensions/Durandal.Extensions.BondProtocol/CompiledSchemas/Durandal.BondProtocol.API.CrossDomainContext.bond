@@ -1,0 +1,12 @@
+import "Durandal.BondProtocol.API.CrossDomainSlot.bond"
+import "Durandal.BondProtocol.API.RecoResult.bond"
+
+namespace Durandal.Extensions.BondProtocol.API
+
+struct CrossDomainContext
+{
+	1: required string RequestDomain;
+	2: required string RequestIntent;
+	3: nullable<vector<CrossDomainSlot>> RequestedSlots;
+	4: nullable<vector<RecoResult>> PastConversationTurns;
+}

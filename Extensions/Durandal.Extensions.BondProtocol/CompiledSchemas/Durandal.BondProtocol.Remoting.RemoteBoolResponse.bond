@@ -1,0 +1,8 @@
+import "Durandal.BondProtocol.Remoting.RemoteProcedureResponse.bond"
+
+namespace Durandal.Extensions.BondProtocol.Remoting
+
+struct RemoteBoolResponse : RemoteProcedureResponse
+{
+    4: bool ReturnVal;
+}

@@ -1,0 +1,15 @@
+import "Durandal.BondProtocol.Remoting.RemoteMessage.bond"
+import "Durandal.BondProtocol.Remoting.RemoteProcedureRequest.bond"
+import "Durandal.BondProtocol.Remoting.RemoteFileStreamOpenMode.bond"
+import "Durandal.BondProtocol.Remoting.RemoteFileStreamAccessMode.bond"
+import "Durandal.BondProtocol.Remoting.RemoteFileStreamShareMode.bond"
+
+namespace Durandal.Extensions.BondProtocol.Remoting
+
+struct RemoteFileStreamOpenRequest : RemoteProcedureRequest
+{
+	3: required string FilePath;
+	4: required RemoteFileStreamOpenMode OpenMode = Unknown;
+	5: required RemoteFileStreamAccessMode AccessMode = Unknown;
+	6: required RemoteFileStreamShareMode ShareMode = None;
+}

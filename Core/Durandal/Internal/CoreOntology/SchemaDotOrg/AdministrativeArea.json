@@ -1,0 +1,9 @@
+﻿{
+  "Id": "http://schema.org/AdministrativeArea",
+  "Comment": "A geographical region, typically under the jurisdiction of a particular government.",
+  "Label": "AdministrativeArea",
+  "InheritsFrom": [
+    "http://schema.org/Place"
+  ],
+  "Fields": {}
+}

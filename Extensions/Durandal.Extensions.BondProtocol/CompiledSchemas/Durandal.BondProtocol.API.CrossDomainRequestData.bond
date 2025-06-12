@@ -1,0 +1,8 @@
+import "Durandal.BondProtocol.API.CrossDomainSlot.bond"
+
+namespace Durandal.Extensions.BondProtocol.API
+
+struct CrossDomainRequestData
+{
+	1: nullable<vector<CrossDomainSlot>> RequestedSlots;
+}

@@ -1,0 +1,147 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34031.279
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{68070EF2-D502-4214-AA4A-F007DAF81784}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Clients", "Clients", "{CDC45825-809C-431F-A35A-C5D15C2ED90A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tools", "Tools", "{EBEEB084-F36A-4B8F-9ADB-9A83081872CA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RazorCompile", "Tools\RazorCompile\RazorCompile.csproj", "{B0C1E419-D6B7-4921-AE44-492F764953F2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AndroidClient", "Clients\AndroidClient\AndroidClient.csproj", "{11FD7F48-93F8-4A3E-9BF9-A7C0603E3146}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Durandal", "Core\Durandal\Durandal.shproj", "{9D309F21-48FA-4B77-A912-4FC3B48597E1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Durandal.NetStandard", "Core\Durandal.NetStandard\Durandal.NetStandard.csproj", "{974329C1-D05D-4FE3-A078-FE908B7981E0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Extensions", "Extensions", "{10DA195E-5F2A-49E8-A6C5-69EA558EE9B3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Durandal.CommonViews", "Extensions\Durandal.CommonViews\Durandal.CommonViews.csproj", "{AA64AB06-5DD1-4D9D-A338-BB3815344D66}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MauiClient", "Clients\MauiClient\MauiClient.csproj", "{34B197D7-3719-4797-82C6-4D679078B190}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Durandal.Extensions.BassAudio.NetStandard", "Extensions\Durandal.Extensions.BassAudio.NetStandard\Durandal.Extensions.BassAudio.NetStandard.csproj", "{B719E642-83F0-46A8-9BB2-8F3AD50CD830}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|ARM = Debug|ARM
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|ARM = Release|ARM
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B0C1E419-D6B7-4921-AE44-492F764953F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0C1E419-D6B7-4921-AE44-492F764953F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0C1E419-D6B7-4921-AE44-492F764953F2}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{B0C1E419-D6B7-4921-AE44-492F764953F2}.Debug|ARM.Build.0 = Debug|Any CPU
+		{B0C1E419-D6B7-4921-AE44-492F764953F2}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{B0C1E419-D6B7-4921-AE44-492F764953F2}.Debug|x86.Build.0 = Debug|Any CPU
+		{B0C1E419-D6B7-4921-AE44-492F764953F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0C1E419-D6B7-4921-AE44-492F764953F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0C1E419-D6B7-4921-AE44-492F764953F2}.Release|ARM.ActiveCfg = Release|Any CPU
+		{B0C1E419-D6B7-4921-AE44-492F764953F2}.Release|ARM.Build.0 = Release|Any CPU
+		{B0C1E419-D6B7-4921-AE44-492F764953F2}.Release|x86.ActiveCfg = Release|Any CPU
+		{B0C1E419-D6B7-4921-AE44-492F764953F2}.Release|x86.Build.0 = Release|Any CPU
+		{11FD7F48-93F8-4A3E-9BF9-A7C0603E3146}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11FD7F48-93F8-4A3E-9BF9-A7C0603E3146}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11FD7F48-93F8-4A3E-9BF9-A7C0603E3146}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{11FD7F48-93F8-4A3E-9BF9-A7C0603E3146}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{11FD7F48-93F8-4A3E-9BF9-A7C0603E3146}.Debug|ARM.Build.0 = Debug|Any CPU
+		{11FD7F48-93F8-4A3E-9BF9-A7C0603E3146}.Debug|ARM.Deploy.0 = Debug|Any CPU
+		{11FD7F48-93F8-4A3E-9BF9-A7C0603E3146}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{11FD7F48-93F8-4A3E-9BF9-A7C0603E3146}.Debug|x86.Build.0 = Debug|Any CPU
+		{11FD7F48-93F8-4A3E-9BF9-A7C0603E3146}.Debug|x86.Deploy.0 = Debug|Any CPU
+		{11FD7F48-93F8-4A3E-9BF9-A7C0603E3146}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11FD7F48-93F8-4A3E-9BF9-A7C0603E3146}.Release|Any CPU.Build.0 = Release|Any CPU
+		{11FD7F48-93F8-4A3E-9BF9-A7C0603E3146}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{11FD7F48-93F8-4A3E-9BF9-A7C0603E3146}.Release|ARM.ActiveCfg = Release|Any CPU
+		{11FD7F48-93F8-4A3E-9BF9-A7C0603E3146}.Release|ARM.Build.0 = Release|Any CPU
+		{11FD7F48-93F8-4A3E-9BF9-A7C0603E3146}.Release|ARM.Deploy.0 = Release|Any CPU
+		{11FD7F48-93F8-4A3E-9BF9-A7C0603E3146}.Release|x86.ActiveCfg = Release|Any CPU
+		{11FD7F48-93F8-4A3E-9BF9-A7C0603E3146}.Release|x86.Build.0 = Release|Any CPU
+		{11FD7F48-93F8-4A3E-9BF9-A7C0603E3146}.Release|x86.Deploy.0 = Release|Any CPU
+		{974329C1-D05D-4FE3-A078-FE908B7981E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{974329C1-D05D-4FE3-A078-FE908B7981E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{974329C1-D05D-4FE3-A078-FE908B7981E0}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{974329C1-D05D-4FE3-A078-FE908B7981E0}.Debug|ARM.Build.0 = Debug|Any CPU
+		{974329C1-D05D-4FE3-A078-FE908B7981E0}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{974329C1-D05D-4FE3-A078-FE908B7981E0}.Debug|x86.Build.0 = Debug|Any CPU
+		{974329C1-D05D-4FE3-A078-FE908B7981E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{974329C1-D05D-4FE3-A078-FE908B7981E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{974329C1-D05D-4FE3-A078-FE908B7981E0}.Release|ARM.ActiveCfg = Release|Any CPU
+		{974329C1-D05D-4FE3-A078-FE908B7981E0}.Release|ARM.Build.0 = Release|Any CPU
+		{974329C1-D05D-4FE3-A078-FE908B7981E0}.Release|x86.ActiveCfg = Release|Any CPU
+		{974329C1-D05D-4FE3-A078-FE908B7981E0}.Release|x86.Build.0 = Release|Any CPU
+		{AA64AB06-5DD1-4D9D-A338-BB3815344D66}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA64AB06-5DD1-4D9D-A338-BB3815344D66}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA64AB06-5DD1-4D9D-A338-BB3815344D66}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{AA64AB06-5DD1-4D9D-A338-BB3815344D66}.Debug|ARM.Build.0 = Debug|Any CPU
+		{AA64AB06-5DD1-4D9D-A338-BB3815344D66}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{AA64AB06-5DD1-4D9D-A338-BB3815344D66}.Debug|x86.Build.0 = Debug|Any CPU
+		{AA64AB06-5DD1-4D9D-A338-BB3815344D66}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA64AB06-5DD1-4D9D-A338-BB3815344D66}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA64AB06-5DD1-4D9D-A338-BB3815344D66}.Release|ARM.ActiveCfg = Release|Any CPU
+		{AA64AB06-5DD1-4D9D-A338-BB3815344D66}.Release|ARM.Build.0 = Release|Any CPU
+		{AA64AB06-5DD1-4D9D-A338-BB3815344D66}.Release|x86.ActiveCfg = Release|Any CPU
+		{AA64AB06-5DD1-4D9D-A338-BB3815344D66}.Release|x86.Build.0 = Release|Any CPU
+		{34B197D7-3719-4797-82C6-4D679078B190}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34B197D7-3719-4797-82C6-4D679078B190}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34B197D7-3719-4797-82C6-4D679078B190}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{34B197D7-3719-4797-82C6-4D679078B190}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{34B197D7-3719-4797-82C6-4D679078B190}.Debug|ARM.Build.0 = Debug|Any CPU
+		{34B197D7-3719-4797-82C6-4D679078B190}.Debug|ARM.Deploy.0 = Debug|Any CPU
+		{34B197D7-3719-4797-82C6-4D679078B190}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{34B197D7-3719-4797-82C6-4D679078B190}.Debug|x86.Build.0 = Debug|Any CPU
+		{34B197D7-3719-4797-82C6-4D679078B190}.Debug|x86.Deploy.0 = Debug|Any CPU
+		{34B197D7-3719-4797-82C6-4D679078B190}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34B197D7-3719-4797-82C6-4D679078B190}.Release|Any CPU.Build.0 = Release|Any CPU
+		{34B197D7-3719-4797-82C6-4D679078B190}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{34B197D7-3719-4797-82C6-4D679078B190}.Release|ARM.ActiveCfg = Release|Any CPU
+		{34B197D7-3719-4797-82C6-4D679078B190}.Release|ARM.Build.0 = Release|Any CPU
+		{34B197D7-3719-4797-82C6-4D679078B190}.Release|ARM.Deploy.0 = Release|Any CPU
+		{34B197D7-3719-4797-82C6-4D679078B190}.Release|x86.ActiveCfg = Release|Any CPU
+		{34B197D7-3719-4797-82C6-4D679078B190}.Release|x86.Build.0 = Release|Any CPU
+		{34B197D7-3719-4797-82C6-4D679078B190}.Release|x86.Deploy.0 = Release|Any CPU
+		{B719E642-83F0-46A8-9BB2-8F3AD50CD830}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B719E642-83F0-46A8-9BB2-8F3AD50CD830}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B719E642-83F0-46A8-9BB2-8F3AD50CD830}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{B719E642-83F0-46A8-9BB2-8F3AD50CD830}.Debug|ARM.Build.0 = Debug|Any CPU
+		{B719E642-83F0-46A8-9BB2-8F3AD50CD830}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{B719E642-83F0-46A8-9BB2-8F3AD50CD830}.Debug|x86.Build.0 = Debug|Any CPU
+		{B719E642-83F0-46A8-9BB2-8F3AD50CD830}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B719E642-83F0-46A8-9BB2-8F3AD50CD830}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B719E642-83F0-46A8-9BB2-8F3AD50CD830}.Release|ARM.ActiveCfg = Release|Any CPU
+		{B719E642-83F0-46A8-9BB2-8F3AD50CD830}.Release|ARM.Build.0 = Release|Any CPU
+		{B719E642-83F0-46A8-9BB2-8F3AD50CD830}.Release|x86.ActiveCfg = Release|Any CPU
+		{B719E642-83F0-46A8-9BB2-8F3AD50CD830}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B0C1E419-D6B7-4921-AE44-492F764953F2} = {EBEEB084-F36A-4B8F-9ADB-9A83081872CA}
+		{11FD7F48-93F8-4A3E-9BF9-A7C0603E3146} = {CDC45825-809C-431F-A35A-C5D15C2ED90A}
+		{9D309F21-48FA-4B77-A912-4FC3B48597E1} = {68070EF2-D502-4214-AA4A-F007DAF81784}
+		{974329C1-D05D-4FE3-A078-FE908B7981E0} = {68070EF2-D502-4214-AA4A-F007DAF81784}
+		{AA64AB06-5DD1-4D9D-A338-BB3815344D66} = {10DA195E-5F2A-49E8-A6C5-69EA558EE9B3}
+		{34B197D7-3719-4797-82C6-4D679078B190} = {CDC45825-809C-431F-A35A-C5D15C2ED90A}
+		{B719E642-83F0-46A8-9BB2-8F3AD50CD830} = {10DA195E-5F2A-49E8-A6C5-69EA558EE9B3}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5F147A12-3632-4DE3-81BB-C68E6F1BBFBE}
+		VisualSVNWorkingCopyRoot = .
+	EndGlobalSection
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		Core\Durandal\Durandal.projitems*{974329c1-d05d-4fe3-a078-fe908b7981e0}*SharedItemsImports = 4
+		Core\Durandal\Durandal.projitems*{9d309f21-48fa-4b77-a912-4fc3b48597e1}*SharedItemsImports = 13
+		Extensions\Durandal.Extensions.BassAudio\Durandal.Extensions.BassAudio.projitems*{b719e642-83f0-46a8-9bb2-8f3ad50cd830}*SharedItemsImports = 5
+	EndGlobalSection
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = Durandal.vsmdi
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,11 @@
+namespace Durandal.Extensions.BondProtocol.Remoting
+
+struct RemoteFileStat
+{
+	1: required bool Exists;
+	2: required bool IsDirectory;
+	3: nullable<int64> LastWriteTime;
+	4: nullable<int64> CreationTime;
+	5: nullable<int64> LastAccessTime;
+	6: int64 Size;
+}

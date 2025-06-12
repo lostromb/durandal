@@ -1,0 +1,60 @@
+import "Durandal.BondProtocol.API.ClientContext.bond"
+import "Durandal.BondProtocol.API.RecoResult.bond"
+import "Durandal.BondProtocol.API.InputMethod.bond"
+import "Durandal.BondProtocol.API.AudioData.bond"
+import "Durandal.BondProtocol.API.ClientAuthenticationLevel.bond"
+import "Durandal.BondProtocol.API.ClientAuthenticationScope.bond"
+import "Durandal.BondProtocol.API.SpeechRecognitionResult.bond"
+
+namespace Durandal.Extensions.BondProtocol.API
+
+// The data structure that is passed to an answer. This contains all of the
+// information about the conversation, the latest query, and the client context
+struct QueryWithContext
+{
+	// The LU data, with annotated text, confidence, slots, intent, etc.
+	1: required RecoResult Understanding;
+	
+	// The list of all past turns known to this conversation
+	2: required vector<RecoResult> PastTurns;
+	
+	// The current turn index (First turn is 0)
+	3: required int32 TurnNum;
+	
+	// The context object that was passed from the client
+	4: required ClientContext ClientContext;
+	
+	// The level of authentication associated with this client+request
+	5: required ClientAuthenticationLevel AuthenticationLevel = None;
+	
+	// Defines the method of input used to generate this request
+	6: required InputMethod Source = Unknown;
+	
+	// The actual audio that was spoken
+	7: nullable<AudioData> InputAudio;
+	
+	// If the system did not recognize the last input, it will retry and increment this counter
+	8: int32 RetryCount;
+
+	// If the last response was an audio response, and the user started a new request before the
+	// audio finished playing, this field will contain the ms of audio that was actually played.
+	// This has a relatively specialized use for barge-in selection, though it is tough because
+	// it requires piecewise TTS
+	9: nullable<int32> BargeInTimeMs;
+
+	// Indicates the scope of the user's authentication, whether they are verified by client, by user,
+	// or by the combination of both.
+	10: ClientAuthenticationScope AuthScope = None;
+
+	// Any flags that are associated with this request (for indicating debugging, tracing, etc.)
+	11: uint32 RequestFlags = 0;
+
+	// The original query that was given as input, if the input was text
+	12: nullable<string> OriginalTextInput;
+	
+	// The original speech recognition result if the input was speech
+	13: nullable<SpeechRecognitionResult> OriginalSpeechInput;
+	
+	// A map of arbitrary data which is used for SPA, client resolution, and similar scenarios
+	14: nullable<map<string, string>> RequestData;
+}

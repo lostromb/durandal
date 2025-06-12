@@ -1,0 +1,12 @@
+namespace Durandal.Extensions.BondProtocol.API
+
+struct InMemoryDataStoreItem
+{
+	1: required string Key;
+	2: required blob Value;
+}
+
+struct InMemoryDataStore
+{
+    1: vector<InMemoryDataStoreItem> Items;
+}

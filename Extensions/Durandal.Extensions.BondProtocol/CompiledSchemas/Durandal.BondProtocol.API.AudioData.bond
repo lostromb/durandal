@@ -1,0 +1,13 @@
+namespace Durandal.Extensions.BondProtocol.API
+
+struct AudioData
+{
+	// The raw audio data
+	1: required blob Data;
+
+	// The compression codec used for this data. The default value is "pcm"
+    2: string Codec;
+
+	// An unstructured field containing codec parameters that are needed for decoding. For uncompressed PCM, the sample rate is represented here by "samplerate=16000"
+	3: string CodecParams;
+}

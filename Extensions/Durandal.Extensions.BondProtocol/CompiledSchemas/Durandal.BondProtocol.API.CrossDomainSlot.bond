@@ -1,0 +1,9 @@
+namespace Durandal.Extensions.BondProtocol.API
+
+struct CrossDomainSlot
+{
+	1: nullable<string> SlotName;
+	2: vector<string> AcceptedSchemas;
+	3: bool IsRequired;
+	4: nullable<string> Documentation;
+}

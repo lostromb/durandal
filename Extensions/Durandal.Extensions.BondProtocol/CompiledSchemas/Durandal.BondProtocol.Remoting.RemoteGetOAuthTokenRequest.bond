@@ -1,0 +1,13 @@
+import "Durandal.BondProtocol.Remoting.RemoteMessage.bond"
+import "Durandal.BondProtocol.Remoting.RemoteProcedureRequest.bond"
+import "Durandal.BondProtocol.API.PluginStrongName.bond"
+import "Durandal.BondProtocol.API.OAuthConfig.bond"
+
+namespace Durandal.Extensions.BondProtocol.Remoting
+
+struct RemoteGetOAuthTokenRequest : RemoteProcedureRequest
+{
+	3: required string UserId;
+	4: required Durandal.Extensions.BondProtocol.API.PluginStrongName PluginId;
+	5: required Durandal.Extensions.BondProtocol.API.OAuthConfig OAuthConfig;
+}

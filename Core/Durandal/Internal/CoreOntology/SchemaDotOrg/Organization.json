@@ -1,0 +1,567 @@
+﻿{
+  "Id": "http://schema.org/Organization",
+  "Comment": "An organization such as a school, NGO, corporation, club, etc.",
+  "Label": "Organization",
+  "InheritsFrom": [
+    "http://schema.org/Thing"
+  ],
+  "Fields": {
+    "serviceArea": {
+      "Name": "serviceArea",
+      "Values": [
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/Place",
+          "Comment": "The geographic area where the service is provided."
+        },
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/GeoShape",
+          "Comment": "The geographic area where the service is provided."
+        },
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/AdministrativeArea",
+          "Comment": "The geographic area where the service is provided."
+        }
+      ]
+    },
+    "funder": {
+      "Name": "funder",
+      "Values": [
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/Person",
+          "Comment": "A person or organization that supports (sponsors) something through some kind of financial contribution."
+        },
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/Organization",
+          "Comment": "A person or organization that supports (sponsors) something through some kind of financial contribution."
+        }
+      ]
+    },
+    "areaServed": {
+      "Name": "areaServed",
+      "Values": [
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/GeoShape",
+          "Comment": "The geographic area where a service or offered item is provided."
+        },
+        {
+          "Type": "Text",
+          "Comment": "The geographic area where a service or offered item is provided."
+        },
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/Place",
+          "Comment": "The geographic area where a service or offered item is provided."
+        },
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/AdministrativeArea",
+          "Comment": "The geographic area where a service or offered item is provided."
+        }
+      ]
+    },
+    "memberOf": {
+      "Name": "memberOf",
+      "Values": [
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/Organization",
+          "Comment": "An Organization (or ProgramMembership) to which this Person or Organization belongs."
+        },
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/ProgramMembership",
+          "Comment": "An Organization (or ProgramMembership) to which this Person or Organization belongs."
+        }
+      ]
+    },
+    "events": {
+      "Name": "events",
+      "Values": [
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/Event",
+          "Comment": "Upcoming or past events associated with this place or organization."
+        }
+      ]
+    },
+    "subOrganization": {
+      "Name": "subOrganization",
+      "Values": [
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/Organization",
+          "Comment": "A relationship between two organizations where the first includes the second, e.g., as a subsidiary. See also: the more specific 'department' property."
+        }
+      ]
+    },
+    "hasOfferCatalog": {
+      "Name": "hasOfferCatalog",
+      "Values": [
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/OfferCatalog",
+          "Comment": "Indicates an OfferCatalog listing for this Organization, Person, or Service."
+        }
+      ]
+    },
+    "globalLocationNumber": {
+      "Name": "globalLocationNumber",
+      "Values": [
+        {
+          "Type": "Text",
+          "Comment": "The <a href=\"http://www.gs1.org/gln\">Global Location Number</a> (GLN, sometimes also referred to as International Location Number or ILN) of the respective organization, person, or place. The GLN is a 13-digit number used to identify parties and physical locations."
+        }
+      ]
+    },
+    "reviews": {
+      "Name": "reviews",
+      "Values": [
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/Review",
+          "Comment": "Review of the item."
+        }
+      ]
+    },
+    "members": {
+      "Name": "members",
+      "Values": [
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/Person",
+          "Comment": "A member of this organization."
+        },
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/Organization",
+          "Comment": "A member of this organization."
+        }
+      ]
+    },
+    "aggregateRating": {
+      "Name": "aggregateRating",
+      "Values": [
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/AggregateRating",
+          "Comment": "The overall rating, based on a collection of reviews or ratings, of the item."
+        }
+      ]
+    },
+    "duns": {
+      "Name": "duns",
+      "Values": [
+        {
+          "Type": "Text",
+          "Comment": "The Dun &amp; Bradstreet DUNS number for identifying an organization or business person."
+        }
+      ]
+    },
+    "taxID": {
+      "Name": "taxID",
+      "Values": [
+        {
+          "Type": "Text",
+          "Comment": "The Tax / Fiscal ID of the organization or person, e.g. the TIN in the US or the CIF/NIF in Spain."
+        }
+      ]
+    },
+    "award": {
+      "Name": "award",
+      "Values": [
+        {
+          "Type": "Text",
+          "Comment": "An award won by or for this item."
+        }
+      ]
+    },
+    "makesOffer": {
+      "Name": "makesOffer",
+      "Values": [
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/Offer",
+          "Comment": "A pointer to products or services offered by the organization or person."
+        }
+      ]
+    },
+    "contactPoints": {
+      "Name": "contactPoints",
+      "Values": [
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/ContactPoint",
+          "Comment": "A contact point for a person or organization."
+        }
+      ]
+    },
+    "awards": {
+      "Name": "awards",
+      "Values": [
+        {
+          "Type": "Text",
+          "Comment": "Awards won by or for this item."
+        }
+      ]
+    },
+    "seeks": {
+      "Name": "seeks",
+      "Values": [
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/Demand",
+          "Comment": "A pointer to products or services sought by the organization or person (demand)."
+        }
+      ]
+    },
+    "member": {
+      "Name": "member",
+      "Values": [
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/Organization",
+          "Comment": "A member of an Organization or a ProgramMembership. Organizations can be members of organizations; ProgramMembership is typically for individuals."
+        },
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/Person",
+          "Comment": "A member of an Organization or a ProgramMembership. Organizations can be members of organizations; ProgramMembership is typically for individuals."
+        }
+      ]
+    },
+    "founders": {
+      "Name": "founders",
+      "Values": [
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/Person",
+          "Comment": "A person who founded this organization."
+        }
+      ]
+    },
+    "alumni": {
+      "Name": "alumni",
+      "Values": [
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/Person",
+          "Comment": "Alumni of an organization."
+        }
+      ]
+    },
+    "dissolutionDate": {
+      "Name": "dissolutionDate",
+      "Values": [
+        {
+          "Type": "Date",
+          "Comment": "The date that this organization was dissolved."
+        }
+      ]
+    },
+    "address": {
+      "Name": "address",
+      "Values": [
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/PostalAddress",
+          "Comment": "Physical address of the item."
+        },
+        {
+          "Type": "Text",
+          "Comment": "Physical address of the item."
+        }
+      ]
+    },
+    "logo": {
+      "Name": "logo",
+      "Values": [
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/URL",
+          "Comment": "An associated logo."
+        },
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/ImageObject",
+          "Comment": "An associated logo."
+        }
+      ]
+    },
+    "employees": {
+      "Name": "employees",
+      "Values": [
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/Person",
+          "Comment": "People working for this organization."
+        }
+      ]
+    },
+    "telephone": {
+      "Name": "telephone",
+      "Values": [
+        {
+          "Type": "Text",
+          "Comment": "The telephone number."
+        }
+      ]
+    },
+    "email": {
+      "Name": "email",
+      "Values": [
+        {
+          "Type": "Text",
+          "Comment": "Email address."
+        }
+      ]
+    },
+    "department": {
+      "Name": "department",
+      "Values": [
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/Organization",
+          "Comment": "A relationship between an organization and a department of that organization, also described as an organization (allowing different urls, logos, opening hours). For example: a store with a pharmacy, or a bakery with a cafe."
+        }
+      ]
+    },
+    "contactPoint": {
+      "Name": "contactPoint",
+      "Values": [
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/ContactPoint",
+          "Comment": "A contact point for a person or organization."
+        }
+      ]
+    },
+    "parentOrganization": {
+      "Name": "parentOrganization",
+      "Values": [
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/Organization",
+          "Comment": "The larger organization that this organization is a <a class=\"localLink\" href=\"http://schema.org/subOrganization\">subOrganization</a> of, if any."
+        }
+      ]
+    },
+    "legalName": {
+      "Name": "legalName",
+      "Values": [
+        {
+          "Type": "Text",
+          "Comment": "The official name of the organization, e.g. the registered company name."
+        }
+      ]
+    },
+    "foundingDate": {
+      "Name": "foundingDate",
+      "Values": [
+        {
+          "Type": "Date",
+          "Comment": "The date that this organization was founded."
+        }
+      ]
+    },
+    "employee": {
+      "Name": "employee",
+      "Values": [
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/Person",
+          "Comment": "Someone working for this organization."
+        }
+      ]
+    },
+    "numberOfEmployees": {
+      "Name": "numberOfEmployees",
+      "Values": [
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/QuantitativeValue",
+          "Comment": "The number of employees in an organization e.g. business."
+        }
+      ]
+    },
+    "naics": {
+      "Name": "naics",
+      "Values": [
+        {
+          "Type": "Text",
+          "Comment": "The North American Industry Classification System (NAICS) code for a particular organization or business person."
+        }
+      ]
+    },
+    "hasPOS": {
+      "Name": "hasPOS",
+      "Values": [
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/Place",
+          "Comment": "Points-of-Sales operated by the organization or person."
+        }
+      ]
+    },
+    "review": {
+      "Name": "review",
+      "Values": [
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/Review",
+          "Comment": "A review of the item."
+        }
+      ]
+    },
+    "foundingLocation": {
+      "Name": "foundingLocation",
+      "Values": [
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/Place",
+          "Comment": "The place where the Organization was founded."
+        }
+      ]
+    },
+    "owns": {
+      "Name": "owns",
+      "Values": [
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/Product",
+          "Comment": "Products owned by the organization or person."
+        },
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/OwnershipInfo",
+          "Comment": "Products owned by the organization or person."
+        }
+      ]
+    },
+    "event": {
+      "Name": "event",
+      "Values": [
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/Event",
+          "Comment": "Upcoming or past event associated with this place, organization, or action."
+        }
+      ]
+    },
+    "founder": {
+      "Name": "founder",
+      "Values": [
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/Person",
+          "Comment": "A person who founded this organization."
+        }
+      ]
+    },
+    "publishingPrinciples": {
+      "Name": "publishingPrinciples",
+      "Values": [
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/CreativeWork",
+          "Comment": "The publishingPrinciples property indicates (typically via <a class=\"localLink\" href=\"http://schema.org/URL\">URL</a>) a document describing the editorial principles of an <a class=\"localLink\" href=\"http://schema.org/Organization\">Organization</a> (or individual e.g. a <a class=\"localLink\" href=\"http://schema.org/Person\">Person</a> writing a blog) that relate to their activities as a publisher, e.g. ethics or diversity policies. When applied to a <a class=\"localLink\" href=\"http://schema.org/CreativeWork\">CreativeWork</a> (e.g. <a class=\"localLink\" href=\"http://schema.org/NewsArticle\">NewsArticle</a>) the principles are those of the party primarily responsible for the creation of the <a class=\"localLink\" href=\"http://schema.org/CreativeWork\">CreativeWork</a>.</p>\n\n<p>While such policies are most typically expressed in natural language, sometimes related information (e.g. indicating a <a class=\"localLink\" href=\"http://schema.org/funder\">funder</a>) can be expressed using schema.org terminology."
+        },
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/URL",
+          "Comment": "The publishingPrinciples property indicates (typically via <a class=\"localLink\" href=\"http://schema.org/URL\">URL</a>) a document describing the editorial principles of an <a class=\"localLink\" href=\"http://schema.org/Organization\">Organization</a> (or individual e.g. a <a class=\"localLink\" href=\"http://schema.org/Person\">Person</a> writing a blog) that relate to their activities as a publisher, e.g. ethics or diversity policies. When applied to a <a class=\"localLink\" href=\"http://schema.org/CreativeWork\">CreativeWork</a> (e.g. <a class=\"localLink\" href=\"http://schema.org/NewsArticle\">NewsArticle</a>) the principles are those of the party primarily responsible for the creation of the <a class=\"localLink\" href=\"http://schema.org/CreativeWork\">CreativeWork</a>.</p>\n\n<p>While such policies are most typically expressed in natural language, sometimes related information (e.g. indicating a <a class=\"localLink\" href=\"http://schema.org/funder\">funder</a>) can be expressed using schema.org terminology."
+        }
+      ]
+    },
+    "sponsor": {
+      "Name": "sponsor",
+      "Values": [
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/Person",
+          "Comment": "A person or organization that supports a thing through a pledge, promise, or financial contribution. e.g. a sponsor of a Medical Study or a corporate sponsor of an event."
+        },
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/Organization",
+          "Comment": "A person or organization that supports a thing through a pledge, promise, or financial contribution. e.g. a sponsor of a Medical Study or a corporate sponsor of an event."
+        }
+      ]
+    },
+    "isicV4": {
+      "Name": "isicV4",
+      "Values": [
+        {
+          "Type": "Text",
+          "Comment": "The International Standard of Industrial Classification of All Economic Activities (ISIC), Revision 4 code for a particular organization, business person, or place."
+        }
+      ]
+    },
+    "location": {
+      "Name": "location",
+      "Values": [
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/Place",
+          "Comment": "The location of for example where the event is happening, an organization is located, or where an action takes place."
+        },
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/PostalAddress",
+          "Comment": "The location of for example where the event is happening, an organization is located, or where an action takes place."
+        },
+        {
+          "Type": "Text",
+          "Comment": "The location of for example where the event is happening, an organization is located, or where an action takes place."
+        }
+      ]
+    },
+    "brand": {
+      "Name": "brand",
+      "Values": [
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/Organization",
+          "Comment": "The brand(s) associated with a product or service, or the brand(s) maintained by an organization or business person."
+        },
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/Brand",
+          "Comment": "The brand(s) associated with a product or service, or the brand(s) maintained by an organization or business person."
+        }
+      ]
+    },
+    "vatID": {
+      "Name": "vatID",
+      "Values": [
+        {
+          "Type": "Text",
+          "Comment": "The Value-added Tax ID of the organization or person."
+        }
+      ]
+    },
+    "leiCode": {
+      "Name": "leiCode",
+      "Values": [
+        {
+          "Type": "Text",
+          "Comment": "An organization identifier that uniquely identifies a legal entity as defined in ISO 17442."
+        }
+      ]
+    },
+    "faxNumber": {
+      "Name": "faxNumber",
+      "Values": [
+        {
+          "Type": "Text",
+          "Comment": "The fax number."
+        }
+      ]
+    }
+  }
+}

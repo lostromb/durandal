@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>ed577d0d-393d-496e-ba0f-1948dd3cd68b</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>Durandal.BondProtocol</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)BondByteConverters.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)BondConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)BondRemoteDialogProtocol.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DebugProtocolWriter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DialogBondTransportProtocol.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DialogLZ4BondTransportProtocol.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)LUBondTransportProtocol.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)BondTypeConverters.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)MemoryStreamOutputBuffer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ModifiedCompactBinaryReader.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)NullRefDiagnosingProtocolWriter.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)CompiledSchemas\*.cs" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,9 @@
+import "Durandal.BondProtocol.Remoting.RemoteProcedureResponse.bond"
+import "Durandal.BondProtocol.API.SynthesizedSpeech.bond"
+
+namespace Durandal.Extensions.BondProtocol.Remoting
+
+struct RemoteSynthesizedSpeechResponse : RemoteProcedureResponse
+{
+    4: nullable<Durandal.Extensions.BondProtocol.API.SynthesizedSpeech> ReturnVal;
+}

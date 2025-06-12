@@ -1,0 +1,29 @@
+﻿namespace Durandal.Extensions.BondProtocol.API
+
+struct InstrumentationEvent
+{
+	1: required string TraceId;
+	2: required string Message;
+	3: required int64 Timestamp;
+	4: required int16 Level;
+	5: required string Component;
+	6: optional uint16 PrivacyClassification;
+}
+
+struct InstrumentationEventList
+{
+    1: required vector<InstrumentationEvent> Events;
+}
+
+struct SerializedMetricEvent
+{
+	1: required string CounterName;
+	2: required string SerializedDimensions;
+	3: required int32 MetricType;
+	4: required blob SerializedValues;
+}
+
+struct SerializedMetricEventList
+{
+	1: required vector<SerializedMetricEvent> Events;
+}

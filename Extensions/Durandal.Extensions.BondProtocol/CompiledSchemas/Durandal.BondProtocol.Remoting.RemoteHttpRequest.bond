@@ -1,0 +1,12 @@
+import "Durandal.BondProtocol.Remoting.RemoteMessage.bond"
+import "Durandal.BondProtocol.Remoting.RemoteProcedureRequest.bond"
+
+namespace Durandal.Extensions.BondProtocol.Remoting
+
+struct RemoteHttpRequest : RemoteProcedureRequest
+{
+	3: required string TargetHost;
+	4: required int32 TargetPort;
+	5: required bool UseSSL;
+	6: required blob WireRequest;
+}

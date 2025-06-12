@@ -1,0 +1,14 @@
+import "Durandal.BondProtocol.API.PluginInformation.bond"
+import "Durandal.BondProtocol.API.PluginStrongName.bond"
+import "Durandal.BondProtocol.API.SerializedConversationTree.bond"
+
+namespace Durandal.Extensions.BondProtocol.API
+
+struct LoadedPluginInformation
+{
+	1: required PluginStrongName PluginStrongName;
+	2: required string LUDomain;
+	3: required string PluginId;
+	4: nullable<PluginInformation> PluginInfo;
+	5: nullable<SerializedConversationTree> SerializedConversationTree;
+}

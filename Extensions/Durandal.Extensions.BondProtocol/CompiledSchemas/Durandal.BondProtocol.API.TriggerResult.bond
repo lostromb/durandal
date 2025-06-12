@@ -1,0 +1,28 @@
+import "Durandal.BondProtocol.API.BoostingOption.bond"
+import "Durandal.BondProtocol.API.LexicalString.bond"
+
+namespace Durandal.Extensions.BondProtocol.API
+
+// Represents a plugin's response when it is tenatively triggered at the beginning of a conversation.
+// The data in this structure can be used to interactively disambiguate between multiple plugins
+// which can answer a single query.
+struct TriggerResult
+{
+	// The suggestion decided by the answer regarding its likelihood of being the correct answer.
+    // Formerly, this was a float value, but since that was very arbitrary it has been replaced with an enum.
+    // The calling code (dialog core) will decide how to honor boost or suppression requests.
+	1: required BoostingOption BoostResult = NoChange;
+	
+	// The human-readable short name for this action, such as "Call Dave with Skype"
+	2: required string ActionName = "";
+	
+	// The spoken lexical form for this action. It should be the same words as ActionName, but with optional SSML tag support
+	3: string ActionNameSsml = "";
+	
+	// The medium-length text description for this action, such as "Start a Skype video call with Dave Hamblin"
+	4: string ActionDescription = "";
+	
+	// A set of strings that are used by the recognized to decide if the user has chosen this action via a voice command.
+    // It should consist of both long and short snippets and variations of the action name.
+	5: vector<LexicalString> ActionKnownAs = nothing;
+}

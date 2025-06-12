@@ -1,0 +1,26 @@
+import "Durandal.BondProtocol.API.DomainScope.bond"
+
+namespace Durandal.Extensions.BondProtocol.API
+
+struct SerializedConversationEdge
+{
+	1: nullable<string> Intent;
+	2: nullable<string> TargetNodeName;
+	3: DomainScope Scope = Local;
+	4: nullable<string> ExternalDomain;
+	5: nullable<string> ExternalIntent;
+}
+
+struct SerializedConversationNode
+{
+	1: nullable<string> NodeName;
+	2: nullable<string> HandlerFunction;
+	3: nullable<string> RetryHandler;
+	4: vector<SerializedConversationEdge> Edges;
+}
+
+struct SerializedConversationTree
+{
+	1: required string LocalDomain;
+	2: vector<SerializedConversationNode> Nodes;
+}

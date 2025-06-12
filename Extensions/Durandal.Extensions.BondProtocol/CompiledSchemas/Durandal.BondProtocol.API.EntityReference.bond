@@ -1,0 +1,8 @@
+namespace Durandal.Extensions.BondProtocol.API
+
+struct EntityReference
+{
+	1: required string EntityId = "";
+	
+    2: float Relevance;
+}

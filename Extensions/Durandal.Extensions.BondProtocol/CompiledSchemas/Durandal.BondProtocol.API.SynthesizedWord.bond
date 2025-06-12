@@ -1,0 +1,12 @@
+namespace Durandal.Extensions.BondProtocol.API
+
+struct SynthesizedWord
+{
+	1: required string Word;
+	
+	// offset in ms
+	2: int64 Offset;
+	
+	// length in ms
+	3: int64 ApproximateLength;
+}

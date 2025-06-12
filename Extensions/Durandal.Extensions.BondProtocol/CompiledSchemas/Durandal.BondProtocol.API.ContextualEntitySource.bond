@@ -1,0 +1,16 @@
+namespace Durandal.Extensions.BondProtocol.API
+
+enum ContextualEntitySource
+{
+	// Entity came from an unknown source
+	Unknown = 0,
+
+	// Entity came from LU engine tagging an entity in the query
+	LanguageUnderstanding = 1,
+
+	// Entity came from a dialog plugin explicitly injecting this entity into the conversation history
+	ConversationHistory = 2,
+
+	// Entity came directly from the client in the request
+	ClientInput = 3
+};

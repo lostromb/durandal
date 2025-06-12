@@ -1,0 +1,22 @@
+import "Durandal.BondProtocol.API.RecognizedPhrase.bond"
+import "Durandal.BondProtocol.API.InstrumentationData.bond"
+
+namespace Durandal.Extensions.BondProtocol.API
+
+struct LUResponse
+{
+    // Versioning for this communication
+	1: required int32 ProtocolVersion = 20;
+	
+	// The list of recognition results from the engine
+	// There will be one RecognizedPhrase for every input that was sent as part of the request
+	// Generally, only speech queries (N-best SR results) will have multiple inputs.
+	2: required vector<RecognizedPhrase> Results;
+
+	// For queries and services that support instant tracing, this field should contain
+	// a list of instrumentation events that were generated as a result of this query
+	3: nullable<vector<InstrumentationEvent>> TraceInfo;
+
+	// If the server generated a traceId for this query, it will be returned here so you can debug later
+    4: nullable<string> TraceId;
+}

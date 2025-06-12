@@ -1,0 +1,53 @@
+import "Durandal.BondProtocol.API.SpeechHypothesis_v16.bond"
+import "Durandal.BondProtocol.API.AudioData.bond"
+import "Durandal.BondProtocol.API.ClientContext.bond"
+import "Durandal.BondProtocol.API.RecoResult.bond"
+import "Durandal.BondProtocol.API.InputMethod.bond"
+import "Durandal.BondProtocol.API.SecurityToken.bond"
+
+namespace Durandal.Extensions.BondProtocol.API
+
+struct ClientRequest_v15
+{
+    // Versioning for this communication
+	1: required int32 ProtocolVersion = 15;
+	
+	// The client context specific to this request
+	2: required ClientContext ClientContext;
+	
+	// Defines the method of input used to generate this request
+	3: required InputMethod InputType = Unknown;
+	
+	// The query or set of queries to be processed
+	4: vector<SpeechHypothesis_v16> Queries;
+	
+	// Optional security token information
+	5: nullable<vector<SecurityToken>> AuthTokens;
+	
+	// If the client cannot do speech reco, it will simply pass the audio here
+	6: nullable<AudioData> QueryAudio;
+	
+	// If the client wishes to invoke a dialog action directly it can do so here
+	// This can also be used if LU was invoked elsewhere and we want to bypass the
+	// LU call that normally happens in dialog
+	7: nullable<vector<RecoResult>> UnderstandingData;
+	
+	// The preferred audio codec that the client wants the response audio to use
+	8: nullable<string> PreferredAudioCodec;
+	
+	// A debugging traceId. If not set, a new one will be generated
+	9: nullable<string> TraceId;
+	
+	// Used to scope the client request to only a subset of loaded domains
+	10: nullable<vector<string>> DomainScope;
+
+	// If the user gave more input while the response from the previous turn is still
+	// playing out of their speakers, this client should set this field
+	// which indicates how much of the response was actually played, in ms.
+	// This is to allow barge-in selection if the answer supports it.
+	11: nullable<int32> ClientAudioPlaybackTimeMs;
+
+	// Stores flags that identify the type of request.
+	// Common flags might be for debug, trace, etc.
+	12: uint32 RequestFlags = 0;
+}

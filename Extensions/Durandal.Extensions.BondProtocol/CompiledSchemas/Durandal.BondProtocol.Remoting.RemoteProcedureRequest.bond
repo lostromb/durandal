@@ -1,0 +1,8 @@
+import "Durandal.BondProtocol.Remoting.RemoteMessage.bond"
+
+namespace Durandal.Extensions.BondProtocol.Remoting
+
+struct RemoteProcedureRequest : RemoteMessage
+{
+    2: required string MethodName;
+}

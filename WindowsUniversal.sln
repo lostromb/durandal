@@ -1,0 +1,130 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31205.134
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{68070EF2-D502-4214-AA4A-F007DAF81784}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Clients", "Clients", "{CDC45825-809C-431F-A35A-C5D15C2ED90A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tools", "Tools", "{EBEEB084-F36A-4B8F-9ADB-9A83081872CA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RazorCompile", "Tools\RazorCompile\RazorCompile.csproj", "{B0C1E419-D6B7-4921-AE44-492F764953F2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DurandalClientWin10", "Clients\DurandalClientWin10\DurandalClientWin10.csproj", "{6BA9D932-60DB-49F4-AC7C-3810C9BCE8EA}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "WinRTCommonClasses", "Clients\WinRTCommonClasses\WinRTCommonClasses.shproj", "{443D9C0D-B655-4B36-ADB9-F66EC58D36F0}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Durandal", "Core\Durandal\Durandal.shproj", "{9D309F21-48FA-4B77-A912-4FC3B48597E1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Durandal.NetStandard", "Core\Durandal.NetStandard\Durandal.NetStandard.csproj", "{974329C1-D05D-4FE3-A078-FE908B7981E0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Extensions", "Extensions", "{26227A49-4ABC-4CD5-99B7-E8C4B9CC4729}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Durandal.CommonViews", "Extensions\Durandal.CommonViews\Durandal.CommonViews.csproj", "{AA64AB06-5DD1-4D9D-A338-BB3815344D66}"
+EndProject
+Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		Clients\WinRTCommonClasses\WinRTCommonClasses.projitems*{443d9c0d-b655-4b36-adb9-f66ec58d36f0}*SharedItemsImports = 13
+		Clients\WinRTCommonClasses\WinRTCommonClasses.projitems*{6ba9d932-60db-49f4-ac7c-3810c9bce8ea}*SharedItemsImports = 4
+		Core\Durandal\Durandal.projitems*{974329c1-d05d-4fe3-a078-fe908b7981e0}*SharedItemsImports = 4
+		Core\Durandal\Durandal.projitems*{9d309f21-48fa-4b77-a912-4fc3b48597e1}*SharedItemsImports = 13
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|ARM = Debug|ARM
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|ARM = Release|ARM
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B0C1E419-D6B7-4921-AE44-492F764953F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0C1E419-D6B7-4921-AE44-492F764953F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0C1E419-D6B7-4921-AE44-492F764953F2}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{B0C1E419-D6B7-4921-AE44-492F764953F2}.Debug|ARM.Build.0 = Debug|Any CPU
+		{B0C1E419-D6B7-4921-AE44-492F764953F2}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{B0C1E419-D6B7-4921-AE44-492F764953F2}.Debug|x64.Build.0 = Debug|Any CPU
+		{B0C1E419-D6B7-4921-AE44-492F764953F2}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{B0C1E419-D6B7-4921-AE44-492F764953F2}.Debug|x86.Build.0 = Debug|Any CPU
+		{B0C1E419-D6B7-4921-AE44-492F764953F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0C1E419-D6B7-4921-AE44-492F764953F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0C1E419-D6B7-4921-AE44-492F764953F2}.Release|ARM.ActiveCfg = Release|Any CPU
+		{B0C1E419-D6B7-4921-AE44-492F764953F2}.Release|ARM.Build.0 = Release|Any CPU
+		{B0C1E419-D6B7-4921-AE44-492F764953F2}.Release|x64.ActiveCfg = Release|Any CPU
+		{B0C1E419-D6B7-4921-AE44-492F764953F2}.Release|x64.Build.0 = Release|Any CPU
+		{B0C1E419-D6B7-4921-AE44-492F764953F2}.Release|x86.ActiveCfg = Release|Any CPU
+		{B0C1E419-D6B7-4921-AE44-492F764953F2}.Release|x86.Build.0 = Release|Any CPU
+		{6BA9D932-60DB-49F4-AC7C-3810C9BCE8EA}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{6BA9D932-60DB-49F4-AC7C-3810C9BCE8EA}.Debug|ARM.ActiveCfg = Debug|ARM
+		{6BA9D932-60DB-49F4-AC7C-3810C9BCE8EA}.Debug|ARM.Build.0 = Debug|ARM
+		{6BA9D932-60DB-49F4-AC7C-3810C9BCE8EA}.Debug|x64.ActiveCfg = Debug|x64
+		{6BA9D932-60DB-49F4-AC7C-3810C9BCE8EA}.Debug|x64.Build.0 = Debug|x64
+		{6BA9D932-60DB-49F4-AC7C-3810C9BCE8EA}.Debug|x64.Deploy.0 = Debug|x64
+		{6BA9D932-60DB-49F4-AC7C-3810C9BCE8EA}.Debug|x86.ActiveCfg = Debug|x86
+		{6BA9D932-60DB-49F4-AC7C-3810C9BCE8EA}.Debug|x86.Build.0 = Debug|x86
+		{6BA9D932-60DB-49F4-AC7C-3810C9BCE8EA}.Debug|x86.Deploy.0 = Debug|x86
+		{6BA9D932-60DB-49F4-AC7C-3810C9BCE8EA}.Release|Any CPU.ActiveCfg = Release|x86
+		{6BA9D932-60DB-49F4-AC7C-3810C9BCE8EA}.Release|ARM.ActiveCfg = Release|ARM
+		{6BA9D932-60DB-49F4-AC7C-3810C9BCE8EA}.Release|ARM.Build.0 = Release|ARM
+		{6BA9D932-60DB-49F4-AC7C-3810C9BCE8EA}.Release|ARM.Deploy.0 = Release|ARM
+		{6BA9D932-60DB-49F4-AC7C-3810C9BCE8EA}.Release|x64.ActiveCfg = Release|x64
+		{6BA9D932-60DB-49F4-AC7C-3810C9BCE8EA}.Release|x64.Build.0 = Release|x64
+		{6BA9D932-60DB-49F4-AC7C-3810C9BCE8EA}.Release|x64.Deploy.0 = Release|x64
+		{6BA9D932-60DB-49F4-AC7C-3810C9BCE8EA}.Release|x86.ActiveCfg = Release|x86
+		{6BA9D932-60DB-49F4-AC7C-3810C9BCE8EA}.Release|x86.Build.0 = Release|x86
+		{6BA9D932-60DB-49F4-AC7C-3810C9BCE8EA}.Release|x86.Deploy.0 = Release|x86
+		{974329C1-D05D-4FE3-A078-FE908B7981E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{974329C1-D05D-4FE3-A078-FE908B7981E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{974329C1-D05D-4FE3-A078-FE908B7981E0}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{974329C1-D05D-4FE3-A078-FE908B7981E0}.Debug|ARM.Build.0 = Debug|Any CPU
+		{974329C1-D05D-4FE3-A078-FE908B7981E0}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{974329C1-D05D-4FE3-A078-FE908B7981E0}.Debug|x64.Build.0 = Debug|Any CPU
+		{974329C1-D05D-4FE3-A078-FE908B7981E0}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{974329C1-D05D-4FE3-A078-FE908B7981E0}.Debug|x86.Build.0 = Debug|Any CPU
+		{974329C1-D05D-4FE3-A078-FE908B7981E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{974329C1-D05D-4FE3-A078-FE908B7981E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{974329C1-D05D-4FE3-A078-FE908B7981E0}.Release|ARM.ActiveCfg = Release|Any CPU
+		{974329C1-D05D-4FE3-A078-FE908B7981E0}.Release|ARM.Build.0 = Release|Any CPU
+		{974329C1-D05D-4FE3-A078-FE908B7981E0}.Release|x64.ActiveCfg = Release|Any CPU
+		{974329C1-D05D-4FE3-A078-FE908B7981E0}.Release|x64.Build.0 = Release|Any CPU
+		{974329C1-D05D-4FE3-A078-FE908B7981E0}.Release|x86.ActiveCfg = Release|Any CPU
+		{974329C1-D05D-4FE3-A078-FE908B7981E0}.Release|x86.Build.0 = Release|Any CPU
+		{AA64AB06-5DD1-4D9D-A338-BB3815344D66}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA64AB06-5DD1-4D9D-A338-BB3815344D66}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA64AB06-5DD1-4D9D-A338-BB3815344D66}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{AA64AB06-5DD1-4D9D-A338-BB3815344D66}.Debug|ARM.Build.0 = Debug|Any CPU
+		{AA64AB06-5DD1-4D9D-A338-BB3815344D66}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{AA64AB06-5DD1-4D9D-A338-BB3815344D66}.Debug|x64.Build.0 = Debug|Any CPU
+		{AA64AB06-5DD1-4D9D-A338-BB3815344D66}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{AA64AB06-5DD1-4D9D-A338-BB3815344D66}.Debug|x86.Build.0 = Debug|Any CPU
+		{AA64AB06-5DD1-4D9D-A338-BB3815344D66}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA64AB06-5DD1-4D9D-A338-BB3815344D66}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA64AB06-5DD1-4D9D-A338-BB3815344D66}.Release|ARM.ActiveCfg = Release|Any CPU
+		{AA64AB06-5DD1-4D9D-A338-BB3815344D66}.Release|ARM.Build.0 = Release|Any CPU
+		{AA64AB06-5DD1-4D9D-A338-BB3815344D66}.Release|x64.ActiveCfg = Release|Any CPU
+		{AA64AB06-5DD1-4D9D-A338-BB3815344D66}.Release|x64.Build.0 = Release|Any CPU
+		{AA64AB06-5DD1-4D9D-A338-BB3815344D66}.Release|x86.ActiveCfg = Release|Any CPU
+		{AA64AB06-5DD1-4D9D-A338-BB3815344D66}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B0C1E419-D6B7-4921-AE44-492F764953F2} = {EBEEB084-F36A-4B8F-9ADB-9A83081872CA}
+		{6BA9D932-60DB-49F4-AC7C-3810C9BCE8EA} = {CDC45825-809C-431F-A35A-C5D15C2ED90A}
+		{443D9C0D-B655-4B36-ADB9-F66EC58D36F0} = {CDC45825-809C-431F-A35A-C5D15C2ED90A}
+		{9D309F21-48FA-4B77-A912-4FC3B48597E1} = {68070EF2-D502-4214-AA4A-F007DAF81784}
+		{974329C1-D05D-4FE3-A078-FE908B7981E0} = {68070EF2-D502-4214-AA4A-F007DAF81784}
+		{AA64AB06-5DD1-4D9D-A338-BB3815344D66} = {26227A49-4ABC-4CD5-99B7-E8C4B9CC4729}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		VisualSVNWorkingCopyRoot = .
+		SolutionGuid = {9481BD6D-74C2-4047-AEB1-F041434E7B91}
+	EndGlobalSection
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = Durandal.vsmdi
+	EndGlobalSection
+EndGlobal

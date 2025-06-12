@@ -1,0 +1,8 @@
+import "Durandal.BondProtocol.Remoting.RemoteProcedureResponse.bond"
+
+namespace Durandal.Extensions.BondProtocol.Remoting
+
+struct RemoteBlobResponse : RemoteProcedureResponse
+{
+    4: nullable<blob> ReturnVal;
+}

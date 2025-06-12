@@ -1,0 +1,6 @@
+namespace Durandal.Extensions.BondProtocol.API
+
+enum AudioOrdering
+{
+    Unspecified, AfterSpeech, BeforeSpeech
+};

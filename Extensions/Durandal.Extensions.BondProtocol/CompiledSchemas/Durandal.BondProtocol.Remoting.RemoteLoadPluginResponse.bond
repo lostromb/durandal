@@ -1,0 +1,9 @@
+import "Durandal.BondProtocol.Remoting.RemoteProcedureResponse.bond"
+import "Durandal.BondProtocol.API.LoadedPluginInformation.bond"
+
+namespace Durandal.Extensions.BondProtocol.Remoting
+
+struct RemoteLoadPluginResponse : RemoteProcedureResponse
+{
+    4: nullable<Durandal.Extensions.BondProtocol.API.LoadedPluginInformation> Info;
+}

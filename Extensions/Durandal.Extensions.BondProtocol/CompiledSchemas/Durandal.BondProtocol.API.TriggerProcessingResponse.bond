@@ -1,0 +1,10 @@
+import "Durandal.BondProtocol.API.TriggerResult.bond"
+import "Durandal.BondProtocol.API.InMemoryDataStore.bond"
+
+namespace Durandal.Extensions.BondProtocol.API
+
+struct TriggerProcessingResponse
+{
+    1: nullable<Durandal.Extensions.BondProtocol.API.TriggerResult> PluginOutput;
+	2: nullable<Durandal.Extensions.BondProtocol.API.InMemoryDataStore> UpdatedSessionStore;
+}

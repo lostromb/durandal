@@ -1,0 +1,23 @@
+namespace Durandal.Extensions.BondProtocol.API
+
+// contains information about a spoken word
+struct SpeechPhraseElement
+{
+    // The confidence score computed by the SR engine
+    1: optional float SREngineConfidence;
+
+    // The lexical form of this element (e.g., "comma" for ",").
+    2: optional string LexicalForm;
+
+    // The display text for this element (e.g., ",").
+    3: optional string DisplayText;
+
+    // The pronunciation for this element, using IPA alphabet
+    4: optional string Pronunciation;
+
+    // This is the starting offset of the element in millisecond units of time relative to the start of the phrase.
+    5: optional uint32 AudioTimeOffset;
+
+    // This is the length of the element in millisecond units of time.
+    6: optional uint32 AudioTimeLength;
+} 

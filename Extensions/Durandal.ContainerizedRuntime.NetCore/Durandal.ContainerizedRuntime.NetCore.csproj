@@ -1,0 +1,54 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net7.0-windows</TargetFramework>
+    <RootNamespace>Durandal.ContainerizedRuntime</RootNamespace>
+    <AssemblyName>Durandal.ContainerizedRuntime</AssemblyName>
+	<CodeAnalysisRuleSet>..\..\DurandalCodeAnalysis.ruleset</CodeAnalysisRuleSet>
+	<SignAssembly>True</SignAssembly>
+	<AssemblyOriginatorKeyFile>..\..\durandal.snk</AssemblyOriginatorKeyFile>
+	<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+  </PropertyGroup>
+
+  <Import Project="..\Durandal.ContainerizedRuntime\Durandal.ContainerizedRuntime.projitems" Label="Shared" />
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="System.Text.RegularExpressions" Version="4.3.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Core\Durandal.NetCore\Durandal.NetCore.csproj" />
+    <ProjectReference Include="..\..\Core\Durandal.NetStandard\Durandal.NetStandard.csproj" />
+    <ProjectReference Include="..\Durandal.Extensions.BondProtocol.NetStandard\Durandal.Extensions.BondProtocol.NetStandard.csproj" />
+  </ItemGroup>
+  
+  <Target Name="WarnOfMissingDurandalRoot" Condition="$(DURANDAL_ROOT) == ''">
+    <Warning Text="DURANDAL_ROOT environment variable not set. Local runtime environment will be set to the /localenv directory" />
+  </Target>
+  <PropertyGroup Condition="$(DURANDAL_ROOT) == ''">
+    <DurandalRoot>$(SolutionDir)localenv</DurandalRoot>
+  </PropertyGroup>
+  <PropertyGroup Condition="$(DURANDAL_ROOT) != ''">
+    <DurandalRoot>$(DURANDAL_ROOT)</DurandalRoot>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DefineConstants>TRACE;TRACK_IDISPOSABLE_LEAKS</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DefineConstants>TRACE;</DefineConstants>
+  </PropertyGroup>
+  <Target Name="CopyOutputToLocalRuntimesEnvironment" AfterTargets="PostBuildEvent">
+    <Message Text="Copying output to local runtime directory $(DurandalRoot)\runtimes\dev-netcore" Importance="high" />
+    <ItemGroup>
+      <AllBuildOutputFiles Include="$(MSBuildProjectDirectory)\$(OutDir)\**\*.*" />
+    </ItemGroup>
+    <!-- <Message Text="DURANDAL_ROOT is $(DURANDAL_ROOT)" Importance="high" />
+    <Message Text="OutDir is $(MSBuildProjectDirectory)\$(OutDir)" Importance="high" />
+    <Message Text="AllBuildOutputFiles is @(AllBuildOutputFiles)" Importance="high" />
+    <Message Text="DestinationFolder is $(DURANDAL_ROOT)\runtimes\dev-netcore" Importance="high" /> -->
+    <Copy SourceFiles="@(AllBuildOutputFiles)" DestinationFolder="$(DurandalRoot)\runtimes\dev-netcore\%(RecursiveDir)" SkipUnchangedFiles="true" OverwriteReadOnlyFiles="true" Retries="3" RetryDelayMilliseconds="300">
+    </Copy>
+  </Target>
+</Project>

@@ -1,0 +1,13 @@
+namespace Durandal.Extensions.BondProtocol.API
+
+enum BoostingOption
+{
+	// Do nothing to this answer's ranking
+	NoChange,
+        
+	// Suppress this answer to not run at all
+	Suppress,
+
+	// Boost this answer to attempt to be ranked #1. If multiple answers are boosted, start disambiguation
+	Boost
+};

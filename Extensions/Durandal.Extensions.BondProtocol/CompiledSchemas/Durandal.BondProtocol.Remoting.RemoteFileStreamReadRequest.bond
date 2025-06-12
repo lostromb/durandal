@@ -1,0 +1,11 @@
+import "Durandal.BondProtocol.Remoting.RemoteMessage.bond"
+import "Durandal.BondProtocol.Remoting.RemoteProcedureRequest.bond"
+
+namespace Durandal.Extensions.BondProtocol.Remoting
+
+struct RemoteFileStreamReadRequest : RemoteProcedureRequest
+{
+	3: required string StreamId;
+	4: required int64 Position;
+	5: required int32 Length;
+}

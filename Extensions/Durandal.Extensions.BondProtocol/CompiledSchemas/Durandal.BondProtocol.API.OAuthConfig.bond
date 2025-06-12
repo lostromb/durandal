@@ -1,0 +1,16 @@
+import "Durandal.BondProtocol.API.OAuthFlavor.bond"
+
+namespace Durandal.Extensions.BondProtocol.API
+
+struct OAuthConfig
+{
+    1: required OAuthFlavor Type = OAuth2;
+	2: nullable<string> ConfigName;
+	3: nullable<string> ClientId;
+	4: nullable<string> ClientSecret;
+	5: nullable<string> TokenUri;
+	6: nullable<string> AuthUri;
+	7: nullable<string> Scope;
+	8: bool UsePKCE;
+	9: nullable<string> AuthorizationHeader;
+}

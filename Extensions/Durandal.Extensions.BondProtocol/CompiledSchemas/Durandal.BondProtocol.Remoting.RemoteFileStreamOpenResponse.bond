@@ -1,0 +1,9 @@
+import "Durandal.BondProtocol.Remoting.RemoteProcedureResponse.bond"
+import "Durandal.BondProtocol.Remoting.RemoteFileStreamOpenResult.bond"
+
+namespace Durandal.Extensions.BondProtocol.Remoting
+
+struct RemoteFileStreamOpenResponse : RemoteProcedureResponse
+{
+    4: nullable<RemoteFileStreamOpenResult> ReturnVal;
+}

@@ -1,0 +1,609 @@
+﻿{
+  "Id": "http://schema.org/Person",
+  "Comment": "A person (alive, dead, undead, or fictional).",
+  "Label": "Person",
+  "InheritsFrom": [
+    "http://schema.org/Thing"
+  ],
+  "Fields": {
+    "spouse": {
+      "Name": "spouse",
+      "Values": [
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/Person",
+          "Comment": "The person's spouse."
+        }
+      ]
+    },
+    "funder": {
+      "Name": "funder",
+      "Values": [
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/Person",
+          "Comment": "A person or organization that supports (sponsors) something through some kind of financial contribution."
+        },
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/Organization",
+          "Comment": "A person or organization that supports (sponsors) something through some kind of financial contribution."
+        }
+      ]
+    },
+    "colleagues": {
+      "Name": "colleagues",
+      "Values": [
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/Person",
+          "Comment": "A colleague of the person."
+        }
+      ]
+    },
+    "deathDate": {
+      "Name": "deathDate",
+      "Values": [
+        {
+          "Type": "Date",
+          "Comment": "Date of death."
+        }
+      ]
+    },
+    "memberOf": {
+      "Name": "memberOf",
+      "Values": [
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/Organization",
+          "Comment": "An Organization (or ProgramMembership) to which this Person or Organization belongs."
+        },
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/ProgramMembership",
+          "Comment": "An Organization (or ProgramMembership) to which this Person or Organization belongs."
+        }
+      ]
+    },
+    "height": {
+      "Name": "height",
+      "Values": [
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/Distance",
+          "Comment": "The height of the item."
+        },
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/QuantitativeValue",
+          "Comment": "The height of the item."
+        }
+      ]
+    },
+    "workLocation": {
+      "Name": "workLocation",
+      "Values": [
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/Place",
+          "Comment": "A contact location for a person's place of work."
+        },
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/ContactPoint",
+          "Comment": "A contact location for a person's place of work."
+        }
+      ]
+    },
+    "netWorth": {
+      "Name": "netWorth",
+      "Values": [
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/MonetaryAmount",
+          "Comment": "The total financial value of the person as calculated by subtracting assets from liabilities."
+        },
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/PriceSpecification",
+          "Comment": "The total financial value of the person as calculated by subtracting assets from liabilities."
+        }
+      ]
+    },
+    "children": {
+      "Name": "children",
+      "Values": [
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/Person",
+          "Comment": "A child of the person."
+        }
+      ]
+    },
+    "jobTitle": {
+      "Name": "jobTitle",
+      "Values": [
+        {
+          "Type": "Text",
+          "Comment": "The job title of the person (for example, Financial Manager)."
+        }
+      ]
+    },
+    "hasOfferCatalog": {
+      "Name": "hasOfferCatalog",
+      "Values": [
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/OfferCatalog",
+          "Comment": "Indicates an OfferCatalog listing for this Organization, Person, or Service."
+        }
+      ]
+    },
+    "deathPlace": {
+      "Name": "deathPlace",
+      "Values": [
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/Place",
+          "Comment": "The place where the person died."
+        }
+      ]
+    },
+    "globalLocationNumber": {
+      "Name": "globalLocationNumber",
+      "Values": [
+        {
+          "Type": "Text",
+          "Comment": "The <a href=\"http://www.gs1.org/gln\">Global Location Number</a> (GLN, sometimes also referred to as International Location Number or ILN) of the respective organization, person, or place. The GLN is a 13-digit number used to identify parties and physical locations."
+        }
+      ]
+    },
+    "birthPlace": {
+      "Name": "birthPlace",
+      "Values": [
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/Place",
+          "Comment": "The place where the person was born."
+        }
+      ]
+    },
+    "gender": {
+      "Name": "gender",
+      "Values": [
+        {
+          "Type": "Text",
+          "Comment": "Gender of the person. While http://schema.org/Male and http://schema.org/Female may be used, text strings are also acceptable for people who do not identify as a binary gender."
+        },
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/GenderType",
+          "Comment": "Gender of the person. While http://schema.org/Male and http://schema.org/Female may be used, text strings are also acceptable for people who do not identify as a binary gender."
+        }
+      ]
+    },
+    "alumniOf": {
+      "Name": "alumniOf",
+      "Values": [
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/EducationalOrganization",
+          "Comment": "An organization that the person is an alumni of."
+        },
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/Organization",
+          "Comment": "An organization that the person is an alumni of."
+        }
+      ]
+    },
+    "homeLocation": {
+      "Name": "homeLocation",
+      "Values": [
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/ContactPoint",
+          "Comment": "A contact location for a person's residence."
+        },
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/Place",
+          "Comment": "A contact location for a person's residence."
+        }
+      ]
+    },
+    "duns": {
+      "Name": "duns",
+      "Values": [
+        {
+          "Type": "Text",
+          "Comment": "The Dun &amp; Bradstreet DUNS number for identifying an organization or business person."
+        }
+      ]
+    },
+    "taxID": {
+      "Name": "taxID",
+      "Values": [
+        {
+          "Type": "Text",
+          "Comment": "The Tax / Fiscal ID of the organization or person, e.g. the TIN in the US or the CIF/NIF in Spain."
+        }
+      ]
+    },
+    "award": {
+      "Name": "award",
+      "Values": [
+        {
+          "Type": "Text",
+          "Comment": "An award won by or for this item."
+        }
+      ]
+    },
+    "birthDate": {
+      "Name": "birthDate",
+      "Values": [
+        {
+          "Type": "Date",
+          "Comment": "Date of birth."
+        }
+      ]
+    },
+    "makesOffer": {
+      "Name": "makesOffer",
+      "Values": [
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/Offer",
+          "Comment": "A pointer to products or services offered by the organization or person."
+        }
+      ]
+    },
+    "givenName": {
+      "Name": "givenName",
+      "Values": [
+        {
+          "Type": "Text",
+          "Comment": "Given name. In the U.S., the first name of a Person. This can be used along with familyName instead of the name property."
+        }
+      ]
+    },
+    "contactPoints": {
+      "Name": "contactPoints",
+      "Values": [
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/ContactPoint",
+          "Comment": "A contact point for a person or organization."
+        }
+      ]
+    },
+    "awards": {
+      "Name": "awards",
+      "Values": [
+        {
+          "Type": "Text",
+          "Comment": "Awards won by or for this item."
+        }
+      ]
+    },
+    "familyName": {
+      "Name": "familyName",
+      "Values": [
+        {
+          "Type": "Text",
+          "Comment": "Family name. In the U.S., the last name of an Person. This can be used along with givenName instead of the name property."
+        }
+      ]
+    },
+    "seeks": {
+      "Name": "seeks",
+      "Values": [
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/Demand",
+          "Comment": "A pointer to products or services sought by the organization or person (demand)."
+        }
+      ]
+    },
+    "sibling": {
+      "Name": "sibling",
+      "Values": [
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/Person",
+          "Comment": "A sibling of the person."
+        }
+      ]
+    },
+    "address": {
+      "Name": "address",
+      "Values": [
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/PostalAddress",
+          "Comment": "Physical address of the item."
+        },
+        {
+          "Type": "Text",
+          "Comment": "Physical address of the item."
+        }
+      ]
+    },
+    "performerIn": {
+      "Name": "performerIn",
+      "Values": [
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/Event",
+          "Comment": "Event that this person is a performer or participant in."
+        }
+      ]
+    },
+    "honorificPrefix": {
+      "Name": "honorificPrefix",
+      "Values": [
+        {
+          "Type": "Text",
+          "Comment": "An honorific prefix preceding a Person's name such as Dr/Mrs/Mr."
+        }
+      ]
+    },
+    "additionalName": {
+      "Name": "additionalName",
+      "Values": [
+        {
+          "Type": "Text",
+          "Comment": "An additional name for a Person, can be used for a middle name."
+        }
+      ]
+    },
+    "siblings": {
+      "Name": "siblings",
+      "Values": [
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/Person",
+          "Comment": "A sibling of the person."
+        }
+      ]
+    },
+    "telephone": {
+      "Name": "telephone",
+      "Values": [
+        {
+          "Type": "Text",
+          "Comment": "The telephone number."
+        }
+      ]
+    },
+    "email": {
+      "Name": "email",
+      "Values": [
+        {
+          "Type": "Text",
+          "Comment": "Email address."
+        }
+      ]
+    },
+    "weight": {
+      "Name": "weight",
+      "Values": [
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/QuantitativeValue",
+          "Comment": "The weight of the product or person."
+        }
+      ]
+    },
+    "contactPoint": {
+      "Name": "contactPoint",
+      "Values": [
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/ContactPoint",
+          "Comment": "A contact point for a person or organization."
+        }
+      ]
+    },
+    "colleague": {
+      "Name": "colleague",
+      "Values": [
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/URL",
+          "Comment": "A colleague of the person."
+        },
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/Person",
+          "Comment": "A colleague of the person."
+        }
+      ]
+    },
+    "naics": {
+      "Name": "naics",
+      "Values": [
+        {
+          "Type": "Text",
+          "Comment": "The North American Industry Classification System (NAICS) code for a particular organization or business person."
+        }
+      ]
+    },
+    "hasPOS": {
+      "Name": "hasPOS",
+      "Values": [
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/Place",
+          "Comment": "Points-of-Sales operated by the organization or person."
+        }
+      ]
+    },
+    "parent": {
+      "Name": "parent",
+      "Values": [
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/Person",
+          "Comment": "A parent of this person."
+        }
+      ]
+    },
+    "owns": {
+      "Name": "owns",
+      "Values": [
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/Product",
+          "Comment": "Products owned by the organization or person."
+        },
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/OwnershipInfo",
+          "Comment": "Products owned by the organization or person."
+        }
+      ]
+    },
+    "affiliation": {
+      "Name": "affiliation",
+      "Values": [
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/Organization",
+          "Comment": "An organization that this person is affiliated with. For example, a school/university, a club, or a team."
+        }
+      ]
+    },
+    "publishingPrinciples": {
+      "Name": "publishingPrinciples",
+      "Values": [
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/CreativeWork",
+          "Comment": "The publishingPrinciples property indicates (typically via <a class=\"localLink\" href=\"http://schema.org/URL\">URL</a>) a document describing the editorial principles of an <a class=\"localLink\" href=\"http://schema.org/Organization\">Organization</a> (or individual e.g. a <a class=\"localLink\" href=\"http://schema.org/Person\">Person</a> writing a blog) that relate to their activities as a publisher, e.g. ethics or diversity policies. When applied to a <a class=\"localLink\" href=\"http://schema.org/CreativeWork\">CreativeWork</a> (e.g. <a class=\"localLink\" href=\"http://schema.org/NewsArticle\">NewsArticle</a>) the principles are those of the party primarily responsible for the creation of the <a class=\"localLink\" href=\"http://schema.org/CreativeWork\">CreativeWork</a>.</p>\n\n<p>While such policies are most typically expressed in natural language, sometimes related information (e.g. indicating a <a class=\"localLink\" href=\"http://schema.org/funder\">funder</a>) can be expressed using schema.org terminology."
+        },
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/URL",
+          "Comment": "The publishingPrinciples property indicates (typically via <a class=\"localLink\" href=\"http://schema.org/URL\">URL</a>) a document describing the editorial principles of an <a class=\"localLink\" href=\"http://schema.org/Organization\">Organization</a> (or individual e.g. a <a class=\"localLink\" href=\"http://schema.org/Person\">Person</a> writing a blog) that relate to their activities as a publisher, e.g. ethics or diversity policies. When applied to a <a class=\"localLink\" href=\"http://schema.org/CreativeWork\">CreativeWork</a> (e.g. <a class=\"localLink\" href=\"http://schema.org/NewsArticle\">NewsArticle</a>) the principles are those of the party primarily responsible for the creation of the <a class=\"localLink\" href=\"http://schema.org/CreativeWork\">CreativeWork</a>.</p>\n\n<p>While such policies are most typically expressed in natural language, sometimes related information (e.g. indicating a <a class=\"localLink\" href=\"http://schema.org/funder\">funder</a>) can be expressed using schema.org terminology."
+        }
+      ]
+    },
+    "sponsor": {
+      "Name": "sponsor",
+      "Values": [
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/Person",
+          "Comment": "A person or organization that supports a thing through a pledge, promise, or financial contribution. e.g. a sponsor of a Medical Study or a corporate sponsor of an event."
+        },
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/Organization",
+          "Comment": "A person or organization that supports a thing through a pledge, promise, or financial contribution. e.g. a sponsor of a Medical Study or a corporate sponsor of an event."
+        }
+      ]
+    },
+    "isicV4": {
+      "Name": "isicV4",
+      "Values": [
+        {
+          "Type": "Text",
+          "Comment": "The International Standard of Industrial Classification of All Economic Activities (ISIC), Revision 4 code for a particular organization, business person, or place."
+        }
+      ]
+    },
+    "brand": {
+      "Name": "brand",
+      "Values": [
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/Organization",
+          "Comment": "The brand(s) associated with a product or service, or the brand(s) maintained by an organization or business person."
+        },
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/Brand",
+          "Comment": "The brand(s) associated with a product or service, or the brand(s) maintained by an organization or business person."
+        }
+      ]
+    },
+    "honorificSuffix": {
+      "Name": "honorificSuffix",
+      "Values": [
+        {
+          "Type": "Text",
+          "Comment": "An honorific suffix preceding a Person's name such as M.D. /PhD/MSCSW."
+        }
+      ]
+    },
+    "vatID": {
+      "Name": "vatID",
+      "Values": [
+        {
+          "Type": "Text",
+          "Comment": "The Value-added Tax ID of the organization or person."
+        }
+      ]
+    },
+    "nationality": {
+      "Name": "nationality",
+      "Values": [
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/Country",
+          "Comment": "Nationality of the person."
+        }
+      ]
+    },
+    "faxNumber": {
+      "Name": "faxNumber",
+      "Values": [
+        {
+          "Type": "Text",
+          "Comment": "The fax number."
+        }
+      ]
+    },
+    "relatedTo": {
+      "Name": "relatedTo",
+      "Values": [
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/Person",
+          "Comment": "The most generic familial relation."
+        }
+      ]
+    },
+    "follows": {
+      "Name": "follows",
+      "Values": [
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/Person",
+          "Comment": "The most generic uni-directional social relation."
+        }
+      ]
+    },
+    "knows": {
+      "Name": "knows",
+      "Values": [
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/Person",
+          "Comment": "The most generic bi-directional social/work relation."
+        }
+      ]
+    },
+    "worksFor": {
+      "Name": "worksFor",
+      "Values": [
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/Organization",
+          "Comment": "Organizations that the person works for."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,10 @@
+namespace Durandal.Extensions.BondProtocol.Remoting
+
+enum RemoteFileStreamOpenMode
+{
+	Unknown = 0,
+	CreateNew = 1,
+	Create = 2,
+	Open = 3,
+	OpenOrCreate = 4,
+};

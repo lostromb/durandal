@@ -1,0 +1,9 @@
+namespace Durandal.Extensions.BondProtocol.Remoting
+
+enum RemoteFileStreamSeekOrigin
+{
+	Unknown = 0,
+	End = 1,
+	Current = 2,
+	Begin = 3,
+};

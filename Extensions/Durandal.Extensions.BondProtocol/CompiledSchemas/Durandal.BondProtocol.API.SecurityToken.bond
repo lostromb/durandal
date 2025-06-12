@@ -1,0 +1,10 @@
+import "Durandal.BondProtocol.API.ClientAuthenticationScope.bond"
+
+namespace Durandal.Extensions.BondProtocol.API
+
+struct SecurityToken
+{
+    1: required string Red;
+    2: required string Blue;
+	3: ClientAuthenticationScope Scope = None;
+}

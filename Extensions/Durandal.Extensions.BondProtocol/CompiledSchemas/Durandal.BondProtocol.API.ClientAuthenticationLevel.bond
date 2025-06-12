@@ -1,0 +1,14 @@
+namespace Durandal.Extensions.BondProtocol.API
+
+enum ClientAuthenticationLevel
+{
+	None = 0x0000,
+	ClientUnknown = 0x0001,
+	ClientUnverified = 0x0002,
+	ClientAuthorized = 0x0004,
+	ClientUnauthorized = 0x0008,
+	UserUnknown = 0x0100,
+	UserUnverified = 0x0200,
+	UserAuthorized = 0x0400,
+	UserUnauthorized = 0x0800,
+}

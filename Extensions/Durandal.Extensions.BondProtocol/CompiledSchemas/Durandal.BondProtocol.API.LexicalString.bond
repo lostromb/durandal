@@ -1,0 +1,7 @@
+namespace Durandal.Extensions.BondProtocol.API
+
+struct LexicalString
+{
+    1: nullable<string> WrittenForm;
+	2: nullable<string> SpokenForm;
+}

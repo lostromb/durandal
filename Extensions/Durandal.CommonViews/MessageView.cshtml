@@ -1,0 +1,57 @@
+@var bool UseHtml5 = true
+@var string Title
+@var string Content
+@var string Superscript;
+@var string Subscript;
+@var string Image;
+@var string TextAlign = "center"
+@var int ScreenWidth = 500
+@var IDictionary<string,string> ClientContextData = null
+@Namespace Durandal.CommonViews
+
+<if condition='UseHtml5'>
+    <!DOCTYPE HTML>
+    <html>
+    <head>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+		<meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+        <link href="/views/common/pure-base-min.css" rel="stylesheet" type="text/css">
+        <link href="/views/common/flexbox.css" rel="stylesheet" type="text/css">
+        <link href="/views/common/global_html5.css" rel="stylesheet" type="text/css">
+        ${new Durandal.CommonViews.DynamicTheme() { ClientContextData = ClientContextData }.Render()}
+        <title>${Title}</title>
+    </head>
+    <body class="globalBgColor globalFontStyle globalFontColor">
+        <div class="flex flexAppContainer">
+            <div class="flex flexBoxColumn flex-stretch screenPadding">
+                <div class="flex1"></div>
+                <if condition='!string.IsNullOrWhiteSpace(Superscript)'>
+                    <div align="center" style="text-align: ${TextAlign}"><span class="flex1 size4 globalFontColorSubtitle">${Superscript}</span></div>
+                </if>
+                <div align="center" style="text-align: ${TextAlign}"><span class="flex1 size2 globalFontColorAccent">${Content}</span></div>
+                <if condition='!string.IsNullOrWhiteSpace(Subscript)'>
+                    <div align="center" style="text-align: ${TextAlign}"><span class="flex1 size4 globalFontColorSubtitle">${Subscript}</span></div>
+                </if>
+                <if condition='!string.IsNullOrWhiteSpace(Image)'>
+                    <div align="center"><img class="featureImg pure-img screenPadding" src="${Image}"></div>
+                </if>
+                <div class="flex1"></div>
+</div>
+        </div>
+    </body>
+</html>
+</if>
+<else>
+    <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+    <html>
+    <head>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <link href="/views/common/global_html4.css" rel="stylesheet" type="text/css">
+        <link href="/views/common/global_${ScreenWidth}px.css" rel="stylesheet" type="text/css">
+        <title>${Title}</title>
+    </head>
+    <body class="globalBgColor globalFontStyle globalFontColorAccent">
+        <div align="center" class="screenPadding">${Content}</div>
+    </body>
+</html>
+</else>

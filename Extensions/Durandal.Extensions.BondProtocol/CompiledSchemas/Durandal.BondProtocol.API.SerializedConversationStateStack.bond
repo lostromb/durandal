@@ -1,0 +1,10 @@
+﻿import "Durandal.BondProtocol.API.RecoResult.bond"
+import "Durandal.BondProtocol.API.MultiTurnBehavior.bond"
+import "Durandal.BondProtocol.API.SerializedConversationState.bond"
+
+namespace Durandal.Extensions.BondProtocol.API
+
+struct SerializedConversationStateStack
+{
+    1: required vector<SerializedConversationState> Stack;
+}

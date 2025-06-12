@@ -1,0 +1,16 @@
+import "Durandal.BondProtocol.API.PluginStrongName.bond"
+import "Durandal.BondProtocol.API.CrossDomainContext.bond"
+import "Durandal.BondProtocol.API.InMemoryDataStore.bond"
+import "Durandal.BondProtocol.Remoting.RemoteMessage.bond"
+import "Durandal.BondProtocol.Remoting.RemoteProcedureRequest.bond"
+
+namespace Durandal.Extensions.BondProtocol.Remoting
+
+struct RemoteCrossDomainResponseRequest : RemoteProcedureRequest
+{
+    3: required Durandal.Extensions.BondProtocol.API.PluginStrongName PluginId;
+    4: required Durandal.Extensions.BondProtocol.API.CrossDomainContext Context;
+	5: nullable<string> TraceId;
+	6: int32 ValidLogLevels;
+	7: nullable<Durandal.Extensions.BondProtocol.API.InMemoryDataStore> SessionStore;
+}

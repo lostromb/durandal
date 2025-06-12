@@ -1,0 +1,39 @@
+namespace Durandal.Extensions.BondProtocol.API
+
+struct LocalizedInformation
+{
+	1: string DisplayName;
+	2: string Creator;
+	3: string ShortDescription;
+	
+	// A set of sample queries that might trigger this answer.
+	4: vector<string> SampleQueries;
+}
+
+struct PluginInformation
+{
+	// The programmatic name of this plugin - this will be used in package manifests
+	// Doesn't necessarily have to be the same as domain name
+	1: required string InternalName;
+	
+	// Version info
+	2: required uint16 MajorVersion;
+	3: required uint16 MinorVersion;
+	
+	// The invariant creator name - also used in package manifests
+	4: string Creator;
+	
+	// A dictionary mapping the locale code (en-us) to a set of localized descriptions
+	5: map<string, LocalizedInformation> LocalizedInfo;
+	
+	// A binary blob containing this plugin's icon as a .PNG file
+	6: blob IconPngData;
+
+	// Signals that this plugin is something internal (a widget or adapter)
+	// and shouln't be shown on normal plugin listings
+	7: bool Hidden = false;
+
+	// Indicates that this plugin will respond to the "configure" intent which
+	// should access a domain-specific configuration dialog.
+	8: bool Configurable = false;
+}

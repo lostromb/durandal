@@ -1,0 +1,10 @@
+import "Durandal.BondProtocol.API.SlotValue.bond"
+import "Durandal.BondProtocol.API.MultiTurnBehavior.bond"
+
+namespace Durandal.Extensions.BondProtocol.API
+
+struct CrossDomainResponseData
+{
+	1: required vector<SlotValue> FilledSlots;
+	2: required MultiTurnBehavior CallbackMultiturnBehavior;
+}

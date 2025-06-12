@@ -1,0 +1,10 @@
+import "Durandal.BondProtocol.API.HypothesisInt.bond"
+import "Durandal.BondProtocol.API.InstrumentationData.bond"
+
+namespace Durandal.Extensions.BondProtocol.Remoting
+
+struct RemoteResolveEntityResponse
+{
+    1: vector<Durandal.Extensions.BondProtocol.API.HypothesisInt> Hypotheses;
+	2: nullable<Durandal.Extensions.BondProtocol.API.InstrumentationEventList> LogEvents;
+}

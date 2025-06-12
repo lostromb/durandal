@@ -1,0 +1,7 @@
+namespace Durandal.Extensions.BondProtocol.API
+
+struct HypothesisInt
+{
+    1: int32 Value;
+	2: float Conf;
+}

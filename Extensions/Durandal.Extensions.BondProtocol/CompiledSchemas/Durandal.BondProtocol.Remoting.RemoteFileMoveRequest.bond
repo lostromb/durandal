@@ -1,0 +1,10 @@
+import "Durandal.BondProtocol.Remoting.RemoteMessage.bond"
+import "Durandal.BondProtocol.Remoting.RemoteProcedureRequest.bond"
+
+namespace Durandal.Extensions.BondProtocol.Remoting
+
+struct RemoteFileMoveRequest : RemoteProcedureRequest
+{
+	3: required string SourcePath;
+	4: required string TargetPath;
+}

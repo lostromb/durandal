@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <ItemGroup>
+        <_DurandalExtensionsNativeAudioBinaries Include="$(MSBuildThisFileDirectory)..\content\**\*.dll" />
+        <_DurandalExtensionsNativeAudioBinaries Include="$(MSBuildThisFileDirectory)..\content\**\*.so" />
+        <_DurandalExtensionsNativeAudioBinaries Include="$(MSBuildThisFileDirectory)..\content\**\*.dylib" />
+
+        <Content Include="@(_DurandalExtensionsNativeAudioBinaries)">
+            <Link>%(RecursiveDir)%(Filename)%(Extension)</Link>
+            <Visible>False</Visible>
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </Content>
+    </ItemGroup>
+</Project>

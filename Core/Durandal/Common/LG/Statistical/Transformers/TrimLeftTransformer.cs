@@ -1,0 +1,50 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using Durandal.Common.Utils;
+using Durandal.Common.Logger;
+using Durandal.Common.NLP;
+using Durandal.Common.NLP.Language;
+
+namespace Durandal.Common.LG.Statistical.Transformers
+{
+    public class TrimLeftTransformer : ISlotTransformer
+    {
+        public char[] _chars;
+
+        public TrimLeftTransformer(string chars)
+        {
+            _chars = chars.ToCharArray();
+        }
+
+        public string Name
+        {
+            get
+            {
+                return "TrimLeft";
+            }
+        }
+
+        public string Apply(object input, LanguageCode locale, ILogger logger, NLPTools nlTools, StatisticalLGPattern pattern)
+        {
+            if (input is string)
+            {
+                return ((string)input).TrimStart(_chars);
+            }
+            else
+            {
+                return input.ToString().TrimStart(_chars);
+            }
+        }
+
+        public string OriginalText
+        {
+            get
+            {
+                return Name + "(\'" + string.Join("\', \'", _chars) + "\')";
+            }
+        }
+    }
+}

@@ -1,0 +1,28 @@
+import "Durandal.BondProtocol.API.MultiTurnBehavior.bond"
+import "Durandal.BondProtocol.API.AudioResponse.bond"
+import "Durandal.BondProtocol.API.DialogAction.bond"
+import "Durandal.BondProtocol.API.TriggerKeyword.bond"
+import "Durandal.BondProtocol.API.Result.bond"
+
+namespace Durandal.Extensions.BondProtocol.API
+
+struct PluginResult
+{
+    1: required Result ResponseCode = Failure;
+	2: nullable<string> ResponseText;
+	3: nullable<string> ResponseSsml;
+	4: nullable<string> ResponseUrl;
+	5: nullable<string> ResponseHtml;
+	6: nullable<MultiTurnBehavior> MultiTurnResult;
+	7: nullable<AudioResponse> ResponseAudio;
+	8: nullable<string> ErrorMessage;
+	9: nullable<map<string, string>> ResponseData;
+	10: nullable<string> ResultConversationNode;
+	11: nullable<string> ClientAction;
+	12: nullable<DialogAction> InvokedDialogAction;
+	13: nullable<vector<string>> SuggestedQueries;
+	14: nullable<vector<TriggerKeyword>> TriggerKeywords;
+	15: nullable<string> ContinuationFuncName;
+	16: nullable<string> AugmentedQuery;
+	17: nullable<uint16> ResponsePrivacyClassification;
+}

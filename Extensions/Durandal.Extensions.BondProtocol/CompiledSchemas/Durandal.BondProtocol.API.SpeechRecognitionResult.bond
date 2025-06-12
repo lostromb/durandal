@@ -1,0 +1,18 @@
+import "Durandal.BondProtocol.API.ConfusionNetwork.bond"
+import "Durandal.BondProtocol.API.SpeechRecognitionStatus.bond"
+import "Durandal.BondProtocol.API.SpeechRecognizedPhrase.bond"
+
+namespace Durandal.Extensions.BondProtocol.API
+
+//contains the recognition result
+struct SpeechRecognitionResult
+{
+    // Recognition status
+    1: SpeechRecognitionStatus RecognitionStatus = None;
+
+    // list of recognized phrases. Top match is at 0
+    2: vector<SpeechRecognizedPhrase> RecognizedPhrases;
+
+    // Confusion network data structure, to be used for result word corrections.
+    3: nullable<ConfusionNetwork> ConfusionNetworkData;
+}

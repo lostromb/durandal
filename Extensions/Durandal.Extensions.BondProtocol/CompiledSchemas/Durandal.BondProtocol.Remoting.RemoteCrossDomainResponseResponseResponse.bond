@@ -1,0 +1,9 @@
+import "Durandal.BondProtocol.Remoting.RemoteProcedureResponse.bond"
+import "Durandal.BondProtocol.API.CrossDomainResponseResponse.bond"
+
+namespace Durandal.Extensions.BondProtocol.Remoting
+
+struct RemoteCrossDomainResponseResponseResponse : RemoteProcedureResponse
+{
+    4: nullable<Durandal.Extensions.BondProtocol.API.CrossDomainResponseResponse> ReturnVal;
+}

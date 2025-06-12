@@ -1,0 +1,8 @@
+import "Durandal.BondProtocol.Remoting.RemoteProcedureResponse.bond"
+
+namespace Durandal.Extensions.BondProtocol.Remoting
+
+struct RemoteInt64Response : RemoteProcedureResponse
+{
+    4: int64 ReturnVal;
+}

@@ -1,0 +1,246 @@
+﻿using Durandal.Common.IO;
+using Durandal.Common.MathExt;
+using Durandal.Common.ServiceMgmt;
+using Durandal.Common.Utils;
+using System;
+using System.Buffers;
+using System.Collections.Generic;
+using System.Runtime.InteropServices;
+using System.Text;
+
+namespace Durandal.Common.MathExt.FFT
+{
+    internal class PlanBluesteinFloat32 : IReal1DFFTPlanFloat32, IComplex1DFFTPlanFloat32
+    {
+        internal int n;
+        internal int n2;
+        internal PlanComplexPackedFloat32 plan;
+        internal PooledBuffer<ComplexF> mem;
+        internal int bk_idx; // indexes into mem
+        internal int bkf_idx; // indexes into mem
+        private int _disposed = 0;
+
+        public int Length => plan.length;
+
+        public PlanBluesteinFloat32(int length)
+        {
+            n = length;
+            n2 = FFTIntrinsics.good_size(n * 2 - 1);
+            mem = BufferPool<ComplexF>.Rent(n + n2);
+            bk_idx = 0;
+            bkf_idx = bk_idx + n;
+
+            /* initialize b_k */
+            Span<float> tmp = new float[4 * n];
+            FFTIntrinsics.sincos_2pibyn(2 * n, tmp);
+            Span<ComplexF> bk = mem.Buffer.AsSpan(bk_idx);
+            Span<ComplexF> bkf = mem.Buffer.AsSpan(bkf_idx);
+            bk[0].Re = 1;
+            bk[0].Im = 0;
+
+            int coeff = 0;
+            for (int m = 1; m < n; ++m)
+            {
+                coeff += 2 * m - 1;
+                if (coeff >= 2 * n)
+                {
+                    coeff -= 2 * n;
+                }
+
+                bk[m].Re = tmp[2 * coeff];
+                bk[m].Im = tmp[2 * coeff + 1];
+            }
+
+            /* initialize the zero-padded, Fourier transformed b_k. Add normalisation. */
+            float xn2 = 1.0f / n2;
+            bkf[0].Re = bk[0].Re * xn2;
+            bkf[0].Im = bk[0].Im * xn2;
+            for (int m = 1; m < n; m++)
+            {
+                bkf[m].Re = bkf[n2 - m].Re = bk[m].Re * xn2;
+                bkf[m].Im = bkf[n2 - m].Im = bk[m].Im * xn2;
+            }
+
+            for (int m = n; m <= n2 - n; ++m)
+            {
+                bkf[m].Re = 0.0f;
+                bkf[m].Im = 0.0f;
+            }
+
+            plan = new PlanComplexPackedFloat32(n2);
+            plan.Forward(bkf, 1.0f);
+            DebugMemoryLeakTracer.TraceDisposableItemCreated(this);
+        }
+
+#if TRACK_IDISPOSABLE_LEAKS
+        ~PlanBluesteinFloat32()
+        {
+            Dispose(false);
+        }
+#endif
+
+        public void Dispose()
+        {
+            Dispose(true);
+            GC.SuppressFinalize(this);
+        }
+
+        protected virtual void Dispose(bool disposing)
+        {
+            if (!AtomicOperations.ExecuteOnce(ref _disposed))
+            {
+                return;
+            }
+
+            DebugMemoryLeakTracer.TraceDisposableItemDisposed(this, disposing);
+
+            if (disposing)
+            {
+                plan?.Dispose();
+                mem?.Dispose();
+            }
+        }
+
+        public void Forward(Span<float> c, float fct)
+        {
+            using (PooledBuffer<ComplexF> pooledTmp = BufferPool<ComplexF>.Rent(n))
+            {
+                ComplexF[] tmp = pooledTmp.Buffer;
+                for (int m = 0; m < n; ++m)
+                {
+                    tmp[m].Re = c[m];
+                    tmp[m].Im = 0.0f;
+                }
+
+                fftblue_fft(tmp, -1, fct);
+
+                c[0] = tmp[0].Re;
+
+                // Jank method
+                MemoryMarshal.Cast<ComplexF, float>(tmp.AsSpan(1, n - 1)).CopyTo(c.Slice(1));
+
+                // Safe method
+                //for (int i = 1; i < n; i++)
+                //{
+                //    c[2 * i - 1] = tmp[i].r;
+                //    c[2 * i] = tmp[i].i;
+                //}
+            }
+        }
+
+        public void Forward(Span<ComplexF> c, float fct)
+        {
+            fftblue_fft(c, -1, fct);
+        }
+
+        public void Backward(Span<float> c, float fct)
+        {
+            using (PooledBuffer<ComplexF> pooledTmp = BufferPool<ComplexF>.Rent(n))
+            {
+                ComplexF[] tmp = pooledTmp.Buffer;
+                tmp[0].Re = c[0];
+                tmp[1].Im = 0.0f;
+
+                // Jank method
+                c.Slice(1, (n - 1)).CopyTo(MemoryMarshal.Cast<ComplexF, float>(tmp.AsSpan(1)));
+
+                // Safe method
+                //for (int i = 1; i < n; i++)
+                //{
+                //    tmp[i].Re = c[2 * i - 1];
+                //    tmp[i].Im = c[2 * i];
+                //}
+
+                if ((n & 1) == 0)
+                {
+                    tmp[n - 1].Im = 0.0f;
+                }
+
+                for (int m = 1; m < n; m++)
+                {
+                    FFTIntrinsics.BLUESTEINSTEP0(ref tmp[n - m], ref tmp[m]);
+                }
+
+                fftblue_fft(tmp, 1, fct);
+                for (int m = 0; m < n; ++m)
+                {
+                    c[m] = tmp[m].Re;
+                }
+            }
+        }
+
+        public void Backward(Span<ComplexF> c, float fct)
+        {
+            fftblue_fft(c, 1, fct);
+        }
+
+        private void fftblue_fft(Span<ComplexF> c, int isign, float fct)
+        {
+            Span<ComplexF> bk = mem.Buffer.AsSpan(bk_idx);
+            Span<ComplexF> bkf = mem.Buffer.AsSpan(bkf_idx);
+            using (PooledBuffer<ComplexF> pooledAkf = BufferPool<ComplexF>.Rent(n2))
+            {
+                ComplexF[] akf = pooledAkf.Buffer;
+                /* initialize a_k and FFT it */
+                if (isign > 0)
+                {
+                    for (int m = 0; m < n; m++)
+                    {
+                        FFTIntrinsics.BLUESTEINSTEP1A(ref akf[m], ref bk[m], ref c[m]);
+                    }
+                }
+                else
+                {
+                    for (int m = 0; m < n; m++)
+                    {
+                        FFTIntrinsics.BLUESTEINSTEP1B(ref akf[m], ref c[m], ref bk[m]);
+                    }
+                }
+
+                MemoryMarshal.Cast<ComplexF, float>(akf.AsSpan(n, n2 - n)).Clear();
+                //for (int m = n; m < n2; ++m)
+                //{
+                //    akf[m].Re = 0;
+                //    akf[m].Im = 0;
+                //}
+
+                plan.Forward(akf, fct);
+
+                /* do the convolution */
+                if (isign > 0)
+                {
+                    for (int m = 0; m < n2; m++)
+                    {
+                        FFTIntrinsics.BLUESTEINSTEP2A(ref akf[m], ref bkf[m]);
+                    }
+                }
+                else
+                {
+                    for (int m = 0; m < n2; m++)
+                    {
+                        FFTIntrinsics.BLUESTEINSTEP2B(ref akf[m], ref bkf[m]);
+                    }
+                }
+
+                /* inverse FFT */
+                plan.Backward(akf, 1.0f);
+
+                /* multiply by b_k */
+                if (isign > 0)
+                {
+                    for (int m = 0; m < n; m++)
+                    {
+                        FFTIntrinsics.BLUESTEINSTEP3A(ref c[m], ref bk[m], ref akf[m]);
+                    }
+                }
+                else
+                {
+                    for (int m = 0; m < n; m++)
+                    {
+                        FFTIntrinsics.BLUESTEINSTEP3B(ref c[m], ref bk[m], ref akf[m]);
+                    }
+                }
+            }
+        }
+    }
+}

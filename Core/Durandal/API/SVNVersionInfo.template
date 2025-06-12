@@ -1,0 +1,24 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace Durandal.API
+{
+    public static class SVNVersionInfo
+    {
+        public const int MajorVersion = 22;
+        public const int MinorVersion = 0;
+        public const string Revision = "$WCREV$";
+        public const string BuildDate = "$WCDATE$";
+        public const string AssemblyVersion = "22.0.$WCREV$.0";
+        
+        public static string VersionString
+        {
+            get
+            {
+                return string.Format("{0}.{1}-{2}", MajorVersion, MinorVersion, Revision);
+            }
+        }
+    }
+}

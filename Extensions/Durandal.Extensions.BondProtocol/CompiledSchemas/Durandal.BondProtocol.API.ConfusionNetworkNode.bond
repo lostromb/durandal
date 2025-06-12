@@ -1,0 +1,11 @@
+namespace Durandal.Extensions.BondProtocol.API
+
+// Defines the Node used in ConfusionNetwork.
+struct ConfusionNetworkNode
+{
+    // Phrase element audio time offset in msec.
+    1: optional uint32 AudioTimeOffset;
+
+    // Index to the first following arc.
+    2: optional uint16 FirstFollowingArc;
+} 

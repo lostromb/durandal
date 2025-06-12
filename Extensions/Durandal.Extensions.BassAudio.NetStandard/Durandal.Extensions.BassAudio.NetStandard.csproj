@@ -1,0 +1,50 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <RootNamespace>Durandal.Extensions.BassAudio</RootNamespace>
+    <AssemblyName>Durandal.Extensions.BassAudio</AssemblyName>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+	<CodeAnalysisRuleSet>..\..\DurandalCodeAnalysis.ruleset</CodeAnalysisRuleSet>
+	<SignAssembly>True</SignAssembly>
+	<AssemblyOriginatorKeyFile>..\..\durandal.snk</AssemblyOriginatorKeyFile>
+	<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+  </PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+		<DefineConstants>TRACE;TRACK_IDISPOSABLE_LEAKS</DefineConstants>
+		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+	</PropertyGroup>
+
+  <Import Project="..\Durandal.Extensions.BassAudio\Durandal.Extensions.BassAudio.projitems" Label="Shared" />
+
+  <ItemGroup>
+    <PackageReference Include="ManagedBass" Version="3.1.1" />
+    <PackageReference Include="System.Memory" Version="4.5.5" />
+    <PackageReference Include="System.Threading.Tasks.Extensions" Version="4.5.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Core\Durandal.NetStandard\Durandal.NetStandard.csproj" />
+  </ItemGroup>
+	
+<ItemGroup>
+	<Content Include="..\Durandal.Extensions.BassAudio\runtimes\**\*.dll">
+		<Link>runtimes\%(RecursiveDir)%(Filename)%(Extension)</Link>
+		<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	</Content>
+	<Content Include="..\Durandal.Extensions.BassAudio\runtimes\**\*.so">
+		<Link>runtimes\%(RecursiveDir)%(Filename)%(Extension)</Link>
+		<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	</Content>
+	<Content Include="..\Durandal.Extensions.BassAudio\runtimes\**\*.dylib">
+		<Link>runtimes\%(RecursiveDir)%(Filename)%(Extension)</Link>
+		<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	</Content>
+</ItemGroup>
+
+</Project>

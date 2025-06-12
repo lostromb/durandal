@@ -1,0 +1,6 @@
+netsh http delete sslcert ipport=0.0.0.0:62292
+netsh http delete sslcert ipport=0.0.0.0:62294
+netsh http delete sslcert ipport=0.0.0.0:443
+netsh http add sslcert ipport=0.0.0.0:62292 certhash=becb1e00416a3ba65b70d19ecdd893773c9ce54f appid="{a98456fe-46b3-464e-a074-17eab93ab607}"
+netsh http add sslcert ipport=0.0.0.0:62294 certhash=becb1e00416a3ba65b70d19ecdd893773c9ce54f appid="{38df3db7-9ec6-4181-9616-e07b1f4aff42}"
+netsh http add sslcert ipport=0.0.0.0:443 certhash=becb1e00416a3ba65b70d19ecdd893773c9ce54f appid="{38df3db7-9ec6-4181-9616-e07b1f4aff42}"

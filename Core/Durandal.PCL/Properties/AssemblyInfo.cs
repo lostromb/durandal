@@ -1,0 +1,24 @@
+﻿using System.Resources;
+using System.Reflection;
+using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
+using Durandal.API;
+
+[assembly: AssemblyTitle("Durandal")]
+[assembly: AssemblyDescription("Primary API and portable core library for Durandal (PCL)")]
+[assembly: AssemblyConfiguration("")]
+[assembly: AssemblyCompany("Microsoft Corporation")]
+[assembly: AssemblyProduct("Durandal")]
+[assembly: AssemblyCopyright("Copyright © 2019 Microsoft Corporation")]
+[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCulture("")]
+[assembly: NeutralResourcesLanguage("en")]
+[assembly: AssemblyVersion(SVNVersionInfo.AssemblyVersion)]
+[assembly: AssemblyFileVersion(SVNVersionInfo.AssemblyVersion)]
+/*
+[assembly: InternalsVisibleTo("Durandal.CoreTests, PublicKey=002400000480000094000000060200000024000052534131000400000100010071a2f675c04c87e64b9be6d37f5833c5285fb4ed883780cf6d61e80aee5d77950b2f06dd45bc634f53405f2a2b7b2332f4dfdcb0554ffc97b935e7343e76e733eea44346e56ac1098c12a66de71e324f2f503f9f2e32560910e2082d6943df50db42679a330e52979bd1eefbb59485d2c7420d158f6ab6d41bdf42d2172675e1")]
+[assembly: InternalsVisibleTo("Durandal.Win32, PublicKey=002400000480000094000000060200000024000052534131000400000100010071a2f675c04c87e64b9be6d37f5833c5285fb4ed883780cf6d61e80aee5d77950b2f06dd45bc634f53405f2a2b7b2332f4dfdcb0554ffc97b935e7343e76e733eea44346e56ac1098c12a66de71e324f2f503f9f2e32560910e2082d6943df50db42679a330e52979bd1eefbb59485d2c7420d158f6ab6d41bdf42d2172675e1")]
+
+[assembly: InternalsVisibleTo("Durandal.CoreTests")]
+[assembly: InternalsVisibleTo("Durandal.Win32")]
+*/

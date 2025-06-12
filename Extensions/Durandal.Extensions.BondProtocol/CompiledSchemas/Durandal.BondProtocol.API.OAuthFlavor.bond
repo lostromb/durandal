@@ -1,0 +1,6 @@
+namespace Durandal.Extensions.BondProtocol.API
+
+enum OAuthFlavor
+{
+    OAuth2
+};

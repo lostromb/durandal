@@ -1,0 +1,9 @@
+﻿{
+  "Id": "http://schema.org/Enumeration",
+  "Comment": "Lists or enumerations—for example, a list of cuisines or music genres, etc.",
+  "Label": "Enumeration",
+  "InheritsFrom": [
+    "http://schema.org/Intangible"
+  ],
+  "Fields": {}
+}

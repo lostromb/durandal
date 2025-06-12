@@ -1,0 +1,10 @@
+import "Durandal.BondProtocol.API.PluginStrongName.bond"
+import "Durandal.BondProtocol.Remoting.RemoteMessage.bond"
+import "Durandal.BondProtocol.Remoting.RemoteProcedureRequest.bond"
+
+namespace Durandal.Extensions.BondProtocol.Remoting
+
+struct RemoteLoadPluginRequest : RemoteProcedureRequest
+{
+    3: required Durandal.Extensions.BondProtocol.API.PluginStrongName PluginId;
+}

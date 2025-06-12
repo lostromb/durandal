@@ -1,0 +1,9 @@
+import "Durandal.BondProtocol.Remoting.RemoteProcedureResponse.bond"
+import "Durandal.BondProtocol.API.PluginStrongName.bond"
+
+namespace Durandal.Extensions.BondProtocol.Remoting
+
+struct RemoteListPluginStrongNameResponse : RemoteProcedureResponse
+{
+    4: nullable<vector<Durandal.Extensions.BondProtocol.API.PluginStrongName>> ReturnVal;
+}

@@ -1,0 +1,9 @@
+namespace Durandal.Extensions.BondProtocol.API
+
+enum DomainScope
+{
+    Local,
+	Common,
+	External,
+	CommonExternal
+};

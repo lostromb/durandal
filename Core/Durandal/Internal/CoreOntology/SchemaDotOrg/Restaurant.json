@@ -1,0 +1,9 @@
+﻿{
+  "Id": "http://schema.org/Restaurant",
+  "Comment": "A restaurant.",
+  "Label": "Restaurant",
+  "InheritsFrom": [
+    "http://schema.org/FoodEstablishment"
+  ],
+  "Fields": {}
+}

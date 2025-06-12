@@ -1,0 +1,8 @@
+namespace Durandal.Extensions.BondProtocol.Remoting
+
+enum RemoteMessageType
+{
+	Unknown,
+	Request,
+	Response
+};

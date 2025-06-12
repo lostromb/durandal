@@ -1,0 +1,37 @@
+import "Durandal.BondProtocol.API.ClientContext.bond"
+import "Durandal.BondProtocol.API.SpeechRecognitionResult.bond"
+
+namespace Durandal.Extensions.BondProtocol.API
+
+struct LURequest
+{
+    // Versioning for this communication
+	1: required int32 ProtocolVersion = 20;
+	
+	// Input string if input method is text
+	2: nullable<string> TextInput;
+	
+	// Speech recognition result if input method is speech
+	3: nullable<SpeechRecognitionResult> SpeechInput;
+	
+	// The user's complete client context, including client id and locale
+    4: required ClientContext Context;
+	
+	// If this is true, extra annotators like Timex and Canonicalizer will be used
+    5: bool DoFullAnnotation = true;
+	
+	// A debugging traceid
+    6: optional string TraceId;
+	
+	// The client can choose to limit the responses to only a few domains, defined by this list.
+	// Empty lists will be ignored
+    7: optional vector<string> DomainScope;
+
+	// Stores flags that identify the type of request.
+	// Common flags might be for debug, trace, etc.
+	8: optional uint32 RequestFlags = 0;
+	
+	// Dialog can specify domains that are currently relevant on its conversation stack.
+	// This can be used by LU to allow or disallow certain multiturn-only intents from coming up
+    9: optional vector<string> ContextualDomains;
+}

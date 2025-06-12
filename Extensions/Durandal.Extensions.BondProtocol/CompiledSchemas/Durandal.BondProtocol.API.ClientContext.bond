@@ -1,0 +1,41 @@
+namespace Durandal.Extensions.BondProtocol.API
+
+struct ClientContext
+{
+    // A unique GUID identifier for the client device making the request. (Device, not user)
+	1: required string ClientId = "";
+	
+	// A set of client capabilities, expressed as flags
+    2: required uint32 Capabilities = 0;
+	
+	// The language code representing the user's preferred language for speech and text ("pt-br", "en-us", etc)
+    3: required string Locale = "";
+
+	// A GUID identifier of the user of the system. One user can use multiple clients simultaneously.
+	4: required string UserId = "0";
+    
+	// A "friendly" name for this client (device); Deprecated if any authentication is used which will authenticate the client separately
+    5: string ClientName;
+    
+    // The user's reference time, in ISO8601 format
+    6: nullable<string> ReferenceDateTime;
+    
+    // The user's current UTC offset, in minutes (i.e -480, -360, etc)
+    7: nullable<int32> UTCOffset;
+    
+    // The user's current location, as best as can be provided by the client
+    8: nullable<double> Latitude;
+    9: nullable<double> Longitude;
+    10: nullable<double> LocationAccuracy;
+
+    // Any extra data that is associated with the client intrinsically.
+	// Please do not use this to send transient, request-specific data; there is a separate field on DialogRequest for that.
+    11: optional map<string, string> ExtraClientContext;
+
+	// A list of actions (action URLs or just names) that can be supported by this client.
+	// These should match the schema that you establish for the ResponseAction field of the client response.
+	12: optional set<string> SupportedClientActions;
+	
+	// User's current time zone in POSIX format
+	13: nullable<string> UserTimeZone;
+}

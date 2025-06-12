@@ -1,0 +1,12 @@
+import "Durandal.BondProtocol.API.ContextualEntitySource.bond"
+
+namespace Durandal.Extensions.BondProtocol.API
+
+struct ContextualEntity
+{
+    1: required string EntityId;
+
+    2: required float Relevance;
+	
+	3: ContextualEntitySource Source = Unknown;
+} 

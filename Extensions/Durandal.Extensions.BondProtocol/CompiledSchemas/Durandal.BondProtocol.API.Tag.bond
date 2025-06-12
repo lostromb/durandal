@@ -1,0 +1,11 @@
+namespace Durandal.Extensions.BondProtocol.API
+
+// Schema describing a tag of a phrase
+struct Tag
+{
+    // An index into the input string referring to the character location where tag can be found
+    1: optional int32 Index;
+
+    // The length of the tag, in characters
+    2: optional int32 Length;
+} 

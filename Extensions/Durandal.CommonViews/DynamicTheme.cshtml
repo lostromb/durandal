@@ -1,0 +1,107 @@
+﻿@var IDictionary<string,string> ClientContextData = null
+@Namespace Durandal.CommonViews
+
+<style type="text/css">
+.globalFontColor
+{
+	<if condition='ClientContextData != null && ClientContextData.ContainsKey("theme:font1")'>
+    color: ${ClientContextData["theme:font1"]};
+    </if>
+    <else>
+    color: #EEEEEE;
+    </else>
+}
+.globalFontColorAccent
+{
+	<if condition='ClientContextData != null && ClientContextData.ContainsKey("theme:font2")'>
+    color: ${ClientContextData["theme:font2"]};
+    </if>
+    <else>
+    color: #1FED14;
+    </else>
+}
+.globalFontColorSubtitle
+{
+	<if condition='ClientContextData != null && ClientContextData.ContainsKey("theme:font3")'>
+    color: ${ClientContextData["theme:font3"]};
+    </if>
+    <else>
+    color: #999999;
+    </else>
+}
+
+.globalLinkColor
+{
+	<if condition='ClientContextData != null && ClientContextData.ContainsKey("theme:link1")'>
+    color: ${ClientContextData["theme:link1"]};
+    </if>
+    <else>
+    color: #94AFE7;
+    </else>
+}
+.globalLinkColor:visited
+{
+	<if condition='ClientContextData != null && ClientContextData.ContainsKey("theme:link2")'>
+    color: ${ClientContextData["theme:link2"]};
+    </if>
+    <else>
+    color: #C2A3DD;
+    </else>
+}
+.globalBgColor
+{
+	<if condition='ClientContextData != null && ClientContextData.ContainsKey("theme:bg1")'>
+    background-color: ${ClientContextData["theme:bg1"]};
+    </if>
+    <else>
+    background-color: #000000;
+    </else>
+}
+.globalBgColorLight
+{
+	<if condition='ClientContextData != null && ClientContextData.ContainsKey("theme:bg2")'>
+    background-color: ${ClientContextData["theme:bg2"]};
+    </if>
+    <else>
+    background-color: #333333;
+    </else>
+}
+.globalBgColorAccent
+{
+	<if condition='ClientContextData != null && ClientContextData.ContainsKey("theme:bg3")'>
+    background-color: ${ClientContextData["theme:bg3"]};
+    </if>
+    <else>
+    background-color: #666666;
+    </else>
+}
+
+.buttonDiv
+{
+	<if condition='ClientContextData != null && ClientContextData.ContainsKey("theme:button1")'>
+    background-color: ${ClientContextData["theme:button1"]};
+    </if>
+    <else>
+    background-color: #333333;
+    </else>
+}
+
+.buttonLink
+{
+    <if condition='ClientContextData != null && ClientContextData.ContainsKey("theme:button2")'>
+    color: ${ClientContextData["theme:button2"]};
+    </if>
+    <else>
+    color: #FFFFFF;
+    </else>
+}
+.buttonLink:visited
+{
+    <if condition='ClientContextData != null && ClientContextData.ContainsKey("theme:button2")'>
+    color: ${ClientContextData["theme:button2"]};
+    </if>
+    <else>
+    color: #FFFFFF;
+    </else>
+}
+</style>

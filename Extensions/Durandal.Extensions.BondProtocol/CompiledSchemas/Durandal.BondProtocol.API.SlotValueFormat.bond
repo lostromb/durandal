@@ -1,0 +1,17 @@
+namespace Durandal.Extensions.BondProtocol.API
+
+enum SlotValueFormat
+{
+    // Unknown source
+	Unknown,
+	// This value came from something the user typed
+    TypedText,
+	// This value came from something the user spoke
+    SpokenText,
+	// This value is a basic string that was passed between domains
+    CrossDomainTag,
+	// This value is a programmatically-generated parameter that can be invoked via dialog action
+    DialogActionParameter,
+	// This value is a structured entity that should be parsed as JSON, XML, or similar
+	StructuredData
+};

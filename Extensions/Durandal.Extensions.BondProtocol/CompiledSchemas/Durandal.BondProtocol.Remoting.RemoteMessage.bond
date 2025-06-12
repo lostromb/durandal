@@ -1,0 +1,8 @@
+import "Durandal.BondProtocol.Remoting.RemoteMessageType.bond"
+
+namespace Durandal.Extensions.BondProtocol.Remoting
+
+struct RemoteMessage
+{
+    1: required RemoteMessageType MessageType = Unknown;
+}

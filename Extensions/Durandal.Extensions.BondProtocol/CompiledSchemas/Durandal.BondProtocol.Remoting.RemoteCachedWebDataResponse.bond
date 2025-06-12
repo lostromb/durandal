@@ -1,0 +1,9 @@
+import "Durandal.BondProtocol.Remoting.RemoteProcedureResponse.bond"
+import "Durandal.BondProtocol.API.CachedWebData.bond"
+
+namespace Durandal.Extensions.BondProtocol.Remoting
+
+struct RemoteCachedWebDataResponse : RemoteProcedureResponse
+{
+    4: nullable<Durandal.Extensions.BondProtocol.API.CachedWebData> ReturnVal;
+}

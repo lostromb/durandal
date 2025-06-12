@@ -1,0 +1,6 @@
+﻿{
+  "Id": "http://schema.org/Male",
+  "Comment": "The male gender.",
+  "Label": "Male",
+  "Type": "http://schema.org/GenderType"
+}

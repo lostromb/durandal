@@ -1,0 +1,27 @@
+import "Durandal.BondProtocol.API.AudioData.bond"
+
+namespace Durandal.Extensions.BondProtocol.API
+
+struct MultiTurnBehavior
+{
+    // Indicates that this conversation should be continued
+	1: required bool Continues;
+	
+	// Indicates that the client should prompt for more input immediately, without waiting for the user
+    2: required bool IsImmediate;
+	
+	// If IsImmediate is true, this is a hint for how long (ms) to pause before prompting
+    3: int32 SuggestedPauseDelay;
+	
+	// This specifies how long the conversation info will remain in-memory before it expires.
+	// The conversation is considered "over" after this elapses
+    4: int32 ConversationTimeoutSeconds = 60;
+	
+	// This flag indicates that the conversation will continue, but that the client will not
+	// prompt automatically for more input. This can be quite dangerous, as you can imagine;
+	// it means a single answer plugin is exclusively responsible for the entire conversation,
+	// and can hijack other conversation plugins maliciously if it chooses. Therefore, it is up
+	// to the dialog engine to apply appropriate "conversational security" measures, or choose to
+	// not honor this flag at all.
+	5: bool FullConversationControl = false;
+}

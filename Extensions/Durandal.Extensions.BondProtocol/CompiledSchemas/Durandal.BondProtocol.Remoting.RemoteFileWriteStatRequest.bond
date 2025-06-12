@@ -1,0 +1,11 @@
+import "Durandal.BondProtocol.Remoting.RemoteMessage.bond"
+import "Durandal.BondProtocol.Remoting.RemoteProcedureRequest.bond"
+
+namespace Durandal.Extensions.BondProtocol.Remoting
+
+struct RemoteFileWriteStatRequest : RemoteProcedureRequest
+{
+	3: required string TargetPath;
+	4: nullable<int64> NewWriteTime;
+	5: nullable<int64> NewCreationTime;
+}

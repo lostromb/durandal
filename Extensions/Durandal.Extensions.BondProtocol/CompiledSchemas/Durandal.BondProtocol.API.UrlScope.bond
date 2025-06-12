@@ -1,0 +1,14 @@
+namespace Durandal.Extensions.BondProtocol.API
+
+enum UrlScope
+{
+    // This URL has an unknown scope
+	Unknown,
+
+	// This URL is an address relative to the local domain (in other words, it starts with a /)
+    Local,
+
+	// This is an absolute URL that refers to a separate domain. Note that usage of this is basically
+	// deprecated; if you want the client to open a browser window, send a NavigateWeb action instead
+    External
+};

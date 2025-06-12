@@ -1,0 +1,9 @@
+import "Durandal.BondProtocol.API.LexicalString.bond"
+
+namespace Durandal.Extensions.BondProtocol.API
+
+struct LexicalNamedEntity
+{
+    1: int32 Ordinal;
+	2: vector<LexicalString> KnownAs;
+}

@@ -1,0 +1,10 @@
+import "Durandal.BondProtocol.API.InstrumentationData.bond"
+import "Durandal.BondProtocol.Remoting.RemoteMessage.bond"
+import "Durandal.BondProtocol.Remoting.RemoteProcedureRequest.bond"
+
+namespace Durandal.Extensions.BondProtocol.Remoting
+
+struct RemoteLogMessageRequest : RemoteProcedureRequest
+{
+    3: required Durandal.Extensions.BondProtocol.API.InstrumentationEventList LogEvents;
+}

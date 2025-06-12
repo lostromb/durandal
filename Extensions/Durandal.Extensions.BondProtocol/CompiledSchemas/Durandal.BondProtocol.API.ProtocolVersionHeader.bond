@@ -1,0 +1,10 @@
+﻿import "Durandal.BondProtocol.API.DialogRequest.bond"
+
+namespace Durandal.Extensions.BondProtocol.API
+
+// This is used to "peek" at serialized requests (ClientRequest, LURequest), partially deserializing them
+// in advance to see if they use a supported protocol type and version.
+struct ProtocolVersionHeader view_of DialogRequest
+{
+	ProtocolVersion;
+}

@@ -1,0 +1,13 @@
+import "Durandal.BondProtocol.Remoting.RemoteMessage.bond"
+import "Durandal.BondProtocol.Remoting.RemoteProcedureRequest.bond"
+import "Durandal.BondProtocol.API.LexicalString.bond"
+import "Durandal.BondProtocol.API.LexicalNamedEntity.bond"
+
+namespace Durandal.Extensions.BondProtocol.Remoting
+
+struct RemoteResolveEntityRequest : RemoteProcedureRequest
+{
+	3: required Durandal.Extensions.BondProtocol.API.LexicalString Input;
+	4: required vector<Durandal.Extensions.BondProtocol.API.LexicalNamedEntity> Possibilities;
+	5: required string Locale;
+}

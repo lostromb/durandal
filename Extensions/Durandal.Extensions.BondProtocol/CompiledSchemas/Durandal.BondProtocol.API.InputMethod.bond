@@ -1,0 +1,30 @@
+namespace Durandal.Extensions.BondProtocol.API
+
+enum InputMethod
+{
+	/// Input method is not known
+	Unknown,
+
+	/// A user manually typed text and submitted it.
+	/// Audio responses are generally not allowed with this input method.
+    Typed,
+
+	// A user spoke an input and it was transcribed into text
+	/// We generally expect the system to speak a response back
+    Spoken,
+
+	/// The system took action without the user's intervention,
+	/// for example a delayed, proactive or UI refresh task
+    Programmatic,
+
+	/// A user pressed a physical button of some kind to trigger the action
+	/// Audio responses are not allowed with this input method, as we generally
+	/// assume the user wants the device to shut up while they are pressing
+	/// buttons on it. If you want audio then use TactileWithAudio.
+	Tactile,
+
+	/// Same as Tactile except that the system is allowed to play audio
+	/// as part of the response. This may be desirable in specific use cases,
+	/// such as an interactive game, a user with impaired vision, or some kind of public kiosk
+	TactileWithAudio
+};

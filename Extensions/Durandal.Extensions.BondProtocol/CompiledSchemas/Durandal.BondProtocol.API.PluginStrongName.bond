@@ -1,0 +1,10 @@
+namespace Durandal.Extensions.BondProtocol.API
+
+struct PluginStrongName
+{
+	1: required string PluginId;
+	
+    2: required int32 MajorVersion;
+	
+    3: required int32 MinorVersion;
+}

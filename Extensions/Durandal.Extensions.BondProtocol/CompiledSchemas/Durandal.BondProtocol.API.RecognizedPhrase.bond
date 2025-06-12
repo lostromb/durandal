@@ -1,0 +1,20 @@
+import "Durandal.BondProtocol.API.RecoResult.bond"
+
+namespace Durandal.Extensions.BondProtocol.API
+
+struct RecognizedPhrase
+{
+    // The original input text that triggered this response
+	1: required string Utterance;
+	
+	// The set of RecoResults parsed from this input. Each RecoResult represents
+	// a hypothesized user intent, with slot info and annotations
+	2: required vector<RecoResult> Recognition;
+
+	// An optional set of sentiments which were output as a result of sentiment analysis.
+	// Sentiment is calculated by a specific domain model defined by sentimentDomainName
+	3: map<string, float> Sentiments;
+
+	// If any entities were extracted as part of recogition, they will be associated with this serialized KnowledgeContext
+	4: blob EntityContext;
+}

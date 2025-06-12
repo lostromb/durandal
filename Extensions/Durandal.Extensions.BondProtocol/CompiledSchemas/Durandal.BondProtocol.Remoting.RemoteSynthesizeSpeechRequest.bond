@@ -1,0 +1,10 @@
+import "Durandal.BondProtocol.Remoting.RemoteMessage.bond"
+import "Durandal.BondProtocol.Remoting.RemoteProcedureRequest.bond"
+import "Durandal.BondProtocol.API.SpeechSynthesisRequest.bond"
+
+namespace Durandal.Extensions.BondProtocol.Remoting
+
+struct RemoteSynthesizeSpeechRequest : RemoteProcedureRequest
+{
+    3: required Durandal.Extensions.BondProtocol.API.SpeechSynthesisRequest SynthRequest;
+}

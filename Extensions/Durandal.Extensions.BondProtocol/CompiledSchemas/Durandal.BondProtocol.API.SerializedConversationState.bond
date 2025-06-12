@@ -1,0 +1,32 @@
+import "Durandal.BondProtocol.API.RecoResult.bond"
+import "Durandal.BondProtocol.API.InMemoryDataStore.bond"
+import "Durandal.BondProtocol.API.MultiTurnBehavior.bond"
+
+namespace Durandal.Extensions.BondProtocol.API
+
+struct SerializedConversationState
+{
+    1: required int32 TurnNum = 0;
+    
+    2: required int32 RetryNum = 0;
+    
+    3: required vector<RecoResult> PreviousConversationTurns = nothing;
+    
+    4: required string CurrentPluginDomain = "";
+    
+    5: required MultiTurnBehavior LastMultiturnState;
+	
+	6: required string CurrentConversationNode = "";
+	
+	7: required int64 ConversationExpireTime = 0;
+	
+	8: InMemoryDataStore SessionStore;
+
+	9: string NextContinuationFuncName = "";
+	
+	10: string CurrentPluginId = "";
+	
+	11: int32 CurrentPluginVersionMajor = 0;
+	
+	12: int32 CurrentPluginVersionMinor = 0;
+}

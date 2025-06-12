@@ -1,0 +1,11 @@
+import "Durandal.BondProtocol.API.AudioData.bond"
+import "Durandal.BondProtocol.API.AudioOrdering.bond"
+
+namespace Durandal.Extensions.BondProtocol.API
+
+struct AudioResponse
+{
+	1: required AudioData Data;
+	
+	2: AudioOrdering Ordering = AfterSpeech;
+}
