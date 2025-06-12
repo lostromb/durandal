@@ -13,6 +13,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using System.Xml;
 
 namespace Durandal.Common.Audio.Components
 {
@@ -38,6 +39,7 @@ namespace Durandal.Common.Audio.Components
         private readonly string _nodeFullName;
         private readonly WeakPointer<IAudioGraph> _inputGraph;
         private readonly WeakPointer<IAudioGraph> _outputGraph;
+        private readonly Guid _uniqueId = Guid.NewGuid();
         private bool _playbackFinished = false;
         private int _samplesPerChannelInBuffer = 0; // Number of samples per channel currently buffered
         private int _disposed = 0;
@@ -83,6 +85,9 @@ namespace Durandal.Common.Audio.Components
             Dispose(false);
         }
 #endif
+
+        /// <inheritdoc/>
+        public Guid NodeId => _uniqueId;
 
         /// <inheritdoc/>
         public IAudioGraph InputGraph => _inputGraph.Value;

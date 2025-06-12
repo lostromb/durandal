@@ -1,0 +1,9 @@
+﻿{
+  "Id": "http://schema.org/GenderType",
+  "Comment": "An enumeration of genders.",
+  "Label": "GenderType",
+  "InheritsFrom": [
+    "http://schema.org/Enumeration"
+  ],
+  "Fields": {}
+}

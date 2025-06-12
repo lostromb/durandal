@@ -1,0 +1,62 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net7.0-windows</TargetFramework>
+    <AssemblyName>Durandal.ConsoleClient</AssemblyName>
+    <RootNamespace>Durandal.ConsoleClient</RootNamespace>
+    <BaseOutputPath></BaseOutputPath>
+    <GenerateDocumentationFile>False</GenerateDocumentationFile>
+    <DocumentationFile></DocumentationFile>
+    <Platforms>x64</Platforms>
+	<CodeAnalysisRuleSet>..\..\DurandalCodeAnalysis.ruleset</CodeAnalysisRuleSet>
+	<ProduceReferenceAssembly>False</ProduceReferenceAssembly>
+	<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <DefineConstants>$(DefineConstants);TRACK_IDISPOSABLE_LEAKS</DefineConstants>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <PlatformTarget>x64</PlatformTarget>
+    <DefineConstants>$(DefineConstants)</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="..\..\Bundles\bundle_client.zip">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Text.RegularExpressions" Version="4.3.1" />
+    <PackageReference Include="System.Threading.Tasks.Extensions" Version="4.5.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Core\Durandal.NetCore\Durandal.NetCore.csproj" />
+    <ProjectReference Include="..\..\Core\Durandal.NetStandard\Durandal.NetStandard.csproj" />
+    <ProjectReference Include="..\..\Extensions\Durandal.Extensions.NativeAudio\Durandal.Extensions.NativeAudio.csproj" />
+    <ProjectReference Include="..\..\Extensions\Durandal.Extensions.NAudio.NetStandard\Durandal.Extensions.NAudio.NetStandard.csproj" />
+    <ProjectReference Include="..\..\Extensions\Durandal.Extensions.Sapi\Durandal.Extensions.Sapi.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Confirm.raw">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Fail.raw">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Prompt.raw">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="sphinx.pack">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <Import Project="..\Durandal.ConsoleClient\Durandal.ConsoleClient.projitems" Label="Shared" />
+
+</Project>

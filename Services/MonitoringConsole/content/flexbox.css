@@ -1,0 +1,116 @@
+﻿@charset "utf-8";
+.flex
+{
+	display: -ms-flexbox;
+	display: -ms-flex;
+	display: -webkit-flex;
+	display: -webkit-box;
+	display: -moz-box;
+	display: flex;
+}
+.flexAppContainer
+{
+	width: 100%;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	bottom: 0px;
+	z-index: 1000;
+	overflow-y: hidden;
+}
+.flex-stretch
+{
+	-webkit-align-items: stretch;
+	-moz-align-items: stretch;
+	-ms-align-items: stretch;
+    align-items: stretch;
+}
+.flex-center
+{
+	-webkit-align-items: center;
+	-moz-align-items: center;
+	-ms-align-items: center;
+    align-items: center;
+}
+.flexBoxRow
+{
+	width: 100%;
+	height: 100%;
+	-webkit-flex-direction: row;
+	flex-direction: row;
+	-webkit-flex-flow: row nowrap;
+	-moz-flex-flow: row nowrap;
+	-ms-flex-flow: row nowrap;
+	flex-flow: row nowrap;
+}
+.flexBoxRowFlow
+{
+	width: 100%;
+	-webkit-flex-direction: row;
+	flex-direction: row;
+	-webkit-flex-flow: row nowrap;
+	-moz-flex-flow: row nowrap;
+	-ms-flex-flow: row nowrap;
+	flex-flow: row nowrap;
+}
+.flexBoxColumn
+{
+	width: 100%;
+	height: 100%;
+	-webkit-flex-direction: column;
+	flex-direction: column;
+	-webkit-flex-flow: column nowrap;
+	-moz-flex-flow: column nowrap;
+	-ms-flex-flow: column nowrap;
+	flex-flow: column nowrap;
+}
+
+.flexBoxColumnFlow
+{
+	width: 100%;
+	-webkit-flex-direction: column;
+	flex-direction: column;
+	-webkit-flex-flow: column nowrap;
+	-moz-flex-flow: column nowrap;
+	-ms-flex-flow: column nowrap;
+	flex-flow: column nowrap;
+}
+.noFlexShrink
+{
+	-webkit-flex-shrink: 0;
+	-moz-flex-shrink: 0;
+    -ms-flex-shrink: 0;
+    flex-shrink: 0;
+}
+.flex1
+{
+	-webkit-box-flex: 1;
+	-moz-box-flex: 1;
+	-webkit-flex: 1;
+	-ms-flex: 1 1 auto;
+	flex: 1;
+}
+.flex2
+{
+	-webkit-box-flex: 2;
+	-moz-box-flex: 2;
+	-webkit-flex: 2;
+	-ms-flex: 2 2 auto;
+	flex: 2;
+}
+.flex3
+{
+	-webkit-box-flex: 3;
+	-moz-box-flex: 3;
+	-webkit-flex: 3;
+	-ms-flex: 3 3 auto;
+	flex: 3;
+}
+.flex5
+{
+	-webkit-box-flex: 5;
+	-moz-box-flex: 5;
+	-webkit-flex: 5;
+	-ms-flex: 5 5 auto;
+	flex: 5;
+}

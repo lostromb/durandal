@@ -1,0 +1,47 @@
+﻿@namespace DurandalServices.Wayfinder
+@using Durandal.Common.Instrumentation
+@using Durandal.Common.Logger
+@var string TraceId
+@var string TimelineImageUrl
+@var string FormattedInstrumentationObject
+@var UnifiedTrace Trace
+
+<!DOCTYPE html>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<html>
+    <head>
+        <title>Durandal Analytics</title>
+    </head>
+    <body>
+        <h1>Wayfinder</h1>
+        <if condition="Trace == null">
+            <span>No trace information found for ${TraceId}!</span>
+        </if>
+        <else>
+            <h2>Trace information for ${TraceId}:</h2>
+            <p>
+                <span>Start time: ${Trace.TraceStart.ToString("yyyy-MM-ddTHH:mm:ss.fffff")} UTC</span><br>
+                <span>End time: ${Trace.TraceEnd.ToString("yyyy-MM-ddTHH:mm:ss.fffff")} UTC</span><br>
+                <span>Duration: ${Trace.TraceDuration} seconds</span><br>
+            </p>
+            <h2>Impression Data:</h2>
+            <p>
+                <pre>${FormattedInstrumentationObject}</pre>
+            </p>
+            <if condition="TimelineImageUrl != null">
+                <h2>Timeline:</h2>
+                <p>
+                    <img src="${TimelineImageUrl}" />
+                </p>
+            </if>
+            <h2>Raw Logs:</h2>
+            <pre>
+                <for each="LogEvent log in Trace.LogEvents">
+                <if condition="log.Level != LogLevel.Ins">
+                        ${log.ToDetailedString()}
+				    </if>
+			    </for>
+		    </pre>
+        </else>
+    </body>
+</html>

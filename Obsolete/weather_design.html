@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+<link href="/views/common/global_html5.css" rel="stylesheet" type="text/css"/>
+<link href="/views/common/flexbox.css" rel="stylesheet" type="text/css"/>
+<link href="/views/weather/weather.css" rel="stylesheet" type="text/css"/>
+<title>Local weather</title>
+<script src="/views/weather/js/jquery.min.js"></script>
+<script src="/views/weather/js/backstretch.js"></script>
+<script type="text/javascript">$(document).ready(function() { $.backstretch("/views/weather/bg/day ice.jpg"); });</script>
+</head>
+<body class="globalFontStyle">
+	<div class="flex flexAppContainer">
+		<div class="flex flexBoxColumn flex-stretch">
+			<div class="flex alignCenter">
+				<div class="flex flexBoxColumn">
+					<span id="locationLabel">Los Angeles, CA</span>
+					<span id="temperature">67.4°</span>
+					<span id="conditionLabel">Haze</span>
+				</div>
+			</div>
+			<div class="flex lightBackground">
+				<div class="flex flexBoxColumn">
+					<div class="flex flexBoxRow">
+						<div class="flex flex1"></div>
+						<div class="flex noFlexShrink weatherDetailItem">
+							Wind<br/>5.8 mph WNW
+						</div>
+						<div class="flex noFlexShrink weatherDetailItem">
+							Rain<br/>0 in.
+						</div>
+						<div class="flex noFlexShrink weatherDetailItem">
+							Humidity<br/>86%
+						</div>
+						<div class="flex noFlexShrink weatherDetailItem">
+							Pressure<br/>29.89 in.
+						</div>
+						<div class="flex flex1"></div>
+					</div>
+				</div>
+			</div>
+			<div class="flex medBackground">
+				<div class="flex flexBoxColumn flex-center">
+					<span id="forecastLabel">Forecast</span>
+					<div class="flex flexBoxRow">
+						<div class="flex flex1"></div>
+						<div class="flex noFlexShrink weatherDetailItem">
+							Mon<br><img src="/views/weather/icons/${ConditionImageName}" class="weatherConditionIcon"><br>0°<br>100°
+						</div>
+						<div class="flex noFlexShrink weatherDetailItem">
+							Tue<br><img src="/views/weather/icons/${ConditionImageName}" class="weatherConditionIcon"><br>0°<br>100°
+						</div>
+						<div class="flex noFlexShrink weatherDetailItem">
+							Wed<br><img src="/views/weather/icons/${ConditionImageName}" class="weatherConditionIcon"><br>0°<br>100°
+						</div>
+						<div class="flex flex1"></div>
+					</div>
+				</div>
+			</div>
+			<div class="flex medBackground flex1"></div>
+			<div id="copyrightField">Data by WeatherUnderground</div>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,9 @@
+namespace csharp Durandal.API
+namespace java org.stromberg.durandal.api
+
+enum Result
+{
+    Success,
+    Failure,
+    Skip
+};

@@ -1,0 +1,10 @@
+namespace csharp Durandal.API
+namespace java org.stromberg.durandal.api
+
+enum SlotValueFormat
+{
+    TypedText,
+    SpokenText,
+    CrossDomainTag,
+    DialogActionParameter
+};

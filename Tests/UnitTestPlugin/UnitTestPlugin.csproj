@@ -1,0 +1,49 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetPath>$(SolutionDir)Tests\UnitTestPlugin\bin\Debug\netstandard1.1\UnitTestPlugin.dll</TargetPath>
+    <TargetName>UnitTestPlugin</TargetName>
+    <ProjectDir>$(SolutionDir)Tests\UnitTestPlugin</ProjectDir>
+  </PropertyGroup>
+  <Import Project="$(SolutionDir)durandal_plugin.props" />
+  <PropertyGroup>
+    <TargetFramework>netstandard1.1</TargetFramework>
+	<RootNamespace>Durandal.CoreTests</RootNamespace>
+	<AssemblyName>UnitTestPlugin</AssemblyName>
+	<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <CodeAnalysisRuleSet>..\..\DurandalCodeAnalysis.ruleset</CodeAnalysisRuleSet>
+	<GenerateDocumentationFile>True</GenerateDocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DefineConstants>TRACE;DEBUG;TRACK_IDISPOSABLE_LEAKS</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="System.Net.Http" Version="4.3.4" />
+    <PackageReference Include="System.Text.RegularExpressions" Version="4.3.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Core\Durandal.NetStandard\Durandal.NetStandard.csproj" />
+  </ItemGroup>
+  
+  <!-- Copied from Durandal_plugin.targets and modified so the package file goes to the expected place -->
+  <!-- This build target will ensure that all referenced assemblies are binplaced in the project output directory
+	prior to packaging (since the newer .netcore project framework will try to keep that as nuget references only)-->
+  <Target Name="BinplacePackageDependencies" AfterTargets="Compile" DependsOnTargets="ResolveAssemblyReferences">
+	<Message Text="ReferenceDependencyPaths is @(ReferenceDependencyPaths)" />
+    <Message Text="ReferencePath is @(ReferencePath)" />
+    <Message Text="ReferenceSatellitePaths is @(ReferenceSatellitePaths)" />
+    <Message Text="ReferenceCopyLocalPaths is @(ReferenceCopyLocalPaths)" />
+    <Message Text="ResolvedDependencyFiles is @(ResolvedDependencyFiles)" />
+    <Message Text="Reference is @(Reference)" />
+	<Message Text="Copying all referenced assemblies into the package staging directory. References are: @(ReferencePath);@(ReferenceDependencyPaths)" />
+    <Copy Condition="'@(ReferenceDependencyPaths)'!=''" SourceFiles="@(ReferenceDependencyPaths)" DestinationFolder="$(OutDir)" SkipUnchangedFiles="true" />
+	<Copy Condition="'@(ReferencePath)'!=''" SourceFiles="@(ReferencePath)" DestinationFolder="$(OutDir)" SkipUnchangedFiles="true" />
+  </Target>
+  
+  <!-- Define the prebuild and postbuild events to compile Razor views and package the final .dupkg file for the project -->
+  <PropertyGroup>
+    <PreBuildEvent>call "$(SolutionDir)target\net48\RazorCompile.exe" "$(ProjectDir)\"</PreBuildEvent>
+    <PostBuildEvent>call "$(SolutionDir)target\net48\CommandLinePackager.exe" /CreateFromProject "$(ProjectDir)" "$(TargetPath)" "$(ProjectDir)\$(TargetName).dupkg"</PostBuildEvent>
+  </PropertyGroup>
+
+</Project>

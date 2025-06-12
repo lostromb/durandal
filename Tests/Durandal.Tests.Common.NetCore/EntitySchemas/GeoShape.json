@@ -1,0 +1,96 @@
+﻿{
+  "Id": "http://schema.org/GeoShape",
+  "Comment": "The geographic shape of a place. A GeoShape can be described using several properties whose values are based on latitude/longitude pairs. Either whitespace or commas can be used to separate latitude and longitude; whitespace should be used when writing a list of several such points.",
+  "Label": "GeoShape",
+  "InheritsFrom": [
+    "http://schema.org/StructuredValue"
+  ],
+  "Fields": {
+    "line": {
+      "Name": "line",
+      "Values": [
+        {
+          "Type": "Text",
+          "Comment": "A line is a point-to-point path consisting of two or more points. A line is expressed as a series of two or more point objects separated by space."
+        }
+      ]
+    },
+    "address": {
+      "Name": "address",
+      "Values": [
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/PostalAddress",
+          "Comment": "Physical address of the item."
+        },
+        {
+          "Type": "Text",
+          "Comment": "Physical address of the item."
+        }
+      ]
+    },
+    "circle": {
+      "Name": "circle",
+      "Values": [
+        {
+          "Type": "Text",
+          "Comment": "A circle is the circular region of a specified radius centered at a specified latitude and longitude. A circle is expressed as a pair followed by a radius in meters."
+        }
+      ]
+    },
+    "box": {
+      "Name": "box",
+      "Values": [
+        {
+          "Type": "Text",
+          "Comment": "A box is the area enclosed by the rectangle formed by two points. The first point is the lower corner, the second point is the upper corner. A box is expressed as two points separated by a space character."
+        }
+      ]
+    },
+    "addressCountry": {
+      "Name": "addressCountry",
+      "Values": [
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/Country",
+          "Comment": "The country. For example, USA. You can also provide the two-letter <a href=\"http://en.wikipedia.org/wiki/ISO_3166-1\">ISO 3166-1 alpha-2 country code</a>."
+        },
+        {
+          "Type": "Text",
+          "Comment": "The country. For example, USA. You can also provide the two-letter <a href=\"http://en.wikipedia.org/wiki/ISO_3166-1\">ISO 3166-1 alpha-2 country code</a>."
+        }
+      ]
+    },
+    "postalCode": {
+      "Name": "postalCode",
+      "Values": [
+        {
+          "Type": "Text",
+          "Comment": "The postal code. For example, 94043."
+        }
+      ]
+    },
+    "elevation": {
+      "Name": "elevation",
+      "Values": [
+        {
+          "Type": "Text",
+          "Comment": "The elevation of a location (<a href=\"https://en.wikipedia.org/wiki/World_Geodetic_System\">WGS 84</a>)."
+        },
+        {
+          "Type": "Number",
+          "Comment": "The elevation of a location (<a href=\"https://en.wikipedia.org/wiki/World_Geodetic_System\">WGS 84</a>)."
+        }
+      ]
+    },
+    "polygon": {
+      "Name": "polygon",
+      "Values": [
+        {
+          "Type": "Text",
+          "Comment": "A polygon is the area enclosed by a point-to-point path for which the starting and ending points are the same. A polygon is expressed as a series of four or more space delimited points where the first and final points are identical."
+        }
+      ]
+    }
+  }
+}

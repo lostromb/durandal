@@ -1,0 +1,18 @@
+namespace csharp Durandal.API
+namespace java org.stromberg.durandal.api
+
+struct Sentence
+{
+    // The original (display form) text that formed this sentence
+	1: required string OriginalText = "";
+	
+	// A list of words, outputted from WordBreaker
+    2: required vector<string> Words;
+	
+	// A parallel array of word start indices corresponding to each word
+    3: required vector<int32> Indices;
+	
+	// If the input was speech, this is the lexical form of the spoken input
+	// For text queries this is the same as display form
+    4: string LexicalForm = "";
+}

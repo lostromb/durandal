@@ -1,0 +1,1 @@
+..\..\target\OntologySchemaTransformer.exe -compile -in "..\..\Data\Schemas\SchemaDotOrg" -out ".\SchemaDotOrg" -namespace "DialogTests.Plugin.SchemaDotOrg" -visibility internal -select http://schema.org/Place http://schema.org/GeoCoordinates

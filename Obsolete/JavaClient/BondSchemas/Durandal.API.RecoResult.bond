@@ -1,0 +1,26 @@
+import "Durandal.API.TaggedData.bond"
+import "Durandal.API.Sentence.bond"
+
+namespace csharp Durandal.API
+namespace java org.stromberg.durandal.api
+
+// Represents the completely annotated recognition result that is passed to
+// each answer.
+struct RecoResult
+{
+    // The classified domain of the utterance
+    1: required string Domain = "";
+    
+    // The user's intent within the domain
+    2: required string Intent = "";
+    
+    // The confidence that this utterance is in the proper domain
+    3: required float Confidence = 0.0;
+    
+    // The actual input sentence
+    4: required Sentence Utterance;
+    
+    // The set of all tag hypotheses attached to this result.
+    // This is an N-best list produced by the CRF
+    5: required vector<TaggedData> TagHyps;
+}

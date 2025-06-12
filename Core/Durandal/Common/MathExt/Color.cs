@@ -28,10 +28,13 @@ namespace Durandal.Common.MathExt
 
         [JsonIgnore]
         public float RedF => ((float)_r) / 255f;
+
         [JsonIgnore]
         public float GreenF => ((float)_g) / 255f;
+
         [JsonIgnore]
         public float BlueF => ((float)_b) / 255f;
+
         [JsonIgnore]
         public float AlphaF => ((float)_a) / 255f;
 

@@ -1,0 +1,26 @@
+﻿@namespace DurandalServices.Instrumentation.Analytics.Html
+@using DurandalServices.Instrumentation.Analytics.Charting
+@var string Content
+@var List<NavbarLink> NavLinks
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Durandal Analytics</title>
+        <link href="/flexbox.css" rel="stylesheet" type="text/css" />
+        <link href="/chart.css" rel="stylesheet" type="text/css" />
+        <script src="/Chart.bundle.min.js"></script>
+    </head>
+    <body>
+        <div class="flex flexAppContainer">
+            <div class="flex flexBoxColumn">
+                <div id="navbar" class="flex">
+                    <for each='NavbarLink link in NavLinks'>
+                        <a href="${link.Url}" class="navbarlink"><div class="navbaritem">${link.Text}</div></a>
+                    </for>
+                </div>
+                ${Content}
+            </div>
+        </div>
+    </body>
+</html>

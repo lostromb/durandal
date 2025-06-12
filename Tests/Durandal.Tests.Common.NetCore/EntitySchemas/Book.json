@@ -1,0 +1,58 @@
+﻿{
+  "Id": "http://schema.org/Book",
+  "Comment": "A book.",
+  "Label": "Book",
+  "InheritsFrom": [
+    "http://schema.org/CreativeWork"
+  ],
+  "Fields": {
+    "isbn": {
+      "Name": "isbn",
+      "Values": [
+        {
+          "Type": "Text",
+          "Comment": "The ISBN of the book."
+        }
+      ]
+    },
+    "bookEdition": {
+      "Name": "bookEdition",
+      "Values": [
+        {
+          "Type": "Text",
+          "Comment": "The edition of the book."
+        }
+      ]
+    },
+    "bookFormat": {
+      "Name": "bookFormat",
+      "Values": [
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/BookFormatType",
+          "Comment": "The format of the book."
+        }
+      ]
+    },
+    "numberOfPages": {
+      "Name": "numberOfPages",
+      "Values": [
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/Integer",
+          "Comment": "The number of pages in the book."
+        }
+      ]
+    },
+    "illustrator": {
+      "Name": "illustrator",
+      "Values": [
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/Person",
+          "Comment": "The illustrator of the book."
+        }
+      ]
+    }
+  }
+}

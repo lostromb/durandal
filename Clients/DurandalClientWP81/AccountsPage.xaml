@@ -1,0 +1,83 @@
+﻿<Page
+    x:Class="DurandalClientWP81.AccountsPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:DurandalClientWP81"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+    Foreground="White" Unloaded="Page_Unloaded" Loaded="Page_Loaded">
+
+    <Grid x:Name="LayoutRoot" Background="Black">
+
+        <Grid.ChildrenTransitions>
+            <TransitionCollection>
+                <EntranceThemeTransition/>
+            </TransitionCollection>
+        </Grid.ChildrenTransitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Title Panel -->
+        <StackPanel Grid.Row="0" Margin="19,0,0,0">
+            <TextBlock Text="DURANDAL" Style="{ThemeResource TitleTextBlockStyle}" Margin="0,12,0,0"/>
+            <TextBlock Text="Accounts" Margin="0,-6.5,0,26.5" Style="{ThemeResource HeaderTextBlockStyle}" CharacterSpacing="{ThemeResource PivotHeaderItemCharacterSpacing}"/>
+        </StackPanel>
+
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+            <StackPanel Grid.Row="0" Margin="0,0,0,0">
+                <TextBlock x:Name="UserIdentitiesLabel" HorizontalAlignment="Left" TextWrapping="Wrap" Text="User identities" VerticalAlignment="Top"/>
+                
+                <StackPanel x:Name="UserIdentitiesPanel">
+
+                    <!--<Grid Margin="5,5,5,5">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Image Margin="5,5,5,5" x:Name="image3" Height="32" Grid.Column="0" Source="Assets/default_profile.png"/>
+                        <StackPanel Orientation="Vertical" Grid.Column="1" Margin="5,5,5,5">
+                            <TextBlock Text="Logan Stromberg"/>
+                            <TextBlock Text="strombergl@live.com"/>
+                        </StackPanel>
+                        <Button Content="Select" Grid.Column="2" Foreground="White" BorderBrush="#FF878787"/>
+                        <Button Content="Logout" Grid.Column="3" Foreground="White" BorderBrush="#FF878787"/>
+                    </Grid>-->
+
+                </StackPanel>
+
+                <Button x:Name="AddMsaUserButton" Margin="0,5,0,5" Foreground="White" BorderBrush="#FF878787" Click="AddMsaUserButton_Click">
+                    <Button.Content>
+                        <StackPanel Orientation="Horizontal">
+                            <Image Height="22" Grid.Column="0" Source="Assets/MSA.png"/>
+                            <TextBlock Margin="5,0,0,0" Text="Add Microsoft account"></TextBlock>
+                        </StackPanel>
+                    </Button.Content>
+                </Button>
+
+                <TextBlock x:Name="AdhocUserNameLabel" HorizontalAlignment="Left" TextWrapping="Wrap" Text="User name" VerticalAlignment="Top"/>
+                <TextBox x:Name="AdhocUserNameBox" Text=""/>
+                <Button x:Name="AddAdhocUserButton" Content="Add local user account" Margin="0,5,0,5" Foreground="White" BorderBrush="#FF878787" Click="AddAdhocUserButton_Click"></Button>
+
+                <!--<TextBlock x:Name="ClientIdentityLabel" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Client identities" VerticalAlignment="Top"/>
+
+                <StackPanel x:Name="ClientIdentitiesPanel">
+                </StackPanel>
+                
+                <TextBlock x:Name="ClientNameLabel" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Client name" VerticalAlignment="Top"/>
+                <TextBox x:Name="ClientNameBox" Text=""/>
+                <Button Content="Add local client credentials" Margin="0,5,0,5" Foreground="White" BorderBrush="#FF878787"></Button>-->
+                <TextBlock x:Name="StatusLabel" HorizontalAlignment="Left" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
+
+                <Button x:Name="BackButton" Content="Back" Margin="0,5,0,5" Foreground="White" BorderBrush="#FF878787" Click="BackButton_Click"></Button>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Page>

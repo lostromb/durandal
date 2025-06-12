@@ -56,7 +56,7 @@ namespace Durandal.Common.Audio.Components
             }
 
             _logger = logger ?? NullLogger.Singleton;
-            _metrics = metrics.DefaultIfNull(() => NullMetricCollector.Singleton);
+            _metrics = metrics.DefaultIfNull(NullMetricCollector.Singleton);
             _metricDimensions = metricDimensions ?? DimensionSet.Empty;
             _readForever = readForever;
             OutputFormat = format;

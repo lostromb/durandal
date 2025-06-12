@@ -1,0 +1,9 @@
+﻿{
+  "Id": "http://schema.org/URL",
+  "Comment": "Data type: URL.",
+  "Label": "URL",
+  "InheritsFrom": [
+    "http://schema.org/Text"
+  ],
+  "Fields": {}
+}

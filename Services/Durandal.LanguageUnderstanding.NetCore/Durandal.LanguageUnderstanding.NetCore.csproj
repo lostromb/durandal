@@ -1,0 +1,55 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net7.0-windows</TargetFramework>
+    <AssemblyName>Durandal.LanguageUnderstanding</AssemblyName>
+    <RootNamespace>Durandal.LanguageUnderstanding</RootNamespace>
+    <ProduceReferenceAssembly>False</ProduceReferenceAssembly>
+    <CodeAnalysisRuleSet>..\..\DurandalCodeAnalysis.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DefineConstants>$(DefineConstants);TRACK_IDISPOSABLE_LEAKS</DefineConstants>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DefineConstants>$(DefineConstants)</DefineConstants>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="..\..\Bundles\bundle_lu.zip" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="..\..\Bundles\bundle_lu.zip">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Net.Http" Version="4.3.4" />
+    <PackageReference Include="System.Text.Json" Version="8.0.5" />
+    <PackageReference Include="System.Text.RegularExpressions" Version="4.3.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Core\Durandal.NetCore\Durandal.NetCore.csproj" />
+    <ProjectReference Include="..\..\Core\Durandal.NetStandard\Durandal.NetStandard.csproj" />
+    <ProjectReference Include="..\..\Extensions\Durandal.Extensions.AspNetCore\Durandal.Extensions.AspNetCore.csproj" />
+    <ProjectReference Include="..\..\Extensions\Durandal.Extensions.Azure\Durandal.Extensions.Azure.csproj" />
+    <ProjectReference Include="..\..\Extensions\Durandal.Extensions.BondProtocol.NetStandard\Durandal.Extensions.BondProtocol.NetStandard.csproj" />
+    <ProjectReference Include="..\..\Extensions\Durandal.Extensions.CognitiveServices\Durandal.Extensions.CognitiveServices.csproj" />
+    <ProjectReference Include="..\..\Extensions\Durandal.Extensions.Compression\Durandal.Extensions.Compression.csproj" />
+    <ProjectReference Include="..\..\Extensions\Durandal.Extensions.MySql\Durandal.Extensions.MySql.csproj" />
+    <ProjectReference Include="..\..\Extensions\Durandal.Extensions.NativeAudio\Durandal.Extensions.NativeAudio.csproj" />
+    <ProjectReference Include="..\..\Extensions\Durandal.Extensions.NAudio.NetStandard\Durandal.Extensions.NAudio.NetStandard.csproj" />
+    <ProjectReference Include="..\..\Extensions\Durandal.Extensions.Redis\Durandal.Extensions.Redis.csproj" />
+    <ProjectReference Include="..\..\Extensions\Durandal.Extensions.Sapi\Durandal.Extensions.Sapi.csproj" />
+  </ItemGroup>
+
+  <Import Project="..\Durandal.ServiceCommon\Durandal.ServiceCommon.projitems" Label="Shared" />
+
+</Project>

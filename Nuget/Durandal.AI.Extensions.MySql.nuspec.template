@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+		<!-- Required elements-->
+		<id>Durandal.AI.Extensions.MySql</id>
+		<version>22.0.$WCREV$</version>
+		<description>Durandal framework extensions for connecting to MySql as a service provider.</description>
+		<authors>Logan Stromberg</authors>
+		<iconUrl>http://durandal.dnsalias.net/durandalai/logo_sm.png</iconUrl>
+		<icon>images\nuget_icon.png</icon>
+
+		<!-- Optional elements -->
+		<title>Durandal Conversational Framework</title>
+		<owners>lostromb</owners>
+		<projectUrl>https://durandalai.visualstudio.com/</projectUrl>
+		<copyright>2023 Microsoft Corporation</copyright>
+		<license type="expression">BSD-3-Clause</license>
+		<dependencies>
+			<group targetFramework="netstandard20">
+				<dependency id="Durandal.AI" version="[22.0.$WCREV$]" />
+				<dependency id="MySql.Data" version="9.0.0" />
+				<dependency id="Newtonsoft.Json" version="13.0.3" />
+			</group>
+		</dependencies>
+    </metadata>
+    <files>
+		<file src=".\nuget_icon.png" target="images\" />
+		
+		<file src="..\Extensions\Durandal.Extensions.MySql\bin\Release\netstandard2.0\Durandal.Extensions.MySql.dll" target="lib\netstandard2.0" />
+		<file src="..\Extensions\Durandal.Extensions.MySql\bin\Release\netstandard2.0\Durandal.Extensions.MySql.pdb" target="lib\netstandard2.0" />
+		<file src="..\Extensions\Durandal.Extensions.MySql\bin\Release\netstandard2.0\Durandal.Extensions.MySql.xml" target="lib\netstandard2.0" />
+	</files>
+</package>

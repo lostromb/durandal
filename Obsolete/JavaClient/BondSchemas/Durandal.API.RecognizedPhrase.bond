@@ -1,0 +1,14 @@
+import "Durandal.API.RecoResult.bond"
+
+namespace csharp Durandal.API
+namespace java org.stromberg.durandal.api
+
+struct RecognizedPhrase
+{
+    // The original input text that triggered this response
+	1: required string Utterance;
+	
+	// The set of RecoResults parsed from this input. Each RecoResult represents
+	// a hypothesized user intent, with slot info and annotations
+	2: required vector<RecoResult> Results;
+}

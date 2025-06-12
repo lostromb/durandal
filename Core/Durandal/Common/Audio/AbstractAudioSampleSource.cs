@@ -18,6 +18,7 @@ namespace Durandal.Common.Audio
     {
         private readonly string _nodeName;
         private readonly string _nodeFullName;
+        private readonly Guid _uniqueId = Guid.NewGuid();
         private Task _backgroundTask = null;
         private CancellationTokenSource _backgroundTaskCancelizer = null;
         private int _isActiveNode = 0;
@@ -38,6 +39,9 @@ namespace Durandal.Common.Audio
             Dispose(false);
         }
 #endif
+
+        /// <inheritdoc/>
+        public Guid NodeId => _uniqueId;
 
         /// <inheritdoc/>
         public IAudioGraph OutputGraph => _outputGraph.Value;

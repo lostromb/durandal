@@ -1,0 +1,47 @@
+@var IEnumerable<TestSuiteStatus> SuiteResults
+@var DateTimeOffset WindowStart
+@var DateTimeOffset WindowEnd
+@using Durandal.Common.Monitoring
+@using System.Linq
+@namespace Durandal.MonitorConsole.Views
+
+<html>
+    <head>
+        <link href="/content/pure-min.css" rel="stylesheet">
+        <link href="/content/flexbox.css" rel="stylesheet">
+        <link href="/content/dashboard.css" rel="stylesheet">
+        <script src="/content/jquery-3.2.1.min.js"></script>
+        <for each='TestSuiteStatus suiteResult in SuiteResults'>
+            <script>
+                $(document).ready(function () {
+                    $("#suite_${suiteResult.SuiteName}_header").click(function () {
+                        $("#suite_${suiteResult.SuiteName}_div").toggle(200, "linear");
+                    });
+
+                    $("#suite_${suiteResult.SuiteName}_div").hide();
+                });
+            </script>
+        </for>
+    </head>
+	<body>
+        <div class="flex flex-center flexBoxColumnFlow">
+            ${new CommonHeader().Render()}
+            <span class="inlineHeader">Monitor Status</span>
+            <a href="/dashboard" class="hiddenLink suiteHeader flex flex-center flexBoxColumnFlow suiteHeaderAllSuites">
+                <div>
+                    <span>All suites</span>
+                </div>
+            </a>
+            <for each='TestSuiteStatus suiteResult in SuiteResults'>
+                <a href="#" class="hiddenLink suiteHeader ${suiteResult.TestResults.Values.Any((t) => !t.IsPassing) ? "suiteHeaderFailing" : "suiteHeaderPassing"} flex flex-center flexBoxColumnFlow" id="suite_${suiteResult.SuiteName}_header">
+                    <div>
+                        <span>${suiteResult.SuiteName}</span>
+                    </div>
+                </a>
+                <div class="suite flex flex-center flexBoxColumnFlow" id="suite_${suiteResult.SuiteName}_div">
+                    ${new SingleSuiteResultView() { SuiteResult=suiteResult, WindowStart=WindowStart, WindowEnd=WindowEnd }.Render()}
+                </div>
+            </for>
+        </div>
+</body>
+</html>

@@ -1,0 +1,6 @@
+﻿{
+  "Id": "http://schema.org/Female",
+  "Comment": "The female gender.",
+  "Label": "Female",
+  "Type": "http://schema.org/GenderType"
+}

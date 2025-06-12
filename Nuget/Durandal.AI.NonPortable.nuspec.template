@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+		<!-- Required elements-->
+		<id>Durandal.AI.NonPortable</id>
+		<version>22.0.$WCREV$</version>
+		<description>Extensions and implementation classes in the Durandal framework for "higher-level" functionality of .Net Framework and .Net Core. For example, HTTP clients / servers, performance counters, file systems, threading and synchronization objects, loggers, etc.</description>
+		<authors>Logan Stromberg</authors>
+		<iconUrl>http://durandal.dnsalias.net/durandalai/logo_sm.png</iconUrl>
+		<icon>images\nuget_icon.png</icon>
+
+		<!-- Optional elements -->
+		<title>Durandal Conversational Framework (Non-portable extensions)</title>
+		<owners>lostromb</owners>
+		<projectUrl>https://durandalai.visualstudio.com/</projectUrl>
+		<copyright>2023 Microsoft Corporation</copyright>
+		<license type="expression">MIT AND MS-PL AND BSD-2-Clause AND BSD-3-Clause</license>
+		<dependencies>
+			<group targetFramework="net7.0">
+				<dependency id="Durandal.AI" version="[22.0.$WCREV$]" />
+				<dependency id="Newtonsoft.Json" version="13.0.3" />
+				<dependency id="BouncyCastle.Cryptography" version="2.4.0" />
+				<dependency id="Microsoft.CodeAnalysis.CSharp.Scripting" version="4.11.0" />
+				<dependency id="System.Diagnostics.PerformanceCounter" version="8.0.0" />
+				<dependency id="Vanara.PInvoke.Pdh" version="4.0.4" />
+			</group>
+			<group targetFramework="net48">
+				<dependency id="Durandal.AI" version="[22.0.$WCREV$]" />
+				<dependency id="Newtonsoft.Json" version="13.0.3" />
+				<dependency id="BouncyCastle.Cryptography" version="2.4.0" />
+				<dependency id="System.Buffers" version="4.5.1" />
+				<dependency id="System.Memory" version="4.5.5" />
+				<dependency id="System.Runtime.CompilerServices.Unsafe" version="6.0.0" />
+				<dependency id="System.ValueTuple" version="4.5.0" />
+				<dependency id="Vanara.Core" version="4.0.4" />
+				<dependency id="Vanara.PInvoke.Kernel32" version="4.0.4" />
+				<dependency id="Vanara.PInvoke.Pdh" version="4.0.4" />
+				<dependency id="Vanara.PInvoke.Shared" version="4.0.4" />
+			</group>
+		</dependencies>
+    </metadata>
+    <files>
+		<file src=".\nuget_icon.png" target="images\" />
+		
+		<file src="..\Core\Durandal.NetCore\bin\Release\net7.0\Durandal.NetCore.dll" target="lib\net7.0" />
+		<file src="..\Core\Durandal.NetCore\bin\Release\net7.0\Durandal.NetCore.pdb" target="lib\net7.0" />
+		<file src="..\Core\Durandal.NetCore\bin\Release\net7.0\Durandal.NetCore.xml" target="lib\net7.0" />
+		
+		<file src="..\Core\Durandal.NetFramework\bin\Release\Durandal.NetFramework.dll" target="lib\net48" />
+		<file src="..\Core\Durandal.NetFramework\bin\Release\Durandal.NetFramework.pdb" target="lib\net48" />
+		<file src="..\Core\Durandal.NetFramework\bin\Release\Durandal.NetFramework.xml" target="lib\net48" />
+	</files>
+</package>

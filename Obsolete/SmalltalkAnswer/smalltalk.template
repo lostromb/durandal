@@ -1,0 +1,79 @@
+#STATIC#
+smalltalk/start_conversation	talk to me
+smalltalk/start_conversation	how are you
+smalltalk/start_conversation	how are you doing?
+smalltalk/start_conversation	what's up?
+smalltalk/start_conversation	what's up
+smalltalk/start_conversation	sup
+smalltalk/start_conversation	how's it going
+smalltalk/start_conversation	how's it going?
+smalltalk/start_conversation	how is it going?
+smalltalk/start_conversation	what are you thinking about
+smalltalk/start_conversation	what are you thinking about?
+smalltalk/start_conversation	I'm bored
+smalltalk/start_conversation	I'm lonely
+smalltalk/start_conversation	You're boring.
+smalltalk/start_conversation	You're dumb
+smalltalk/start_conversation	That's stupid
+smalltalk/start_conversation	You're stupid
+smalltalk/end_conversation	goodbye
+smalltalk/end_conversation	bye
+smalltalk/end_conversation	seeya
+smalltalk/end_conversation	see ya
+smalltalk/end_conversation	fare well
+smalltalk/end_conversation	farewell
+smalltalk/end_conversation	goodbye then
+smalltalk/end_conversation	then goodbye
+smalltalk/end_conversation	go away
+smalltalk/end_conversation	get out
+smalltalk/end_conversation	good bye
+smalltalk/end_conversation	goodbye
+smalltalk/end_conversation	goodbye
+
+smalltalk/yourname	what is your name
+smalltalk/yourname	what's your name
+smalltalk/yourname	what are you called
+smalltalk/yourname	do you have a name
+smalltalk/yourname	what is your name
+smalltalk/yourname	what's your name?
+smalltalk/yourname	what is your name?
+smalltalk/yourname	what can I call you
+
+#REGEX#
+smalltalk/yourname	^what('s| is) your name[?\.]?$
+smalltalk/yourname	^do you have a name[?\.]?$
+smalltalk/yourname	^who are you[?\.]?$
+
+smalltalk/yourquest	^what('s| is) your quest[?\.]?$
+
+smalltalk/yourcolor	^what('s| is) your favou?rite color[?\.]?$
+smalltalk/unladenswallow	^what.+?(air ?speed|velocity|laden|swallow)
+
+smalltalk/sister_bots	(of|about) (?<bot>(cortana|alexa|google now|siri|amazon echo))[?\.]?$
+
+smalltalk/are_you	^are you (?<what>\w+)[?\.]?$
+
+#PATTERNS#
+smalltalk/sister_bots	{whatyouthinkof} [bot]{sisters}[/bot]
+smalltalk/sister_bots	{whatyouthinkof} [bot]{sisters}[/bot]?
+
+#whatyouthinkof#
+what do you think about
+what do you think of
+how do you feel about
+do you know
+are you sisters with
+do you know about
+have you heard of
+have you heard about
+how are you different from
+who is
+what is
+
+#sisters#
+Cortana
+Google Now
+Siri
+Alexa
+Echo
+Amazon Echo

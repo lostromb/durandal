@@ -13,6 +13,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using System.Xml;
 
 namespace Durandal.Common.Audio.Components
 {
@@ -32,6 +33,7 @@ namespace Durandal.Common.Audio.Components
         private readonly DimensionSet _metricDimensions;
         private readonly string _nodeName;
         private readonly string _nodeFullName;
+        private readonly Guid _uniqueId = Guid.NewGuid();
         private readonly CancellationTokenSource _backgroundTaskCancel = new CancellationTokenSource();
         private readonly ILogger _logger;
         private readonly AutoResetEventAsync _backgroundTaskFinished = new AutoResetEventAsync(true);
@@ -86,6 +88,9 @@ namespace Durandal.Common.Audio.Components
             Dispose(false);
         }
 #endif
+
+        /// <inheritdoc/>
+        public Guid NodeId => _uniqueId;
 
         /// <inheritdoc/>
         public IAudioGraph InputGraph => _inputGraph.Value;

@@ -1,0 +1,31 @@
+@var TestSuiteStatus SuiteResult
+@var DateTimeOffset WindowStart
+@var DateTimeOffset WindowEnd
+@using Durandal.Common.Monitoring
+@using System.Linq
+@namespace Durandal.MonitorConsole.Views
+
+<html>
+    <head>
+        <link href="/content/pure-min.css" rel="stylesheet">
+        <link href="/content/flexbox.css" rel="stylesheet">
+        <link href="/content/dashboard.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="flex flex-center flexBoxColumnFlow">
+            ${new CommonHeader().Render()}
+            <span class="inlineHeader">Monitor Status</span>
+            <a href="/dashboard" class="hiddenLink suiteHeader flex flex-center flexBoxColumnFlow suiteHeaderAllSuites">
+                <div>
+                    <span>All suites</span>
+                </div>
+            </a>
+            <div class="suiteHeader flex flex-center flexBoxColumnFlow ${SuiteResult.TestResults.Values.Any((t) => !t.IsPassing) ? "suiteHeaderFailing" : "suiteHeaderPassing"}">
+                <span>${SuiteResult.SuiteName}</span>
+            </div>
+            <div class="suite flex flex-center flexBoxColumnFlow">
+                ${new SingleSuiteResultView() { SuiteResult=SuiteResult, WindowStart=WindowStart, WindowEnd=WindowEnd }.Render()}
+            </div>
+        </div>
+    </body>
+</html>

@@ -21,7 +21,7 @@ namespace Durandal.Common.Utils.NativePlatform
     /// The typical use pattern should be:
     /// <list type="number">
     /// <item>Near the entry point of your program, call <see cref="SetGlobalResolver"/> to install a more appropriate resolver for your platform.</item>
-    /// <item>Before calling into a native library, call <see cref="PrepareNativeLibrary(string, ILogger)"/> to ensure that library is present and available to load</item>
+    /// <item>Before calling into a native library, call <see cref="PrepareNativeLibrary(string, ILogger)"/> once to ensure that library is present and available to load</item>
     /// <item>Begin using your P/Invoke methods as normal</item>
     /// </list>
     /// </summary>

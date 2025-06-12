@@ -1,0 +1,455 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Sphinx">
+      <UniqueIdentifier>{c883526e-b632-43a5-afde-685d0b8f3936}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Output.cpp" />
+    <ClCompile Include="PSphinxTrigger.cpp" />
+    <ClCompile Include="libpocketsphinx\acmod.c">
+      <Filter>Sphinx</Filter>
+    </ClCompile>
+    <ClCompile Include="libpocketsphinx\allphone_search.c">
+      <Filter>Sphinx</Filter>
+    </ClCompile>
+    <ClCompile Include="libpocketsphinx\bin_mdef.c">
+      <Filter>Sphinx</Filter>
+    </ClCompile>
+    <ClCompile Include="libpocketsphinx\blkarray_list.c">
+      <Filter>Sphinx</Filter>
+    </ClCompile>
+    <ClCompile Include="libpocketsphinx\dict.c">
+      <Filter>Sphinx</Filter>
+    </ClCompile>
+    <ClCompile Include="libpocketsphinx\dict2pid.c">
+      <Filter>Sphinx</Filter>
+    </ClCompile>
+    <ClCompile Include="libpocketsphinx\fsg_history.c">
+      <Filter>Sphinx</Filter>
+    </ClCompile>
+    <ClCompile Include="libpocketsphinx\fsg_lextree.c">
+      <Filter>Sphinx</Filter>
+    </ClCompile>
+    <ClCompile Include="libpocketsphinx\fsg_search.c">
+      <Filter>Sphinx</Filter>
+    </ClCompile>
+    <ClCompile Include="libpocketsphinx\hmm.c">
+      <Filter>Sphinx</Filter>
+    </ClCompile>
+    <ClCompile Include="libpocketsphinx\kws_detections.c">
+      <Filter>Sphinx</Filter>
+    </ClCompile>
+    <ClCompile Include="libpocketsphinx\kws_search.c">
+      <Filter>Sphinx</Filter>
+    </ClCompile>
+    <ClCompile Include="libpocketsphinx\mdef.c">
+      <Filter>Sphinx</Filter>
+    </ClCompile>
+    <ClCompile Include="libpocketsphinx\ms_gauden.c">
+      <Filter>Sphinx</Filter>
+    </ClCompile>
+    <ClCompile Include="libpocketsphinx\ms_mgau.c">
+      <Filter>Sphinx</Filter>
+    </ClCompile>
+    <ClCompile Include="libpocketsphinx\ms_senone.c">
+      <Filter>Sphinx</Filter>
+    </ClCompile>
+    <ClCompile Include="libpocketsphinx\ngram_search.c">
+      <Filter>Sphinx</Filter>
+    </ClCompile>
+    <ClCompile Include="libpocketsphinx\ngram_search_fwdflat.c">
+      <Filter>Sphinx</Filter>
+    </ClCompile>
+    <ClCompile Include="libpocketsphinx\ngram_search_fwdtree.c">
+      <Filter>Sphinx</Filter>
+    </ClCompile>
+    <ClCompile Include="libpocketsphinx\phone_loop_search.c">
+      <Filter>Sphinx</Filter>
+    </ClCompile>
+    <ClCompile Include="libpocketsphinx\pocketsphinx.c">
+      <Filter>Sphinx</Filter>
+    </ClCompile>
+    <ClCompile Include="libpocketsphinx\ps_alignment.c">
+      <Filter>Sphinx</Filter>
+    </ClCompile>
+    <ClCompile Include="libpocketsphinx\ps_lattice.c">
+      <Filter>Sphinx</Filter>
+    </ClCompile>
+    <ClCompile Include="libpocketsphinx\ps_mllr.c">
+      <Filter>Sphinx</Filter>
+    </ClCompile>
+    <ClCompile Include="libpocketsphinx\ptm_mgau.c">
+      <Filter>Sphinx</Filter>
+    </ClCompile>
+    <ClCompile Include="libpocketsphinx\s2_semi_mgau.c">
+      <Filter>Sphinx</Filter>
+    </ClCompile>
+    <ClCompile Include="libpocketsphinx\state_align_search.c">
+      <Filter>Sphinx</Filter>
+    </ClCompile>
+    <ClCompile Include="libpocketsphinx\tmat.c">
+      <Filter>Sphinx</Filter>
+    </ClCompile>
+    <ClCompile Include="libpocketsphinx\vector.c">
+      <Filter>Sphinx</Filter>
+    </ClCompile>
+    <ClCompile Include="libsphinxbase\fe\fe_interface.c">
+      <Filter>Sphinx</Filter>
+    </ClCompile>
+    <ClCompile Include="libsphinxbase\fe\fe_noise.c">
+      <Filter>Sphinx</Filter>
+    </ClCompile>
+    <ClCompile Include="libsphinxbase\fe\fe_prespch_buf.c">
+      <Filter>Sphinx</Filter>
+    </ClCompile>
+    <ClCompile Include="libsphinxbase\fe\fe_sigproc.c">
+      <Filter>Sphinx</Filter>
+    </ClCompile>
+    <ClCompile Include="libsphinxbase\fe\fe_warp.c">
+      <Filter>Sphinx</Filter>
+    </ClCompile>
+    <ClCompile Include="libsphinxbase\fe\fe_warp_affine.c">
+      <Filter>Sphinx</Filter>
+    </ClCompile>
+    <ClCompile Include="libsphinxbase\fe\fe_warp_inverse_linear.c">
+      <Filter>Sphinx</Filter>
+    </ClCompile>
+    <ClCompile Include="libsphinxbase\fe\fe_warp_piecewise_linear.c">
+      <Filter>Sphinx</Filter>
+    </ClCompile>
+    <ClCompile Include="libsphinxbase\fe\fixlog.c">
+      <Filter>Sphinx</Filter>
+    </ClCompile>
+    <ClCompile Include="libsphinxbase\fe\yin.c">
+      <Filter>Sphinx</Filter>
+    </ClCompile>
+    <ClCompile Include="libsphinxbase\feat\agc.c">
+      <Filter>Sphinx</Filter>
+    </ClCompile>
+    <ClCompile Include="libsphinxbase\feat\cmn.c">
+      <Filter>Sphinx</Filter>
+    </ClCompile>
+    <ClCompile Include="libsphinxbase\feat\cmn_prior.c">
+      <Filter>Sphinx</Filter>
+    </ClCompile>
+    <ClCompile Include="libsphinxbase\feat\feat.c">
+      <Filter>Sphinx</Filter>
+    </ClCompile>
+    <ClCompile Include="libsphinxbase\feat\lda.c">
+      <Filter>Sphinx</Filter>
+    </ClCompile>
+    <ClCompile Include="libsphinxbase\lm\fsg_model.c">
+      <Filter>Sphinx</Filter>
+    </ClCompile>
+    <ClCompile Include="libsphinxbase\lm\jsgf.c">
+      <Filter>Sphinx</Filter>
+    </ClCompile>
+    <ClCompile Include="libsphinxbase\lm\jsgf_parser.c">
+      <Filter>Sphinx</Filter>
+    </ClCompile>
+    <ClCompile Include="libsphinxbase\lm\jsgf_scanner.c">
+      <Filter>Sphinx</Filter>
+    </ClCompile>
+    <ClCompile Include="libsphinxbase\lm\lm_trie.c">
+      <Filter>Sphinx</Filter>
+    </ClCompile>
+    <ClCompile Include="libsphinxbase\lm\lm_trie_quant.c">
+      <Filter>Sphinx</Filter>
+    </ClCompile>
+    <ClCompile Include="libsphinxbase\lm\ngram_model.c">
+      <Filter>Sphinx</Filter>
+    </ClCompile>
+    <ClCompile Include="libsphinxbase\lm\ngram_model_set.c">
+      <Filter>Sphinx</Filter>
+    </ClCompile>
+    <ClCompile Include="libsphinxbase\lm\ngram_model_trie.c">
+      <Filter>Sphinx</Filter>
+    </ClCompile>
+    <ClCompile Include="libsphinxbase\lm\ngrams_raw.c">
+      <Filter>Sphinx</Filter>
+    </ClCompile>
+    <ClCompile Include="libsphinxbase\util\bio.c">
+      <Filter>Sphinx</Filter>
+    </ClCompile>
+    <ClCompile Include="libsphinxbase\util\bitarr.c">
+      <Filter>Sphinx</Filter>
+    </ClCompile>
+    <ClCompile Include="libsphinxbase\util\bitvec.c">
+      <Filter>Sphinx</Filter>
+    </ClCompile>
+    <ClCompile Include="libsphinxbase\util\blas_lite.c">
+      <Filter>Sphinx</Filter>
+    </ClCompile>
+    <ClCompile Include="libsphinxbase\util\case.c">
+      <Filter>Sphinx</Filter>
+    </ClCompile>
+    <ClCompile Include="libsphinxbase\util\ckd_alloc.c">
+      <Filter>Sphinx</Filter>
+    </ClCompile>
+    <ClCompile Include="libsphinxbase\util\cmd_ln.c">
+      <Filter>Sphinx</Filter>
+    </ClCompile>
+    <ClCompile Include="libsphinxbase\util\dtoa.c">
+      <Filter>Sphinx</Filter>
+    </ClCompile>
+    <ClCompile Include="libsphinxbase\util\err.c">
+      <Filter>Sphinx</Filter>
+    </ClCompile>
+    <ClCompile Include="libsphinxbase\util\errno.c">
+      <Filter>Sphinx</Filter>
+    </ClCompile>
+    <ClCompile Include="libsphinxbase\util\f2c_lite.c">
+      <Filter>Sphinx</Filter>
+    </ClCompile>
+    <ClCompile Include="libsphinxbase\util\filename.c">
+      <Filter>Sphinx</Filter>
+    </ClCompile>
+    <ClCompile Include="libsphinxbase\util\genrand.c">
+      <Filter>Sphinx</Filter>
+    </ClCompile>
+    <ClCompile Include="libsphinxbase\util\glist.c">
+      <Filter>Sphinx</Filter>
+    </ClCompile>
+    <ClCompile Include="libsphinxbase\util\hash_table.c">
+      <Filter>Sphinx</Filter>
+    </ClCompile>
+    <ClCompile Include="libsphinxbase\util\heap.c">
+      <Filter>Sphinx</Filter>
+    </ClCompile>
+    <ClCompile Include="libsphinxbase\util\huff_code.c">
+      <Filter>Sphinx</Filter>
+    </ClCompile>
+    <ClCompile Include="libsphinxbase\util\listelem_alloc.c">
+      <Filter>Sphinx</Filter>
+    </ClCompile>
+    <ClCompile Include="libsphinxbase\util\logmath.c">
+      <Filter>Sphinx</Filter>
+    </ClCompile>
+    <ClCompile Include="libsphinxbase\util\matrix.c">
+      <Filter>Sphinx</Filter>
+    </ClCompile>
+    <ClCompile Include="libsphinxbase\util\mmio.c">
+      <Filter>Sphinx</Filter>
+    </ClCompile>
+    <ClCompile Include="libsphinxbase\util\pio.c">
+      <Filter>Sphinx</Filter>
+    </ClCompile>
+    <ClCompile Include="libsphinxbase\util\priority_queue.c">
+      <Filter>Sphinx</Filter>
+    </ClCompile>
+    <ClCompile Include="libsphinxbase\util\profile.c">
+      <Filter>Sphinx</Filter>
+    </ClCompile>
+    <ClCompile Include="libsphinxbase\util\sbthread.c">
+      <Filter>Sphinx</Filter>
+    </ClCompile>
+    <ClCompile Include="libsphinxbase\util\slamch.c">
+      <Filter>Sphinx</Filter>
+    </ClCompile>
+    <ClCompile Include="libsphinxbase\util\slapack_lite.c">
+      <Filter>Sphinx</Filter>
+    </ClCompile>
+    <ClCompile Include="libsphinxbase\util\strfuncs.c">
+      <Filter>Sphinx</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Output.h" />
+    <ClInclude Include="PSphinxTrigger.h" />
+    <ClInclude Include="libpocketsphinx\acmod.h">
+      <Filter>Sphinx</Filter>
+    </ClInclude>
+    <ClInclude Include="libpocketsphinx\allphone_search.h">
+      <Filter>Sphinx</Filter>
+    </ClInclude>
+    <ClInclude Include="libpocketsphinx\bin_mdef.h">
+      <Filter>Sphinx</Filter>
+    </ClInclude>
+    <ClInclude Include="libpocketsphinx\blkarray_list.h">
+      <Filter>Sphinx</Filter>
+    </ClInclude>
+    <ClInclude Include="libpocketsphinx\dict.h">
+      <Filter>Sphinx</Filter>
+    </ClInclude>
+    <ClInclude Include="libpocketsphinx\dict2pid.h">
+      <Filter>Sphinx</Filter>
+    </ClInclude>
+    <ClInclude Include="libpocketsphinx\fsg_history.h">
+      <Filter>Sphinx</Filter>
+    </ClInclude>
+    <ClInclude Include="libpocketsphinx\fsg_lextree.h">
+      <Filter>Sphinx</Filter>
+    </ClInclude>
+    <ClInclude Include="libpocketsphinx\fsg_search_internal.h">
+      <Filter>Sphinx</Filter>
+    </ClInclude>
+    <ClInclude Include="libpocketsphinx\hmm.h">
+      <Filter>Sphinx</Filter>
+    </ClInclude>
+    <ClInclude Include="libpocketsphinx\kws_detections.h">
+      <Filter>Sphinx</Filter>
+    </ClInclude>
+    <ClInclude Include="libpocketsphinx\kws_search.h">
+      <Filter>Sphinx</Filter>
+    </ClInclude>
+    <ClInclude Include="libpocketsphinx\mdef.h">
+      <Filter>Sphinx</Filter>
+    </ClInclude>
+    <ClInclude Include="libpocketsphinx\ms_gauden.h">
+      <Filter>Sphinx</Filter>
+    </ClInclude>
+    <ClInclude Include="libpocketsphinx\ms_mgau.h">
+      <Filter>Sphinx</Filter>
+    </ClInclude>
+    <ClInclude Include="libpocketsphinx\ms_senone.h">
+      <Filter>Sphinx</Filter>
+    </ClInclude>
+    <ClInclude Include="libpocketsphinx\ngram_search.h">
+      <Filter>Sphinx</Filter>
+    </ClInclude>
+    <ClInclude Include="libpocketsphinx\ngram_search_fwdflat.h">
+      <Filter>Sphinx</Filter>
+    </ClInclude>
+    <ClInclude Include="libpocketsphinx\ngram_search_fwdtree.h">
+      <Filter>Sphinx</Filter>
+    </ClInclude>
+    <ClInclude Include="libpocketsphinx\phone_loop_search.h">
+      <Filter>Sphinx</Filter>
+    </ClInclude>
+    <ClInclude Include="libpocketsphinx\pocketsphinx_internal.h">
+      <Filter>Sphinx</Filter>
+    </ClInclude>
+    <ClInclude Include="libpocketsphinx\ps_alignment.h">
+      <Filter>Sphinx</Filter>
+    </ClInclude>
+    <ClInclude Include="libpocketsphinx\ps_lattice_internal.h">
+      <Filter>Sphinx</Filter>
+    </ClInclude>
+    <ClInclude Include="libpocketsphinx\ptm_mgau.h">
+      <Filter>Sphinx</Filter>
+    </ClInclude>
+    <ClInclude Include="libpocketsphinx\s2_semi_mgau.h">
+      <Filter>Sphinx</Filter>
+    </ClInclude>
+    <ClInclude Include="libpocketsphinx\s3types.h">
+      <Filter>Sphinx</Filter>
+    </ClInclude>
+    <ClInclude Include="libpocketsphinx\state_align_search.h">
+      <Filter>Sphinx</Filter>
+    </ClInclude>
+    <ClInclude Include="libpocketsphinx\tied_mgau_common.h">
+      <Filter>Sphinx</Filter>
+    </ClInclude>
+    <ClInclude Include="libpocketsphinx\tmat.h">
+      <Filter>Sphinx</Filter>
+    </ClInclude>
+    <ClInclude Include="libpocketsphinx\vector.h">
+      <Filter>Sphinx</Filter>
+    </ClInclude>
+    <ClInclude Include="libsphinxbase\fe\fe_internal.h">
+      <Filter>Sphinx</Filter>
+    </ClInclude>
+    <ClInclude Include="libsphinxbase\fe\fe_noise.h">
+      <Filter>Sphinx</Filter>
+    </ClInclude>
+    <ClInclude Include="libsphinxbase\fe\fe_prespch_buf.h">
+      <Filter>Sphinx</Filter>
+    </ClInclude>
+    <ClInclude Include="libsphinxbase\fe\fe_type.h">
+      <Filter>Sphinx</Filter>
+    </ClInclude>
+    <ClInclude Include="libsphinxbase\fe\fe_warp.h">
+      <Filter>Sphinx</Filter>
+    </ClInclude>
+    <ClInclude Include="libsphinxbase\fe\fe_warp_affine.h">
+      <Filter>Sphinx</Filter>
+    </ClInclude>
+    <ClInclude Include="libsphinxbase\fe\fe_warp_inverse_linear.h">
+      <Filter>Sphinx</Filter>
+    </ClInclude>
+    <ClInclude Include="libsphinxbase\fe\fe_warp_piecewise_linear.h">
+      <Filter>Sphinx</Filter>
+    </ClInclude>
+    <ClInclude Include="libsphinxbase\lm\jsgf_internal.h">
+      <Filter>Sphinx</Filter>
+    </ClInclude>
+    <ClInclude Include="libsphinxbase\lm\jsgf_parser.h">
+      <Filter>Sphinx</Filter>
+    </ClInclude>
+    <ClInclude Include="libsphinxbase\lm\jsgf_scanner.h">
+      <Filter>Sphinx</Filter>
+    </ClInclude>
+    <ClInclude Include="libsphinxbase\lm\lm_trie.h">
+      <Filter>Sphinx</Filter>
+    </ClInclude>
+    <ClInclude Include="libsphinxbase\lm\lm_trie_quant.h">
+      <Filter>Sphinx</Filter>
+    </ClInclude>
+    <ClInclude Include="libsphinxbase\lm\ngram_model_internal.h">
+      <Filter>Sphinx</Filter>
+    </ClInclude>
+    <ClInclude Include="libsphinxbase\lm\ngram_model_set.h">
+      <Filter>Sphinx</Filter>
+    </ClInclude>
+    <ClInclude Include="libsphinxbase\lm\ngram_model_trie.h">
+      <Filter>Sphinx</Filter>
+    </ClInclude>
+    <ClInclude Include="libsphinxbase\lm\ngrams_raw.h">
+      <Filter>Sphinx</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="libpocketsphinx\fast_ptm.txt">
+      <Filter>Sphinx</Filter>
+    </Text>
+    <Text Include="libsphinxbase\fe\fe_design.txt">
+      <Filter>Sphinx</Filter>
+    </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="libpocketsphinx\Makefile.am">
+      <Filter>Sphinx</Filter>
+    </None>
+    <None Include="libsphinxbase\fe\make_log_sub_table.py">
+      <Filter>Sphinx</Filter>
+    </None>
+    <None Include="libsphinxbase\fe\make_log_table.py">
+      <Filter>Sphinx</Filter>
+    </None>
+    <None Include="libsphinxbase\fe\Makefile.am">
+      <Filter>Sphinx</Filter>
+    </None>
+    <None Include="libsphinxbase\feat\Makefile.am">
+      <Filter>Sphinx</Filter>
+    </None>
+    <None Include="libsphinxbase\lm\_jsgf_scanner.l">
+      <Filter>Sphinx</Filter>
+    </None>
+    <None Include="libsphinxbase\lm\jsgf_parser.y">
+      <Filter>Sphinx</Filter>
+    </None>
+    <None Include="libsphinxbase\lm\Makefile.am">
+      <Filter>Sphinx</Filter>
+    </None>
+    <None Include="libsphinxbase\util\clapack_scrub.py">
+      <Filter>Sphinx</Filter>
+    </None>
+    <None Include="libsphinxbase\util\fortran.py">
+      <Filter>Sphinx</Filter>
+    </None>
+    <None Include="libsphinxbase\util\make_lite.py">
+      <Filter>Sphinx</Filter>
+    </None>
+    <None Include="libsphinxbase\util\Makefile.am">
+      <Filter>Sphinx</Filter>
+    </None>
+    <None Include="libsphinxbase\util\README.python">
+      <Filter>Sphinx</Filter>
+    </None>
+    <None Include="libsphinxbase\util\wrapped_routines">
+      <Filter>Sphinx</Filter>
+    </None>
+  </ItemGroup>
+</Project>

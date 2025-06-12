@@ -8,6 +8,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using System.Xml;
 
 namespace Durandal.Common.Audio.Components
 {
@@ -21,6 +22,7 @@ namespace Durandal.Common.Audio.Components
         private readonly WeakPointer<ResamplingFilter> _resampler;
         private readonly string _nodeName;
         private readonly string _nodeFullName;
+        private readonly Guid _uniqueId = Guid.NewGuid();
         private HashSet<IDisposable> _extraDisposables;
         private int _disposed = 0;
 
@@ -92,6 +94,9 @@ namespace Durandal.Common.Audio.Components
             Dispose(false);
         }
 #endif
+
+        /// <inheritdoc/>
+        public Guid NodeId => _uniqueId;
 
         /// <summary>
         /// Gets the algorithmic delay introduced by this conformer (mostly due to resampling)

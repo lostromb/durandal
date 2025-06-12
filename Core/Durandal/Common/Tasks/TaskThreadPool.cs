@@ -51,7 +51,7 @@ namespace Durandal.Common.Tasks
                 creationOptions,
                 creationOptions == TaskCreationOptions.LongRunning ? TaskContinuationOptions.LongRunning : TaskContinuationOptions.None,
                 TaskScheduler.Default); // fixme there should really be a task scheduler instance created per-pool rather than shared
-            _metrics = metrics.DefaultIfNull(() => NullMetricCollector.Singleton);
+            _metrics = metrics.DefaultIfNull(NullMetricCollector.Singleton);
             _dimensions = dimensions ?? DimensionSet.Empty;
             _dimensions = _dimensions.Combine(new MetricDimension(CommonInstrumentation.Key_Dimension_ThreadPoolName, _poolName));
             _runningAndQueuedTasks = 0;

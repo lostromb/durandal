@@ -14,8 +14,8 @@ namespace Durandal.Common.Security
     /// </summary>
     public static class CryptographyHelpers
     {
-        private static IRandom random = new FastRandom();
-        private static readonly long epochTicks = new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc).Ticks;
+        private static IRandom INSECURE_RANDOM = new FastRandom();
+        private static readonly long EPOCH_TICKS = new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc).Ticks;
         
         /// <summary>
         /// Generates a random large number, with the specified maximum value and bit length (default 512 bits)
@@ -37,7 +37,7 @@ namespace Durandal.Common.Security
             {
                 for (int c = 0; c < data.Length; c++)
                 {
-                    data[c] = (byte)random.NextInt(1, 255);
+                    data[c] = (byte)INSECURE_RANDOM.NextInt(1, 255);
                 }
 
                 candidate = new BigInteger(data);
@@ -51,7 +51,7 @@ namespace Durandal.Common.Security
             byte[] data = new byte[FastMath.Max(1, bitLength / 8)];
             for (int c = 0; c < data.Length; c++)
             {
-                data[c] = (byte)random.NextInt(1, 255);
+                data[c] = (byte)INSECURE_RANDOM.NextInt(1, 255);
             }
 
             return data;
@@ -92,12 +92,12 @@ namespace Durandal.Common.Security
         /// <returns></returns>
         public static BigInteger GenerateRequestExpireTimeToken(TimeSpan timeUntilExpiration, IRealTimeProvider realTime)
         {
-            long epochTimeMs = epochTicks / 10000;
+            long epochTimeMs = EPOCH_TICKS / 10000;
             long expireTime = realTime.TimestampMilliseconds - epochTimeMs + (long)timeUntilExpiration.TotalMilliseconds;
             byte[] byteArray = new byte[16];
             for (int c = 0; c < byteArray.Length; c++)
             {
-                byteArray[c] = (byte)random.NextInt(1, 255);
+                byteArray[c] = (byte)INSECURE_RANDOM.NextInt(1, 255);
             }
             BinaryHelpers.Int64ToByteArrayLittleEndian(expireTime, byteArray, 4);
             return new BigInteger(byteArray, 16);
@@ -113,12 +113,12 @@ namespace Durandal.Common.Security
             long expireTimeMs = BitConverter.ToInt64(tokenRed.GetBytes(), 4);
             try
             {
-                return new DateTimeOffset(epochTicks + (expireTimeMs * 10000), TimeSpan.Zero);
+                return new DateTimeOffset(EPOCH_TICKS + (expireTimeMs * 10000), TimeSpan.Zero);
             }
             catch (ArgumentOutOfRangeException)
             {
                 // Ticks are invalid, so just return the epoch time
-                return new DateTimeOffset(epochTicks, TimeSpan.Zero);
+                return new DateTimeOffset(EPOCH_TICKS, TimeSpan.Zero);
             }
         }
     }

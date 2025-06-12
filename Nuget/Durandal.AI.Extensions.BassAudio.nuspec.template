@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata minClientVersion="5.0">
+		<!-- Required elements-->
+		<id>Durandal.AI.Extensions.BassAudio</id>
+		<version>22.0.$WCREV$</version>
+		<description>Durandal framework extensions using BASS library for multi-platform audio</description>
+		<authors>Logan Stromberg</authors>
+		<iconUrl>http://durandal.dnsalias.net/durandalai/logo_sm.png</iconUrl>
+		<icon>images\nuget_icon.png</icon>
+
+		<!-- Optional elements -->
+		<title>Durandal Conversational Framework</title>
+		<owners>lostromb</owners>
+		<projectUrl>https://durandalai.visualstudio.com/</projectUrl>
+		<copyright>2023 Microsoft Corporation</copyright>
+		<license type="expression">BSD-3-Clause</license>
+		<dependencies>
+			<group targetFramework="netstandard20">
+				<dependency id="Durandal.AI" version="[22.0.$WCREV$]" />
+				<dependency id="ManagedBass" version="3.1.1" />
+				<dependency id="NetStandard.Library" version="2.0.3" />
+				<dependency id="System.Memory" version="4.5.5" />
+				<dependency id="System.Threading.Tasks.Extensions" version="4.5.4" />
+			</group>
+			<group targetFramework="portable-net45+win8+wpa81+wp8">
+				<dependency id="Durandal.AI" version="[22.0.$WCREV$]" />
+				<dependency id="ManagedBass" version="[0.24.0]" />
+				<dependency id="ManagedBass.PInvoke" version="0.6.1" />
+				<dependency id="Microsoft.Bcl" version="1.1.10" />
+				<dependency id="Microsoft.Bcl.Build" version="1.0.21" />
+				<dependency id="System.Buffers" version="4.5.1" />
+				<dependency id="System.Memory" version="4.5.5" />
+				<dependency id="System.Threading.Tasks.Extensions" version="4.5.4" />
+				<dependency id="System.Runtime.CompilerServices.Unsafe" version="5.0.0" />
+			</group>
+		</dependencies>
+    </metadata>
+    <files>
+		<file src=".\nuget_icon.png" target="images\" />
+		
+		<file src="..\Extensions\Durandal.Extensions.BassAudio.NetStandard\bin\Release\netstandard2.0\Durandal.Extensions.BassAudio.dll" target="lib\netstandard2.0" />
+		<file src="..\Extensions\Durandal.Extensions.BassAudio.NetStandard\bin\Release\netstandard2.0\Durandal.Extensions.BassAudio.pdb" target="lib\netstandard2.0" />
+		<file src="..\Extensions\Durandal.Extensions.BassAudio.NetStandard\bin\Release\netstandard2.0\Durandal.Extensions.BassAudio.xml" target="lib\netstandard2.0" />
+		
+		<file src="..\Extensions\Durandal.Extensions.BassAudio.PCL\bin\Release\Durandal.Extensions.BassAudio.dll" target="lib\portable-net45+win8+wpa81+wp8" />
+		<file src="..\Extensions\Durandal.Extensions.BassAudio.PCL\bin\Release\Durandal.Extensions.BassAudio.pdb" target="lib\portable-net45+win8+wpa81+wp8" />
+		<file src="..\Extensions\Durandal.Extensions.BassAudio.PCL\bin\Release\Durandal.Extensions.BassAudio.xml" target="lib\portable-net45+win8+wpa81+wp8" />
+		
+		<!-- Make sure all the native libraries are bundled into /content, that the folder tree is preserved, and that build targets will copy those to projects transitively -->
+		<file src="..\Extensions\Durandal.Extensions.BassAudio\runtimes\**" target="content\runtimes" />
+		<file src="..\Extensions\Durandal.Extensions.BassAudio\Durandal.AI.Extensions.BassAudio.targets" target="build" />
+		<file src="..\Extensions\Durandal.Extensions.BassAudio\Durandal.AI.Extensions.BassAudio.targets" target="buildTransitive" />
+	</files>
+</package>

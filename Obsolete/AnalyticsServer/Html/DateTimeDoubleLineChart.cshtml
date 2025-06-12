@@ -1,0 +1,86 @@
+﻿@namespace DurandalServices.Instrumentation.Analytics.Html
+@using DurandalServices.Instrumentation.Analytics.Charting
+@using System.Drawing
+@var string ChartId = "chart"
+@var string ChartTitle = "Value"
+@var string Label1 = "Series1"
+@var string Label2 = "Series2"
+@var float Tension = 0.2f
+@var IEnumerable<DateTimeChartPoint> Data1
+@var Color LineColor1 = Color.FromArgb(0, 255, 255)
+@var IEnumerable<DateTimeChartPoint> Data2
+@var Color LineColor2 = Color.FromArgb(255, 0, 255)
+@var DateTimeOffset MinTime
+@var DateTimeOffset MaxTime
+
+<canvas id="${ChartId}"></canvas>
+<script>
+    var ctx = document.getElementById("${ChartId}").getContext('2d');
+    var myChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            datasets: [
+            {
+                label: '${Label1}',
+                data: [
+                <for each='var point in Data1'>
+                    { x: '${point.Time.ToUniversalTime().ToString("yyyy-MM-ddTHH:mm:ss")}', y: ${point.Value} },
+                </for>
+                ],
+                borderWidth: 3,
+                borderColor: 'rgba(${LineColor1.R}, ${LineColor1.G}, ${LineColor1.B}, 1.0)',
+                pointRadius: 1,
+                pointHitRadius: 10,
+                fill: false
+            },
+            {
+                label: '${Label2}',
+                data: [
+                <for each='var point in Data2'>
+                    { x: '${point.Time.ToUniversalTime().ToString("yyyy-MM-ddTHH:mm:ss")}', y: ${point.Value} },
+                </for>
+                ],
+                borderWidth: 3,
+                borderColor: 'rgba(${LineColor2.R}, ${LineColor2.G}, ${LineColor2.B}, 1.0)',
+                pointRadius: 1,
+                pointHitRadius: 10,
+                fill: false
+                }
+        ]
+    },
+    options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            legend: {
+            display: false
+            },
+        elements: {
+                line: {
+                    tension: ${Tension}
+                }
+        },
+        title: {
+                display: true,
+                text: '${ChartTitle}'
+        },
+        scales: {
+                xAxes: [{
+                    type: "time",
+                    time: {
+                        displayFormats: {
+                            day: "M-D",
+                            hour: "M-D ha"
+                        },
+                        //min: "${MinTime.ToUniversalTime().ToString("yyyy-MM-ddTHH:mm:ss")}",
+                        //max: "${MaxTime.ToUniversalTime().ToString("yyyy-MM-ddTHH:mm:ss")}"
+                    }
+                }],
+                yAxes: [{
+                    ticks: {
+                        beginAtZero:true
+                    }
+                }]
+        }
+    }
+    });
+</script>

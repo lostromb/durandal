@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using System.Xml;
 
 namespace Durandal.Common.Audio.Components
 {
@@ -23,6 +24,7 @@ namespace Durandal.Common.Audio.Components
         private readonly LinearMixer _noiseMixer;
         private readonly string _nodeName;
         private readonly string _nodeFullName;
+        private readonly Guid _uniqueId = Guid.NewGuid();
         private int _disposed = 0;
 
         public FeedbackSimulator(WeakPointer<IAudioGraph> graph, AudioSampleFormat format, string nodeCustomName, TimeSpan delay)
@@ -68,6 +70,9 @@ namespace Durandal.Common.Audio.Components
                 _volume.VolumeDecibels = value;
             }
         }
+
+        /// <inheritdoc/>
+        public Guid NodeId => _uniqueId;
 
         /// <inheritdoc/>
         public IAudioGraph InputGraph => _graph.Value;

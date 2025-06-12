@@ -1,0 +1,9 @@
+﻿{
+  "Id": "http://schema.org/City",
+  "Comment": "A city or town.",
+  "Label": "City",
+  "InheritsFrom": [
+    "http://schema.org/AdministrativeArea"
+  ],
+  "Fields": {}
+}

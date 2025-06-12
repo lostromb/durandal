@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<grammar 
+  version="1.0" mode="voice" root="trigger"
+  xml:lang="en-US" tag-format="semantics/1.0" 
+  sapi:alphabet="x-microsoft-ups" 
+  xmlns="http://www.w3.org/2001/06/grammar"
+  xmlns:sapi="http://schemas.microsoft.com/Speech/2002/06/SRGSExtensions">
+  
+  <rule id="trigger" scope="public">
+    <item><token sapi:display="hey durandal" sapi:pron="H EI . D UWX R . S1 AE lng N . D UH L"> hey durandal </token></item>
+  </rule>
+
+</grammar>
+
+<!-- Pronunciation "du͡əɻ.ˈæn.dʊl" -->

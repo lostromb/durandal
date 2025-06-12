@@ -1,0 +1,28 @@
+﻿<Window x:Class="Durandal.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:durandal="clr-namespace:Durandal"
+        Title="Dialog Engine" Height="468" Width="577">
+    <Grid>
+        <Grid Height="60" Margin="0,0,0,0" HorizontalAlignment="Stretch" VerticalAlignment="Top">
+            <Label Content="(Dialog Engine)" Height="28" HorizontalAlignment="Left" Name="label1" VerticalAlignment="Top" Width="342" />
+            <Label Content="(Status String)" Height="28" Margin="0,26,0,0" Name="label2" VerticalAlignment="Top" HorizontalAlignment="Left" Width="342" />
+        </Grid>
+        <TabControl HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,66,0,0">
+            <TabItem Header="Log">
+                <Frame Source="LogView.xaml" />
+            </TabItem>
+            <TabItem Header="Plugins">
+                <Frame Source="PluginView.xaml" />
+            </TabItem>
+            <TabItem Header="Clients">
+                <Frame Source="ClientView.xaml" />
+            </TabItem>
+            <TabItem Header="Configuration">
+                <Frame Source="ConfigurationView.xaml" />
+            </TabItem>
+            <TabItem Header="Debug Console">
+                <Frame Source="DebugView.xaml" />
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>

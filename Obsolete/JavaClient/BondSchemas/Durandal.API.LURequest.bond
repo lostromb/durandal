@@ -1,0 +1,30 @@
+import "Durandal.API.SpeechHypothesis.bond"
+import "Durandal.API.ClientContext.bond"
+
+namespace csharp Durandal.API
+namespace java org.stromberg.durandal.api
+
+struct LURequest
+{
+    // Versioning for this communication
+	1: required int32 ProtocolVersion = 6;
+	
+	// The list of hypotheses to be processed
+    2: required vector<SpeechHypothesis> Utterances;
+	
+	// The user's complete client context, including client id and locale
+    3: required ClientContext Context;
+	
+	// If this is true, extra annotators like Timex and Canonicalizer will be used
+    4: bool DoFullAnnotation = true;
+	
+	// Set this to true if the input came from speech reco
+    5: bool IsSpeechQuery = false;
+	
+	// A debugging traceid
+    6: optional string TraceId;
+	
+	// The client can choose to limit the responses to only a few domains, defined by this list.
+	// Empty lists will be ignored
+    7: optional vector<string> DomainScope;
+}

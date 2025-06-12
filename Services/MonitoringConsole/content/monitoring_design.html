@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <link href="/views/pure-min.css" rel="stylesheet">
+   <link href="/views/flexbox.css" rel="stylesheet">
+   <link href="/views/dashboard.css" rel="stylesheet">
+   <script src="/views/jquery-3.2.1.min.js"></script>
+   <script>
+  $(document).ready(function(){
+      $("#suite_Channels_header").click(function(){
+          $("#suite_Channels_div").toggle(200, "linear");
+      });
+
+    $("#suite_Channels_div").hide();
+  });
+    </script>
+</head>
+	<body>
+  <div class="flex flex-center flexBoxColumnFlow">
+  <h1><a href="https://analytics.applicationinsights.io/subscriptions/a4f207ac-6329-4af9-8245-6ce13c0fc425/resourcegroups/DoradoMonitoring/components/DoradoMonitoringInsights#/discover/query/results/chart?title=All%20tests%20pass%20rate&amp;shared=true&amp;apptype=other&amp;resourceId=%252Fsubscriptions%252Fa4f207ac-6329-4af9-8245-6ce13c0fc425%252Fresourcegroups%252FDoradoMonitoring%252Fproviders%252Fmicrosoft.insights%252Fcomponents%252FDoradoMonitoringInsights" target="_blank">TEST ANALYTICS ARE HERE</a> - - - - <a href="https://microsoft.sharepoint.com/teams/doradotaskforce/_layouts/15/WopiFrame.aspx?sourcedoc={e9f7b491-2648-4c91-9a48-8a26b3b632c2}&amp;action=edit&amp;wd=target%28%2F%2FDRI%20Info.one%7Cf6b481d2-4e11-4d84-83f1-956948eeaa8c%2FDorado%20monitoring%20framework%7C06f0cf79-ec40-44ec-b66f-6c1a8af2eab0%2F%29" target="_blank">DRI INFO PAGE HERE</a></h1>
+  <a href="#" class="hiddenLink suiteHeader suiteHeaderFailing flex flex-center flexBoxColumn" id="suite_Channels_header"><div>
+            <span>Channels</span>
+            </div></a>
+  <div class="suite flex flex-center flexBoxColumn" id="suite_Channels_div">
+    <a href="/api/status/suite/Channels"><h3>Suite status</h3></a>
+    <table class="pure-table pure-table-bordered">
+        <thead><tr><th>Related analytics queries</th></tr></thead>
+            <tbody><tr><td><a href="https://analytics.applicationinsights.io/subscriptions/a4f207ac-6329-4af9-8245-6ce13c0fc425/resourcegroups/DoradoMonitoring/components/DoradoMonitoringInsights?q=H4sIAAAAAAAEAGWQwW7CMAyG73sKi1M7VYgdthu7tLsNNAEv4AarDSIOih0mpj38krJWQr3anz%2F7t4mi3n1ciVWefuG7p0DA6AjWa1gcSHSHvJg6al0qobvAO2Dni7e%2BnHpmUDWJYLGeZbmPVmk7uuoemeksWXYJ%2FkRGIfvvAKgXDZa7YqYZobKCg72z4xUVfKHIDjVXX1YreE6eo4%2FtmeaefTSGRJLmMw2wuQ1bH%2BgNocRALn9j%2BU8lvqnnBz6gTZ3fINE5DPaHAK9dMV5WQnubglbQWi5yjApeXR4KxEcKQyTTY9A%2Fe23c%2B5EBAAA%3D&amp;apptype=other" target="_blank">Pass rate</a></td></tr>
+            <tr><td><a href="https://analytics.applicationinsights.io/subscriptions/a4f207ac-6329-4af9-8245-6ce13c0fc425/resourcegroups/DoradoMonitoring/components/DoradoMonitoringInsights?q=H4sIAAAAAAAEAGWQwW7CMAyG73sKi1OZKsQO7MYu7W7bNAEv4AarDSIOih0QiIdfUtZKqFf782f%2FNlHUu88zscrLHS4dBQJGR7Bew2xHohvk2dhR61IJ3Qk%2BAFtfvHfzsWd6VZ0IFutZFttolX4GV9UhMx0ly07BH8goZP8DAPWiwXJbTDQDNC9hZx%2FscEUJvyiyQc3Vt%2BUSXpNn72NzpKlnG40hkaT5SgNsrv3WJ%2FqbUGIgl7%2Bx%2BKcSX1fTA5%2FQuspvkOgcBnsjwHNbDOPQXMecJTSWi5yihJXLM4F4T6FPZDoM%2BgdfAIVPkAEAAA%3D%3D&amp;apptype=other" target="_blank">Latencies</a></td></tr>
+    </tbody></table>
+    <br>
+<table class="pure-table pure-table-bordered">
+    <thead>
+        <tr>
+            <th>Test Name</th>
+            <th>Passed</th>
+            <th>Pass Rate</th>
+            <th>Pass Rate Threshold</th>
+            <th>Average Latency</th>
+            <th>Latency Threshold</th>
+            <th>Run Count</th>
+        </tr>
+    </thead>
+        <tbody><tr>
+            <!-- test name -->
+            <td><a href="/api/status/test/AlexaAvailability">AlexaAvailability</a></td>
+            
+            <!-- passed -->
+                <td>PASS</td>
+
+            <!-- pass rate -->
+                <td>66.67%</td>
+
+            <!-- pass rate threshold -->
+                <td>50.00%</td>
+
+            <!-- latency -->
+                <td>1815.691</td>
+
+            <!-- latency threshold -->
+                <td>N/A</td>
+
+            <!-- run count -->
+            <td>3</td>
+        </tr>
+        <tr>
+            <!-- test name -->
+            <td><a href="/api/status/test/BotletRuntimeAPI">BotletRuntimeAPI</a></td>
+            
+            <!-- passed -->
+                <td>PASS</td>
+
+            <!-- pass rate -->
+                <td>100.00%</td>
+
+            <!-- pass rate threshold -->
+                <td>50.00%</td>
+
+            <!-- latency -->
+                <td>1190.079</td>
+
+            <!-- latency threshold -->
+                <td>N/A</td>
+
+            <!-- run count -->
+            <td>3</td>
+        </tr>
+        <tr>
+            <!-- test name -->
+            <td><a href="/api/status/test/CortanaAvailability">CortanaAvailability</a></td>
+            
+            <!-- passed -->
+                <td>PASS</td>
+
+            <!-- pass rate -->
+                <td>100.00%</td>
+
+            <!-- pass rate threshold -->
+                <td>50.00%</td>
+
+            <!-- latency -->
+                <td>2855.452</td>
+
+            <!-- latency threshold -->
+                <td>N/A</td>
+
+            <!-- run count -->
+            <td>3</td>
+        </tr>
+        <tr>
+            <!-- test name -->
+            <td><a href="/api/status/test/FacebookAvailability">FacebookAvailability</a></td>
+            
+            <!-- passed -->
+                <td>PASS</td>
+
+            <!-- pass rate -->
+                <td>100.00%</td>
+
+            <!-- pass rate threshold -->
+                <td>50.00%</td>
+
+            <!-- latency -->
+                <td>1973.054</td>
+
+            <!-- latency threshold -->
+                <td>N/A</td>
+
+            <!-- run count -->
+            <td>3</td>
+        </tr>
+        <tr>
+            <!-- test name -->
+            <td><a href="/api/status/test/ServiceBotletRuntimeAPI">ServiceBotletRuntimeAPI</a></td>
+            
+            <!-- passed -->
+                <td>PASS</td>
+
+            <!-- pass rate -->
+                <td>100.00%</td>
+
+            <!-- pass rate threshold -->
+                <td>50.00%</td>
+
+            <!-- latency -->
+                <td>1767.682</td>
+
+            <!-- latency threshold -->
+                <td>N/A</td>
+
+            <!-- run count -->
+            <td>3</td>
+        </tr>
+        <tr>
+            <!-- test name -->
+            <td><a href="/api/status/test/TelegramAvailability">TelegramAvailability</a></td>
+            
+            <!-- passed -->
+                <td>PASS</td>
+
+            <!-- pass rate -->
+                <td>100.00%</td>
+
+            <!-- pass rate threshold -->
+                <td>50.00%</td>
+
+            <!-- latency -->
+                <td>3307.737</td>
+
+            <!-- latency threshold -->
+                <td>N/A</td>
+
+            <!-- run count -->
+            <td>3</td>
+        </tr>
+</tbody></table>
+<h3>Overall result: <b>PASS</b></h3>
+</div>
+</div>
+</body></html>

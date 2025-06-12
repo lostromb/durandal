@@ -1,0 +1,17 @@
+@var UnknownObject Model
+@namespace Durandal.Views.Common.Test
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+  <head>
+    <title>${Model.MemberVariable}</title>
+  </head>
+  <body>
+    This is my spark page!
+	<table>
+    <if condition='Model.MemberFunction()'>
+		<div>This is a test</div>
+	</if>
+</table>
+  </body>
+</html>

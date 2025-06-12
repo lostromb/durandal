@@ -10,8 +10,14 @@ namespace Durandal.Common.Audio
     public interface IAudioGraphComponent : IDisposable
     {
         /// <summary>
+        /// Gets a unique ID for this component randomly generated at its creation time.
+        /// </summary>
+        Guid NodeId { get; }
+
+        /// <summary>
         /// The custom name (if any) of this audio node in the graph. Useful for debugging and instrumentation.
-        /// Cannot be null. The default value of this is just the name of the implementation class.
+        /// Cannot be null. The default value of this is just the name of the implementation class. Not guaranteed
+        /// to be unique across components.
         /// </summary>
         string NodeName { get; }
 

@@ -1,0 +1,78 @@
+GET /speech/recognition/interactive/cognitiveservices/v1?format=detailed&language=en-us HTTP/1.1
+Host: westus2.stt.speech.microsoft.com:443
+Upgrade: websocket
+Connection: Upgrade
+Sec-WebSocket-Key: KSO+hOFs1q5SkEnx8bvp6w==
+Sec-WebSocket-Protocol: USP
+Ocp-Apim-Subscription-Key: d75f2bddd7e84c7a8c94cf1a1e79fad0
+X-ConnectionId: c11e0975045942d8b98b18d8d6eed5f6
+Sec-WebSocket-Version: 13
+
+
+PACKET: OPCODE 1 TEXT FIN MASKED LEN 244
+X-Timestamp:2019-01-03T22:51:04.928Z
+Path:speech.config
+Content-Type:application/json
+
+{"context":{"os":{"name":"Client","platform":"Windows","version":"8"},"system":{"build":"Windows-x64","lang":"C#","name":"SpeechSDK","version":"1.2.0"}}}
+PACKET: OPCODE 2 BIN FIN MASKED LEN 156
+ nX-Timestamp:2019-01-03T22:51:04.928Z
+Path:audio
+X-StreamId:1
+X-RequestId:30eb92c0fde244988d585879189beba6
+RIFF    WAVEfmt      ?>   }    data
+
+PACKET: OPCODE 2 BIN FIN MASKED LEN 3312
+ nX-Timestamp:2019-01-03T22:51:04.928Z
+Path:audio
+X-StreamId:1
+X-RequestId:30eb92c0fde244988d585879189beba6
+(WAV data)
+
+PACKET: OPCODE 2 BIN FIN MASKED LEN 3312
+ nX-Timestamp:2019-01-03T22:51:04.928Z
+Path:audio
+X-StreamId:1
+X-RequestId:30eb92c0fde244988d585879189beba6
+(WAV data)
+
+PACKET: OPCODE 2 BIN FIN MASKED LEN 3312
+ nX-Timestamp:2019-01-03T22:51:04.928Z
+Path:audio
+X-StreamId:1
+X-RequestId:30eb92c0fde244988d585879189beba6
+(WAV data)
+
+PACKET: OPCODE 2 BIN FIN MASKED LEN 3312
+ nX-Timestamp:2019-01-03T22:51:04.928Z
+Path:audio
+X-StreamId:1
+X-RequestId:30eb92c0fde244988d585879189beba6
+(WAV data)
+
+PACKET: OPCODE 2 BIN FIN MASKED LEN 3312
+ nX-Timestamp:2019-01-03T22:51:04.929Z
+Path:audio
+X-StreamId:1
+X-RequestId:30eb92c0fde244988d585879189beba6
+(WAV data)
+
+PACKET: OPCODE 2 BIN FIN MASKED LEN 3312
+ nX-Timestamp:2019-01-03T22:51:04.929Z
+Path:audio
+X-StreamId:1
+X-RequestId:30eb92c0fde244988d585879189beba6
+(WAV data)
+
+PACKET: OPCODE 2 BIN FIN MASKED LEN 3312
+ nX-Timestamp:2019-01-03T22:51:04.982Z
+Path:audio
+X-StreamId:1
+X-RequestId:30eb92c0fde244988d585879189beba6
+(WAV data)
+
+PACKET: OPCODE 2 BIN FIN MASKED LEN 112
+ nX-Timestamp:2019-01-03T22:51:06.070Z
+Path:audio
+X-StreamId:1
+X-RequestId:30eb92c0fde244988d585879189beba6

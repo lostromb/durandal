@@ -1,0 +1,23 @@
+﻿<Window x:Class="GuiPackager.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Durandal Package Uploader" Height="216" Width="728">
+    <Grid>
+        <Label x:Name="DialogDirLabel" Content="Dialog Engine directory" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="244"/>
+        <Button x:Name="SelectDialogDirButton" Content="Choose" HorizontalAlignment="Left" Margin="332,10,0,0" VerticalAlignment="Top" Width="112" Height="26" Click="SelectDialogDirButton_Click"/>
+        <TextBox x:Name="DialogDirField" Height="26" Margin="449,10,9.6,0" TextWrapping="Wrap" Text="C:\" VerticalAlignment="Top"/>
+
+        <Label x:Name="LuDirLabel" Content="LU directory" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top" Width="244"/>
+        <Button x:Name="SelectLuDirButton" Content="Choose" HorizontalAlignment="Left" Margin="332,41,0,0" VerticalAlignment="Top" Width="112" Height="26" Click="SelectLuDirButton_Click"/>
+        <TextBox x:Name="LuDirField" Height="26" Margin="449,41,9.6,0" TextWrapping="Wrap" Text="C:\" VerticalAlignment="Top"/>
+
+        <Label x:Name="PluginFileLabel" Content="Plugin File" HorizontalAlignment="Left" Margin="10,72,0,0" VerticalAlignment="Top" Width="244"/>
+        <Button x:Name="SelectPluginButton" Content="Choose" HorizontalAlignment="Left" Margin="332,72,0,0" VerticalAlignment="Top" Width="112" Height="26" Click="SelectPluginButton_Click"/>
+        <TextBox x:Name="PluginFileField" Height="26" Margin="449,72,9.6,0" TextWrapping="Wrap" Text="C:\" VerticalAlignment="Top"/>
+
+        <Label x:Name="DeployServerLabel" Content="Deployment Server" HorizontalAlignment="Left" Margin="10,103,0,0" VerticalAlignment="Top" Width="244"/>
+        <TextBox x:Name="DeployServerField" HorizontalAlignment="Left" Height="26" Margin="332,103,0,0" TextWrapping="Wrap" Text="durandalprod.cloudapp.net" VerticalAlignment="Top" Width="260"/>
+
+        <Button x:Name="SubmitButton" Content="Submit" Margin="225,134,208.6,10.4" Click="SubmitButton_Click"/>
+    </Grid>
+</Window>

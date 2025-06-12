@@ -36,14 +36,13 @@ namespace Durandal.Extensions.BassAudio
 
             try
             {
-                if (NativePlatformUtils.PrepareNativeLibrary("bass", _logger) == NativeLibraryStatus.Available)
-                {
-                    _logger.Log($"Initializing BASS audio using library version {Bass.Version}...");
-                }
-                else
+                if (NativePlatformUtils.PrepareNativeLibrary("bass", _logger) != NativeLibraryStatus.Available)
                 {
                     _logger.Log($"BASS library may not exist on this system. Things could break!", LogLevel.Wrn);
                 }
+
+                // Throw an exception now if we can't call into this function...
+                _logger.Log($"Initializing BASS audio using library version {Bass.Version}...");
             }
             catch (BadImageFormatException e)
             {

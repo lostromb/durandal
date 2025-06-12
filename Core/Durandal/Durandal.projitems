@@ -159,6 +159,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Common\MathExt\Matrix3x3f.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Common\MathExt\StaticAverageFloat.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Common\MathExt\StatisticalSet.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Common\MathExt\StatisticalSetFloat.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Common\Net\Http2\DataTransferWindow.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Common\Net\Http2\Frames\Http2ContinuationFrame.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Common\Net\Http2\Frames\Http2GoAwayFrame.cs" />

@@ -1,0 +1,85 @@
+﻿{
+  "Id": "http://schema.org/FoodEstablishment",
+  "Comment": "A food-related business.",
+  "Label": "FoodEstablishment",
+  "InheritsFrom": [
+    "http://schema.org/LocalBusiness"
+  ],
+  "Fields": {
+    "servesCuisine": {
+      "Name": "servesCuisine",
+      "Values": [
+        {
+          "Type": "Text",
+          "Comment": "The cuisine of the restaurant."
+        }
+      ]
+    },
+    "hasMenu": {
+      "Name": "hasMenu",
+      "Values": [
+        {
+          "Type": "Text",
+          "Comment": "Either the actual menu as a structured representation, as text, or a URL of the menu."
+        },
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/URL",
+          "Comment": "Either the actual menu as a structured representation, as text, or a URL of the menu."
+        },
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/Menu",
+          "Comment": "Either the actual menu as a structured representation, as text, or a URL of the menu."
+        }
+      ]
+    },
+    "menu": {
+      "Name": "menu",
+      "Values": [
+        {
+          "Type": "Text",
+          "Comment": "Either the actual menu as a structured representation, as text, or a URL of the menu."
+        },
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/URL",
+          "Comment": "Either the actual menu as a structured representation, as text, or a URL of the menu."
+        },
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/Menu",
+          "Comment": "Either the actual menu as a structured representation, as text, or a URL of the menu."
+        }
+      ]
+    },
+    "starRating": {
+      "Name": "starRating",
+      "Values": [
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/Rating",
+          "Comment": "An official rating for a lodging business or food establishment, e.g. from national associations or standards bodies. Use the author property to indicate the rating organization, e.g. as an Organization with name such as (e.g. HOTREC, DEHOGA, WHR, or Hotelstars)."
+        }
+      ]
+    },
+    "acceptsReservations": {
+      "Name": "acceptsReservations",
+      "Values": [
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/URL",
+          "Comment": "Indicates whether a FoodEstablishment accepts reservations. Values can be Boolean, an URL at which reservations can be made or (for backwards compatibility) the strings <code>Yes</code> or <code>No</code>."
+        },
+        {
+          "Type": "Boolean",
+          "Comment": "Indicates whether a FoodEstablishment accepts reservations. Values can be Boolean, an URL at which reservations can be made or (for backwards compatibility) the strings <code>Yes</code> or <code>No</code>."
+        },
+        {
+          "Type": "Text",
+          "Comment": "Indicates whether a FoodEstablishment accepts reservations. Values can be Boolean, an URL at which reservations can be made or (for backwards compatibility) the strings <code>Yes</code> or <code>No</code>."
+        }
+      ]
+    }
+  }
+}

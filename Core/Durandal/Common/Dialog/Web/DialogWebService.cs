@@ -89,7 +89,7 @@ namespace Durandal.Common.Dialog.Web
             _speechRecognitionEngine = parameters.SpeechReco;
             _speechSynthesizer = parameters.SpeechSynth;
             _codecFactory = parameters.CodecFactory;
-            _metrics = parameters.Metrics.DefaultIfNull(() => NullMetricCollector.Singleton);
+            _metrics = parameters.Metrics.DefaultIfNull(NullMetricCollector.Singleton);
             _dimensions = parameters.MetricDimensions ?? DimensionSet.Empty;
             _audioQuality = AudioHelpers.GetAudioQualityBasedOnMachinePerformance();
 

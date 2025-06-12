@@ -1,0 +1,44 @@
+import "Durandal.API.SpeechHypothesis.bond"
+import "Durandal.API.AudioData.bond"
+import "Durandal.API.ClientContext.bond"
+import "Durandal.API.RecoResult.bond"
+import "Durandal.API.InputMethod.bond"
+import "Durandal.API.SecurityToken.bond"
+
+namespace csharp Durandal.API
+namespace java org.stromberg.durandal.api
+
+struct ClientRequest
+{
+    // Versioning for this communication
+	1: required int32 ProtocolVersion = 6;
+	
+	// The client context specific to this request
+	2: required ClientContext ClientContext;
+	
+	// Defines the method of input used to generate this request
+	3: required InputMethod Source = Unknown;
+	
+	// The query or set of queries to be processed
+	4: vector<SpeechHypothesis> Queries;
+	
+	// Optional security token information
+	5: nullable<SecurityToken> AuthToken;
+	
+	// If the client cannot do speech reco, it will simply pass the audio here
+	6: nullable<AudioData> QueryAudio;
+	
+	// If the client wishes to invoke a dialog action directly it can do so here
+	// This can also be used if LU was invoked elsewhere and we want to bypass the
+	// LU call that normally happens in dialog
+	7: nullable<vector<RecoResult>> UnderstandingData;
+	
+	// The preferred audio codec that the client wants the response audio to use
+	8: string PreferredAudioCodec;
+	
+	// A debugging traceId. If not set, a new one will be generated
+	9: string TraceId;
+	
+	// Used to scope the client request to only a subset of loaded domains
+	10: vector<string> DomainScope;
+}

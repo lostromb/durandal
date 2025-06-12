@@ -1,0 +1,337 @@
+<?xml version="1.0"?>
+<grammar version="1.0">
+  <regex id="reBoundary" scope="public" expression="(?:\b)" />
+  <regex id="reNumber" scope="public" expression="([\d][\d,\.]*)" /> 
+  <regex id="reNumberWord" scope="public" expression="(one|two|three|four|five|six|seven|eight|nine|ten|eleven|twelve|thirteen|fourteen|fifteen|sixteen|seventeen|eighteen|nineteen|twenty|twenty-one|twenty-two|twenty-three|twenty-four|twenty-five|twenty-six|twenty-seven|twenty-eight|twenty-nine|twenty one|twenty two|twenty three|twenty four|twenty five|twenty six|twenty seven|twenty eight|twenty nine|thirty|thirty-one|thirty-two|thirty-three|thirty-four|thirty-five|thirty-six|thirty-seven|thirty-eight|thirty-nine|thirty one|thirty two|thirty three|thirty four|thirty five|thirty six|thirty seven|thirty eight|thirty nine|forty|forty-one|forty-two|forty-three|forty-four|forty-five|forty-six|forty-seven|forty-eight|forty-nine|forty one|forty two|forty three|forty four|forty five|forty six|forty seven|forty eight|forty nine|fifty|fifty-one|fifty-two|fifty-three|fifty-four|fifty-five|fifty-six|fifty-seven|fifty-eight|fifty-nine|fifty one|fifty two|fifty three|fifty four|fifty five|fifty six|fifty seven|fifty eight|fifty nine|sixty|sixty-one|sixty-two|sixty-three|sixty-four|sixty-five|sixty-six|sixty-seven|sixty-eight|sixty-nine|sixty one|sixty two|sixty three|sixty four|sixty five|sixty six|sixty seven|sixty eight|sixty nine|seventy|seventy-one|seventy-two|seventy-three|seventy-four|seventy-five|seventy-six|seventy-seven|seventy-eight|seventy-nine|seventy one|seventy two|seventy three|seventy four|seventy five|seventy six|seventy seven|seventy eight|seventy nine|eighty|eighty-one|eighty-two|eighty-three|eighty-four|eighty-five|eighty-six|eighty-seven|eighty-eight|eighty-nine|eighty one|eighty two|eighty three|eighty four|eighty five|eighty six|eighty seven|eighty eight|eighty nine|ninety|ninety-one|ninety-two|ninety-three|ninety-four|ninety-five|ninety-six|ninety-seven|ninety-eight|ninety-nine|ninety one|ninety two|ninety three|ninety four|ninety five|ninety six|ninety seven|ninety eight|ninety nine|1/2|1/3|1/4|1/5|1/6|1/7|1/8|1/9|1/10|half|third|fourth|fifth|sixth|seventh|eighth|ninth|tenth|a half|a third|a fourth|a fifth|a sixth|a seventh|a eighth|a ninth|a tenth|one half|one third|one fourth|one fifth|one sixth|one seventh|one eighth|one ninth|one tenth)" />
+  <regex id="reNumberWordTh" scope="public" expression="([1-9][0-9]?(th|rd|st|nd)|first|second|third|forth|fourth|fifth|sixth|seventh|eighth|ninth|tenth|eleventh|twelfth|thirteenth|fourteenth|fifteenth|sixteenth|seventeenth|eighteenth|nineteenth|twentieth|twenty-first|twenty first|twenty-second|twenty second|twenty-third|twenty third|twenty-fourth|twenty fourth|twenty-forth|twenty-fifth|twenty fifth|twenty-sixth|twenty sixth|twenty-seventh|twenty seventh|twenty-eighth|twenty eighth|twenty-ninth|twenty ninth|thirtieth|thirty-first|thirty first)" />
+  
+  <normalization_rule id="numberPassthrough" strict="false" />
+  
+  <normalization_rule id="numberWord" strict="true">
+    <item input="one" output="1" />
+    <item input="two" output="2" />
+    <item input="three" output="3" />
+    <item input="four" output="4" />
+    <item input="five" output="5" />
+    <item input="six" output="6" />
+    <item input="seven" output="7" />
+    <item input="eight" output="8" />
+    <item input="nine" output="9" />
+    <item input="ten" output="10" />
+    <item input="eleven" output="11" />
+    <item input="twelve" output="12" />
+    <item input="thirteen" output="13" />
+    <item input="fourteen" output="14" />
+    <item input="fifteen" output="15" />
+    <item input="sixteen" output="16" />
+    <item input="seventeen" output="17" />
+    <item input="eighteen" output="18" />
+    <item input="nineteen" output="19" />
+    <item input="twenty" output="20" />
+    <item input="twenty-one" output="21" />
+    <item input="twenty-two" output="22" />
+    <item input="twenty-three" output="23" />
+    <item input="twenty-four" output="24" />
+    <item input="twenty-five" output="25" />
+    <item input="twenty-six" output="26" />
+    <item input="twenty-seven" output="27" />
+    <item input="twenty-eight" output="28" />
+    <item input="twenty-nine" output="29" />
+    <item input="twenty one" output="21" />
+    <item input="twenty two" output="22" />
+    <item input="twenty three" output="23" />
+    <item input="twenty four" output="24" />
+    <item input="twenty five" output="25" />
+    <item input="twenty six" output="26" />
+    <item input="twenty seven" output="27" />
+    <item input="twenty eight" output="28" />
+    <item input="twenty nine" output="29" />
+    <item input="thirty" output="30" />
+    <item input="thirty-one" output="31" />
+    <item input="thirty-two" output="32" />
+    <item input="thirty-three" output="33" />
+    <item input="thirty-four" output="34" />
+    <item input="thirty-five" output="35" />
+    <item input="thirty-six" output="36" />
+    <item input="thirty-seven" output="37" />
+    <item input="thirty-eight" output="38" />
+    <item input="thirty-nine" output="39" />
+    <item input="thirty one" output="31" />
+    <item input="thirty two" output="32" />
+    <item input="thirty three" output="33" />
+    <item input="thirty four" output="34" />
+    <item input="thirty five" output="35" />
+    <item input="thirty six" output="36" />
+    <item input="thirty seven" output="37" />
+    <item input="thirty eight" output="38" />
+    <item input="thirty nine" output="39" />
+    <item input="forty" output="40" />
+    <item input="forty-one" output="41" />
+    <item input="forty-two" output="42" />
+    <item input="forty-three" output="43" />
+    <item input="forty-four" output="44" />
+    <item input="forty-five" output="45" />
+    <item input="forty-six" output="46" />
+    <item input="forty-seven" output="47" />
+    <item input="forty-eight" output="48" />
+    <item input="forty-nine" output="49" />
+    <item input="forty one" output="41" />
+    <item input="forty two" output="42" />
+    <item input="forty three" output="43" />
+    <item input="forty four" output="44" />
+    <item input="forty five" output="45" />
+    <item input="forty six" output="46" />
+    <item input="forty seven" output="47" />
+    <item input="forty eight" output="48" />
+    <item input="forty nine" output="49" />
+    <item input="fifty" output="50" />
+    <item input="fifty-one" output="51" />
+    <item input="fifty-two" output="52" />
+    <item input="fifty-three" output="53" />
+    <item input="fifty-four" output="54" />
+    <item input="fifty-five" output="55" />
+    <item input="fifty-six" output="56" />
+    <item input="fifty-seven" output="57" />
+    <item input="fifty-eight" output="58" />
+    <item input="fifty-nine" output="59" />
+    <item input="fifty one" output="51" />
+    <item input="fifty two" output="52" />
+    <item input="fifty three" output="53" />
+    <item input="fifty four" output="54" />
+    <item input="fifty five" output="55" />
+    <item input="fifty six" output="56" />
+    <item input="fifty seven" output="57" />
+    <item input="fifty eight" output="58" />
+    <item input="fifty nine" output="59" />
+    <item input="sixty" output="60" />
+    <item input="sixty-one" output="61" />
+    <item input="sixty-two" output="62" />
+    <item input="sixty-three" output="63" />
+    <item input="sixty-four" output="64" />
+    <item input="sixty-five" output="65" />
+    <item input="sixty-six" output="66" />
+    <item input="sixty-seven" output="67" />
+    <item input="sixty-eight" output="68" />
+    <item input="sixty-nine" output="69" />
+    <item input="sixty one" output="61" />
+    <item input="sixty two" output="62" />
+    <item input="sixty three" output="63" />
+    <item input="sixty four" output="64" />
+    <item input="sixty five" output="65" />
+    <item input="sixty six" output="66" />
+    <item input="sixty seven" output="67" />
+    <item input="sixty eight" output="68" />
+    <item input="sixty nine" output="69" />
+    <item input="seventy" output="70" />
+    <item input="seventy-one" output="71" />
+    <item input="seventy-two" output="72" />
+    <item input="seventy-three" output="73" />
+    <item input="seventy-four" output="74" />
+    <item input="seventy-five" output="75" />
+    <item input="seventy-six" output="76" />
+    <item input="seventy-seven" output="77" />
+    <item input="seventy-eight" output="78" />
+    <item input="seventy-nine" output="79" />
+    <item input="seventy one" output="71" />
+    <item input="seventy two" output="72" />
+    <item input="seventy three" output="73" />
+    <item input="seventy four" output="74" />
+    <item input="seventy five" output="75" />
+    <item input="seventy six" output="76" />
+    <item input="seventy seven" output="77" />
+    <item input="seventy eight" output="78" />
+    <item input="seventy nine" output="79" />
+    <item input="eighty" output="80" />
+    <item input="eighty-one" output="81" />
+    <item input="eighty-two" output="82" />
+    <item input="eighty-three" output="83" />
+    <item input="eighty-four" output="84" />
+    <item input="eighty-five" output="85" />
+    <item input="eighty-six" output="86" />
+    <item input="eighty-seven" output="87" />
+    <item input="eighty-eight" output="88" />
+    <item input="eighty-nine" output="89" />
+    <item input="eighty one" output="81" />
+    <item input="eighty two" output="82" />
+    <item input="eighty three" output="83" />
+    <item input="eighty four" output="84" />
+    <item input="eighty five" output="85" />
+    <item input="eighty six" output="86" />
+    <item input="eighty seven" output="87" />
+    <item input="eighty eight" output="88" />
+    <item input="eighty nine" output="89" />
+    <item input="ninety" output="90" />
+    <item input="ninety-one" output="91" />
+    <item input="ninety-two" output="92" />
+    <item input="ninety-three" output="93" />
+    <item input="ninety-four" output="94" />
+    <item input="ninety-five" output="95" />
+    <item input="ninety-six" output="96" />
+    <item input="ninety-seven" output="97" />
+    <item input="ninety-eight" output="98" />
+    <item input="ninety-nine" output="99" />
+    <item input="ninety one" output="91" />
+    <item input="ninety two" output="92" />
+    <item input="ninety three" output="93" />
+    <item input="ninety four" output="94" />
+    <item input="ninety five" output="95" />
+    <item input="ninety six" output="96" />
+    <item input="ninety seven" output="97" />
+    <item input="ninety eight" output="98" />
+    <item input="ninety nine" output="99" />
+	<item input="1/2" output="1/2" />
+	<item input="1/3" output="1/3" />
+	<item input="1/4" output="1/4" />
+	<item input="1/5" output="1/5" />
+	<item input="1/6" output="1/6" />
+	<item input="1/7" output="1/7" />
+	<item input="1/8" output="1/8" />
+	<item input="1/9" output="1/9" />
+	<item input="1/10" output="1/10" />
+	<item input="half" output="1/2" />
+	<item input="third" output="1/3" />
+	<item input="fourth" output="1/4" />
+	<item input="fifth" output="1/5" />
+	<item input="sixth" output="1/6" />
+	<item input="seventh" output="1/7" />
+	<item input="eighth" output="1/8" />
+	<item input="ninth" output="1/9" />
+	<item input="tenth" output="1/10" />
+	<item input="a half" output="1/2" />
+	<item input="a third" output="1/3" />
+	<item input="a fourth" output="1/4" />
+	<item input="a fifth" output="1/5" />
+	<item input="a sixth" output="1/6" />
+	<item input="a seventh" output="1/7" />
+	<item input="a eighth" output="1/8" />
+	<item input="a ninth" output="1/9" />
+	<item input="a tenth" output="1/10" />
+	<item input="one half" output="1/2" />
+	<item input="one third" output="1/3" />
+	<item input="one fourth" output="1/4" />
+	<item input="one fifth" output="1/5" />
+	<item input="one sixth" output="1/6" />
+	<item input="one seventh" output="1/7" />
+	<item input="one eighth" output="1/8" />
+	<item input="one ninth" output="1/9" />
+	<item input="one tenth" output="1/10" />
+  </normalization_rule>
+  
+  <normalization_rule id="numberWordTh" strict="true">
+    <item input="first" output="1" />
+    <item input="second" output="2" />
+    <item input="third" output="3" />
+    <item input="forth" output="4" />
+    <item input="fourth" output="4" />
+    <item input="fifth" output="5" />
+    <item input="sixth" output="6" />
+    <item input="seventh" output="7" />
+    <item input="eighth" output="8" />
+    <item input="ninth" output="9" />
+    <item input="tenth" output="10" />
+    <item input="eleventh" output="11" />
+    <item input="twelfth" output="12" />
+    <item input="thirteenth" output="13" />
+    <item input="fourteenth" output="14" />
+    <item input="fifteenth" output="15" />
+    <item input="sixteenth" output="16" />
+    <item input="seventeenth" output="17" />
+    <item input="eighteenth" output="18" />
+    <item input="nineteenth" output="19" />
+    <item input="twentieth" output="20" />
+    <item input="twenty-first" output="21" />
+    <item input="twenty first" output="21" />
+    <item input="twenty-second" output="22" />
+    <item input="twenty second" output="22" />
+    <item input="twenty-third" output="23" />
+    <item input="twenty third" output="23" />
+    <item input="twenty-fourth" output="24" />
+    <item input="twenty fourth" output="24" />
+    <item input="twenty-forth" output="24" />
+    <item input="twenty-fifth" output="25" />
+    <item input="twenty fifth" output="25" />
+    <item input="twenty-sixth" output="26" />
+    <item input="twenty sixth" output="26" />
+    <item input="twenty-seventh" output="27" />
+    <item input="twenty seventh" output="27" />
+    <item input="twenty-eighth" output="28" />
+    <item input="twenty eighth" output="28" />
+    <item input="twenty-ninth" output="29" />
+    <item input="twenty ninth" output="29" />
+    <item input="thirtieth" output="30" />
+    <item input="thirty-first" output="31" />
+    <item input="thirty first" output="31" />
+    <item input="1st" output="1" />
+    <item input="2nd" output="2" />
+    <item input="3rd" output="3" />
+    <item input="4th" output="4" />
+    <item input="5th" output="5" />
+    <item input="6th" output="6" />
+    <item input="7th" output="7" />
+    <item input="8th" output="8" />
+    <item input="9th" output="9" />
+    <item input="10th" output="10" />
+    <item input="11th" output="11" />
+    <item input="12th" output="12" />
+    <item input="13th" output="13" />
+    <item input="14th" output="14" />
+    <item input="15th" output="15" />
+    <item input="16th" output="16" />
+    <item input="17th" output="17" />
+    <item input="18th" output="18" />
+    <item input="19th" output="19" />
+    <item input="20th" output="20" />
+    <item input="21st" output="21" />
+    <item input="22nd" output="22" />
+    <item input="23rd" output="23" />
+    <item input="24th" output="24" />
+    <item input="25th" output="25" />
+    <item input="26th" output="26" />
+    <item input="27th" output="27" />
+    <item input="28th" output="28" />
+    <item input="29th" output="29" />
+    <item input="30th" output="30" />
+    <item input="31st" output="31" />
+  </normalization_rule>
+  
+  <!-- POSITIVE RULES -->
+  
+  <rule id="number" scope="public" example="5">
+    <one-of>
+		<item><ruleref uri="#reBoundary" /></item>
+		<item>$</item>
+	</one-of>
+	<one-of>
+        <item><ruleref uri="#reNumber" /></item>
+        <normalizer>numberPassthrough</normalizer>
+    </one-of>
+    <one-of>
+		<item><ruleref uri="#reBoundary" /></item>
+		<item>%</item>
+	</one-of>
+  </rule>
+  
+  <rule id="numberWord" scope="public" example="seven">
+    <item><ruleref uri="#reBoundary" /></item>
+	<one-of>
+        <item><ruleref uri="#reNumberWord" /></item>
+        <normalizer>numberWord</normalizer>
+      </one-of>
+    <one-of>
+		<item><ruleref uri="#reBoundary" /></item>
+		<item>percent</item>
+	</one-of>
+  </rule>
+  
+  <rule id="numberWordTh" scope="public" example="first">
+    <item><ruleref uri="#reBoundary" /></item>
+	<one-of>
+        <item><ruleref uri="#reNumberWordTh" /></item>
+        <normalizer>numberWordTh</normalizer>
+      </one-of>
+	<item><ruleref uri="#reBoundary" /></item>
+  </rule>
+  
+  <!-- NEGATIVE RULES -->
+  
+</grammar>

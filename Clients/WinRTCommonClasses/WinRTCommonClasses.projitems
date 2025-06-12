@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>443d9c0d-b655-4b36-adb9-f66ec58d36f0</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>DurandalWinRT</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)ClientSideHtmlRenderer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DurandalApp.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ImageUtils.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OAuthLoginActionHandlerWinRT.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)PocketSphinxAdapterWinRT.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)WindowsLocalConfiguration.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)WinRTFileStorage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)WinRTSocket.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)WinRTSocketFactory.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)WinRTSocketServer.cs" />
+  </ItemGroup>
+</Project>

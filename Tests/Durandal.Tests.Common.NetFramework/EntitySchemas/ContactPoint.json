@@ -1,0 +1,138 @@
+﻿{
+  "Id": "http://schema.org/ContactPoint",
+  "Comment": "A contact point&#x2014;for example, a Customer Complaints department.",
+  "Label": "ContactPoint",
+  "InheritsFrom": [
+    "http://schema.org/StructuredValue"
+  ],
+  "Fields": {
+    "serviceArea": {
+      "Name": "serviceArea",
+      "Values": [
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/Place",
+          "Comment": "The geographic area where the service is provided."
+        },
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/GeoShape",
+          "Comment": "The geographic area where the service is provided."
+        },
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/AdministrativeArea",
+          "Comment": "The geographic area where the service is provided."
+        }
+      ]
+    },
+    "areaServed": {
+      "Name": "areaServed",
+      "Values": [
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/GeoShape",
+          "Comment": "The geographic area where a service or offered item is provided."
+        },
+        {
+          "Type": "Text",
+          "Comment": "The geographic area where a service or offered item is provided."
+        },
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/Place",
+          "Comment": "The geographic area where a service or offered item is provided."
+        },
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/AdministrativeArea",
+          "Comment": "The geographic area where a service or offered item is provided."
+        }
+      ]
+    },
+    "hoursAvailable": {
+      "Name": "hoursAvailable",
+      "Values": [
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/OpeningHoursSpecification",
+          "Comment": "The hours during which this service or contact is available."
+        }
+      ]
+    },
+    "contactOption": {
+      "Name": "contactOption",
+      "Values": [
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/ContactPointOption",
+          "Comment": "An option available on this contact point (e.g. a toll-free number or support for hearing-impaired callers)."
+        }
+      ]
+    },
+    "availableLanguage": {
+      "Name": "availableLanguage",
+      "Values": [
+        {
+          "Type": "Text",
+          "Comment": "A language someone may use with or at the item, service or place. Please use one of the language codes from the <a href=\"http://tools.ietf.org/html/bcp47\">IETF BCP 47 standard</a>. See also <a class=\"localLink\" href=\"http://schema.org/inLanguage\">inLanguage</a>"
+        },
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/Language",
+          "Comment": "A language someone may use with or at the item, service or place. Please use one of the language codes from the <a href=\"http://tools.ietf.org/html/bcp47\">IETF BCP 47 standard</a>. See also <a class=\"localLink\" href=\"http://schema.org/inLanguage\">inLanguage</a>"
+        }
+      ]
+    },
+    "telephone": {
+      "Name": "telephone",
+      "Values": [
+        {
+          "Type": "Text",
+          "Comment": "The telephone number."
+        }
+      ]
+    },
+    "email": {
+      "Name": "email",
+      "Values": [
+        {
+          "Type": "Text",
+          "Comment": "Email address."
+        }
+      ]
+    },
+    "contactType": {
+      "Name": "contactType",
+      "Values": [
+        {
+          "Type": "Text",
+          "Comment": "A person or organization can have different contact points, for different purposes. For example, a sales contact point, a PR contact point and so on. This property is used to specify the kind of contact point."
+        }
+      ]
+    },
+    "productSupported": {
+      "Name": "productSupported",
+      "Values": [
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/Product",
+          "Comment": "The product or service this support contact point is related to (such as product support for a particular product line). This can be a specific product or product line (e.g. \"iPhone\") or a general category of products or services (e.g. \"smartphones\")."
+        },
+        {
+          "Type": "Text",
+          "Comment": "The product or service this support contact point is related to (such as product support for a particular product line). This can be a specific product or product line (e.g. \"iPhone\") or a general category of products or services (e.g. \"smartphones\")."
+        }
+      ]
+    },
+    "faxNumber": {
+      "Name": "faxNumber",
+      "Values": [
+        {
+          "Type": "Text",
+          "Comment": "The fax number."
+        }
+      ]
+    }
+  }
+}

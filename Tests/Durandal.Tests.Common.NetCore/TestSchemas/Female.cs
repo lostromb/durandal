@@ -1,0 +1,19 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using Durandal.Common.Ontology;
+using Durandal.Tests.TestSchemas;
+
+namespace Durandal.Tests.TestSchemas
+{
+    /// <summary>
+    /// <para>Female</para>
+    /// <para>The female gender.</para>
+    /// </summary>
+    public class Female : Durandal.Tests.TestSchemas.GenderType
+    {
+        public Female(KnowledgeContext context, string entityId = null) : base(context, "enum://http://schema.org/Female") { }
+    }
+}

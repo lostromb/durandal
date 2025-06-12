@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RunSettings>
+  <TestRunParameters>
+    <Parameter name="DurandalRootDirectory" value="" />
+    <Parameter name="BingMapsApiKey" value="" />
+    <Parameter name="BingSpeechApiKey" value="" />
+    <Parameter name="BingSpellerApiKey" value="" />
+    <Parameter name="BingTranslateApiKey" value="" />
+    <Parameter name="BingSearchApiKey" value="" />
+    <Parameter name="BingSearchApiKeyInternal" value="" />
+    <Parameter name="MySqlConnectionString" value="" />
+    <Parameter name="RedisConnectionString" value="" />
+    <Parameter name="DarkskyApiKey" value="" />
+  </TestRunParameters>
+</RunSettings>

@@ -1,0 +1,25 @@
+import "Durandal.API.SlotValueFormat.bond"
+
+namespace csharp Durandal.API
+namespace java org.stromberg.durandal.api
+
+struct SlotValue
+{
+	// The name or key of this value
+    1: required string Name;
+	
+	// The string value of this slot
+    2: required string Value;
+	
+	// The mechanism which produced this slot value
+    3: required SlotValueFormat Format = TypedText;
+	
+	// Untyped metadata attached to the value
+    4: required map<string, string> Annotations;
+	
+	// Homophones or other alternate interpretations of the value
+    5: nullable<vector<string>> Alternates;
+	
+	// For speech input, this is the (approximate) lexical form of the slot value
+	6: optional string LexicalForm;
+}

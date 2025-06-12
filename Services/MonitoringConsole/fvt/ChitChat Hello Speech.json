@@ -1,0 +1,88 @@
+{
+	"Metadata": {
+		"TestName": "Chitchat hello speech",
+		"Author": "Logan",
+		"SuggestedTestInterval": "30"
+	},
+	"Turns": [
+		{
+			"Input": {
+				"Type": "ComplexSpeech",
+				"SpeechRecognitionResult": {
+					"RecognitionStatus": "Success",
+					"RecognizedPhrases": [
+						{
+							"IPASyllables": "",
+							"SREngineConfidence": 0.935544968,
+							"Locale": "en-US",
+							"AudioTimeOffset": 3600000,
+							"AudioTimeLength": 5900000,
+							"DisplayText": "Hello.",
+							"LexicalForm": "hello"
+						},
+						{
+							"IPASyllables": "",
+							"SREngineConfidence": 0.7219026,
+							"Locale": "en-US",
+							"AudioTimeOffset": 3600000,
+							"AudioTimeLength": 5900000,
+							"DisplayText": "hello hello",
+							"LexicalForm": "hello hello"
+						},
+						{
+							"IPASyllables": "",
+							"SREngineConfidence": 0.623567045,
+							"Locale": "en-US",
+							"AudioTimeOffset": 3600000,
+							"AudioTimeLength": 5900000,
+							"DisplayText": "hello i",
+							"LexicalForm": "hello i"
+						},
+						{
+							"IPASyllables": "",
+							"SREngineConfidence": 0.01989964,
+							"Locale": "en-US",
+							"AudioTimeOffset": 3600000,
+							"AudioTimeLength": 5900000,
+							"DisplayText": "have",
+							"LexicalForm": "have"
+						},
+						{
+							"IPASyllables": "",
+							"SREngineConfidence": 0.00912037,
+							"Locale": "en-US",
+							"AudioTimeOffset": 3600000,
+							"AudioTimeLength": 5900000,
+							"DisplayText": "uh-huh",
+							"LexicalForm": "uh-huh"
+						}
+					]
+				}
+			},
+			"Validations": [
+				{ "Type": "NoErrorMessage" },
+				{
+					"Type": "Any",
+					"Validations": [
+						{
+							"Type": "ResponseTextRegex",
+							"Regex": "^Hello!$"
+						},
+						{
+							"Type": "ResponseTextRegex",
+							"Regex": "^Hello there!$"
+						},
+						{
+							"Type": "ResponseTextRegex",
+							"Regex": "^Hi! What can I do for you\\?$"
+						},
+						{
+							"Type": "ResponseTextRegex",
+							"Regex": "^Hi! How can I help\\?$"
+						}
+					]
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+		<!-- Required elements-->
+		<id>Durandal.AI.Extensions.Redis</id>
+		<version>22.0.$WCREV$</version>
+		<description>Durandal framework extensions for connecting to Redis as a service provider.</description>
+		<authors>Logan Stromberg</authors>
+		<iconUrl>http://durandal.dnsalias.net/durandalai/logo_sm.png</iconUrl>
+		<icon>images\nuget_icon.png</icon>
+
+		<!-- Optional elements -->
+		<title>Durandal Conversational Framework</title>
+		<owners>lostromb</owners>
+		<projectUrl>https://durandalai.visualstudio.com/</projectUrl>
+		<copyright>2023 Microsoft Corporation</copyright>
+		<license type="expression">BSD-3-Clause</license>
+		<dependencies>
+			<group targetFramework="netstandard20">
+				<dependency id="Durandal.AI" version="[22.0.$WCREV$]" />
+				<dependency id="StackExchange.Redis" version="2.8.16" />
+			</group>
+		</dependencies>
+    </metadata>
+    <files>
+		<file src=".\nuget_icon.png" target="images\" />
+		
+		<file src="..\Extensions\Durandal.Extensions.Redis\bin\Release\netstandard2.0\Durandal.Extensions.Redis.dll" target="lib\netstandard2.0" />
+		<file src="..\Extensions\Durandal.Extensions.Redis\bin\Release\netstandard2.0\Durandal.Extensions.Redis.pdb" target="lib\netstandard2.0" />
+		<file src="..\Extensions\Durandal.Extensions.Redis\bin\Release\netstandard2.0\Durandal.Extensions.Redis.xml" target="lib\netstandard2.0" />
+	</files>
+</package>

@@ -1,0 +1,39 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build",
+            "command": "dotnet",
+            "type": "shell",
+            "args": [
+                "build",
+                "/property:GenerateFullPaths=true",
+                // for dumb reasons we must escape the semicolon with %3B, https://github.com/dotnet/sdk/issues/9562
+                "/property:DefineConstants='LINUX%3BNETCOREAPP'",
+                "/consoleloggerparameters:NoSummary",
+                "${workspaceFolder}/Linux.sln"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "reveal": "silent"
+            },
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "clean",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "clean",
+                "/consoleloggerparameters:NoSummary",
+                "${workspaceFolder}/Linux.sln"
+            ],
+            "problemMatcher": "$msCompile"
+        }
+    ]
+}

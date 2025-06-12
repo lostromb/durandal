@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<grammar version="1.0">
+  <regex id="matcher" expression=".+" />
+  
+  <normalization_rule id="normalizer" strict="true">
+	<item input="steps" output="STEPS" />
+    <item input="calories" output="CALORIES" />
+	<item input="miles" output="MILES" />
+	<item input="kilometers" output="KILOMETERS" />
+	<item input="sleep" output="SLEEP" />
+    <item input="slept" output="SLEEP" />
+  </normalization_rule>
+  
+  <rule id="canonicalized_value">
+    <item><ruleref uri="#matcher" /><normalizer>normalizer</normalizer></item>
+  </rule>
+
+</grammar>

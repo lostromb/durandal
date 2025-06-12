@@ -1,0 +1,47 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <IsPackable>false</IsPackable>
+    <PlatformTarget>x64</PlatformTarget>
+	<SignAssembly>True</SignAssembly>
+	<AssemblyOriginatorKeyFile>..\..\durandal.snk</AssemblyOriginatorKeyFile>
+	<RootNamespace>Durandal.Tests</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="TestData\*.opus" />
+    <None Remove="TestData\*.raw" />
+    <None Remove="TestData\*.wav" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="TestData\*">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+	<Content Include="..\UnitTestPlugin\UnitTestPlugin.dupkg">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		<Link>TestData\UnitTestPlugin.dupkg</Link>
+	</Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.11.1" />
+    <PackageReference Include="MSTest.TestAdapter" Version="3.6.1" />
+    <PackageReference Include="MSTest.TestFramework" Version="3.6.1" />
+    <PackageReference Include="coverlet.collector" Version="6.0.2">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="System.Net.Http" Version="4.3.4" />
+    <PackageReference Include="System.Text.RegularExpressions" Version="4.3.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Core\Durandal.NetCore\Durandal.NetCore.csproj" />
+    <ProjectReference Include="..\..\Core\Durandal.NetStandard\Durandal.NetStandard.csproj" />
+    <ProjectReference Include="..\..\Extensions\Durandal.Extensions.CognitiveServices\Durandal.Extensions.CognitiveServices.csproj" />
+    <ProjectReference Include="..\..\Extensions\Durandal.Extensions.Compression\Durandal.Extensions.Compression.csproj" />
+  </ItemGroup>
+
+</Project>

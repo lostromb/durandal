@@ -1,0 +1,15 @@
+namespace csharp Durandal.API
+namespace java org.stromberg.durandal.api
+
+struct SpeechHypothesis
+{
+    // The typed or recognized text (in display form)
+	1: required string Utterance = "";
+	
+	// The SR confidence, if applicable
+    2: required float Confidence = 0.0;
+	
+	// The lexical form of the input for speech queries.
+	// For text queries, this would be the same as display form
+    3: string LexicalForm = "";
+}

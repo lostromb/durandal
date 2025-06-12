@@ -1,0 +1,17 @@
+namespace csharp Durandal.API
+namespace java org.stromberg.durandal.api
+
+struct AudioData
+{
+	// The raw audio data
+	1: required blob Data;
+
+	// The sample rate of the audio. It is always assumed to be single-channel
+    2: required int32 SampleRate;
+
+	// The (optional) compression codec used for this data. If this is empty, assume it's 16-bit PCM
+    3: string Codec;
+
+	// An unstructured field containing codec parameters that may be usedful in decoding
+	4: string CodecParams;
+}

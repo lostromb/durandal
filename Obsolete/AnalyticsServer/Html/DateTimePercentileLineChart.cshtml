@@ -1,0 +1,121 @@
+﻿@namespace DurandalServices.Instrumentation.Analytics.Html
+@using DurandalServices.Instrumentation.Analytics.Charting
+@using System.Drawing
+@var string ChartId = "chart"
+@var string Label = "Value"
+@var float Tension = 0.2f
+@var IEnumerable<DateTimePercentileChartPoint> Data
+@var Color LineColor = Color.FromArgb(0, 255, 255)
+@var DateTimeOffset MinTime
+@var DateTimeOffset MaxTime
+
+<canvas id="${ChartId}"></canvas>
+<script>
+var ctx = document.getElementById("${ChartId}").getContext('2d');
+var myChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+        datasets: [
+            {
+                label: '${Label}-P5',
+                data: [
+                <for each='var point in Data'>
+                    { x: '${point.Time.ToUniversalTime().ToString("yyyy-MM-ddTHH:mm:ss")}', y: ${point.PercentileP5} },
+                </for>
+                ],
+                borderWidth: 1,
+                borderColor: 'rgba(${LineColor.R}, ${LineColor.G}, ${LineColor.B}, 0.5)',
+                pointRadius: 1,
+                pointHitRadius: 10,
+                fill: false
+            },
+            {
+                label: '${Label}-P25',
+                data: [
+                <for each='var point in Data'>
+                    { x: '${point.Time.ToUniversalTime().ToString("yyyy-MM-ddTHH:mm:ss")}', y: ${point.PercentileP25} },
+                </for>
+                ],
+                borderWidth: 2,
+                borderColor: 'rgba(${LineColor.R}, ${LineColor.G}, ${LineColor.B}, 0.75)',
+                pointRadius: 1,
+                pointHitRadius: 10,
+                fill: false
+            },
+            {
+                label: '${Label}-P50',
+                data: [
+                <for each='var point in Data'>
+                    { x: '${point.Time.ToUniversalTime().ToString("yyyy-MM-ddTHH:mm:ss")}', y: ${point.PercentileP50} },
+                </for>
+                ],
+                borderWidth: 4,
+                borderColor: 'rgba(${LineColor.R}, ${LineColor.G}, ${LineColor.B}, 1.0)',
+                pointRadius: 2,
+                pointHitRadius: 10,
+                fill: false
+            },
+            {
+                label: '${Label}-P75',
+                data: [
+                <for each='var point in Data'>
+                    { x: '${point.Time.ToUniversalTime().ToString("yyyy-MM-ddTHH:mm:ss")}', y: ${point.PercentileP75} },
+                </for>
+                ],
+                borderWidth: 2,
+                borderColor: 'rgba(${LineColor.R}, ${LineColor.G}, ${LineColor.B}, 0.75)',
+                pointRadius: 1,
+                pointHitRadius: 10,
+                fill: false
+            },
+            {
+                label: '${Label}-P95',
+                data: [
+                <for each='var point in Data'>
+                    { x: '${point.Time.ToUniversalTime().ToString("yyyy-MM-ddTHH:mm:ss")}', y: ${point.PercentileP95} },
+                </for>
+                ],
+                borderWidth: 1,
+                borderColor: 'rgba(${LineColor.R}, ${LineColor.G}, ${LineColor.B}, 0.5)',
+                pointRadius: 1,
+                pointHitRadius: 10,
+                fill: false
+            }
+        ]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      legend: {
+        display: false
+      },
+      elements: {
+        line: {
+            tension: ${Tension}
+        }
+      },
+      title: {
+        display: true,
+        text: '${Label}'
+      },
+      scales: {
+        xAxes: [{
+          type: "time",
+          time: {
+            displayFormats: {
+              day: "M-D",
+              hour: "M-D ha"
+            },
+            //min: "${MinTime.ToUniversalTime().ToString("yyyy-MM-ddTHH:mm:ss")}",
+            //max: "${MaxTime.ToUniversalTime().ToString("yyyy-MM-ddTHH:mm:ss")}"
+          }
+        }],
+        yAxes: [{
+          ticks: {
+            beginAtZero:true
+          }
+        }]
+      }
+    }
+});
+</script>

@@ -1,0 +1,105 @@
+@var TestSuiteStatus SuiteResult
+@var DateTimeOffset WindowStart
+@var DateTimeOffset WindowEnd
+@using Durandal.Common.Monitoring
+@using System.Linq
+@namespace Durandal.MonitorConsole.Views
+
+<h3>Suite "<a href="/dashboard/suite/${SuiteResult.SuiteName}">${SuiteResult.SuiteName}</a>", time range ${WindowStart.ToString()} to ${WindowEnd.ToString()}</h3>
+<!--<if condition='SuiteResult.AnalyticsQueries != null && SuiteResult.AnalyticsQueries.Count > 0'>
+    <table class="pure-table pure-table-bordered">
+        <thead><tr><th>Related analytics queries</th></tr></thead>
+        <for each='AppInsightsQuery analyticsQuery in SuiteResult.AnalyticsQueries'>
+            <tr><td><a href="${analyticsQuery.CreateDeeplink()}" target="_blank">${analyticsQuery.Label}</a></td></tr>
+        </for>
+    </table>
+    <br />
+</if>-->
+<table class="pure-table pure-table-bordered">
+    <thead>
+        <tr>
+            <th>Test Name</th>
+            <th>Passed</th>
+            <th>Pass Rate</th>
+            <th>Pass Rate Threshold</th>
+            <th>Average Latency</th>
+            <th>Latency Threshold</th>
+            <th>Run Count</th>
+        </tr>
+    </thead>
+    <for each='TestMonitorStatus testResult in SuiteResult.TestResults.Values.OrderBy((t) => t.TestName)'>
+        <tr>
+            <!-- test name -->
+            <td><a href="/dashboard/test/${testResult.TestName}">${testResult.TestName}</a></td>
+            
+            <!-- passed -->
+            <if condition='testResult.IsPassing'>
+                <td>PASS</td>
+            </if>
+            <else>
+                <td style="background-color: red">FAIL</td>
+            </else>
+
+            <!-- pass rate -->
+            <if condition='!testResult.PassRateThreshold.HasValue || testResult.PassRate >= testResult.PassRateThreshold.Value - 0.0001f'>
+                <td>${string.Format("{0:P2}", testResult.PassRate)}</td>
+            </if>
+            <else>
+                <td style="background-color: red">${string.Format("{0:P2}", testResult.PassRate)}</td>
+            </else>
+
+            <!-- pass rate threshold -->
+            <if condition='testResult.PassRateThreshold.HasValue'>
+                <td>${string.Format("{0:P2}", testResult.PassRateThreshold.Value)}</td>
+            </if>
+            <else>
+                <td>N/A</td>
+            </else>
+
+            <!-- latency -->
+            <if condition='!testResult.LatencyThreshold.HasValue || testResult.MedianLatency < testResult.LatencyThreshold.Value'>
+                <td>${testResult.MedianLatency.TotalMilliseconds}</td>
+            </if>
+            <else>
+                <td style="background-color: red">${testResult.MedianLatency.TotalMilliseconds}</td>
+            </else>
+
+            <!-- latency threshold -->
+            <if condition='testResult.LatencyThreshold.HasValue'>
+                <td>${testResult.LatencyThreshold.Value.TotalMilliseconds}</td>
+            </if>
+            <else>
+                <td>N/A</td>
+            </else>
+
+            <!-- run count -->
+            <td>${testResult.TestsRan}</td>
+        </tr>
+    </for>
+</table>
+<h3>Overall result: <b>${SuiteResult.TestResults.Values.Any((t) => !t.IsPassing) ? "FAILED" : "PASS"}</b></h3>
+<if condition='SuiteResult.TestResults.Values.Any((t) => t.LastErrors != null && t.LastErrors.Count > 0)'>
+    <h3>Recent failures:</h3>
+    <table class="pure-table pure-table-bordered">
+        <thead>
+            <tr>
+                <th>Test Name</th>
+                <th>Last Failure Time</th>
+                <th>Trace Id</th>
+                <th>Message</th>
+                <!--<th>Datacenter</th>-->
+            </tr>
+        </thead>
+        <for each='TestMonitorStatus testResult in SuiteResult.TestResults.Values'>
+            <if condition='testResult.LastErrors != null && testResult.LastErrors.Count > 0'>
+                <tr>
+                    <td><a href="/dashboard/test/${testResult.TestName}">${testResult.TestName}</a></td>
+                    <td>${testResult.LastErrors[0].BeginTimestamp}</td>
+                    <td>${testResult.LastErrors[0].TraceId.ToString("N")}</td>
+                    <td>${testResult.LastErrors[0].Message.Replace("\n", "<br />")}</td>
+                    <!--<td>${testResult.LastErrors[0].Datacenter}</td>-->
+                </tr>
+            </if>
+        </for>
+    </table>
+</if>

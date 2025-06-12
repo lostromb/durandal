@@ -20,6 +20,7 @@ namespace Durandal.Common.Audio
         protected readonly WeakPointer<IAudioGraph> _graph;
         private readonly string _nodeName;
         private readonly string _nodeFullName;
+        private readonly Guid _uniqueId = Guid.NewGuid();
         protected bool _playbackFinished = false;
         private HashSet<IDisposable> _extraDisposables;
         private int _disposed = 0;
@@ -37,6 +38,9 @@ namespace Durandal.Common.Audio
             Dispose(false);
         }
 #endif
+
+        /// <inheritdoc/>
+        public Guid NodeId => _uniqueId;
 
         /// <inheritdoc/>
         public IAudioGraph InputGraph => _graph.Value;

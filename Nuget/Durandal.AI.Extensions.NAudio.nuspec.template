@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+		<!-- Required elements-->
+		<id>Durandal.AI.Extensions.NAudio</id>
+		<version>22.0.$WCREV$</version>
+		<description>Durandal framework extensions for using audio hardware devices and codecs via NAudio.</description>
+		<authors>Logan Stromberg</authors>
+		<iconUrl>http://durandal.dnsalias.net/durandalai/logo_sm.png</iconUrl>
+		<icon>images\nuget_icon.png</icon>
+
+		<!-- Optional elements -->
+		<title>Durandal Conversational Framework</title>
+		<owners>lostromb</owners>
+		<projectUrl>https://durandalai.visualstudio.com/</projectUrl>
+		<copyright>2023 Microsoft Corporation</copyright>
+		<license type="expression">BSD-3-Clause</license>
+		<dependencies>
+			<group targetFramework="netstandard20">
+				<dependency id="Durandal.AI" version="[22.0.$WCREV$]" />
+				<dependency id="NAudio.Core" version="2.2.1" />
+				<dependency id="NAudio.Wasapi" version="2.2.1" />
+				<dependency id="NAudio.WinMM" version="2.2.1" />
+			</group>
+			<group targetFramework="net48">
+				<dependency id="Durandal.AI" version="[22.0.$WCREV$]" />
+				<dependency id="NAudio.Core" version="2.2.1" />
+				<dependency id="NAudio.Wasapi" version="2.2.1" />
+				<dependency id="NAudio.WinMM" version="2.2.1" />
+				<dependency id="System.Threading.Tasks.Extensions" version="4.5.4" />
+				<dependency id="System.Runtime.CompilerServices.Unsafe" version="6.0.0" />
+			</group>
+		</dependencies>
+    </metadata>
+    <files>
+		<file src=".\nuget_icon.png" target="images\" />
+		
+		<file src="..\Extensions\Durandal.Extensions.NAudio.NetStandard\bin\Release\netstandard2.0\Durandal.Extensions.NAudio.dll" target="lib\netstandard2.0" />
+		<file src="..\Extensions\Durandal.Extensions.NAudio.NetStandard\bin\Release\netstandard2.0\Durandal.Extensions.NAudio.pdb" target="lib\netstandard2.0" />
+		<file src="..\Extensions\Durandal.Extensions.NAudio.NetStandard\bin\Release\netstandard2.0\Durandal.Extensions.NAudio.xml" target="lib\netstandard2.0" />
+		
+		<file src="..\Extensions\Durandal.Extensions.NAudio.NetFramework\bin\Release\Durandal.Extensions.NAudio.dll" target="lib\net48" />
+		<file src="..\Extensions\Durandal.Extensions.NAudio.NetFramework\bin\Release\Durandal.Extensions.NAudio.pdb" target="lib\net48" />
+		<file src="..\Extensions\Durandal.Extensions.NAudio.NetFramework\bin\Release\Durandal.Extensions.NAudio.xml" target="lib\net48" />
+	</files>
+</package>

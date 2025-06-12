@@ -1,0 +1,160 @@
+﻿@using Durandal.Common.Monitoring
+@using System.Linq
+@var IEnumerable<SuiteAlertStatus> AllAlertStatus
+@namespace Photon.StatusReporter.Razor
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="/content/pure-min.css" rel="stylesheet">
+        <link href="/content/flexbox.css" rel="stylesheet">
+        <link href="/content/dashboard.css" rel="stylesheet">
+        <script src="/content/jquery-3.2.1.min.js"></script>
+        <for each='SuiteAlertStatus suiteStatus in AllAlertStatus'>
+            <script>
+                $(document).ready(function () {
+                    $("#suite_${suiteStatus.SuiteName}_header").click(function () {
+                        $("#suite_${suiteStatus.SuiteName}_div").toggle(200, "linear");
+                    });
+
+                    $("#suite_${suiteStatus.SuiteName}_div").hide();
+                });
+            </script>
+        </for>
+        <script>
+
+        madeChanges = false;
+        changedTests = {};
+
+        toggleSaveButton = function(enabled)
+        {
+          if (enabled)
+          {
+            $("#saveButton").text("Save changes");
+            $("#saveButton").removeClass("buttonDisabled");
+            $("#saveButton").addClass("buttonEnabled");
+            document.getElementById("saveButton").disabled = false;
+          }
+          else
+          {
+            $("#saveButton").addClass("buttonDisabled");
+            $("#saveButton").removeClass("buttonEnabled");
+            document.getElementById("saveButton").disabled = true;
+          }
+        }
+
+        selectionChanged = function(source)
+        {
+          name = source.srcElement.name;
+          value = source.srcElement.selectedIndex;
+          //console.log("Changed " + name + " to " + value);
+          madeChanges = true;
+          toggleSaveButton(madeChanges);
+          changedTests[name] = value;
+          console.log(changedTests);
+        }
+
+        $(document).ready(
+          function()
+          {
+              toggleSaveButton(false);
+              
+              # foreach (SuiteAlertStatus suiteStatus in AllAlertStatus) {
+              #   foreach (TestAlertStatus testStatus in suiteStatus.TestStatus.Values) {
+              document.getElementById("alertLevel_${testStatus.TestName}").addEventListener("change", selectionChanged);
+              #   }
+              # }
+
+            $("#saveButton").click(
+              function()
+              {
+                if (madeChanges)
+                {
+                  $("#saveButton").text("Saving...");
+                  $.ajax({
+                    type: "POST",
+                    url: "/api/alerts/updateAlertConfig",
+                    data: changedTests,
+                    error: function(data, status)
+                    {
+                      $("#saveButton").text("Failed to save");
+                    },
+                    success: function(data, status)
+                    {
+                      madeChanges = false;
+                      changedTests = {};
+                      toggleSaveButton(madeChanges);
+                      $("#saveButton").text("Saved!");
+                    }
+                  });
+                }
+              }
+            );
+          }
+        );
+
+        </script>
+    </head>
+    <body>
+        <div class="flex flex-center flexBoxColumnFlow">
+            ${new CommonHeader().Render()}
+            <span class="inlineHeader">Alerting Configuration</span>
+            <button id="saveButton" class="buttonDisabled" disabled>Save changes</button>
+            <br />
+            <for each='SuiteAlertStatus suiteStatus in AllAlertStatus'>
+                <a href="#" class="hiddenLink suiteHeader suiteHeaderPassing flex flex-center flexBoxColumn" id="suite_${suiteStatus.SuiteName}_header">
+                    <div>
+                        <span>${suiteStatus.SuiteName}</span>
+                    </div>
+                </a>
+                <div class="suite flex flex-center flexBoxColumn" id="suite_${suiteStatus.SuiteName}_div">
+                    <table class="pure-table pure-table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Test Name</th>
+                                <th>Last Alert Level</th>
+                                <th>Last Incident</th>
+                                <th>Last Incident Duration</th>
+                                <th>Configured Alert Level</th>
+                                <th>Owning Team</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <for each='TestAlertStatus testStatus in suiteStatus.TestStatus.Values'>
+                                <tr>
+                                    <!-- test name -->
+                                    <td><a href="/dashboard/test/${testStatus.TestName}">${testStatus.TestName}</a></td>
+                                    <!-- last incident level -->
+                                    <!-- color it red if the end of the incident is within the last 15 minutes -->
+                                    <if condition='testStatus.IsIncidentCurrent'>
+                                        <td style="background-color: red">
+                                    </if>
+                                    <else>
+                                        <td>
+                                    </else>
+                                    ${TestAlertStatus.FormatAlertLevel(testStatus.MostRecentFailureLevel)}
+                                    </td>
+                                    <!-- last incident -->
+                                    <td>${TestAlertStatus.FormatDateTimeRecency(testStatus.MostRecentFailureBegin)}</td>
+                                    <!-- last incident duration -->
+                                    <td>${testStatus.FormatIncidentDuration()}</td>
+                                    <!-- configured alert level -->
+                                    <td>
+                                        <select id="alertLevel_${testStatus.TestName}" name="${testStatus.TestName}">
+                                            <option value="NoAlert"${testStatus.DefaultFailureLevel == AlertLevel.NoAlert ? " selected" : ""}>No Alerts</option>
+                                            <option value="Mute"${testStatus.DefaultFailureLevel == AlertLevel.Mute ? " selected" : ""}>Mute</option>
+                                            <option value="Notify"${testStatus.DefaultFailureLevel == AlertLevel.Notify ? " selected" : ""}>Notify</option>
+                                            <option value="Alert"${testStatus.DefaultFailureLevel == AlertLevel.Alert ? " selected" : ""}>Alert</option>
+                                        </select>
+                                    </td>
+                                    <!-- team name -->
+                                    <td>${testStatus.OwningTeamName ?? "Not set"}</td>
+                                </tr>
+                             </for>
+                        </tbody>
+                    </table>
+                </div>
+            </for>
+        </div>
+    </body>
+</html>

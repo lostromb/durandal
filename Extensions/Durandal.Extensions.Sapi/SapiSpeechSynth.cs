@@ -54,7 +54,7 @@
             _logger = logger.AssertNonNull(nameof(logger));
             _synthThreadPool = threadPool.AssertNonNull(nameof(threadPool));
             _audioOutputFormat = outputFormat.AssertNonNull(nameof(outputFormat));
-            _metrics = metrics.DefaultIfNull(() => NullMetricCollector.Singleton);
+            _metrics = metrics.DefaultIfNull(NullMetricCollector.Singleton);
             _metricDimensions = metricDimensions ?? DimensionSet.Empty;
             _supportedCultures = BuildListOfSupportedLocales();
 

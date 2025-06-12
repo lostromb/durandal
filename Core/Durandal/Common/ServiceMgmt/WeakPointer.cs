@@ -47,6 +47,18 @@ namespace Durandal.Common.ServiceMgmt
         /// Otherwise, return a new WeakPointer referring to the output of the value producer.
         /// This behaves like a null-coalescing operator "??" (since that can't be overridden).
         /// </summary>
+        /// <param name="otherValue">An alternative value to use.</param>
+        /// <returns>A new pointer to either this non-null value, or the default value.</returns>
+        public WeakPointer<T> DefaultIfNull(T otherValue)
+        {
+            return Value == null ? new WeakPointer<T>(otherValue) : this;
+        }
+
+        /// <summary>
+        /// If this <see cref="WeakPointer{T}"/> refers to a non-null object, return this.
+        /// Otherwise, return a new WeakPointer referring to the output of the value producer.
+        /// This behaves like a null-coalescing operator "??" (since that can't be overridden).
+        /// </summary>
         /// <param name="otherValue">A lambda function which can produce an alternative value.</param>
         /// <returns>A new pointer to either this non-null value, or the default value.</returns>
         public WeakPointer<T> DefaultIfNull(Func<T> otherValue)

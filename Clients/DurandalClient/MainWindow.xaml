@@ -1,0 +1,14 @@
+﻿<Window x:Class="Durandal.Client.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Durandal Client" Height="556" Width="321" Closed="WindowClosed" VerticalContentAlignment="Stretch" FontSize="11" HorizontalContentAlignment="Stretch" xmlns:awe="http://schemas.awesomium.com/winfx" Loaded="Window_Loaded">
+    <Grid>
+        <TextBox Name="inputTextBox" Height="57" VerticalAlignment="Bottom" Margin="0,0,55,0" KeyUp="inputTextBox_KeyUp" Text="" Background="#FFCCCCCC" BorderBrush="Black" Foreground="#FF646464" FontSize="15" FontWeight="Normal" FontStyle="Normal" VerticalContentAlignment="Center" BorderThickness="3" ClipToBounds="False" Padding="6,0,0,0" SelectionBrush="#FF76AAFC" OverridesDefaultStyle="False" Focusable="True" GotFocus="inputTextBox_GotFocus" LostFocus="inputTextBox_LostFocus" LostKeyboardFocus="inputTextBox_LostKeyboardFocus" MouseEnter="inputTextBox_MouseEnter" />
+        <Button Name="microphoneButton" HorizontalAlignment="Right" Width="57" Height="57" VerticalAlignment="Bottom">
+            <Button.Background>
+                <ImageBrush ImageSource="/DurandalClient;component/mic.png" />
+            </Button.Background>
+        </Button>
+        <WebBrowser Name="canvas" Margin="0,0,0,57" />
+    </Grid>
+</Window>

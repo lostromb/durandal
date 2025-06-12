@@ -344,6 +344,7 @@ namespace Durandal.Common.Utils
         /// Checks whether the given string is found inside of a larger string, using ordinal comparison.
         /// This is a specialized method which aims to reduce allocation when the alternative would be
         /// to do string.Substring().Equals and incur a lot of potential allocation.
+        /// This is kind of trivial with span comparison nowadays....
         /// </summary>
         /// <param name="searchFor">The small string you are looking for.</param>
         /// <param name="searchWithin">The larger string you are searching within.</param>

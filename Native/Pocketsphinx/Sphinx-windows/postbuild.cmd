@@ -1,0 +1,1 @@
+copy ".\bin\psphinx_trigger.dll" "..\SphinxTrigger\psphinx_trigger.dll"

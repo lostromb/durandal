@@ -1,0 +1,141 @@
+#STATIC#
+
+fitbit/get_overview	how is my exercise coming
+fitbit/get_overview	how well am I exercising
+fitbit/get_overview	how well am I staying active
+fitbit/get_overview	am I staying active
+
+#REGEX#
+
+fitbit/get_overview	(exercise|activity|fitbit) (summary|statistics)
+
+#PATTERNS#
+
+fitbit/get_overview	what are my {exercise_statistics}
+fitbit/get_overview	how are my {exercise_statistics}
+fitbit/get_overview	show me my {exercise_statistics}
+fitbit/get_overview	show me my {exercise_summary}
+fitbit/get_overview	show me {exercise_statistics}
+fitbit/get_overview	show me {exercise_summary}
+fitbit/get_overview	I want my {exercise_summary}
+fitbit/get_overview	I want to see my {exercise_statistics}
+fitbit/get_overview	I want to see my {exercise_summary}
+fitbit/get_overview	{exercise_summary}
+fitbit/get_overview	give me {exercise_summary}
+fitbit/get_overview	{exercise_statistics}
+fitbit/get_overview	give me {exercise_statistics}
+
+#exercise_statistics#
+fitbit statistics
+fit bit statistics
+exercise statistics
+
+#exercise_summary#
+fitbit summary
+fit bit summary
+exercise summary
+activity summary
+
+#STATIC#
+
+fitbit/query_stats	how did I [stat]sleep[/stat] [time]yesterday[/time]
+fitbit/query_stats	how did I [stat]sleep[/stat] [time]last night[/time]
+fitbit/query_stats	how well did I [stat]sleep[/stat] [time]last night[/time]
+fitbit/query_stats	how well have I [stat]slept[/stat] [time]recently[/time]
+
+#PATTERNS#
+
+fitbit/query_stats	{how_many} {stat_active_phrases}
+fitbit/query_stats	{how_many} {stat_active_phrases} so far
+fitbit/query_stats	{how_many} {stat_active_phrases} so far [time]today[/time]
+fitbit/query_stats	{how_many} {stat_active_phrases} [time]today[/time]
+fitbit/query_stats	{how_many} {stat_active_phrases} [time]yesterday[/time]
+fitbit/query_stats	{how_many} {stat_active_phrases} [time]this week[/time]
+fitbit/query_stats	{how_many} {stat_active_phrases} so far [time]this week[/time]
+fitbit/query_stats	{how_many} {stat_active_phrases} on [time]the 3rd[/time]
+fitbit/query_stats	{how_many} {stat_active_phrases} on [time]the 10th[/time]
+fitbit/query_stats	{how_many} {stat_active_phrases} on [time]the 21st[/time]
+fitbit/query_stats	{how_many} {stat_active_phrases} on [time]{days_of_week}[/time]
+fitbit/query_stats	{how_many} {stat_active_phrases} [time]last {days_of_week}[/time]
+
+#how_many#
+how many
+how much
+what
+
+#stat_active_phrases#
+[stat]steps[/stat] have I taken
+[stat]steps[/stat] did I take
+[stat]calories[/stat] have i burned
+[stat]calories[/stat] did I burn
+[stat]miles[/stat] did I travel
+[stat]miles[/stat] did I walk
+[stat]miles[/stat] did I run
+[stat]miles[/stat] have I traveled
+[stat]miles[/stat] have I walked
+[stat]miles[/stat] have I run
+[stat]kilometers[/stat] did I travel
+[stat]kilometers[/stat] did I walk
+[stat]kilometers[/stat] did I run
+[stat]kilometers[/stat] have I traveled
+[stat]kilometers[/stat] have I walked
+[stat]kilometers[/stat] have I run
+
+#PATTERNS#
+
+fitbit/alter_time_scale	{how_about} [time]yesterday[/time]
+fitbit/alter_time_scale	{how_about} [time]today[/time]
+fitbit/alter_time_scale	{how_about} [time]this week[/time]
+fitbit/alter_time_scale	{how_about} on [time]the 3rd[/time]
+fitbit/alter_time_scale	{how_about} on [time]the 10th[/time]
+fitbit/alter_time_scale	{how_about} on [time]the 21st[/time]
+fitbit/alter_time_scale	{how_about} on [time]{days_of_week}[/time]
+fitbit/alter_time_scale	{how_about} [time]last {days_of_week}[/time]
+
+#how_about#
+what about
+how about
+
+#days_of_week#
+monday
+tuesday
+wednesday
+thursday
+friday
+saturday
+sunday
+
+#STATIC#
+fitbit/get_last_exercise	when did I exercise last
+fitbit/get_last_exercise	when did I last exercise
+
+#PATTERNS#
+
+fitbit/get_last_exercise	when did I go {on_a_jog} last
+fitbit/get_last_exercise	when did I last go {on_a_jog}
+fitbit/get_last_exercise	{what_was} the last time I went {on_a_jog}
+fitbit/get_last_exercise	{what_was} the most recent time I went {on_a_jog}
+
+#what_was#
+when's
+what is
+when is
+what was
+when was
+
+#on_a_jog#
+exercising
+[exercise_type]jogging[/exercise_type]
+[exercise_type]biking[/exercise_type]
+[exercise_type]running[/exercise_type]
+[exercise_type]rowing[/exercise_type]
+[exercise_type]swimming[/exercise_type]
+[exercise_type]sprinting[/exercise_type]
+for a [exercise_type]jog[/exercise_type]
+for a [exercise_type]run[/exercise_type]
+for a [exercise_type]bike ride[/exercise_type]
+for a [exercise_type]swim[/exercise_type]
+on a [exercise_type]jog[/exercise_type]
+on a [exercise_type]run[/exercise_type]
+on a [exercise_type]bike ride[/exercise_type]
+on a [exercise_type]swim[/exercise_type]

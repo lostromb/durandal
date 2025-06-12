@@ -9,9 +9,9 @@ namespace Durandal.API
     {
         public const int MajorVersion = 22;
         public const int MinorVersion = 0;
-        public const string Revision = "4669";
-        public const string BuildDate = "2025/02/26 14:59:39";
-        public const string AssemblyVersion = "22.0.4669.0";
+        public const string Revision = "4671";
+        public const string BuildDate = "2025/05/28 22:17:22";
+        public const string AssemblyVersion = "22.0.4671.0";
         
         public static string VersionString
         {

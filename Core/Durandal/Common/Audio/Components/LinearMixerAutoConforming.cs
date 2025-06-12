@@ -10,6 +10,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using System.Xml;
 
 namespace Durandal.Common.Audio.Components
 {
@@ -28,6 +29,7 @@ namespace Durandal.Common.Audio.Components
         private readonly AudioProcessingQuality _resamplerQuality;
         private readonly string _nodeName;
         private readonly string _nodeFullName;
+        private readonly Guid _uniqueId = Guid.NewGuid();
         private readonly WeakPointer<IAudioGraph> _outputGraph;
         private int _disposed = 0;
 
@@ -60,6 +62,9 @@ namespace Durandal.Common.Audio.Components
             Dispose(false);
         }
 #endif
+
+        /// <inheritdoc/>
+        public Guid NodeId => _uniqueId;
 
         public IAudioGraph OutputGraph => _outputGraph.Value;
 

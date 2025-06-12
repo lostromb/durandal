@@ -1,15 +1,16 @@
-﻿using System;
+﻿using Durandal.Common.IO;
+using Durandal.Common.Logger;
+using Durandal.Common.ServiceMgmt;
+using Durandal.Common.Tasks;
+using Durandal.Common.Time;
+using Durandal.Common.Utils;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
-using Durandal.Common.Time;
-using Durandal.Common.Utils;
-using Durandal.Common.Tasks;
-using Durandal.Common.IO;
-using Durandal.Common.Logger;
-using Durandal.Common.ServiceMgmt;
+using System.Xml;
 
 namespace Durandal.Common.Audio
 {
@@ -23,6 +24,7 @@ namespace Durandal.Common.Audio
         protected readonly WeakPointer<IAudioGraph> _graph;
         private readonly string _nodeName;
         private readonly string _nodeFullName;
+        private readonly Guid _uniqueId = Guid.NewGuid();
         private NonRealTimeStream _outputStream;
         private HashSet<IDisposable> _extraDisposables;
         private int _disposed = 0;
@@ -46,6 +48,9 @@ namespace Durandal.Common.Audio
             Dispose(false);
         }
 #endif
+
+        /// <inheritdoc/>
+        public Guid NodeId => _uniqueId;
 
         /// <summary>
         /// Gets the codec which this encoder encoded to (as a constant format code such as "aiff")

@@ -1,0 +1,66 @@
+{
+	"Metadata":
+	{
+		"TestName": "Team Rocket",
+		"Author": "Logan",
+		"SuggestedTestInterval": "30"
+	},
+	"Turns":
+	[
+		{
+			"Input":
+			{
+				"Type": "Speech", "DisplayText": "Prepare for trouble", "Locale": "en-US"
+			},
+			"Validations":
+			[
+				{ "Type": "NoErrorMessage" },
+				{ "Type": "ResponseTextRegex", "Regex": "^Make it double" },
+			]
+		},
+		{
+			"Input":
+			{
+				"Type": "Speech", "DisplayText": "To protect the world from devastation", "Locale": "en-US"
+			},
+			"Validations":
+			[
+				{ "Type": "NoErrorMessage" },
+				{ "Type": "ResponseTextRegex", "Regex": "^To unite all people" },
+			]
+		},
+		{
+			"Input":
+			{
+				"Type": "Speech", "DisplayText": "To denounce the evils of truth and love", "Locale": "en-US"
+			},
+			"Validations":
+			[
+				{ "Type": "NoErrorMessage" },
+				{ "Type": "ResponseTextRegex", "Regex": "^To extend our reach" },
+			]
+		},
+		{
+			"Input":
+			{
+				"Type": "Speech", "DisplayText": "Jessie", "Locale": "en-US"
+			},
+			"Validations":
+			[
+				{ "Type": "NoErrorMessage" },
+				{ "Type": "ResponseTextRegex", "Regex": "^James" },
+			]
+		},
+		{
+			"Input":
+			{
+				"Type": "Speech", "DisplayText": "Team rocket blast off at the speed of light", "Locale": "en-US"
+			},
+			"Validations":
+			[
+				{ "Type": "NoErrorMessage" },
+				{ "Type": "ResponseTextRegex", "Regex": "^Surrender now or prepare to fight" },
+			]
+		}
+	]
+}

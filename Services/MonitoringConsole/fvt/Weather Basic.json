@@ -1,0 +1,64 @@
+﻿{
+	"Metadata":
+	{
+		"TestName": "Weather Basic",
+		"Author": "Logan",
+		"SuggestedTestInterval": "5:00"
+	},
+	"Turns":
+	[
+		{
+			"Input":
+			{
+				"Type": "Speech",
+				"DisplayText": "How's the weather in Kinston",
+				"Locale": "en-US",
+				"ClientContext":
+				{
+					"Latitude": 35.672575,
+					"Longitude": -77.369351,
+					"LocationAccuracy": 1000,
+					"SupportedClientActions": [ "ExecuteDelayedAction" ]
+				}
+			},
+			"Validations":
+			[
+				{
+					"Type": "All",
+					"Validations": 
+					[
+						{ "Type": "NoErrorMessage" },
+						{ "Type": "ResponseTextRegex", "Regex": "^In Kinston, NC the weather is" },
+						{ "Type": "ResponseHtmlRegex", "Regex": "<span id=\\\"locationLabel\\\">Kinston, NC</span>" }
+					]
+				}
+			]
+		},
+		{
+			"PreDelay": "5",
+			"Input":
+			{
+				"Type": "ClientDialogAction",
+				"Locale": "en-US",
+				"ClientContext":
+				{
+					"Latitude": 35.672575,
+					"Longitude": -77.369351,
+					"LocationAccuracy": 1000,
+					"SupportedClientActions": [ "ExecuteDelayedAction" ]
+				}
+			},
+			"Validations":
+			[
+				{
+					"Type": "All",
+					"Validations": 
+					[
+						{ "Type": "NoErrorMessage" },
+						{ "Type": "TriggeredDomainIntent", "Domain": "weather", "Intent": "refresh" }
+					]
+				}
+			]
+		}
+	]
+}

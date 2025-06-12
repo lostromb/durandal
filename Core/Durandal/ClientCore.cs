@@ -272,7 +272,7 @@
             _clientSideKeyStorage = parameters.PrivateKeyStore;
             _triggerArbitrator = parameters.AudioTriggerArbitrator;
             _clientHttpFactory = parameters.HttpClientFactory;
-            _metrics = parameters.Metrics.DefaultIfNull(() => NullMetricCollector.Singleton);
+            _metrics = parameters.Metrics.DefaultIfNull(NullMetricCollector.Singleton);
             _metricDimensions = parameters.MetricDimensions ?? DimensionSet.Empty;
             _preferredAudioCodec = parameters.ClientConfig.AudioCodec;
             if (string.IsNullOrEmpty(_preferredAudioCodec))

@@ -1,0 +1,85 @@
+﻿<Page
+    x:Class="DurandalClientWP81.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:DurandalClientWP81"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Loaded="Page_Loaded" Unloaded="Page_Unloaded">
+    <Page.Resources>
+        <ImageBrush x:Key="MicBrushNormal" Stretch="Fill" ImageSource="/Assets/mic.png"/>
+        <ImageBrush x:Key="MicBrushPressed" Stretch="Fill" ImageSource="/Assets/mic_pressed.png"/>
+
+    </Page.Resources>
+    <Grid x:Name="LayoutRoot" Background="Black">
+        <WebView x:Name="WebViewControl"
+             HorizontalAlignment="Stretch"
+             VerticalAlignment="Stretch"
+             Margin="0,0,0,75"
+             NavigationCompleted="Browser_NavigationCompleted"
+             DefaultBackgroundColor="Black"/>
+        <TextBox x:Name="InputTextBox"
+                 Height="80"
+                 Margin="0,0,0,-4"
+                 Padding="125,20,20,0"
+                 TextWrapping="NoWrap"
+                 VerticalAlignment="Bottom"
+                 BorderThickness="0,2,0,0"
+                 FontSize="30" 
+                 Text=""
+                 KeyUp="InputTextBox_KeyUp"
+                 PlaceholderText="Ask me anything"
+                 TextAlignment="Left"
+                 Foreground="White"
+                 Background="#FF383838" GotFocus="InputTextBox_GotFocus" LostFocus="InputTextBox_LostFocus"
+                 >
+            <TextBox.BorderBrush>
+                <LinearGradientBrush EndPoint="1,0.5" StartPoint="0,0.5">
+                    <GradientStop Color="#FF7A7A7A" Offset="0"/>
+                    <GradientStop Color="#FF383838" Offset="1"/>
+                </LinearGradientBrush>
+            </TextBox.BorderBrush>
+        </TextBox>
+
+        <Rectangle x:Name="MicButton"
+                Height="150"
+                Width="150"
+                VerticalAlignment="Bottom"
+                HorizontalAlignment="Left"
+                Margin="-30,0,0,-30"
+                RenderTransformOrigin="0.5,0.5" 
+                Fill="{StaticResource MicBrushNormal}"
+                ManipulationMode="All"
+                PointerReleased="MicButton_PointerReleased"
+                ManipulationStarting="MicButton_ManipulationStarting"
+                Tapped="MicButton_Tapped"/>
+    </Grid>
+
+    <Page.BottomAppBar>
+        <CommandBar ClosedDisplayMode="Minimal">
+            <CommandBar.SecondaryCommands>
+                <AppBarButton
+                    x:Name="HomeAppBarButton"
+                    x:Uid="HomeAppBarButton"
+                    Label="home"
+                    Click="HomeAppBarButton_Click" />
+                <AppBarButton
+                    x:Name="SettingsAppBarButton"
+                    x:Uid="SettingsAppBarButton"
+                    Label="settings"
+                    Click="SettingsAppBarButton_Click"/>
+                <AppBarButton
+                    x:Name="AccountsAppBarButton"
+                    x:Uid="AccountsAppBarButton"
+                    Label="accounts"
+                    Click="AccountsAppBarButton_Click"/>
+                <AppBarButton
+                    x:Name="DebugAppBarButton"
+                    x:Uid="DebugAppBarButton"
+                    Label="debug"
+                    Click="DebugAppBarButton_Click"/>
+            </CommandBar.SecondaryCommands>
+        </CommandBar>
+    </Page.BottomAppBar>
+</Page>

@@ -16,6 +16,7 @@ namespace Durandal.Common.Collections
     {
         private static readonly string NameOfInternalItemsInSystemList = "_items";
         private static readonly Lazy<FieldInfo> List_Double_InnerArrayAccessor = new Lazy<FieldInfo>(GenerateListAccessor_Double, LazyThreadSafetyMode.PublicationOnly);
+        private static readonly Lazy<FieldInfo> List_Float_InnerArrayAccessor = new Lazy<FieldInfo>(GenerateListAccessor_Float, LazyThreadSafetyMode.PublicationOnly);
 
         /// <summary>
         /// Given a common runtime collection, try and extract the underlying storage
@@ -57,6 +58,46 @@ namespace Durandal.Common.Collections
             }
         }
 
+        /// <summary>
+        /// Given a common runtime collection, try and extract the underlying storage
+        /// array using reflection. <b>THIS IS A HUGE HACK!</b> At least lock the list for concurrency
+        /// as long as you are holding a reference to the returned array.
+        /// </summary>
+        /// <param name="list">The collection to try and pry open.</param>
+        /// <param name="segment">The returned raw array segment.</param>
+        /// <returns>True if we were able to access the list internals.</returns>
+        public static bool TryGetUnderlyingArraySegment(IEnumerable<float> list, out ArraySegment<float> segment)
+        {
+            // In modern dotnet we could use CollectionsMarshal.AsSpan for something similar
+            segment = default;
+
+            if (list is float[] array)
+            {
+                segment = new ArraySegment<float>(array, 0, array.Length);
+                return true;
+            }
+            else if (list is List<float> castList)
+            {
+                if (List_Float_InnerArrayAccessor.Value == null)
+                {
+                    return false;
+                }
+
+                object rawRef = List_Float_InnerArrayAccessor.Value.GetValue(list);
+                if (rawRef == null || !(rawRef is float[]))
+                {
+                    return false;
+                }
+
+                segment = new ArraySegment<float>((float[])rawRef, 0, castList.Count);
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
         private static FieldInfo GenerateListAccessor_Double()
         {
             try
@@ -67,6 +108,28 @@ namespace Durandal.Common.Collections
                     .Where((s) => string.Equals(NameOfInternalItemsInSystemList, s.Name, StringComparison.Ordinal)).FirstOrDefault();
                 if (returnVal == null ||
                     returnVal.FieldType != typeof(double[]))
+                {
+                    return null;
+                }
+
+                return returnVal;
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+        }
+
+        private static FieldInfo GenerateListAccessor_Float()
+        {
+            try
+            {
+                // Probe to see if we can pry into the underlying double[] array beneath the List<double>,
+                // and if so, cache the reflection accessor that makes that possible
+                FieldInfo returnVal = typeof(List<float>).GetRuntimeFields()
+                    .Where((s) => string.Equals(NameOfInternalItemsInSystemList, s.Name, StringComparison.Ordinal)).FirstOrDefault();
+                if (returnVal == null ||
+                    returnVal.FieldType != typeof(float[]))
                 {
                     return null;
                 }

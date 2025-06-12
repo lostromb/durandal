@@ -1,0 +1,937 @@
+﻿{
+  "Id": "http://schema.org/CreativeWork",
+  "Comment": "The most generic kind of creative work, including books, movies, photographs, software programs, etc.",
+  "Label": "CreativeWork",
+  "InheritsFrom": [
+    "http://schema.org/Thing"
+  ],
+  "Fields": {
+    "about": {
+      "Name": "about",
+      "Values": [
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/Thing",
+          "Comment": "The subject matter of the content."
+        }
+      ]
+    },
+    "educationalAlignment": {
+      "Name": "educationalAlignment",
+      "Values": [
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/AlignmentObject",
+          "Comment": "An alignment to an established educational framework."
+        }
+      ]
+    },
+    "associatedMedia": {
+      "Name": "associatedMedia",
+      "Values": [
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/MediaObject",
+          "Comment": "A media object that encodes this CreativeWork. This property is a synonym for encoding."
+        }
+      ]
+    },
+    "funder": {
+      "Name": "funder",
+      "Values": [
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/Person",
+          "Comment": "A person or organization that supports (sponsors) something through some kind of financial contribution."
+        },
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/Organization",
+          "Comment": "A person or organization that supports (sponsors) something through some kind of financial contribution."
+        }
+      ]
+    },
+    "position": {
+      "Name": "position",
+      "Values": [
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/Integer",
+          "Comment": "The position of an item in a series or sequence of items."
+        },
+        {
+          "Type": "Text",
+          "Comment": "The position of an item in a series or sequence of items."
+        }
+      ]
+    },
+    "audio": {
+      "Name": "audio",
+      "Values": [
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/AudioObject",
+          "Comment": "An embedded audio object."
+        }
+      ]
+    },
+    "workExample": {
+      "Name": "workExample",
+      "Values": [
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/CreativeWork",
+          "Comment": "Example/instance/realization/derivation of the concept of this creative work. eg. The paperback edition, first edition, or eBook."
+        }
+      ]
+    },
+    "provider": {
+      "Name": "provider",
+      "Values": [
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/Organization",
+          "Comment": "The service provider, service operator, or service performer; the goods producer. Another party (a seller) may offer those services or goods on behalf of the provider. A provider may also serve as the seller."
+        },
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/Person",
+          "Comment": "The service provider, service operator, or service performer; the goods producer. Another party (a seller) may offer those services or goods on behalf of the provider. A provider may also serve as the seller."
+        }
+      ]
+    },
+    "encoding": {
+      "Name": "encoding",
+      "Values": [
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/MediaObject",
+          "Comment": "A media object that encodes this CreativeWork. This property is a synonym for associatedMedia."
+        }
+      ]
+    },
+    "interactivityType": {
+      "Name": "interactivityType",
+      "Values": [
+        {
+          "Type": "Text",
+          "Comment": "The predominant mode of learning supported by the learning resource. Acceptable values are 'active', 'expositive', or 'mixed'."
+        }
+      ]
+    },
+    "accessibilitySummary": {
+      "Name": "accessibilitySummary",
+      "Values": [
+        {
+          "Type": "Text",
+          "Comment": "A human-readable summary of specific accessibility features or deficiencies, consistent with the other accessibility metadata but expressing subtleties such as \"short descriptions are present but long descriptions will be needed for non-visual users\" or \"short descriptions are present and no long descriptions are needed.\""
+        }
+      ]
+    },
+    "character": {
+      "Name": "character",
+      "Values": [
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/Person",
+          "Comment": "Fictional person connected with a creative work."
+        }
+      ]
+    },
+    "audience": {
+      "Name": "audience",
+      "Values": [
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/Audience",
+          "Comment": "An intended audience, i.e. a group for whom something was created."
+        }
+      ]
+    },
+    "sourceOrganization": {
+      "Name": "sourceOrganization",
+      "Values": [
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/Organization",
+          "Comment": "The Organization on whose behalf the creator was working."
+        }
+      ]
+    },
+    "isPartOf": {
+      "Name": "isPartOf",
+      "Values": [
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/CreativeWork",
+          "Comment": "Indicates a CreativeWork that this CreativeWork is (in some sense) part of."
+        }
+      ]
+    },
+    "video": {
+      "Name": "video",
+      "Values": [
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/VideoObject",
+          "Comment": "An embedded video object."
+        }
+      ]
+    },
+    "publisher": {
+      "Name": "publisher",
+      "Values": [
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/Organization",
+          "Comment": "The publisher of the creative work."
+        },
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/Person",
+          "Comment": "The publisher of the creative work."
+        }
+      ]
+    },
+    "publication": {
+      "Name": "publication",
+      "Values": [
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/PublicationEvent",
+          "Comment": "A publication event associated with the item."
+        }
+      ]
+    },
+    "text": {
+      "Name": "text",
+      "Values": [
+        {
+          "Type": "Text",
+          "Comment": "The textual content of this CreativeWork."
+        }
+      ]
+    },
+    "expires": {
+      "Name": "expires",
+      "Values": [
+        {
+          "Type": "Date",
+          "Comment": "Date the content expires and is no longer useful or available. For example a <a class=\"localLink\" href=\"http://schema.org/VideoObject\">VideoObject</a> or <a class=\"localLink\" href=\"http://schema.org/NewsArticle\">NewsArticle</a> whose availability or relevance is time-limited, or a <a class=\"localLink\" href=\"http://schema.org/ClaimReview\">ClaimReview</a> fact check whose publisher wants to indicate that it may no longer be relevant (or helpful to highlight) after some date."
+        }
+      ]
+    },
+    "contributor": {
+      "Name": "contributor",
+      "Values": [
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/Person",
+          "Comment": "A secondary contributor to the CreativeWork or Event."
+        },
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/Organization",
+          "Comment": "A secondary contributor to the CreativeWork or Event."
+        }
+      ]
+    },
+    "reviews": {
+      "Name": "reviews",
+      "Values": [
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/Review",
+          "Comment": "Review of the item."
+        }
+      ]
+    },
+    "typicalAgeRange": {
+      "Name": "typicalAgeRange",
+      "Values": [
+        {
+          "Type": "Text",
+          "Comment": "The typical expected age range, e.g. '7-9', '11-'."
+        }
+      ]
+    },
+    "releasedEvent": {
+      "Name": "releasedEvent",
+      "Values": [
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/PublicationEvent",
+          "Comment": "The place and time the release was issued, expressed as a PublicationEvent."
+        }
+      ]
+    },
+    "educationalUse": {
+      "Name": "educationalUse",
+      "Values": [
+        {
+          "Type": "Text",
+          "Comment": "The purpose of a work in the context of education; for example, 'assignment', 'group work'."
+        }
+      ]
+    },
+    "contentLocation": {
+      "Name": "contentLocation",
+      "Values": [
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/Place",
+          "Comment": "The location depicted or described in the content. For example, the location in a photograph or painting."
+        }
+      ]
+    },
+    "schemaVersion": {
+      "Name": "schemaVersion",
+      "Values": [
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/URL",
+          "Comment": "Indicates (by URL or string) a particular version of a schema used in some CreativeWork. For example, a document could declare a schemaVersion using an URL such as http://schema.org/version/2.0/ if precise indication of schema version was required by some application."
+        },
+        {
+          "Type": "Text",
+          "Comment": "Indicates (by URL or string) a particular version of a schema used in some CreativeWork. For example, a document could declare a schemaVersion using an URL such as http://schema.org/version/2.0/ if precise indication of schema version was required by some application."
+        }
+      ]
+    },
+    "accessibilityFeature": {
+      "Name": "accessibilityFeature",
+      "Values": [
+        {
+          "Type": "Text",
+          "Comment": "Content features of the resource, such as accessible media, alternatives and supported enhancements for accessibility (<a href=\"http://www.w3.org/wiki/WebSchemas/Accessibility\">WebSchemas wiki lists possible values</a>)."
+        }
+      ]
+    },
+    "aggregateRating": {
+      "Name": "aggregateRating",
+      "Values": [
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/AggregateRating",
+          "Comment": "The overall rating, based on a collection of reviews or ratings, of the item."
+        }
+      ]
+    },
+    "alternativeHeadline": {
+      "Name": "alternativeHeadline",
+      "Values": [
+        {
+          "Type": "Text",
+          "Comment": "A secondary title of the CreativeWork."
+        }
+      ]
+    },
+    "locationCreated": {
+      "Name": "locationCreated",
+      "Values": [
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/Place",
+          "Comment": "The location where the CreativeWork was created, which may not be the same as the location depicted in the CreativeWork."
+        }
+      ]
+    },
+    "accessModeSufficient": {
+      "Name": "accessModeSufficient",
+      "Values": [
+        {
+          "Type": "Text",
+          "Comment": "A list of single or combined accessModes that are sufficient to understand all the intellectual content of a resource. Expected values include:  auditory, tactile, textual, visual."
+        }
+      ]
+    },
+    "temporalCoverage": {
+      "Name": "temporalCoverage",
+      "Values": [
+        {
+          "Type": "DateTime",
+          "Comment": "The temporalCoverage of a CreativeWork indicates the period that the content applies to, i.e. that it describes, either as a DateTime or as a textual string indicating a time period in <a href=\"https://en.wikipedia.org/wiki/ISO_8601#Time_intervals\">ISO 8601 time interval format</a>. In\n      the case of a Dataset it will typically indicate the relevant time period in a precise notation (e.g. for a 2011 census dataset, the year 2011 would be written \"2011/2012\"). Other forms of content e.g. ScholarlyArticle, Book, TVSeries or TVEpisode may indicate their temporalCoverage in broader terms - textually or via well-known URL.\n      Written works such as books may sometimes have precise temporal coverage too, e.g. a work set in 1939 - 1945 can be indicated in ISO 8601 interval format format via \"1939/1945\"."
+        },
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/URL",
+          "Comment": "The temporalCoverage of a CreativeWork indicates the period that the content applies to, i.e. that it describes, either as a DateTime or as a textual string indicating a time period in <a href=\"https://en.wikipedia.org/wiki/ISO_8601#Time_intervals\">ISO 8601 time interval format</a>. In\n      the case of a Dataset it will typically indicate the relevant time period in a precise notation (e.g. for a 2011 census dataset, the year 2011 would be written \"2011/2012\"). Other forms of content e.g. ScholarlyArticle, Book, TVSeries or TVEpisode may indicate their temporalCoverage in broader terms - textually or via well-known URL.\n      Written works such as books may sometimes have precise temporal coverage too, e.g. a work set in 1939 - 1945 can be indicated in ISO 8601 interval format format via \"1939/1945\"."
+        },
+        {
+          "Type": "Text",
+          "Comment": "The temporalCoverage of a CreativeWork indicates the period that the content applies to, i.e. that it describes, either as a DateTime or as a textual string indicating a time period in <a href=\"https://en.wikipedia.org/wiki/ISO_8601#Time_intervals\">ISO 8601 time interval format</a>. In\n      the case of a Dataset it will typically indicate the relevant time period in a precise notation (e.g. for a 2011 census dataset, the year 2011 would be written \"2011/2012\"). Other forms of content e.g. ScholarlyArticle, Book, TVSeries or TVEpisode may indicate their temporalCoverage in broader terms - textually or via well-known URL.\n      Written works such as books may sometimes have precise temporal coverage too, e.g. a work set in 1939 - 1945 can be indicated in ISO 8601 interval format format via \"1939/1945\"."
+        }
+      ]
+    },
+    "accountablePerson": {
+      "Name": "accountablePerson",
+      "Values": [
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/Person",
+          "Comment": "Specifies the Person that is legally accountable for the CreativeWork."
+        }
+      ]
+    },
+    "spatialCoverage": {
+      "Name": "spatialCoverage",
+      "Values": [
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/Place",
+          "Comment": "The spatialCoverage of a CreativeWork indicates the place(s) which are the focus of the content. It is a subproperty of\n      contentLocation intended primarily for more technical and detailed materials. For example with a Dataset, it indicates\n      areas that the dataset describes: a dataset of New York weather would have spatialCoverage which was the place: the state of New York."
+        }
+      ]
+    },
+    "offers": {
+      "Name": "offers",
+      "Values": [
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/Offer",
+          "Comment": "An offer to provide this item&#x2014;for example, an offer to sell a product, rent the DVD of a movie, perform a service, or give away tickets to an event."
+        }
+      ]
+    },
+    "editor": {
+      "Name": "editor",
+      "Values": [
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/Person",
+          "Comment": "Specifies the Person who edited the CreativeWork."
+        }
+      ]
+    },
+    "discussionUrl": {
+      "Name": "discussionUrl",
+      "Values": [
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/URL",
+          "Comment": "A link to the page containing the comments of the CreativeWork."
+        }
+      ]
+    },
+    "award": {
+      "Name": "award",
+      "Values": [
+        {
+          "Type": "Text",
+          "Comment": "An award won by or for this item."
+        }
+      ]
+    },
+    "copyrightHolder": {
+      "Name": "copyrightHolder",
+      "Values": [
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/Organization",
+          "Comment": "The party holding the legal copyright to the CreativeWork."
+        },
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/Person",
+          "Comment": "The party holding the legal copyright to the CreativeWork."
+        }
+      ]
+    },
+    "accessibilityHazard": {
+      "Name": "accessibilityHazard",
+      "Values": [
+        {
+          "Type": "Text",
+          "Comment": "A characteristic of the described resource that is physiologically dangerous to some users. Related to WCAG 2.0 guideline 2.3 (<a href=\"http://www.w3.org/wiki/WebSchemas/Accessibility\">WebSchemas wiki lists possible values</a>)."
+        }
+      ]
+    },
+    "copyrightYear": {
+      "Name": "copyrightYear",
+      "Values": [
+        {
+          "Type": "Number",
+          "Comment": "The year during which the claimed copyright for the CreativeWork was first asserted."
+        }
+      ]
+    },
+    "awards": {
+      "Name": "awards",
+      "Values": [
+        {
+          "Type": "Text",
+          "Comment": "Awards won by or for this item."
+        }
+      ]
+    },
+    "recordedAt": {
+      "Name": "recordedAt",
+      "Values": [
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/Event",
+          "Comment": "The Event where the CreativeWork was recorded. The CreativeWork may capture all or part of the event."
+        }
+      ]
+    },
+    "commentCount": {
+      "Name": "commentCount",
+      "Values": [
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/Integer",
+          "Comment": "The number of comments this CreativeWork (e.g. Article, Question or Answer) has received. This is most applicable to works published in Web sites with commenting system; additional comments may exist elsewhere."
+        }
+      ]
+    },
+    "fileFormat": {
+      "Name": "fileFormat",
+      "Values": [
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/URL",
+          "Comment": "Media type, typically MIME format (see <a href=\"http://www.iana.org/assignments/media-types/media-types.xhtml\">IANA site</a>) of the content e.g. application/zip of a SoftwareApplication binary. In cases where a CreativeWork has several media type representations, 'encoding' can be used to indicate each MediaObject alongside particular fileFormat information. Unregistered or niche file formats can be indicated instead via the most appropriate URL, e.g. defining Web page or a Wikipedia entry."
+        },
+        {
+          "Type": "Text",
+          "Comment": "Media type, typically MIME format (see <a href=\"http://www.iana.org/assignments/media-types/media-types.xhtml\">IANA site</a>) of the content e.g. application/zip of a SoftwareApplication binary. In cases where a CreativeWork has several media type representations, 'encoding' can be used to indicate each MediaObject alongside particular fileFormat information. Unregistered or niche file formats can be indicated instead via the most appropriate URL, e.g. defining Web page or a Wikipedia entry."
+        }
+      ]
+    },
+    "inLanguage": {
+      "Name": "inLanguage",
+      "Values": [
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/Language",
+          "Comment": "The language of the content or performance or used in an action. Please use one of the language codes from the <a href=\"http://tools.ietf.org/html/bcp47\">IETF BCP 47 standard</a>. See also <a class=\"localLink\" href=\"http://schema.org/availableLanguage\">availableLanguage</a>."
+        },
+        {
+          "Type": "Text",
+          "Comment": "The language of the content or performance or used in an action. Please use one of the language codes from the <a href=\"http://tools.ietf.org/html/bcp47\">IETF BCP 47 standard</a>. See also <a class=\"localLink\" href=\"http://schema.org/availableLanguage\">availableLanguage</a>."
+        }
+      ]
+    },
+    "accessibilityAPI": {
+      "Name": "accessibilityAPI",
+      "Values": [
+        {
+          "Type": "Text",
+          "Comment": "Indicates that the resource is compatible with the referenced accessibility API (<a href=\"http://www.w3.org/wiki/WebSchemas/Accessibility\">WebSchemas wiki lists possible values</a>)."
+        }
+      ]
+    },
+    "interactionStatistic": {
+      "Name": "interactionStatistic",
+      "Values": [
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/InteractionCounter",
+          "Comment": "The number of interactions for the CreativeWork using the WebSite or SoftwareApplication. The most specific child type of InteractionCounter should be used."
+        }
+      ]
+    },
+    "contentRating": {
+      "Name": "contentRating",
+      "Values": [
+        {
+          "Type": "Text",
+          "Comment": "Official rating of a piece of content&#x2014;for example,'MPAA PG-13'."
+        }
+      ]
+    },
+    "learningResourceType": {
+      "Name": "learningResourceType",
+      "Values": [
+        {
+          "Type": "Text",
+          "Comment": "The predominant type or kind characterizing the learning resource. For example, 'presentation', 'handout'."
+        }
+      ]
+    },
+    "accessMode": {
+      "Name": "accessMode",
+      "Values": [
+        {
+          "Type": "Text",
+          "Comment": "The human sensory perceptual system or cognitive faculty through which a person may process or perceive information. Expected values include: auditory, tactile, textual, visual, colorDependent, chartOnVisual, chemOnVisual, diagramOnVisual, mathOnVisual, musicOnVisual, textOnVisual."
+        }
+      ]
+    },
+    "material": {
+      "Name": "material",
+      "Values": [
+        {
+          "Type": "Text",
+          "Comment": "A material that something is made from, e.g. leather, wool, cotton, paper."
+        },
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/URL",
+          "Comment": "A material that something is made from, e.g. leather, wool, cotton, paper."
+        },
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/Product",
+          "Comment": "A material that something is made from, e.g. leather, wool, cotton, paper."
+        }
+      ]
+    },
+    "isFamilyFriendly": {
+      "Name": "isFamilyFriendly",
+      "Values": [
+        {
+          "Type": "Boolean",
+          "Comment": "Indicates whether this content is family friendly."
+        }
+      ]
+    },
+    "exampleOfWork": {
+      "Name": "exampleOfWork",
+      "Values": [
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/CreativeWork",
+          "Comment": "A creative work that this work is an example/instance/realization/derivation of."
+        }
+      ]
+    },
+    "version": {
+      "Name": "version",
+      "Values": [
+        {
+          "Type": "Text",
+          "Comment": "The version of the CreativeWork embodied by a specified resource."
+        },
+        {
+          "Type": "Number",
+          "Comment": "The version of the CreativeWork embodied by a specified resource."
+        }
+      ]
+    },
+    "dateModified": {
+      "Name": "dateModified",
+      "Values": [
+        {
+          "Type": "DateTime",
+          "Comment": "The date on which the CreativeWork was most recently modified or when the item's entry was modified within a DataFeed."
+        },
+        {
+          "Type": "Date",
+          "Comment": "The date on which the CreativeWork was most recently modified or when the item's entry was modified within a DataFeed."
+        }
+      ]
+    },
+    "mainEntity": {
+      "Name": "mainEntity",
+      "Values": [
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/Thing",
+          "Comment": "Indicates the primary entity described in some page or other CreativeWork."
+        }
+      ]
+    },
+    "genre": {
+      "Name": "genre",
+      "Values": [
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/URL",
+          "Comment": "Genre of the creative work, broadcast channel or group."
+        },
+        {
+          "Type": "Text",
+          "Comment": "Genre of the creative work, broadcast channel or group."
+        }
+      ]
+    },
+    "keywords": {
+      "Name": "keywords",
+      "Values": [
+        {
+          "Type": "Text",
+          "Comment": "Keywords or tags used to describe this content. Multiple entries in a keywords list are typically delimited by commas."
+        }
+      ]
+    },
+    "author": {
+      "Name": "author",
+      "Values": [
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/Organization",
+          "Comment": "The author of this content or rating. Please note that author is special in that HTML 5 provides a special mechanism for indicating authorship via the rel tag. That is equivalent to this and may be used interchangeably."
+        },
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/Person",
+          "Comment": "The author of this content or rating. Please note that author is special in that HTML 5 provides a special mechanism for indicating authorship via the rel tag. That is equivalent to this and may be used interchangeably."
+        }
+      ]
+    },
+    "isBasedOnUrl": {
+      "Name": "isBasedOnUrl",
+      "Values": [
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/Product",
+          "Comment": "A resource that was used in the creation of this resource. This term can be repeated for multiple sources. For example, http://example.com/great-multiplication-intro.html."
+        },
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/CreativeWork",
+          "Comment": "A resource that was used in the creation of this resource. This term can be repeated for multiple sources. For example, http://example.com/great-multiplication-intro.html."
+        },
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/URL",
+          "Comment": "A resource that was used in the creation of this resource. This term can be repeated for multiple sources. For example, http://example.com/great-multiplication-intro.html."
+        }
+      ]
+    },
+    "timeRequired": {
+      "Name": "timeRequired",
+      "Values": [
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/Duration",
+          "Comment": "Approximate or typical time it takes to work with or through this learning resource for the typical intended target audience, e.g. 'P30M', 'P1H25M'."
+        }
+      ]
+    },
+    "translator": {
+      "Name": "translator",
+      "Values": [
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/Organization",
+          "Comment": "Organization or person who adapts a creative work to different languages, regional differences and technical requirements of a target market, or that translates during some event."
+        },
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/Person",
+          "Comment": "Organization or person who adapts a creative work to different languages, regional differences and technical requirements of a target market, or that translates during some event."
+        }
+      ]
+    },
+    "thumbnailUrl": {
+      "Name": "thumbnailUrl",
+      "Values": [
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/URL",
+          "Comment": "A thumbnail image relevant to the Thing."
+        }
+      ]
+    },
+    "hasPart": {
+      "Name": "hasPart",
+      "Values": [
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/CreativeWork",
+          "Comment": "Indicates a CreativeWork that is (in some sense) a part of this CreativeWork."
+        }
+      ]
+    },
+    "comment": {
+      "Name": "comment",
+      "Values": [
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/Comment",
+          "Comment": "Comments, typically from users."
+        }
+      ]
+    },
+    "review": {
+      "Name": "review",
+      "Values": [
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/Review",
+          "Comment": "A review of the item."
+        }
+      ]
+    },
+    "license": {
+      "Name": "license",
+      "Values": [
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/CreativeWork",
+          "Comment": "A license document that applies to this content, typically indicated by URL."
+        },
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/URL",
+          "Comment": "A license document that applies to this content, typically indicated by URL."
+        }
+      ]
+    },
+    "accessibilityControl": {
+      "Name": "accessibilityControl",
+      "Values": [
+        {
+          "Type": "Text",
+          "Comment": "Identifies input methods that are sufficient to fully control the described resource (<a href=\"http://www.w3.org/wiki/WebSchemas/Accessibility\">WebSchemas wiki lists possible values</a>)."
+        }
+      ]
+    },
+    "encodings": {
+      "Name": "encodings",
+      "Values": [
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/MediaObject",
+          "Comment": "A media object that encodes this CreativeWork."
+        }
+      ]
+    },
+    "isBasedOn": {
+      "Name": "isBasedOn",
+      "Values": [
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/Product",
+          "Comment": "A resource that was used in the creation of this resource. This term can be repeated for multiple sources. For example, http://example.com/great-multiplication-intro.html."
+        },
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/CreativeWork",
+          "Comment": "A resource that was used in the creation of this resource. This term can be repeated for multiple sources. For example, http://example.com/great-multiplication-intro.html."
+        },
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/URL",
+          "Comment": "A resource that was used in the creation of this resource. This term can be repeated for multiple sources. For example, http://example.com/great-multiplication-intro.html."
+        }
+      ]
+    },
+    "creator": {
+      "Name": "creator",
+      "Values": [
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/Organization",
+          "Comment": "The creator/author of this CreativeWork. This is the same as the Author property for CreativeWork."
+        },
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/Person",
+          "Comment": "The creator/author of this CreativeWork. This is the same as the Author property for CreativeWork."
+        }
+      ]
+    },
+    "publishingPrinciples": {
+      "Name": "publishingPrinciples",
+      "Values": [
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/CreativeWork",
+          "Comment": "The publishingPrinciples property indicates (typically via <a class=\"localLink\" href=\"http://schema.org/URL\">URL</a>) a document describing the editorial principles of an <a class=\"localLink\" href=\"http://schema.org/Organization\">Organization</a> (or individual e.g. a <a class=\"localLink\" href=\"http://schema.org/Person\">Person</a> writing a blog) that relate to their activities as a publisher, e.g. ethics or diversity policies. When applied to a <a class=\"localLink\" href=\"http://schema.org/CreativeWork\">CreativeWork</a> (e.g. <a class=\"localLink\" href=\"http://schema.org/NewsArticle\">NewsArticle</a>) the principles are those of the party primarily responsible for the creation of the <a class=\"localLink\" href=\"http://schema.org/CreativeWork\">CreativeWork</a>.</p>\n\n<p>While such policies are most typically expressed in natural language, sometimes related information (e.g. indicating a <a class=\"localLink\" href=\"http://schema.org/funder\">funder</a>) can be expressed using schema.org terminology."
+        },
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/URL",
+          "Comment": "The publishingPrinciples property indicates (typically via <a class=\"localLink\" href=\"http://schema.org/URL\">URL</a>) a document describing the editorial principles of an <a class=\"localLink\" href=\"http://schema.org/Organization\">Organization</a> (or individual e.g. a <a class=\"localLink\" href=\"http://schema.org/Person\">Person</a> writing a blog) that relate to their activities as a publisher, e.g. ethics or diversity policies. When applied to a <a class=\"localLink\" href=\"http://schema.org/CreativeWork\">CreativeWork</a> (e.g. <a class=\"localLink\" href=\"http://schema.org/NewsArticle\">NewsArticle</a>) the principles are those of the party primarily responsible for the creation of the <a class=\"localLink\" href=\"http://schema.org/CreativeWork\">CreativeWork</a>.</p>\n\n<p>While such policies are most typically expressed in natural language, sometimes related information (e.g. indicating a <a class=\"localLink\" href=\"http://schema.org/funder\">funder</a>) can be expressed using schema.org terminology."
+        }
+      ]
+    },
+    "sponsor": {
+      "Name": "sponsor",
+      "Values": [
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/Person",
+          "Comment": "A person or organization that supports a thing through a pledge, promise, or financial contribution. e.g. a sponsor of a Medical Study or a corporate sponsor of an event."
+        },
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/Organization",
+          "Comment": "A person or organization that supports a thing through a pledge, promise, or financial contribution. e.g. a sponsor of a Medical Study or a corporate sponsor of an event."
+        }
+      ]
+    },
+    "producer": {
+      "Name": "producer",
+      "Values": [
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/Organization",
+          "Comment": "The person or organization who produced the work (e.g. music album, movie, tv/radio series etc.)."
+        },
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/Person",
+          "Comment": "The person or organization who produced the work (e.g. music album, movie, tv/radio series etc.)."
+        }
+      ]
+    },
+    "mentions": {
+      "Name": "mentions",
+      "Values": [
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/Thing",
+          "Comment": "Indicates that the CreativeWork contains a reference to, but is not necessarily about a concept."
+        }
+      ]
+    },
+    "dateCreated": {
+      "Name": "dateCreated",
+      "Values": [
+        {
+          "Type": "Date",
+          "Comment": "The date on which the CreativeWork was created or the item was added to a DataFeed."
+        },
+        {
+          "Type": "DateTime",
+          "Comment": "The date on which the CreativeWork was created or the item was added to a DataFeed."
+        }
+      ]
+    },
+    "datePublished": {
+      "Name": "datePublished",
+      "Values": [
+        {
+          "Type": "Date",
+          "Comment": "Date of first broadcast/publication."
+        }
+      ]
+    },
+    "isAccessibleForFree": {
+      "Name": "isAccessibleForFree",
+      "Values": [
+        {
+          "Type": "Boolean",
+          "Comment": "A flag to signal that the item, event, or place is accessible for free."
+        }
+      ]
+    },
+    "headline": {
+      "Name": "headline",
+      "Values": [
+        {
+          "Type": "Text",
+          "Comment": "Headline of the article."
+        }
+      ]
+    },
+    "citation": {
+      "Name": "citation",
+      "Values": [
+        {
+          "Type": "Identifier",
+          "ReferencedId": "http://schema.org/CreativeWork",
+          "Comment": "A citation or reference to another creative work, such as another publication, web page, scholarly article, etc."
+        },
+        {
+          "Type": "Text",
+          "Comment": "A citation or reference to another creative work, such as another publication, web page, scholarly article, etc."
+        }
+      ]
+    }
+  }
+}

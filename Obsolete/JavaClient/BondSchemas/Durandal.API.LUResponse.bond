@@ -1,0 +1,13 @@
+import "Durandal.API.RecognizedPhrase.bond"
+
+namespace csharp Durandal.API
+namespace java org.stromberg.durandal.api
+
+struct LUResponse
+{
+    // Versioning for this communication
+	1: required int32 ProtocolVersion = 6;
+	
+	// The list of recognition results from the engine
+	2: required vector<RecognizedPhrase> Results;
+}

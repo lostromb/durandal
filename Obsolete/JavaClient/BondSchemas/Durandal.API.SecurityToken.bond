@@ -1,0 +1,8 @@
+namespace csharp Durandal.API
+namespace java org.stromberg.durandal.api
+
+struct SecurityToken
+{
+    1: required string Red;
+    2: required string Blue;
+}

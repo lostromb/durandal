@@ -1,0 +1,13 @@
+﻿<Page x:Class="Durandal.DebugView"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d" 
+      d:DesignHeight="300" d:DesignWidth="300"
+	Title="DebugView">
+    <Grid>
+        <TextBox Height="24" Margin="6,6,6,0" Name="debugInput" VerticalAlignment="Top" KeyUp="debugInput_KeyUp" />
+        <TextBox Margin="6,36,6,6" Name="debugOutput" Foreground="Lime" Background="Black" VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="Auto" />
+    </Grid>
+</Page>

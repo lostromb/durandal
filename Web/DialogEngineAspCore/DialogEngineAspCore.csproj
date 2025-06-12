@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Core\Durandal.NetCore\Durandal.NetCore.csproj" />
+    <ProjectReference Include="..\..\Core\Durandal.NetStandard\Durandal.NetStandard.csproj" />
+    <ProjectReference Include="..\..\Extensions\Durandal.Azure.NetStandard\Durandal.Azure.NetStandard.csproj" />
+    <ProjectReference Include="..\..\Extensions\Durandal.BondProtocol.NetStandard\Durandal.BondProtocol.NetStandard.csproj" />
+    <ProjectReference Include="..\..\Extensions\Durandal.MySql.NetStandard\Durandal.MySql.NetStandard.csproj" />
+    <ProjectReference Include="..\..\Extensions\Durandal.Redis.NetStandard\Durandal.Redis.NetStandard.csproj" />
+  </ItemGroup>
+
+</Project>

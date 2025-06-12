@@ -87,7 +87,7 @@ namespace Durandal.Common.Remoting
             _socket = socket.AssertNonNull(nameof(socket));
             _logger = logger;
             _maxBoxLifetime = mailboxLifetime;
-            _metrics = metrics.DefaultIfNull(() => NullMetricCollector.Singleton);
+            _metrics = metrics.DefaultIfNull(NullMetricCollector.Singleton);
             _dimensions = metricDimensions ?? DimensionSet.Empty;
             _rand = new FastRandom();
             _socketLock = new SemaphoreSlim(1);

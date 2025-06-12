@@ -1,22 +1,15 @@
 ﻿using Durandal.Common.Audio;
+using Durandal.Common.Audio.Hardware;
+using Durandal.Common.IO;
+using Durandal.Common.Logger;
+using Durandal.Common.ServiceMgmt;
+using Durandal.Common.Tasks;
+using Durandal.Common.Time;
+using Durandal.Common.Utils;
 using ManagedBass;
 using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Threading;
-using Durandal.Common.Logger;
-using System.Runtime.InteropServices;
-using Durandal.Common.Utils;
-using Durandal.Common.Time;
-using Durandal.Common.Tasks;
-using Durandal.Common.IO;
-using Durandal.Common.Utils.NativePlatform;
-using Durandal.Common.Audio.Hardware;
-using System.IO;
-using Durandal.Common.ServiceMgmt;
+using System.Threading.Tasks;
 
 namespace Durandal.Extensions.BassAudio
 {
